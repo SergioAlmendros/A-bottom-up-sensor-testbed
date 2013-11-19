@@ -1,0 +1,91 @@
+\documentclass[10pt,a4paper]{article}
+
+\title{A bottom up sensor testbed}
+\author{Sergio Almendros Diaz}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Pilot Charter}
+
+Fellow: Sergio Almendros Diaz
+\\
+Mentor: 
+\\
+Advisor: Jaume Barcelo
+
+\subsection{Pilot purpose or justification}
+The purpose of this pilot is to build a sensor platform that can be attached to guifi nodes to gather and share sensory data.
+
+\subsection{Measurable pilot objectives and related success criteria}
+\begin{itemize}
+\item Gather data about temperature, humidity, light and noise. 
+\item Share the data as open data.
+\item Deploy at least two nodes and gather data for at least two weeks.
+\end{itemize}
+
+\subsection{High-level requirements}
+\begin{itemize}
+\item Outdoor enclosure.
+\item Use open hardware and open software to the possible extent.
+\item Use standardized interfaces to integrate with other projects.
+\end{itemize}
+
+\subsection{High-level pilot description}
+The goal is to use an arduino platform to create a bottom-up broadband wireless sensor networks. 
+As guifi.net has already over 20,000 nodes, the idea is to co-locate the sensory platforms together with the guifi.net nodes and use the guifi.net network to transmit the data.
+This data should be gathered and shared.
+Ideally, the pilot should include a presentation interface for the users to visualize the data.
+
+\subsection{High-level risks}
+A possible risk is that the prototypes are not rugged enough for outdoor environments.
+It is also a risk that the prototype is not stable and needs to be reset very often.
+
+\subsection{Summary milestone schedule}
+\begin{itemize}
+\item From 20/09/2013 to 23/09/2013
+	\begin{itemize}
+	\item Establish the general idea of the TFG and specifics goals.
+	\end{itemize}
+\item From 23/09/2013 to 11/10/2013
+	\begin{itemize}
+	\item Specify the tasks to do and make a planning.
+	\end{itemize}
+\item From 11/10/2013 to 30/10/2013
+	\begin{itemize}
+	\item Connect first sensors to the Arduino.
+	\end{itemize}
+\item From 31/10/2013 to 10/01/2014
+	\begin{itemize}
+	\item Connect to guifi network and upload data to an open data platform.
+	\end{itemize}
+\item From 10/01/2014 to 01/06/2014
+	\begin{itemize}
+	\item Integration of sensors and communication aspects.
+	\item Install prototypes.
+	\item Data sharing and visualization.
+    \item Data analysis and evaluation of the testbed.
+	\end{itemize}
+\item From 02/06/2014 to 30/06/20014
+	\begin{itemize}
+	\item Preparation of the final memory.
+	\end{itemize}
+\item From 01/07/2014 to the date of the presentation
+	\begin{itemize}
+	\item Make the presentation.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Summary budget}
+The cost of this pilot will be approximately 4000 €. This quantity is for the scholarship to the student that will develop this pilot, budget for attending a conference or visiting collaborators, and the purchase of the necessary hardware.
+
+
+\section{Tutorial}
+I want to do an easy example to how to connect an arduino with a server running in my computer, what I want to do is mix the two examples of the arduino IDE (Blink and UDPSendReceiveString). The final result should be a program in my computer that comunicates with the arduino with an UDP command to light a LED fot 10 seconds.
+
+This is a reduce problem of the real "bottom-up sensor testbed" because, at the end I will have a program that will ask all the arduino devices to send the data that they have, stop sending or reset it.
+
+
+
+\end{document}
