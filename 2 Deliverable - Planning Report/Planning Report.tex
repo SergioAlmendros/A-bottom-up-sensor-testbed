@@ -1,0 +1,49 @@
+\documentclass[10pt,a4paper]{article}
+
+\title{A bottom up sensor testbed}
+\author{Sergio Almendros Diaz}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Planning Report}
+
+The following sections explain the tasks that I will do in the course of this project.
+
+\subsection{Small problem solution}
+
+I want to do an easy example to how to connect an arduino with a server running in my computer, what I want to do is mix the two examples of the arduino IDE (Blink and UDPSendReceiveString). The final result should be a program in my computer that communicates with the arduino with an UDP command to light a LED fot 10 seconds.
+
+This is a reduce problem of the real "bottom-up sensor testbed" because, at the end, in every arduino will be a program that will have to send a message to a server with the data of the sensors attached to it.
+
+\subsection{Collect Data from sensors}
+
+First I will connect a temperature sensor to the arduino YUN, then, I will develop a program to collect the information from it, and send it to a small server.
+When the temperature sensor works, I will do the same process with a humidity, light, and noise sensor.
+
+\subsection{Install Sentilo}
+
+Sentilo (www.sentilo.io) is an open source sensor and actuator platform that I will install in my laptop to act as the server between the sensor network and the interface for the users to visualize the data. 
+
+\subsection{Communication with Sentilo}
+
+I will adapt the messages that the arduino send to fit with the Sentilo.
+
+\subsection{First big test}
+
+At this moment, the part of the arduino and the server will be done, so I will test the server for the real number of guifi nodes with a program which will emulate x arduinos sending different values of temperature, humidity, light, and noise, to test the capacity of the Sentilo platform.
+
+\subsection{Interface}
+
+I want to do an interface for any user to understand the meaning of the temperature, humidity, light, and noise values. This interface will be develop for an android mobile application.
+
+\subsection{Sentilo module}
+
+I will develop a module for the Sentilo platform, ideally it will be a authentication module, but by the time I could start this task it may be developed, so this task is a little bit unknown.
+
+\subsection{Memory}
+
+This task have to be done in parallel with all the other ones, and its purpose is document all the work that I have done.
+
+\end{document}
