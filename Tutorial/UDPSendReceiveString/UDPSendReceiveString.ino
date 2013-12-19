@@ -22,7 +22,7 @@
 // The IP address will be dependent on your local network:
 byte mac[] = {  
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-IPAddress ip(192, 168, 1, 177);
+IPAddress ip(192, 168, 1, 5);
 
 unsigned int localPort = 8888;      // local port to listen on
 
@@ -35,6 +35,7 @@ EthernetUDP Udp;
 
 void setup() {
   // start the Ethernet and UDP:
+  Serial.println("hola");
   Ethernet.begin(mac,ip);
   Udp.begin(localPort);
 
@@ -44,7 +45,7 @@ void setup() {
 void loop() {
   // if there's data available, read a packet
   int packetSize = Udp.parsePacket();
-  if(packetSize)
+  if(packetSize > 0)
   {
     Serial.print("Received packet of size ");
     Serial.println(packetSize);
