@@ -1,0 +1,4 @@
+pdf: 
+	latex Planning_Report.tex
+	dvips -o Planning_Report.ps -Ppdf -G0 -t a4 Planning_Report.dvi
+	ps2pdf -sPAPERSIZE=a4 -dPDFSETTINGS=/prepress -dEmbedAllFonts=true Planning_Report.ps
