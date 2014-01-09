@@ -1,12 +1,58 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[12pt, b5paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
 
+%CODIFICACIÓ
+\usepackage[latin1]{inputenc}
+
+%IDIOMES
+\usepackage[catalan,english]{babel}
+
+%NOMÉS PER A OBTENIR INDICACIÓ DEL MARC EN MIDA B5
+\usepackage[b5paper]{geometry}
+\usepackage[cam,a4,center,frame]{crop}
+
+%PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
+\usepackage{graphicx}
+
+%FONTS TIMES O GARAMOND, 
+\usepackage{times}
+%\usepackage{garamond}
+
+%SENSE HEADINGS: NO MODIFICAR
+\pagestyle{plain}
+
+%PER A L'ÍNDEX DE MATÈRIES
+\usepackage{makeidx}
+\makeindex
+
+%ESTIL DE BIBLIOGRAFIA
+\bibliographystyle{apalike}
+
+
+%AQUEST DOCUMENT ÉS EN CATALÀ
+\selectlanguage{english}
+
+%EN COMPTES DE ÍNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
+\addto\captionscatalan
+  {\renewcommand{\contentsname}{\Large \sffamily Index}}
+
+
+%AFEGIU EN AQUESTA PART LES VOSTRES DADES
 \title{A bottom up sensor testbed}
 \author{Sergio Almendros Diaz}
-\date{\today}
+\thyear{2013/2014}
+\department{NETS}
+\supervisor{Jaume Barcelo}
+
 
 \begin{document}
+
+
+\frontmatter
+
 \maketitle
+
+\cleardoublepage
 
 \section{Planning Report}
 
@@ -52,22 +98,70 @@ This task have to be done in parallel with all the other ones, and its purpose i
 
 \subsection{Gantt chart}
 
-\begin{figure}
-\begin{center}
-  \begin{ganttchart}{1}{23}
-    \gantttitle{Pilot Timeline}{23} \\ 
-    \ganttbar{Task 1 [7/01/14 - 12/01/14]}{1}{1} \\
-    \ganttlinkedbar{Task 2 [13/01/14 - 19/01/14]}{3}{4} \\
-    \ganttlinkedbar{Task 3 [20/01/14 - 2/02/14]}{5}{7} \\
-    \ganttlinkedbar{Task 4 [3/02/14 - 5/02/14]}{8}{8} \\
-    \ganttlinkedbar{Task 5 [6/02/14 - 16/02/14]}{9}{11} \\
-    \ganttlinkedbar{Task 6 [17/02/14 - 2/03/14]}{12}{13} \\
-    \ganttlinkedbar{Task 7 [3/03/14 - 30/04/14]}{14}{18} \\
-    \ganttlinkedbar{Task 8 [1/05/14 - 31/06/14]}{19}{22} \\
-    \ganttbar{Task 9 [7/01/14 - 31/06/14]}{1}{22}
-  \end{ganttchart}
-\end{center}
-\end{figure} 
- 
+%  \begin{ganttchart}{1}{23}
+ %   \gantttitle{Pilot Timeline}{23} \\ 
+  %  \ganttbar{Task 1 [7/01/14 - 12/01/14]}{1}{1} \\
+   % \ganttlinkedbar{Task 2 [13/01/14 - 19/01/14]}{3}{4} \\
+    %\ganttlinkedbar{Task 3 [20/01/14 - 2/02/14]}{5}{7} \\
+%    \ganttlinkedbar{Task 4 [3/02/14 - 5/02/14]}{8}{8} \\
+ %   \ganttlinkedbar{Task 5 [6/02/14 - 16/02/14]}{9}{11} \\
+  %  \ganttlinkedbar{Task 6 [17/02/14 - 2/03/14]}{12}{13} \\
+   % \ganttlinkedbar{Task 7 [3/03/14 - 30/04/14]}{14}{18} \\
+    %\ganttlinkedbar{Task 8 [1/05/14 - 31/06/14]}{19}{22} \\
+    %\ganttbar{Task 9 [7/01/14 - 31/06/14]}{1}{22}
+%  \end{ganttchart}
+
+
+\begin{figure}[ftbp]
+  \begin{center}
+
+    \begin{ganttchart}
+    [y unit title=0.4cm, 
+    y unit chart=0.5cm,
+    vgrid,hgrid,
+    title label anchor/.style={below=-1.6ex},
+    title left shift=.05,
+    title right shift=-.05,
+    title height=1,
+    bar/.style={fill=gray!50},
+    incomplete/.style={fill=white},
+    progress label text={},
+    bar height=0.7,
+    group right shift=0,
+    group top shift=.6,
+    group height=.3,
+    group peaks height={}{}{.2}]{1}{21}
+    %labels
+    \gantttitle{2014}{21} \\
+    \gantttitle{January}{3} 
+    \gantttitle{February}{3} 
+    \gantttitle{March}{3} 
+    \gantttitle{April}{3} 
+    \gantttitle{May}{3} 
+    \gantttitle{June}{3}
+    \gantttitle{July}{3} \\
+    %tasks
+    \ganttbar{First task}{1}{1} \\
+    \ganttbar{Task 2}{2}{2} \\
+    \ganttbar{Task 3}{3}{3} \\
+    \ganttbar{Task 4}{4}{4} \\
+    \ganttbar{task 5}{5}{5} \\
+    \ganttbar{Task 6}{6}{8} \\
+    \ganttbar{Task 7}{9}{14} \\
+    \ganttbar{task 8}{15}{18} \\
+    \ganttbar{task 9}{2}{20}
+
+    %relations 
+    \ganttlink{elem0}{elem1} 
+    \ganttlink{elem1}{elem2} 
+    \ganttlink{elem2}{elem3} 
+    \ganttlink{elem3}{elem4} 
+    \ganttlink{elem4}{elem5} 
+    \ganttlink{elem5}{elem6} 
+    \ganttlink{elem6}{elem7}  
+   \end{ganttchart}
+  \end{center}
+\caption{Gantt Chart}
+\end{figure}
 
 \end{document}
