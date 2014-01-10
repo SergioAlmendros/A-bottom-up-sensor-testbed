@@ -54,7 +54,7 @@
 
 \cleardoublepage
 
-\section{Planning Report}
+\section{Plllanning Report}
 
 The following sections explain the tasks that I will do in the course of this project.
 
@@ -97,21 +97,6 @@ I will contribute to Sentilo and other sensor data brokerage platforms accommoda
 This task have to be done in parallel with all the other ones, and its purpose is document all the work that I will do.
 
 \subsection{Gantt chart}
-
-%  \begin{ganttchart}{1}{23}
- %   \gantttitle{Pilot Timeline}{23} \\ 
-  %  \ganttbar{Task 1 [7/01/14 - 12/01/14]}{1}{1} \\
-   % \ganttlinkedbar{Task 2 [13/01/14 - 19/01/14]}{3}{4} \\
-    %\ganttlinkedbar{Task 3 [20/01/14 - 2/02/14]}{5}{7} \\
-%    \ganttlinkedbar{Task 4 [3/02/14 - 5/02/14]}{8}{8} \\
- %   \ganttlinkedbar{Task 5 [6/02/14 - 16/02/14]}{9}{11} \\
-  %  \ganttlinkedbar{Task 6 [17/02/14 - 2/03/14]}{12}{13} \\
-   % \ganttlinkedbar{Task 7 [3/03/14 - 30/04/14]}{14}{18} \\
-    %\ganttlinkedbar{Task 8 [1/05/14 - 31/06/14]}{19}{22} \\
-    %\ganttbar{Task 9 [7/01/14 - 31/06/14]}{1}{22}
-%  \end{ganttchart}
-
-
 \begin{figure}[ftbp]
   \begin{center}
 
@@ -149,7 +134,7 @@ This task have to be done in parallel with all the other ones, and its purpose i
     \ganttbar{Task 6}{6}{8} \\
     \ganttbar{Task 7}{9}{14} \\
     \ganttbar{task 8}{15}{18} \\
-    \ganttbar{task 9}{1}{21}
+    \ganttbar{task 9}{2}{20}
 
     %relations 
     \ganttlink{elem0}{elem1} 

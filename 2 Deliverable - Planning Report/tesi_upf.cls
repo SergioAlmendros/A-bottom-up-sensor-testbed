@@ -221,12 +221,12 @@
       \end{tabular}\par}%
       \rule{\linewidth}{1mm} \par
       \vskip 1cm%
-    {\large TESI DOCTORAL UPF / ANY \@thyear}\\[2cm]
-    {\normalsize DIRECTOR DE LA TESI}\par
-    {\large \@supervisor} {\large Departament \@department} \par
+    {\large TFG UPF / YEAR \@thyear}\\[2cm]
+    {\normalsize DIRECTOR/S OF  THE TFG:}\par
+    {\large \@supervisor} {\normalsize \\ DEPARTMENT:\\ \@department} \par
     \vspace{3cm}
    \centering  
-    \fbox{\includegraphics[scale=0.4]{logo_upf.png}}
+    \fbox{\includegraphics[scale=3]{logo_upf.png}}
    \end{flushleft}\par
 %  \@thanks
 % \vfil\null

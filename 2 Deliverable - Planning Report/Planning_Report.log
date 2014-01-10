@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  9 JAN 2014 11:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  10 JAN 2014 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -391,52 +391,119 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(./geometry.sty
-Package: geometry 2002/07/08 v3.2 Page Geometry
-\Gm@cnth=\count124
-\Gm@cntv=\count125
-\c@Gm@tempcnt=\count126
-\Gm@bindingoffset=\dimen153
-\Gm@wd@mp=\dimen154
-\Gm@odd@mp=\dimen155
-\Gm@even@mp=\dimen156
-\Gm@dimlist=\toks26
-) (./crop.sty
+(./crop.sty
 Package: crop 2003/05/20 v1.9 crop marks (mf)
-\stockwidth=\dimen157
-\stockheight=\dimen158
-\CROP@index=\count127
-\CROP@offset=\count128
+\stockwidth=\dimen153
+\stockheight=\dimen154
+\CROP@index=\count124
+\CROP@offset=\count125
 Package crop Info: Local config file crop.cfg used on input line 605.
+ (/usr/share/texlive/texmf-dist/tex/xelatex/xetexconfig/crop.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/xelatex/xetexconfig/crop.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen155
+\captionmargin@=\dimen156
+\captionwidth=\dimen157
+\caption@tempdima=\dimen158
+\caption@indent=\dimen159
+\caption@parindent=\dimen160
+\caption@hangindent=\dimen161
+)
+\c@ContinuedFloat=\count126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
+
+(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5 Variant command support
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count127
+\decimalpart=\count128
+)
+Package: xstring 2013/2/28  v1.7a  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen162
+)
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/05/30 v0.4u Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count129
+\calc@Bcount=\count130
+\calc@Adimen=\dimen163
+\calc@Bdimen=\dimen164
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count131
+\calc@Cskip=\skip45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package atbegshi Info: Package `crop' patched.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2013/05/30 v0.4u Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box37
+\AM@toc@title=\toks27
+\c@AM@survey=\count132
+\AM@templatesizebox=\box38
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
-\@indexfile=\write4
-\openout4 = `Planning_Report.idx'.
+\@indexfile=\write5
+\openout5 = `Planning_Report.idx'.
 
 
 Writing index file Planning_Report.idx
 (./Planning_Report.aux)
 \openout1 = `Planning_Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -444,17 +511,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen159
-\scratchbox=\box37
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen160
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count133
+\scratchdimen=\dimen165
+\scratchbox=\box39
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen166
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -462,10 +529,6 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -503,65 +566,29 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \l on input line 48.
-LaTeX Info: Redefining \L on input line 48.
--------------------- Geometry parameters
-paper: b5paper
-landscape: --
-twocolumn: --
-twoside: true
-asymmetric: --
-h-parts: 60.09283pt, 0.7\paperwidth , 90.13925pt (default)
-v-parts: 85.35913pt, 0.7\paperheight , 128.03871pt (default)
-hmarginratio: 2:3
-vmarginratio: 2:3
-lines: --
-heightrounded: --
-bindingoffset: 0.0pt
-truedimen: --
-includehead: --
-includefoot: --
-includemp: --
-driver: pdftex
--------------------- Page layout dimensions and switches
-\paperwidth  500.7685pt
-\paperheight 711.3189pt
-\textwidth  350.5364pt
-\textheight 497.92105pt
-\oddsidemargin  -12.17715pt
-\evensidemargin 17.86926pt
-\topmargin  -18.78465pt
-\headheight 12.0pt
-\headsep    19.8738pt
-\footskip   30.0pt
-\marginparwidth 50.0pt
-\marginparsep   7.0pt
-\columnsep  10.0pt
-\skip\footins  10.8pt plus 4.0pt minus 2.0pt
-\hoffset 0.0pt
-\voffset 0.0pt
-\mag 1000
-\@twosidetrue \@mparswitchtrue 
-(1in=72.27pt, 1cm=28.45pt)
------------------------
-Package crop Info: requested driver: `' on input line 48.
-Package crop Info: detected driver: `pdftex' on input line 48.
-Package crop Info: using `pdftex' graphics driver on input line 48.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 53.
+LaTeX Info: Redefining \l on input line 52.
+LaTeX Info: Redefining \L on input line 52.
+Package crop Info: requested driver: `' on input line 52.
+Package crop Info: detected driver: `pdftex' on input line 52.
+Package crop Info: using `pdftex' graphics driver on input line 52.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box40
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 57.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 53.
+(Font)              <14.4> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 53.
+(Font)              <7> on input line 57.
 
-<logo_upf.png, id=4, 222.8325pt x 78.2925pt>
+<logo_upf.png, id=4, 36.135pt x 13.2495pt>
 File: logo_upf.png Graphic file (type png)
  <use logo_upf.png>
-Package pdftex.def Info: logo_upf.png used on input line 53.
-(pdftex.def)             Requested size: 89.13141pt x 31.31644pt.
+Package pdftex.def Info: logo_upf.png used on input line 57.
+(pdftex.def)             Requested size: 108.40466pt x 39.74835pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -572,32 +599,63 @@ Package pdftex.def Info: logo_upf.png used on input line 53.
 
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
- [3]
-Overfull \hbox (0.95555pt too wide) in paragraph at lines 162--163
- [] 
- []
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
 
-[4] [5] (./Planning_Report.aux) ) 
+(./Planning_Report.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 6.
+)
+\tf@toc=\write6
+\openout6 = `Planning_Report.toc'.
+
+ [3] [4
+
+
+] (./Planning_Report.lof)
+\tf@lof=\write7
+\openout7 = `Planning_Report.lof'.
+
+ [5] [6
+
+
+]
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
+[1
+
+
+]
+No file Planning_Report.bbl.
+[2] [3] [4
+
+
+]
+No file Planning_Report.ind.
+(./Planning_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 12551 strings out of 493307
- 243684 string characters out of 6139906
- 310794 words of memory out of 5000000
- 15737 multiletter control sequences out of 15000+600000
- 17823 words of font info for 35 fonts, out of 8000000 for 9000
+ 14580 strings out of 493307
+ 277830 string characters out of 6139906
+ 348969 words of memory out of 5000000
+ 17706 multiletter control sequences out of 15000+600000
+ 21887 words of font info for 45 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,10n,63p,423b,826s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips
-/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Planning_Report.pdf (5 pages, 57612 bytes).
+ 63i,10n,63p,423b,858s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Planning_Report.pdf (10 pages, 51085 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
