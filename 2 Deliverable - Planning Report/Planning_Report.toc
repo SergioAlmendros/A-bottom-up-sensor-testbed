@@ -4,7 +4,7 @@
 \contentsline {chapter}{List of figures}{v}
 \contentsline {chapter}{\numberline {1}{\MakeUppercase { Planning Report}}}{1}
 \contentsline {section}{\numberline {1.1}Familiarization with the Arduino Yun}{1}
-\contentsline {section}{\numberline {1.2}Small problem solution}{1}
+\contentsline {section}{\numberline {1.2}Preliminary testbed}{1}
 \contentsline {section}{\numberline {1.3}Collect Data from sensors}{1}
 \contentsline {section}{\numberline {1.4}Install Sentilo}{2}
 \contentsline {section}{\numberline {1.5}Communication with Sentilo}{2}

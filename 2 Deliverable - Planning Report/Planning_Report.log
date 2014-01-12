@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  10 JAN 2014 14:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  12 JAN 2014 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -643,7 +643,7 @@ No file Planning_Report.ind.
 Here is how much of TeX's memory you used:
  14580 strings out of 493307
  277830 string characters out of 6139906
- 348969 words of memory out of 5000000
+ 349969 words of memory out of 5000000
  17706 multiletter control sequences out of 15000+600000
  21887 words of font info for 45 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -652,7 +652,7 @@ Here is how much of TeX's memory you used:
 .enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Planning_Report.pdf (10 pages, 51085 bytes).
+Output written on Planning_Report.pdf (10 pages, 51084 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

@@ -1,27 +1,31 @@
-\documentclass[12pt, b5paper,twoside]{tesi_upf}
+\documentclass[12pt, a4paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
 
-%CODIFICACI√ì
+%CODIFICACI”
 \usepackage[latin1]{inputenc}
+
 
 %IDIOMES
 \usepackage[catalan,english]{babel}
 
-%NOM√âS PER A OBTENIR INDICACI√ì DEL MARC EN MIDA B5
-\usepackage[b5paper]{geometry}
+%NOM…S PER A OBTENIR INDICACI” DEL MARC EN MIDA A4
 \usepackage[cam,a4,center,frame]{crop}
 
-%PER A INCLOURE GR√ÄFICS I EL LOGO DE LA UPF
+%PER A INCLOURE GR¿FICS I EL LOGO DE LA UPF
 \usepackage{graphicx}
-
+\usepackage{caption}
+\usepackage{acronym}
+\usepackage{multirow}
 %FONTS TIMES O GARAMOND, 
 \usepackage{times}
 %\usepackage{garamond}
+\usepackage{url}
 
+\usepackage{pdfpages}
 %SENSE HEADINGS: NO MODIFICAR
 \pagestyle{plain}
 
-%PER A L'√çNDEX DE MAT√àRIES
+%PER A L'ÕNDEX DE MAT»RIES
 \usepackage{makeidx}
 \makeindex
 
@@ -29,20 +33,20 @@
 \bibliographystyle{apalike}
 
 
-%AQUEST DOCUMENT √âS EN CATAL√Ä
+%AQUEST DOCUMENT …S EN CATAL¿
 \selectlanguage{english}
 
-%EN COMPTES DE √çNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
+%EN COMPTES DE ÕNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
 \addto\captionscatalan
-  {\renewcommand{\contentsname}{\Large \sffamily Index}}
+  {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
 
 
 %AFEGIU EN AQUESTA PART LES VOSTRES DADES
 \title{A bottom up sensor testbed}
-\author{Sergio Almendros Diaz}
-\thyear{2013/2014}
-\department{NETS}
-\supervisor{Jaume Barcelo}
+\author{Sergio Almendros DÌaz}
+\thyear{2013}
+\department{Departament de Tecnologies de la InformaciÛ i les Comunicacions (DTIC)}
+\supervisor{Jaume BarcelÛ}
 
 
 \begin{document}
@@ -52,51 +56,63 @@
 
 \maketitle
 
-\cleardoublepage
+\selectlanguage{english}
 
-\section{Plllanning Report}
+
+%TAULA DE CONTINGUTS: OBLIGAT“RIA
+\tableofcontents
+
+%INDEX DE FIGURES; NOM…S ES POSA SI HI HA FIGURES
+\listoffigures
+%Fa que aparegui al sumari
+\addcontentsline{toc}{chapter}{List of figures}
+
+%COMEN«A EL TEXT
+\mainmatter
+\chapter{Planning Report}
 
 The following sections explain the tasks that I will do in the course of this project.
 
-\subsection{Familiarization with the Arduino Yun}
+\section{Familiarization with the Arduino Yun}
 
 In this project I will be working with an arduino Yun, but I never worked before with any type of arduino, so the first task is to start coding different kind of programs. Then I will have to learn how to interact with the linux in the arduino Yun.
 
-\subsection{Small problem solution}
+\section{Small problem solution}
 
 I want to do an easy example to how to connect an arduino with a server running in my computer, what I want to do is establish a bridge between an arduino program and the linux within the arduino to be able to communicate with a server in my laptop, and send a string with the value returned by a sensor.
 This is a reduce problem of the real "bottom-up sensor testbed" because, at the end, in every arduino will be a program that will have to send a message to a server with the data of the sensors attached to it.
 
-\subsection{Collect Data from sensors}
+\section{Collect Data from sensors}
 
 First I will connect a temperature sensor to the arduino YUN, then, I will develop a program to collect the information from it, and send it to a server.
 When the temperature sensor works, I will do the same process with a humidity, light, and noise sensor.
 
-\subsection{Install Sentilo}
+\section{Install Sentilo}
 
 Sentilo (www.sentilo.io) is an open source sensor and actuator platform that I will install in my laptop to act as the server between the sensor network and the interface for the users to visualize the data. 
 
-\subsection{Communication with Sentilo}
+\section{Communication with Sentilo}
 
 I will adapt the messages that the arduino send to fit with the Sentilo.
 
-\subsection{Real deployment}
+\section{Real deployment}
 
 At this moment, the part of the arduino and the server will be done, so I will test the server installing the arduino in real nodes of the guifi network, for example, the node in the Universitat Pompeu Fabra, and any other node that allow me to install it. The arduino will have a temperature, humidity, light, and noise sensor.
 
-\subsection{Interface}
+\section{Interface}
 
 I want to do an interface for any user to understand the meaning of the temperature, humidity, light, and noise values. This interface will be develop for an android mobile application.
 
-\subsection{Sentilo module}
+\section{Sentilo module}
 
 I will contribute to Sentilo and other sensor data brokerage platforms accommodating the sensor testbed deployed in the previous tasks.
 
-\subsection{Final report}
+\section{Final report}
 
 This task have to be done in parallel with all the other ones, and its purpose is document all the work that I will do.
 
-\subsection{Gantt chart}
+\section{Gantt chart}
+
 \begin{figure}[ftbp]
   \begin{center}
 
@@ -149,4 +165,40 @@ This task have to be done in parallel with all the other ones, and its purpose i
 \caption{Gantt Chart}
 \end{figure}
 
+
+
+
+
+\bibliography{bibliography}
+\cleardoublepage
+
+
+
+\backmatter
+\printindex
+
+
+
+
+
 \end{document}
+
+
+%NUMERACI” DE LA P¿GINA EXTERIOR EXCEPTE EN LA PRIMERA P¿GINA DE CADA CAPÕTOL
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+
+
+%MUTIPLES ÕNDEX
+%En el pre‡mbul
+\usepackage{multind}
+\makeindex{authors}
+%IntroducciÛ d'entrades la forma
+\index{authors}{Einstein}
+%SituaciÛ de l'Õndex
+\printindex{authors}{Author index}
+%Cal eliminar les comandes \usepakage{makeidx} \makeindex \printindex
+%cal exacutar des de la lÌnia de comandes makeindex authors
