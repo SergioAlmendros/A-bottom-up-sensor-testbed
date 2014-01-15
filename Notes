@@ -1,0 +1,13 @@
+-¿Que te de commons y de bottom el nostre proyecte? (Posible pregunta de la presentacion final)
+-¿Porque se tiene que dar dinero en el proyecto?
+
+-¿Como pasar del arduino al linux del arduino?
+
+ -13/01/14: [Task 2] Buscar informacion para pasar un script en java al linux del arduino para comunicarme con un servidor en el portatil
+ -14/01/14: [Task 2] 
+ --Peta, pero hay un ejemplo de la libreria bridge de arduino que hace lo que necesito: TemperatureWebPanel, y hace falta una tarjeta microSD
+ --Los nodos guifi enviaran datos siempre o solo cuando se lo pida el servidor?
+ --httpclient.get(http://www.sentilo.upf.edu/Num_Arduino/Tipo_Sensor/Valor)???
+ --[REUNION]
+ ---Hacer un usuario
+ ---Mirar battlemesh, ietf, y fosdem, para ver si ofrecen algo que ayude a nuestro piloto o para poder contribuir.
