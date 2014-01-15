@@ -1,0 +1,1 @@
+In theory, the arduino program creates an httpclient (example of the arduino 1.5.5 IDE), and basically it does a get to the IP and port where the server is listening with the command "FIN" and the server stops.
