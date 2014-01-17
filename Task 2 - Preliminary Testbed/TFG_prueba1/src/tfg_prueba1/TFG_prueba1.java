@@ -24,14 +24,16 @@ public class TFG_prueba1 {
             BufferedReader inClient = new BufferedReader(new InputStreamReader(connectedserver.getInputStream()));
             int c = 0;
             msg = inClient.readLine();
-            String[] msg2 = msg.split(" ");
+            /*String[] msg2 = msg.split(" ");
             String msgData = msg2[1].substring(1);
             if(msgData.equals("FIN"))
             {
                 connectedserver.close();
                 break;
-            }
+            }*/
             System.out.println(msg);
+            connectedserver.close();
+            break;
         }
         server.close();
 
