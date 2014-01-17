@@ -3,11 +3,22 @@
 
 -¿Como pasar del arduino al linux del arduino?
 
- -13/01/14: [Task 2] Buscar informacion para pasar un script en java al linux del arduino para comunicarme con un servidor en el portatil
- -14/01/14: [Task 2] 
- --Peta, pero hay un ejemplo de la libreria bridge de arduino que hace lo que necesito: TemperatureWebPanel, y hace falta una tarjeta microSD
- --Los nodos guifi enviaran datos siempre o solo cuando se lo pida el servidor?
- --httpclient.get(http://www.sentilo.upf.edu/Num_Arduino/Tipo_Sensor/Valor)???
- --[REUNION]
- ---Hacer un usuario
- ---Mirar battlemesh, ietf, y fosdem, para ver si ofrecen algo que ayude a nuestro piloto o para poder contribuir.
+-13/01/14: [Task 2] Buscar informacion para pasar un script en java al linux del arduino para comunicarme con un servidor en el portatil
+-14/01/14: [Task 2] 
+--Peta, pero hay un ejemplo de la libreria bridge de arduino que hace lo que necesito: TemperatureWebPanel, y hace falta una tarjeta microSD
+--Los nodos guifi enviaran datos siempre o solo cuando se lo pida el servidor?
+--httpclient.get(http://www.sentilo.upf.edu/Num_Arduino/Tipo_Sensor/Valor)???
+--[REUNION]
+---Hacer un usuario
+---Mirar battlemesh, ietf, y fosdem, para ver si ofrecen algo que ayude a nuestro piloto o para poder contribuir.
+-15/01/14: 
+--[Task 2] 
+---Con el httpclient.get ya funciona, aunque he cambiado un poco el servidor.
+---Google Search: arduino read http response code, he encontrado una libreria en github que se llama HttpClient que hace mas facil la interaccion con webservers desde arduino.
+-16/01/14
+--[Task 2]
+---El codigo de ejemplo funciona con Ethernet, pero en teoria deberia funcionar con Wifi, empiezo a mirarme el codigo para entenderlo.
+-16/01/14
+--[Task 2]
+---Utilizando la libreria httpclient (https://github.com/amcewen/HttpClient) y substituyendo EthernetClient por YunClient he podido hacer un get, pero no funciona con webs que redireccionan.
+---Aprender ha hacer posts!!
