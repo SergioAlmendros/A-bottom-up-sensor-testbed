@@ -1,1 +1,2 @@
-In theory, the arduino program creates an httpclient (example of the arduino 1.5.5 IDE), and basically it does a get to the IP and port where the server is listening with the command "FIN" and the server stops.
+The Sketch_httpclient_GET use a library to create a HttpClient (https://github.com/amcewen/HttpClient) and sends a get to the upf web page and show the response by the Serial.
+The Sketch_httpclient_POST is not complet yet.
