@@ -28,4 +28,30 @@
 ---Voy a intentar subir un JSON a opencities con un valor inventado de temperatura.
 ---Falla opencities al intentar subir un GeoJson.
 ---[GET en opencities] http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/raspberrylab/1
----He cogido el codigo de Jaume para recoger los datos de una sensor de temperatura
+---He cogido el codigo de Jaume para recoger los datos de una sensor de temperatura, y sale un valor un poco alto.
+---Voy a intentar hacer un get de un dataset de opencities desde arduino, pero no deja porque la libreria Httpclient que estoy usando no soporta conexiones persistentes, que supongo que son las que utiliza opencities.
+---Voy a coger valores de un sensor de luz (LDR).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
