@@ -1,0 +1,30 @@
+{
+    "type": "TemperatureCollection",
+    "name": "Temperature Invented value1",
+    "timeStamp":"2014-01-20T10:14:49.742Z",
+    "features": [
+     	{
+            "type": "Feature",
+            "tags": ["temperature", "upf"],
+            "geometry": {
+	        	"type": "Point",
+				"coordinates": [2.167028, 41.387547]
+            },
+            "properties": {
+            	"id" : "1",
+            	"name": "SENSOR-TEMP-BCN-UPFPOBLENOU",
+            	"datasetId": "temperature",
+            	"datasetName": "temperature",
+            	"address": "Carrer de Tànger, Barcelona",
+            	"description": "Temperature sensor of UPF Poblenou",
+            	"timeStamp":"2014-01-20T10:14:49.742Z",
+            	"value": "25.1",
+            	"unit":"ºC",
+            	"contentType":"video/ogg",
+            	"url":"http://download.blender.org/peach/trailer/trailer_1080p.ogg",
+            	"previewImage":"http://peach.blender.org/wp-content/uploads/poster_rodents_small.jpg",
+            	"size":4	
+            }
+     	}
+    ]     	
+}

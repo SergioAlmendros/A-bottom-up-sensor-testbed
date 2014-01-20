@@ -18,7 +18,14 @@
 -16/01/14
 --[Task 2]
 ---El codigo de ejemplo funciona con Ethernet, pero en teoria deberia funcionar con Wifi, empiezo a mirarme el codigo para entenderlo.
--16/01/14
+-17/01/14
 --[Task 2]
 ---Utilizando la libreria httpclient (https://github.com/amcewen/HttpClient) y substituyendo EthernetClient por YunClient he podido hacer un get, pero no funciona con webs que redireccionan.
 ---Aprender ha hacer posts!!
+---Algo falla, no se porque el sketch no se conecta con mi ordenador.
+-20/01/14
+--[Task 2]
+---Voy a intentar subir un JSON a opencities con un valor inventado de temperatura.
+---Falla opencities al intentar subir un GeoJson.
+---[GET en opencities] http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/raspberrylab/1
+---He cogido el codigo de Jaume para recoger los datos de una sensor de temperatura
