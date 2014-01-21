@@ -31,7 +31,10 @@
 ---He cogido el codigo de Jaume para recoger los datos de una sensor de temperatura, y sale un valor un poco alto.
 ---Voy a intentar hacer un get de un dataset de opencities desde arduino, pero no deja porque la libreria Httpclient que estoy usando no soporta conexiones persistentes, que supongo que son las que utiliza opencities.
 ---Voy a coger valores de un sensor de luz (LDR).
----Manuel y yo hemos intentado conectar un QRD1113 al arduino, pero aun no hemos acabado.
+---Manuel y yo hemos intentado conectar un QRD1114 al arduino, pero aun no hemos acabado.
+-21/01/14
+--El QRD1114 estaba fundido
+--Me he bajado la libreria para hacer JSON (https://github.com/interactive-matter/aJson) y he intentado reducir el ejemplo que dan para entenderlo.
 
 
 
