@@ -41,22 +41,51 @@ void testJSON() {
   else {
     return;
   }
-  aJson.addItemToObject(root, "name", aJson.createItem(
-  "Sergio"));
-  aJsonObject* fmt = aJson.createObject();
-  if (fmt != NULL) {
-    aJson.addItemToObject(root, "format", fmt);
-    aJson.addStringToObject(fmt, "type", "rect");
-    aJson.addNumberToObject(fmt, "width", 1920);
-    aJson.addNumberToObject(fmt, "height", 1080);
-    aJson.addFalseToObject(fmt, "interlace");
-    aJson.addNumberToObject(fmt, "frame rate", 24);
-    aJson.addNumberToObject(fmt, "length", 1.29);
-  } 
-  else {
-    return;
-  }
+  aJson.addItemToObject(root, "type", aJson.createItem(
+  "FeatureCollection"));
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "timeStamp", "2014-01-20T10:31:06.655Z");
+  aJsonObject* features = aJson.createArray();
+  aJson.addItemToObject(root, "features", features);
+  
+  aJsonObject* featuresroot = aJson.createObject();
+  aJson.addItemToArray(features,featuresroot);
+  aJson.addItemToObject(featuresroot, "type", aJson.createItem(
+  "Feature"));
+  
+  aJsonObject* tags = aJson.createArray();
+  aJson.addItemToObject(featuresroot, "tags", tags);
+  aJson.addItemToArray(tags,aJson.createItem("red"));
+  aJson.addItemToArray(tags,aJson.createItem("tall"));
+  aJson.addItemToArray(tags,aJson.createItem("cheap"));
+  
+  aJsonObject* geometry = aJson.createObject();
+  aJson.addItemToObject(featuresroot, "geometry", geometry);
+  aJson.addStringToObject(geometry, "type", "Point");
+  aJsonObject* coordinates = aJson.createArray();
+  aJson.addItemToObject(geometry, "coordinates", coordinates);
+  aJson.addItemToArray(coordinates,aJson.createItem(2.167028));
+  aJson.addItemToArray(coordinates,aJson.createItem(41.387547));
 
+  aJsonObject* properties = aJson.createObject();
+  aJson.addItemToObject(featuresroot, "properties", properties);
+  aJson.addStringToObject(properties, "id", "1");
+  aJson.addNumberToObject(properties, "name",1);
+  /*aJson.addStringToObject(properties, "name", "SENSOR-TEMP-BCN-UPFPOBLENOU");
+  aJson.addStringToObject(properties, "datasetId", "temperature");
+  aJson.addStringToObject(properties, "datasetName", "temperature");
+  aJson.addStringToObject(properties, "address", "Carrer de Tanger, Barcelona");
+  aJson.addStringToObject(properties, "description", "Temperature sensor of UPF Poblenou");
+  aJson.addStringToObject(properties, "timeStamp", "2014-01-20T10:31:06.655Z");
+  aJson.addStringToObject(properties, "value", "21");
+  aJson.addStringToObject(properties, "unit", "*C");
+  aJson.addStringToObject(properties, "contentType", "video/ogg");
+  aJson.addStringToObject(properties, "url", "http://download.blender.org/peach/trailer/trailer_1080p.ogg");
+  aJson.addStringToObject(properties, "previewImage", "http://peach.blender.org/wp-content/uploads/poster_rodents_small.jpg");
+  aJson.addStringToObject(properties, "size", "4");
+  */
+  
+  
   freeMem("with object");
   char* string = aJson.print(root);
   if (string != NULL) {
