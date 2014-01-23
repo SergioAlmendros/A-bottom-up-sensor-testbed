@@ -40,26 +40,32 @@ void testObjects() {
   else {
     printProgStr( OBJECT_CREATION_FAILED_STRING);
     return;
+  }*/
+  
+  if (root == NULL) {
+    printProgStr( OBJECT_CREATION_FAILED_STRING);
+    return;
   }
-  printProgStr( ADDING_NAME_STRING);*/
+  
+  //printProgStr( ADDING_NAME_STRING);
   aJson.addItemToObject(root, "name", aJson.createItem(
   "Jack (\"Bee\") Nimble"));
   //printProgStr( CREATING_FROMAT_STRING);
   aJsonObject* fmt = aJson.createObject();
   if (fmt != NULL) {
-    printProgStr( ADDING_FORMAT_STRING);
+    //printProgStr( ADDING_FORMAT_STRING);
     aJson.addItemToObject(root, "format", fmt);
-    printProgStr( ADDING_TYPE_STRING);
+    //printProgStr( ADDING_TYPE_STRING);
     aJson.addStringToObject(fmt, "type", "rect");
-    printProgStr( ADDING_WIDTH_STRING);
+    //printProgStr( ADDING_WIDTH_STRING);
     aJson.addNumberToObject(fmt, "width", 1920);
-    printProgStr( ADDING_HEIGHT_STRING);
+    //printProgStr( ADDING_HEIGHT_STRING);
     aJson.addNumberToObject(fmt, "height", 1080);
-    printProgStr( ADDING_INTERLACE_STRING);
+    //printProgStr( ADDING_INTERLACE_STRING);
     aJson.addFalseToObject(fmt, "interlace");
-    printProgStr( ADDING_FRAMERATE_STRING);
+    //printProgStr( ADDING_FRAMERATE_STRING);
     aJson.addNumberToObject(fmt, "frame rate", 24);
-    printProgStr( ADDING_LENGTH_STRING);
+    //printProgStr( ADDING_LENGTH_STRING);
     aJson.addNumberToObject(fmt, "length", 1.29);
   } 
   else {
@@ -68,7 +74,7 @@ void testObjects() {
   }
 
   freeMem("with object");
-  //printProgStr( RESULT_PRINTING_STRING);
+  printProgStr( RESULT_PRINTING_STRING);
   char* string = aJson.print(root);
   if (string != NULL) {
     Serial.println(string);
@@ -77,12 +83,12 @@ void testObjects() {
     printProgStr( OUTPUT_STRING_ERROR);
   }
 
-  //printProgStr( DELETING_OBJECT_STRING);
+  printProgStr( DELETING_OBJECT_STRING);
   aJson.deleteItem(root);
   freeMem("after deletion");
 
-  //printProgStr(PARSING_OBJECT);
-  //Serial.println(string);
+  printProgStr(PARSING_OBJECT);
+  Serial.println(string);
   //root = aJson.parse(string);
   free(string);
   freeMem("after printing");
@@ -114,8 +120,8 @@ void testObjects() {
   }*/
 
   printProgStr( DELETING_OBJECT_STRING);
-  aJson.deleteItem(root);
-  freeMem("after deleting object");
+  //aJson.deleteItem(root);
+  //freeMem("after deleting object");
 }
 
 void testArrays() {

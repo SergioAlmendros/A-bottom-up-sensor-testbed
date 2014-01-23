@@ -1,6 +1,4 @@
 #include <aJSON.h>
-
-
 #include <avr/pgmspace.h>
 
 const prog_char PROGMEM RETRIEVING_NAME[] ="Retrieving name\n";
@@ -69,9 +67,16 @@ void testJSON() {
 
   aJsonObject* properties = aJson.createObject();
   aJson.addItemToObject(featuresroot, "properties", properties);
-  aJson.addStringToObject(properties, "id", "1");
-  aJson.addNumberToObject(properties, "name",1);
-  /*aJson.addStringToObject(properties, "name", "SENSOR-TEMP-BCN-UPFPOBLENOU");
+  
+  aJsonObject* p2 = aJson.createObject();
+  aJson.addItemToObject(featuresroot, "p2", p2);
+  
+  
+  
+  /*aJson.addStringToObject(properties, "id", "1");
+  aJson.addStringToObject(properties, "h", "2");
+  aJson.addNumberToObject(properties, "n",1);
+  aJson.addStringToObject(properties, "name", "SENSOR-TEMP-BCN-UPFPOBLENOU");
   aJson.addStringToObject(properties, "datasetId", "temperature");
   aJson.addStringToObject(properties, "datasetName", "temperature");
   aJson.addStringToObject(properties, "address", "Carrer de Tanger, Barcelona");
@@ -87,6 +92,55 @@ void testJSON() {
   
   
   freeMem("with object");
+  int len = strlen(aJson.print(root));
+  Serial.print("Size of the JSON = ");
+  Serial.println(len);
+  
+  char* string = aJson.print(root);
+  if (string != NULL) {
+    Serial.println(string);
+  } 
+
+  aJson.deleteItem(root);
+  freeMem("after deletion");
+
+  root = aJson.parse(string);
+  free(string);
+  freeMem("after printing");
+
+  aJsonObject* name = aJson.getObjectItem(root, "name");
+  aJson.deleteItem(root);
+  freeMem("after deleting object");
+}
+
+void testJSON2(){
+
+  Serial.println("Empieza");
+  
+  aJsonObject* root = aJson.createObject();
+  if (root != NULL) {
+  } 
+  else {
+    return;
+  }
+  aJson.addItemToObject(root, "type", aJson.createItem(
+  "FeatureCollection"));
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+  aJson.addStringToObject(root, "name", "Temperature Invented value1");
+
+ 
+ 
+  
+  freeMem("with object");
+  int len = strlen(aJson.print(root));
+  Serial.print("Size of the JSON = ");
+  Serial.println(len);
+  
   char* string = aJson.print(root);
   if (string != NULL) {
     Serial.println(string);
