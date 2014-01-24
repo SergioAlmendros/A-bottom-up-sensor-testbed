@@ -5,7 +5,7 @@ Design of the sketch (arduino) & script (python)
 
 -Python:
   
-  1- Save the data.
+  1- Collect the data.
   2- Read a file (logData) to check if the new value is the same as the last writed value.
   3- If the value is equal, the script will do nothing, if is different, it will write down in a new line on the file.
   4- Create the GeoJSON.

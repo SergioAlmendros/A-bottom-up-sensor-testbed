@@ -35,7 +35,16 @@
 -21/01/14
 --El QRD1114 estaba fundido
 --Me he bajado la libreria para hacer JSON (https://github.com/interactive-matter/aJson) y he intentado reducir el ejemplo que dan para entenderlo.
-
+-22/01/14
+--Haciendo el codigo para generar el geojson de ejemplo en opencities.
+--Parece que el objeto JSON es demasiado grande para la memoria del arduino.
+-23/01/14
+--Voy a intentar crear un script en python y guardarlo en el YUN, y ejecutarlo desde un sketch
+--El script en python (hello world) funciona desde el shell del yun (ssh root@ip_yun_wifi) y ya recibo el output.
+-24/01/14
+--He hecho un cursillo corto sobre python
+--Me he instalado el pycharm (IDE) en el portatil para programar en python
+--Estoy en el punto de crear el geojson
 
 
 

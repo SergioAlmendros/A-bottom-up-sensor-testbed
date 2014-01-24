@@ -48,7 +48,8 @@ void loop()
   http.beginRequest();
   //http.get("http://10.1.67.4:5555", "/someform");
   //http.get("http://192.168.2.112:5555", "/someform");
-  http.get("www.upf.edu", "/"); 
+  //http.get("www.upf.edu", "/"); 
+  http.get("opendata.nets.upf.edu/", "/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/raspberrylab/1"); 
   http.endRequest();
   
   
@@ -86,7 +87,7 @@ void loop()
         {
           // We haven't got any data, so let's pause to allow some to
           // arrive
-          delay(kNetworkDelay);
+          //delay(kNetworkDelay);
         }
       }
      
