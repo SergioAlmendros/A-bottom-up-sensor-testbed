@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  25 JAN 2014 12:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  25 JAN 2014 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,11 +624,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <12> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 8.
+(Font)              <8> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 8.
+(Font)              <6> on input line 11.
 )
 \tf@toc=\write6
 \openout6 = `A-bottom-up-sensor-testbed.toc'.
@@ -647,36 +647,80 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [11] [12
 
 
+] (./A-bottom-up-sensor-testbed.lot)
+\tf@lot=\write8
+\openout8 = `A-bottom-up-sensor-testbed.lot'.
+
+[13] [14
+
+
+]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 133.
+ [15] [16
+
+
 ]
 Chapter 1.
 [1
 
 
+] [2
+
+
 ]
+Chapter 2.
+[3] [4
+
+
+]
+Chapter 3.
+[5] [6
+
+
+]
+Chapter 4.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 162.
+[7] [8
+
+
+]
+Chapter 5.
+[9] [10
+
+
+]
+Chapter 6.
+[11] [12
+
+
+]
+Chapter 7.
 No file A-bottom-up-sensor-testbed.bbl.
-[2] [3] [4
+[13] [14
 
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
 (./A-bottom-up-sensor-testbed.aux) ) 
 Here is how much of TeX's memory you used:
- 14590 strings out of 493307
- 278064 string characters out of 6139906
- 349969 words of memory out of 5000000
- 17713 multiletter control sequences out of 15000+600000
- 24674 words of font info for 48 fonts, out of 8000000 for 9000
+ 14273 strings out of 493307
+ 271005 string characters out of 6139906
+ 344995 words of memory out of 5000000
+ 17392 multiletter control sequences out of 15000+600000
+ 26348 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,10n,63p,434b,858s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,10n,59p,434b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dv
 ips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (16 pages, 62301 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (30 pages, 65109 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

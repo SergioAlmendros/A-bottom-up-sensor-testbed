@@ -4,14 +4,25 @@
 \select@language {catalan}
 \select@language {english}
 \contentsline {chapter}{List of figures}{xi}
-\contentsline {chapter}{\numberline {1}{\MakeUppercase { Planning Report}}}{1}
-\contentsline {section}{\numberline {1.1}Familiarization with the Arduino Yun}{1}
-\contentsline {section}{\numberline {1.2}Preliminary testbed}{1}
-\contentsline {section}{\numberline {1.3}Collect Data from sensors}{1}
-\contentsline {section}{\numberline {1.4}Install Sentilo}{2}
-\contentsline {section}{\numberline {1.5}Communication with Sentilo}{2}
-\contentsline {section}{\numberline {1.6}Real deployment}{2}
-\contentsline {section}{\numberline {1.7}Interface}{2}
-\contentsline {section}{\numberline {1.8}Sentilo module}{2}
-\contentsline {section}{\numberline {1.9}Final report}{2}
-\contentsline {section}{\numberline {1.10}Gantt chart}{2}
+\contentsline {chapter}{List of tables}{xiii}
+\contentsline {chapter}{List of Abbreviations}{xv}
+\contentsline {chapter}{\numberline {1}{\MakeUppercase { Introduction}}}{1}
+\contentsline {chapter}{\numberline {2}{\MakeUppercase { State of the Art}}}{3}
+\contentsline {section}{\numberline {2.1}Sensor platforms}{3}
+\contentsline {section}{\numberline {2.2}Opendata services: opencities, sentilo, xively, ...}{3}
+\contentsline {chapter}{\numberline {3}{\MakeUppercase { Technologies}}}{5}
+\contentsline {section}{\numberline {3.1}Arduino}{5}
+\contentsline {section}{\numberline {3.2}Android}{5}
+\contentsline {section}{\numberline {3.3}Sensors}{5}
+\contentsline {section}{\numberline {3.4}Guifi network and opencities}{5}
+\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{7}
+\contentsline {section}{\numberline {4.1}Guifi nodes}{7}
+\contentsline {section}{\numberline {4.2}Arduino: software}{7}
+\contentsline {subsection}{\numberline {4.2.1}Collect sensory data}{7}
+\contentsline {subsection}{\numberline {4.2.2}Communication with opencities}{7}
+\contentsline {section}{\numberline {4.3}Android app}{7}
+\contentsline {chapter}{\numberline {5}{\MakeUppercase { Conclusions}}}{9}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Future work}}}{11}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Appendixes}}}{13}
+\contentsline {section}{\numberline {7.1}Pilot Charter}{13}
+\contentsline {section}{\numberline {7.2}Documentation}{13}

@@ -61,7 +61,7 @@
 
 %%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 
-\noindent To my family.
+\noindent Dedicatòria
 
 \cleardoublepage
 
@@ -83,7 +83,7 @@ Acknowledgments
 \section*{\Large \sffamily Abstract}
 
 A bottom up sensor testbed is a sensor platform which collect sensory data. In this thesis we will develop a sensor platform that can be attached to guifi nodes to gather and share sensory data throught the guifi network and opencities.
-Guifi is an open network built to everyone can join it providing his own connection and opencities is a platform develop in UPF which allows any user to upload and download sensory data.\\
+Guifi is an open network built to everyone can join it providing his own connection and opencities is a platform developed in UPF which allows any user to upload and download sensory data.\\
 For the guifi nodes we will use an Arduino YUN (Arduino is an open-source electronics prototyping platform) which will gathered the sensory data and send it to opencities, then an Android application will get and visualize this data.
 \\
 This solution will show how to create a sensor platform and see the result very quickly which could help to other developers build their own platform to share sensory data.
@@ -120,106 +120,56 @@ Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat
 %Fa que aparegui al sumari
 \addcontentsline{toc}{chapter}{List of figures}
 
+%INDEX DE TAULES; NOMÉS ES POSA SI HI HA TAULES
+\listoftables
+%Fa que aparegui al sumari
+\addcontentsline{toc}{chapter}{List of tables}
+
+%INDEX DE ACRONIMS
+\cleardoublepage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\vspace*{1.95cm} \hspace*{-0.155cm} %,88
+\textbf{{\huge \sffamily List of Abbreviations}\\}
+\vspace*{0.5cm}         
+\begin{acronym}
+
+\acro{AY}{Arduino YUN}
+
+\end{acronym}
+
+
 %COMENÇA EL TEXT
 \mainmatter
-\chapter{Planning Report}
+\chapter{Introduction}
 
-The following sections explain the tasks that I will do in the course of this project.
+\chapter{State of the Art}
 
-\section{Familiarization with the Arduino Yun}
+  \section{Sensor platforms}
+  \section{Opendata services: opencities, sentilo, xively, ...}
 
-In this project I will be working with an arduino Yun, but I never worked before with any type of arduino, so the first task is to start coding different kind of programs. Then I will have to learn how to interact with the linux in the arduino Yun.
+\chapter{Technologies}
 
-\section{Preliminary testbed}
+  \section{Arduino}
+  \section{Android}
+  \section{Sensors}
+  \section{Guifi network and opencities}
 
-I want to do an easy example to how to connect an arduino with a server running in my computer, what I want to do is establish a bridge between an arduino program and the linux within the arduino to be able to communicate with a server in my laptop, and send a string with the value returned by a sensor.
-This is a reduce problem of the real "bottom-up sensor testbed" because, at the end, in every arduino will be a program that will have to send a message to a server with the data of the sensors attached to it.
+\chapter{Bottom up sensor testbed}
+  
+  \section{Guifi nodes}
+  \section{Arduino: software}
+    \subsection{Collect sensory data}
+    \subsection{Communication with opencities}
+  \section{Android app}
 
-\section{Collect Data from sensors}
+\chapter{Conclusions}
 
-First I will connect a temperature sensor to the arduino YUN, then, I will develop a program to collect the information from it, and send it to a server.
-When the temperature sensor works, I will do the same process with a humidity, light, and noise sensor.
+\chapter{Future work}
 
-\section{Install Sentilo}
-
-Sentilo (www.sentilo.io) is an open source sensor and actuator platform that I will install in my laptop to act as the server between the sensor network and the interface for the users to visualize the data. 
-
-\section{Communication with Sentilo}
-
-I will adapt the messages that the arduino send to fit with the Sentilo.
-
-\section{Real deployment}
-
-At this moment, the part of the arduino and the server will be done, so I will test the server installing the arduino in real nodes of the guifi network, for example, the node in the Universitat Pompeu Fabra, and any other node that allow me to install it. The arduino will have a temperature, humidity, light, and noise sensor.
-
-\section{Interface}
-
-I want to do an interface for any user to understand the meaning of the temperature, humidity, light, and noise values. This interface will be develop for an android mobile application.
-
-\section{Sentilo module}
-
-I will contribute to Sentilo and other sensor data brokerage platforms accommodating the sensor testbed deployed in the previous tasks.
-
-\section{Final report}
-
-This task have to be done in parallel with all the other ones, and its purpose is document all the work that I will do.
-
-\section{Gantt chart}
-
-\begin{figure}[ftbp]
-  \begin{center}
-
-    \begin{ganttchart}
-    [y unit title=0.4cm, 
-    y unit chart=0.5cm,
-    vgrid,hgrid,
-    title label anchor/.style={below=-1.6ex},
-    title left shift=.05,
-    title right shift=-.05,
-    title height=1,
-    bar/.style={fill=gray!50},
-    incomplete/.style={fill=white},
-    progress label text={},
-    bar height=0.7,
-    group right shift=0,
-    group top shift=.6,
-    group height=.3,
-    group peaks height={}{}{.2}]{1}{21}
-    %labels
-    \gantttitle{2014}{21} \\
-    \gantttitle{January}{3} 
-    \gantttitle{February}{3} 
-    \gantttitle{March}{3} 
-    \gantttitle{April}{3} 
-    \gantttitle{May}{3} 
-    \gantttitle{June}{3}
-    \gantttitle{July}{3} \\
-    %tasks
-    \ganttbar{First task}{1}{1} \\
-    \ganttbar{Task 2}{2}{2} \\
-    \ganttbar{Task 3}{3}{3} \\
-    \ganttbar{Task 4}{4}{4} \\
-    \ganttbar{task 5}{5}{5} \\
-    \ganttbar{Task 6}{6}{8} \\
-    \ganttbar{Task 7}{9}{14} \\
-    \ganttbar{task 8}{15}{18} \\
-    \ganttbar{task 9}{2}{20}
-
-    %relations 
-    \ganttlink{elem0}{elem1} 
-    \ganttlink{elem1}{elem2} 
-    \ganttlink{elem2}{elem3} 
-    \ganttlink{elem3}{elem4} 
-    \ganttlink{elem4}{elem5} 
-    \ganttlink{elem5}{elem6} 
-    \ganttlink{elem6}{elem7}  
-   \end{ganttchart}
-  \end{center}
-\caption{Gantt Chart}
-\end{figure}
-
-
-
+\chapter{Appendixes}
+  \section{Pilot Charter}
+  \section{Documentation}
 
 
 \bibliography{bibliography}
