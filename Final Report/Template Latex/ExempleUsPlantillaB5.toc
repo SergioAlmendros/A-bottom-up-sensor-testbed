@@ -1,0 +1,11 @@
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {catalan}
+\contentsline {chapter}{\'Index de figures}{xiii}
+\contentsline {chapter}{\'Index de taules}{xv}
+\contentsline {chapter}{\numberline {1}{\MakeUppercase { El primer cap\IeC {\'\i }tol}}}{5}
+\contentsline {section}{\numberline {1.1}Una secci\'o}{5}
+\contentsline {subsection}{\numberline {1.1.1}Una subsecci\'o}{5}
+\contentsline {section}{\numberline {1.2}Una altra secci\'o}{5}
+\contentsline {chapter}{\numberline {2}{\MakeUppercase { El segon cap\IeC {\'\i }tol}}}{7}
