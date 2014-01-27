@@ -2,99 +2,113 @@
 import sys
 import geojson
 import datetime
-import httplib
-import urllib
+from httplib2 import Http
 
-ID = 0
-temperature = int(sys.argv[1])
-#1- Collect the data.
+class Arduino:
+    def __init__(self, temperature, light, noise, humidity):
+        self.temperature = temperature
+        self.light = light
+        self.noise = noise
+        self.humidity = humidity
+        self.id = 0
+        self.location = "BCN-UPFPOBLENOU"
+        self.datasetId = 'temperature'
+        self.address = 'Carrer de Tanger, Barcelona'
+        self.description = ''
+        self.apikey = "7b1611c3-c688-474b-bcab-6e4921bfb109"
 
-if len(sys.argv) != 2:
-    print "Usage: python main.py temperature"
-    print "And you write: " + str(sys.argv)
-    sys.exit(0)
+def collectdata():
+    #1- Collect the data.
+    print "Collecting the data from the arduino sensors"
+    arduino = Arduino(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    return arduino
 
-#2- Read a file (logData) to check if the new value is the same as the last writed value.
-#3- If the value is equal, the script will do nothing, if is different, it will write down in a new line on the file.
-print "Reading the logData to check if the new values are new"
-logData = open('logData', 'r')
+def readfile(arduino):
+    #2- Read a file (logData) to check if the new value is the same as the last writed value.
+    #3- If the value is equal, the script will do nothing, if is different, it will write down in a new line on the file.
+    print "Reading the logData to check the id value"
+    logData = open('logData', 'r')
 
-if not logData.read(1):
-    ID = 0
-else:
-    for line in logData:
-        lastLine = line
-
-    p = lastLine.split("-")
-    ID = int(p[0]) + 1
-
-#print ID
-if ID != 0:
-    if temperature == int(p[1]):
-        print "The temperature has not change since last update"
+    if not logData.read(1):
+        arduino.id = 0
+        prueba = '-' + str(arduino.id) + '-' + str(arduino.temperature) + '-' + str(arduino.humidity) \
+                 + '-' + str(arduino.light) + '-' + str(arduino.noise)
     else:
-        logData.close()
-        logData = open('logData', 'a')
-        logData.write('\n'+str(ID) + '-' + str(temperature))
-        ID += 1
-        print "The new value of temperature has been added to the logData file"
+        for line in logData:
+            lastline = line
 
-else:
+        p = lastline.split("-")
+        arduino.id = int(p[0]) + 1
+        prueba = '\n' + str(arduino.id) + '-' + str(arduino.temperature) + '-' + str(arduino.humidity) \
+                 + '-' + str(arduino.light) + '-' + str(arduino.noise)
+
     logData.close()
     logData = open('logData', 'a')
-    logData.write('-'+str(ID) + '-' + str(temperature))
-    ID += 1
-    print "The new value of temperature has been added to the logData file"
-
-#4- Create the GeoJSON.
-timestamp = datetime.datetime.now().isoformat()
-
-p = geojson.FeatureCollection(
-    name='Temperature Invented value1',
-    timestamp=timestamp,
-    features=[
-        geojson.Feature(
-            type='Feature',
-            tags=['red', 'tall', 'cheap'],
-            geometry=geojson.Point([2.167028, 41.387547]),
-            properties={
-                'id': "%s" % ID,
-                'name': "%s" % 'SENSOR-TEMP-BCN-UPFPOBLENOU',
-                'datasetId': "%s" % 'temperature',
-                'datasetName': "%s" % 'temperature',
-                'address': "%s" % 'Carrer de Tanger, Barcelona',
-                'description': "%s" % 'Temperature sensor of UPF Poblenou',
-                'timeStamp': "%s" % timestamp,
-                'value': "%s" % temperature,
-                'unit': "%s" % '*C'
-                #'contentType': "%s" % 'video/ogg',
-                #'url': "%s" % 'http://download.blender.org/peach/trailer/trailer_1080p.ogg',
-                #'previewImage': "%s" % 'http://peach.blender.org/wp-content/uploads/poster_rodents_small.jpg'
-            }
-        )
-
-    ]
-)
-data = geojson.dumps(p)
-print data
-
-#5- Do the POST to opencities.
-print "Sending the data to opencities"
+    logData.write(prueba)
+    arduino.id += 1
+    print "The new values had been added to the logData file"
 
 
-params = urllib.urlencode(data)
-headers = {"Content-type": "application/json"}
-conn = httplib.HTTPConnection("http://opencities.upf.edu")
-conn.request("POST", "/osn2/api/datasets/uploadGeoJson/7b1611c3-c688-474b-bcab-6e4921bfb109/temperature", params, headers)
-response = conn.getresponse()
-print response.status, response.reason
+def createJSON(arduino):
+    #4- Create the GeoJSON.
+    print "Creating the GeoJSON"
+    timestamp = datetime.datetime.now().isoformat()
+    p = geojson.FeatureCollection(
+        name='Temperature Invented value1',
+        timestamp=timestamp,
+        features=[
+            geojson.Feature(
+                type='Feature',
+                tags=['temperature'],
+                geometry=geojson.Point([2.167028, 41.387547]),
+                properties={
+                    'id': "%s" % arduino.id,
+                    'name': "%s" % ("SENSOR-TEMP" + arduino.location),
+                    'datasetId': "%s" % arduino.datasetId,
+                    'datasetName': "%s" % arduino.datasetId,
+                    'address': "%s" % arduino.address,
+                    'description': "%s" % ('Temperature sensor of' + arduino.location),
+                    'timeStamp': "%s" % timestamp,
+                    'value': "%s" % arduino.temperature,
+                    'unit': "%s" % '*C'
+                }
+            )
 
+        ]
+    )
+    data = geojson.dumps(p)
+    return data
+    #print data
 
+def POSTopencities(arduino, data):
+    #5- Do the POST to opencities.
+    print "Sending the data to opencities"
 
+    http_obj = Http()
+    resp, content = http_obj.request(
+        uri="http://opencities.upf.edu/osn2/api/datasets/uploadGeoJson/" + arduino.apikey + "/" + arduino.datasetId,
+        method='POST',
+        headers={'Content-Type': 'application/json; charset=UTF-8'},
+        #body=dumps(dictionary),
+        body=data
+    )
+    print "Response from opencities: " + resp['status']
 
+def main():
+    if len(sys.argv) != 5:
+        print "Usage: python main.py temperature light noise humidity"
+        print "And you write: " + str(sys.argv)
+        sys.exit(0)
 
+    arduino = collectdata()
+    readfile(arduino)
+    data = createJSON(arduino)
+    POSTopencities(arduino, data)
 
-
+if __name__ == '__main__':
+    main()
+else:
+    pass
 
 
 
