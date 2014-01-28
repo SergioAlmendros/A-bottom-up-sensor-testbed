@@ -35,7 +35,7 @@ def readfile(arduino):
     #3- If the value is equal, the script will do nothing, if is different, it will write down in a new line on the file
     print "Reading the logData to check the id value"
     logData = open('logData', 'r')
-
+    lastline = ""
     if not logData.read(1):
         arduino.id = 0
         prueba = '-' + str(arduino.id) + '-' + str(arduino.temperature) + '-' + str(arduino.humidity) \
@@ -52,16 +52,15 @@ def readfile(arduino):
     logData.close()
     logData = open('logData', 'a')
     logData.write(prueba)
+    logData.close()
     arduino.id += 1
     print "The new values had been added to the logData file"
 
 
 def createJSON(arduino):
     #4- Create the GeoJSON.
-    print "Creating the GeoJSON"
+    #print "Creating the GeoJSON"
     timestamp = datetime.datetime.now().isoformat()
-
-
 
     p = geojson.FeatureCollection(
         name='Temperature Invented value1',
@@ -160,9 +159,11 @@ def main():
         sys.exit(0)
 
     arduino = collectdata()
-    readfile(arduino)
+    #readfile(arduino)
+    arduino.id = 1
     data = createJSON(arduino)
-    #POSTopencities(arduino, data)
+    POSTopencities(arduino, data)
+
 
 if __name__ == '__main__':
     main()

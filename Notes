@@ -54,6 +54,21 @@
 --No encuentro nada para validar el geoJSON y no se como conseguir la latitud y longitud
 --La longitud y latitud lo hago con geopy https://code.google.com/p/geopy/wiki/GettingStarted
 --Sigo sin saber como validar
+-28/01/14
+--Para copiar un archivo en la sd del arduino desde el portatil: scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
+scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
+
+--Voy a instalar los paquetes en el arduino que necesito para que funcione el script de python (geojson y geopy)
+---Para instalar paquetes he escrito estas comandas:
+    opkg update
+    opkg install distribute
+    opkg install python-openssl
+    easy_install pip
+    pip install geojson
+    pip install geopy
+--No soy capaz de darle permisos de escritura sobre un fichero a todos los usuarios, asi que la parte de escritura la hare desde el mismo arduino, haber si deja.
+--Al final la parte de escribir en el logData lo hago desde el skech de arduino porque desde python no lo hace.
+
 
 
 

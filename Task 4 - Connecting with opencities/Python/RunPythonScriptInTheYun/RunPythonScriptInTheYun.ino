@@ -22,38 +22,77 @@
  */
 
 #include <Process.h>
+#include <FileIO.h>
 
 void setup() {
   Bridge.begin();	// Initialize the Bridge
   Serial.begin(9600);	// Initialize the Serial
-
+  FileSystem.begin();
+  
   // Wait until a Serial Monitor is connected.
   while (!Serial);
 }
 
 void loop() {
-  //Process p;
-  //p.runShellCommand("python /mnt/sda1/arduino/www/hello.py");
-  //while (p.running());
   
+  String dataString;
+  //dataString += getTimeStamp();
+  //dataString += " = ";
+  
+  //FALTA LEER LOS SENSORES
+  dataString += "-5-6-7-8";
+  
+  File dataFile = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_APPEND);
+
+  // if the file is available, write to it:
+  if (dataFile) {
+    dataFile.print(dataString);
+    dataFile.print("\n");
+    dataFile.close();
+    // print to the serial port too:
+    Serial.println(dataString);
+  }  
+  // if the file isn't open, pop up an error:
+  else {
+    Serial.println("error opening datalog.txt");
+  } 
+  /*
   Process myscript;
-  //myscript.begin("/mnt/sda1/arduino/www/hello.py");
-  //myscript.run();
-  myscript.runShellCommand("python /mnt/sda1/arduino/www/hello.py");
+  myscript.runShellCommand("python /mnt/sda1/arduino/www/main.py 2 3 4 5"); 
   while (myscript.running());
   
   String output = "";
 
   // read the output of the script
   while (myscript.available()) {
-    output += (char)myscript.read();
+    output += (char)myscript.read();   
   }
   // remove the blank spaces at the beginning and the ending of the string
   output.trim();
-  Serial.println(output);
+  Serial.println(output);*/
   //Serial.flush();
   
   delay(5000);  // wait 5 seconds before you do it again
+}
+
+String getTimeStamp() {
+  String result;
+  Process time;
+  // date is a command line utility to get the date and the time 
+  // in different formats depending on the additional parameter 
+  time.begin("date");
+  time.addParameter("+%D-%T");  // parameters: D for the complete date mm/dd/yy
+                                //             T for the time hh:mm:ss    
+  time.run();  // run the command
+
+  // read the output of the command
+  while(time.available()>0) {
+    char c = time.read();
+    if(c != '\n')
+      result += c;
+  }
+
+  return result;
 }
 
 
