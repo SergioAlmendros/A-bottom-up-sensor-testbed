@@ -160,7 +160,6 @@ def main():
 
     arduino = collectdata()
     #readfile(arduino)
-    arduino.id = 1
     data = createJSON(arduino)
     POSTopencities(arduino, data)
 
