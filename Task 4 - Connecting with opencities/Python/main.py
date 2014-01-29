@@ -27,7 +27,8 @@ class Arduino:
 def collectdata():
     #1- Collect the data.
     print "Collecting the data from the arduino sensors"
-    arduino = Arduino(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    arduino = Arduino(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    arduino.id = int(sys.argv[2])
     return arduino
 
 def readfile(arduino):
@@ -59,7 +60,7 @@ def readfile(arduino):
 
 def createJSON(arduino):
     #4- Create the GeoJSON.
-    #print "Creating the GeoJSON"
+    print "Creating the GeoJSON"
     timestamp = datetime.datetime.now().isoformat()
 
     p = geojson.FeatureCollection(
@@ -153,12 +154,13 @@ def POSTopencities(arduino, data):
     print "Response from opencities: " + resp['status']
 
 def main():
-    if len(sys.argv) != 5:
-        print "Usage: python main.py temperature light noise humidity"
+    if len(sys.argv) != 6:
+        print "Usage: python main.py id temperature light noise humidity"
         print "And you write: " + str(sys.argv)
         sys.exit(0)
 
     arduino = collectdata()
+    print "ha acabado de recolectar los datos"
     #readfile(arduino)
     data = createJSON(arduino)
     POSTopencities(arduino, data)

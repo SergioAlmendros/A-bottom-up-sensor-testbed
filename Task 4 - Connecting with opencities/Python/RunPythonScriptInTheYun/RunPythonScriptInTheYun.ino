@@ -20,52 +20,63 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
   File dataFileRead = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_READ);
   
   String output = "";
-  while(dataFileRead.available()){
-    output += (char)dataFileRead.read();   
-  }
-  // remove the blank spaces at the beginning and the ending of the string
-  output.trim();
-  //Serial.println(output);
   int id = 1;
   String result = "";
-  if( output = "" ){
-    Serial.println("archivo vacio");
-    result = str(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
+  
+  int c = 0;
+
+  if( !dataFileRead.available() ){
+    //Serial.println("archivo vacio");
+    result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
   }else{
-    Serial.println("archivo lleno");
-    result = " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
+    //Serial.println("archivo lleno");
+    
+    while(dataFileRead.available()){
+        output += (char)dataFileRead.read(); 
+    }
+
+    String lastline = "";
+   
+    for( int i=output.length()-2; i>=0; --i ){
+      
+      if( output[i] == '\n' )
+        break;
+      lastline += output[i];      
+    }
+    
+    //Serial.println(lastline[ lastline.length()-1 ]);
+        
+    // remove the blank spaces at the beginning and the ending of the string
+    output.trim();
+    id = int( lastline[ lastline.length()-1 ] ) - int('0');
+    id += 1;
+    result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
   }
+
+  //Serial.println(result);
   
   dataFileRead.close();
-  
-  /*
-  
+
   File dataFileAppend = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_APPEND);
 
   // if the file is available, write to it:
   if (dataFileAppend) {
-    dataFileAppend.print(dataSensors);
+    dataFileAppend.print(result);
     dataFileAppend.print("\n");
     dataFileAppend.close();
   }  
   // if the file isn't open, pop up an error:
   else {
     Serial.println("error opening datalog.txt");
-  } */
+  }
   
+  return id;
 }
 
-void executePythonScritp(String dataSensors,int id){
+void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth){
   
   Process myscript;
-  
-  /*
-  char *p = dataSensors;
-  char *str;
-  while ((str = strtok_r(p, "-", &p)) != NULL)
-    Serial.println(str);
-
-  myscript.runShellCommand("python /mnt/sda1/arduino/www/main.py " + dataSensors); 
+  myscript.runShellCommand("python /mnt/sda1/arduino/www/main.py " + String(id) + " " + *temperature + " " + *ligth + " " + *noise + " " + *humidity); 
   while (myscript.running());
   
   String output = "";
@@ -76,7 +87,7 @@ void executePythonScritp(String dataSensors,int id){
   }
   // remove the blank spaces at the beginning and the ending of the string
   output.trim();
-  Serial.println(output);*/
+  Serial.println(output);
   
 }
 
@@ -84,11 +95,8 @@ void loop() {
   
   String temperature, humidity, noise, ligth;
   readSensors(&temperature, &humidity, &noise, &ligth);
-  readFile(&temperature, &humidity, &noise, &ligth);
-  
-  
-  //int id = readFile(dataSensors);
-  //executePythonScritp(dataSensors,id); 
+  int id = readFile(&temperature, &humidity, &noise, &ligth);
+  executePythonScritp(id,&temperature, &humidity, &noise, &ligth); 
 
   //delay(60000);  // wait 60 seconds before you do it again
   delay(5000);

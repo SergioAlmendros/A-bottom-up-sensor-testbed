@@ -71,6 +71,7 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Al final la parte de escribir en el logData lo hago desde el skech de arduino porque desde python no lo hace.
 -29/01/14
 --Estoy haciendo la parte del logData en el skech de arduino
+--El python no funciona
 
 
 
