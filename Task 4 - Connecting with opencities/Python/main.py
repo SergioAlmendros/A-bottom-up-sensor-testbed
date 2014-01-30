@@ -28,7 +28,8 @@ def collectdata():
     #1- Collect the data.
     print "Collecting the data from the arduino sensors"
     arduino = Arduino(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
-    arduino.id = int(sys.argv[2])
+    arduino.id = int(sys.argv[1])
+    print "Done collecting"
     return arduino
 
 def readfile(arduino):
@@ -136,6 +137,7 @@ def createJSON(arduino):
     )
     data = geojson.dumps(p)
     #print data
+    print "Done creating the GeoJSON"
     return data
     #Validar GeoJSON
 

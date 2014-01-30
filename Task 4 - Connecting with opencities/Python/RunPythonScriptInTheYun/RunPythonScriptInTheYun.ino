@@ -26,10 +26,10 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
   int c = 0;
 
   if( !dataFileRead.available() ){
-    //Serial.println("archivo vacio");
+    Serial.println("archivo vacio");
     result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
   }else{
-    //Serial.println("archivo lleno");
+    Serial.println("archivo lleno");
     
     while(dataFileRead.available()){
         output += (char)dataFileRead.read(); 
@@ -48,7 +48,22 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
         
     // remove the blank spaces at the beginning and the ending of the string
     output.trim();
-    id = int( lastline[ lastline.length()-1 ] ) - int('0');
+    
+    //Coger el numero hasta que haya un espacio
+    String sid = "";
+    for( int i=lastline.length()-1; i>=0; --i ){
+      
+      if( lastline[i] == ' ' )
+        break;
+      sid += lastline[i];      
+    }
+    Serial.println(sid);
+    
+    char sid_as_char[sid.length()]; // or:  char *test_as_char; .... not sure if you have to initialize the buffer
+    sid.toCharArray(sid_as_char, sid.length());
+    Serial.println(sid_as_char);
+    id = int(sid_as_char);
+    Serial.println(id);
     id += 1;
     result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
   }
@@ -76,7 +91,10 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
 void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth){
   
   Process myscript;
-  myscript.runShellCommand("python /mnt/sda1/arduino/www/main.py " + String(id) + " " + *temperature + " " + *ligth + " " + *noise + " " + *humidity); 
+  String a = "python /mnt/sda1/arduino/www/main.py " + String(id) + " " + *temperature + " " + *ligth + " " + *noise + " " + *humidity;
+  Serial.println("Llamada a main.py: ");
+  Serial.println("\t" + a );
+  myscript.runShellCommand(a); 
   while (myscript.running());
   
   String output = "";

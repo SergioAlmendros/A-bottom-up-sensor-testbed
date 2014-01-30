@@ -72,6 +72,8 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -29/01/14
 --Estoy haciendo la parte del logData en el skech de arduino
 --El python no funciona
+-30/01/14
+--El problema era que el python estaba cogiendo la temperatura como id, y cuando enviaba un 2 no pasaba nada, pero cuando enviaba un 5.14 petaba y no enviaba el error, pero ya funciona.
 
 
 
