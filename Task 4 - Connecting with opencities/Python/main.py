@@ -4,6 +4,9 @@ import geojson
 import datetime
 from httplib2 import Http
 from geopy import geocoders
+import requests
+import json
+
 
 class Arduino:
     def __init__(self, temperature, light, noise, humidity):
@@ -31,6 +34,7 @@ def collectdata():
     arduino.id = int(sys.argv[1])
     print "Done collecting"
     return arduino
+
 
 def readfile(arduino):
     #2- Read a file (logData) to check if the new value is the same as the last write value.
@@ -66,7 +70,7 @@ def createJSON(arduino):
 
     p = geojson.FeatureCollection(
         name='Temperature Invented value1',
-        timestamp=timestamp,
+        timeStamp=timestamp,
         features=[
             geojson.Feature(
                 type='Feature',
@@ -83,7 +87,53 @@ def createJSON(arduino):
                     'value': "%s" % arduino.temperature,
                     'unit': "%s" % 'Cel'
                 }
-            ),
+            )
+
+        ]
+    )
+    data = geojson.dumps(p)
+    print data
+    print "Done creating the GeoJSON"
+    return data
+    #Validar GeoJSON
+
+
+def POSTopencities(arduino, data):
+    #5- Do the POST to opencities.
+    print "Sending the data to opencities"
+    http_obj = Http()
+    resp, content = http_obj.request(
+        uri="http://opencities.upf.edu/osn2/api/datasets/uploadGeoJson/" + arduino.apikey + "/" + arduino.datasetId,
+        #uri="http://opencities.upf.edu/osn2/api/datasets/uploadGeoJson/7b1611c3-c688-474b-bcab-6e4921bfb109/temperature",
+        method='POST',
+        headers={'Content-Type': 'application/json; charset=UTF-8'},
+        #body=dumps(dictionary),
+        body=data
+    )
+
+    print "Response from opencities: " + resp['status']
+
+
+def main():
+    if len(sys.argv) != 6:
+        print "Usage: python main.py id temperature light noise humidity"
+        print "And you write: " + str(sys.argv)
+        sys.exit(0)
+
+    arduino = collectdata()
+    print "ha acabado de recolectar los datos"
+    #readfile(arduino)
+    data = createJSON(arduino)
+    POSTopencities(arduino, data)
+
+
+if __name__ == '__main__':
+    main()
+else:
+    pass
+
+"""
+,
             geojson.Feature(
                 type='Feature',
                 tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
@@ -131,49 +181,7 @@ def createJSON(arduino):
                     'value': "%s" % arduino.temperature,
                     'unit': "%s" % 'Cel'
                 }
-            )
-
-        ]
-    )
-    data = geojson.dumps(p)
-    #print data
-    print "Done creating the GeoJSON"
-    return data
-    #Validar GeoJSON
-
-def POSTopencities(arduino, data):
-    #5- Do the POST to opencities.
-    print "Sending the data to opencities"
-
-    http_obj = Http()
-    resp, content = http_obj.request(
-        uri="http://opencities.upf.edu/osn2/api/datasets/uploadGeoJson/" + arduino.apikey + "/" + arduino.datasetId,
-        method='POST',
-        headers={'Content-Type': 'application/json; charset=UTF-8'},
-        #body=dumps(dictionary),
-        body=data
-    )
-    print "Response from opencities: " + resp['status']
-
-def main():
-    if len(sys.argv) != 6:
-        print "Usage: python main.py id temperature light noise humidity"
-        print "And you write: " + str(sys.argv)
-        sys.exit(0)
-
-    arduino = collectdata()
-    print "ha acabado de recolectar los datos"
-    #readfile(arduino)
-    data = createJSON(arduino)
-    POSTopencities(arduino, data)
-
-
-if __name__ == '__main__':
-    main()
-else:
-    pass
-
-
+            )"""
 
 
 

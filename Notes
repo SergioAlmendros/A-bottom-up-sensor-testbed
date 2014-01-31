@@ -74,6 +74,12 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --El python no funciona
 -30/01/14
 --El problema era que el python estaba cogiendo la temperatura como id, y cuando enviaba un 2 no pasaba nada, pero cuando enviaba un 5.14 petaba y no enviaba el error, pero ya funciona.
+--Voy a empezar con los sensores.
+--He hecho un sketch para leer los valores del emartee Mini Sound Sensor, pero me falta saber que devuelve.
+--Voy a mirar el de humedad, me he bajado una libreria para leer este sensor que tenia alejandro.
+-31/01/14
+--El geoJSON esta mal hecho y me faltan cables para conectar con el sensor de calidad de aire.
+--En la pagina el json funciona pero con el curl no funciona, hablar con palacin.
 
 
 

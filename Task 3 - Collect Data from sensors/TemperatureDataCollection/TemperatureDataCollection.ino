@@ -4,6 +4,7 @@ int analogPin = 0;
 int readValue = 0; 
 float temperature = 0; 
 float temperatureF = 0;
+
 void setup() { 
   Serial.begin(9600); 
 }

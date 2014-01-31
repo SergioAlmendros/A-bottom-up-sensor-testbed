@@ -18,14 +18,14 @@
                 ]
             },
             "properties": {
-                "id": "1",
+                "id": "2",
                 "name": "SENSOR-TEMP-BCN-UPFPOBLENOU",
                 "datasetId": "temperature",
                 "datasetName": "temperature",
                 "address": "Carrer de Tanger, Barcelona",
                 "description": "Temperature sensor of UPF Poblenou",
                 "timeStamp": "2014-01-20T10:31:06.655Z",
-                "value": "21",
+                "value": "45",
                 "unit": "*C",
                 "contentType": "video/ogg",
                 "url": "http://download.blender.org/peach/trailer/trailer_1080p.ogg",

@@ -26,7 +26,7 @@
                 "description": "Temperature sensor of UPF Poblenou",
                 "timeStamp": "2014-01-20T10:31:06.655Z",
                 "value": "21",
-                "unit": "ºC",
+                "unit": "*C",
                 "contentType": "video/ogg",
                 "url": "http://download.blender.org/peach/trailer/trailer_1080p.ogg",
                 "previewImage": "http://peach.blender.org/wp-content/uploads/poster_rodents_small.jpg",
@@ -35,3 +35,14 @@
         }
     ]
 }
+
+
+
+
+
+
+
+
+
+
+
