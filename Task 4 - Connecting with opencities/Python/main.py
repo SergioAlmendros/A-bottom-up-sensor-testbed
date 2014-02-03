@@ -6,6 +6,7 @@ from httplib2 import Http
 from geopy import geocoders
 import requests
 import json
+import urllib2
 
 
 class Arduino:
@@ -73,6 +74,7 @@ def createJSON(arduino):
         timeStamp=timestamp,
         features=[
             geojson.Feature(
+                id='d25830850271b4e90cc5dcdd0fb18daf',
                 type='Feature',
                 tags=['temperature', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
@@ -87,12 +89,65 @@ def createJSON(arduino):
                     'value': "%s" % arduino.temperature,
                     'unit': "%s" % 'Cel'
                 }
+            ),
+            geojson.Feature(
+                id='d25830850271b4e90cc5dcdd0fb18daf',
+                type='Feature',
+                tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
+                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
+                properties={
+                    'id': "%s" % (str(arduino.id) + ".2"),
+                    'name': "%s" % ("SENSOR-LIGHT" + arduino.location),
+                    'datasetId': "%s" % arduino.datasetId,
+                    'datasetName': "%s" % arduino.datasetId,
+                    'address': "%s" % arduino.address,
+                    'description': "%s" % ('Light sensor of ' + arduino.location),
+                    'timeStamp': "%s" % timestamp,
+                    'value': "%s" % arduino.temperature,
+                    'unit': "%s" % 'Cel'
+                }
+            ),
+            geojson.Feature(
+                id='d25830850271b4e90cc5dcdd0fb18daf',
+                type='Feature',
+                tags=['noise', 'sensor', 'arduino', 'upf', 'guifi'],
+                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
+                properties={
+                    'id': "%s" % (str(arduino.id) + ".3"),
+                    'name': "%s" % ("SENSOR-NOISE" + arduino.location),
+                    'datasetId': "%s" % arduino.datasetId,
+                    'datasetName': "%s" % arduino.datasetId,
+                    'address': "%s" % arduino.address,
+                    'description': "%s" % ('Noise sensor of ' + arduino.location),
+                    'timeStamp': "%s" % timestamp,
+                    'value': "%s" % arduino.temperature,
+                    'unit': "%s" % 'Cel'
+                }
+            ),
+            geojson.Feature(
+                id='d25830850271b4e90cc5dcdd0fb18daf',
+                type='Feature',
+                tags=['humidity', 'sensor', 'arduino', 'upf', 'guifi'],
+                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
+                properties={
+                    'id': "%s" % (str(arduino.id) + ".4"),
+                    'name': "%s" % ("SENSOR-HUMIDITY" + arduino.location),
+                    'datasetId': "%s" % arduino.datasetId,
+                    'datasetName': "%s" % arduino.datasetId,
+                    'address': "%s" % arduino.address,
+                    'description': "%s" % ('Humidity sensor of ' + arduino.location),
+                    'timeStamp': "%s" % timestamp,
+                    'value': "%s" % arduino.temperature,
+                    'unit': "%s" % 'Cel'
+                }
             )
 
         ]
     )
     data = geojson.dumps(p)
+    data = data.replace(" \"id\": \"d25830850271b4e90cc5dcdd0fb18daf\", ", " ")
     print data
+
     print "Done creating the GeoJSON"
     return data
     #Validar GeoJSON
@@ -100,6 +155,9 @@ def createJSON(arduino):
 
 def POSTopencities(arduino, data):
     #5- Do the POST to opencities.
+
+    #data = json.dumps(p, encoding='utf8', sort_keys=True)
+
     print "Sending the data to opencities"
     http_obj = Http()
     resp, content = http_obj.request(
@@ -110,8 +168,12 @@ def POSTopencities(arduino, data):
         #body=dumps(dictionary),
         body=data
     )
+    print "Response from opencities:"
+    print resp
 
-    print "Response from opencities: " + resp['status']
+
+
+
 
 
 def main():
@@ -132,56 +194,6 @@ if __name__ == '__main__':
 else:
     pass
 
-"""
-,
-            geojson.Feature(
-                type='Feature',
-                tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
-                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
-                properties={
-                    'id': "%s" % (str(arduino.id) + ".2"),
-                    'name': "%s" % ("SENSOR-LIGHT" + arduino.location),
-                    'datasetId': "%s" % arduino.datasetId,
-                    'datasetName': "%s" % arduino.datasetId,
-                    'address': "%s" % arduino.address,
-                    'description': "%s" % ('Light sensor of ' + arduino.location),
-                    'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.temperature,
-                    'unit': "%s" % 'Cel'
-                }
-            ),
-            geojson.Feature(
-                type='Feature',
-                tags=['noise', 'sensor', 'arduino', 'upf', 'guifi'],
-                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
-                properties={
-                    'id': "%s" % (str(arduino.id) + ".3"),
-                    'name': "%s" % ("SENSOR-NOISE" + arduino.location),
-                    'datasetId': "%s" % arduino.datasetId,
-                    'datasetName': "%s" % arduino.datasetId,
-                    'address': "%s" % arduino.address,
-                    'description': "%s" % ('Noise sensor of ' + arduino.location),
-                    'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.temperature,
-                    'unit': "%s" % 'Cel'
-                }
-            ),
-            geojson.Feature(
-                type='Feature',
-                tags=['humidity', 'sensor', 'arduino', 'upf', 'guifi'],
-                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
-                properties={
-                    'id': "%s" % (str(arduino.id) + ".4"),
-                    'name': "%s" % ("SENSOR-HUMIDITY" + arduino.location),
-                    'datasetId': "%s" % arduino.datasetId,
-                    'datasetName': "%s" % arduino.datasetId,
-                    'address': "%s" % arduino.address,
-                    'description': "%s" % ('Humidity sensor of ' + arduino.location),
-                    'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.temperature,
-                    'unit': "%s" % 'Cel'
-                }
-            )"""
 
 
 
