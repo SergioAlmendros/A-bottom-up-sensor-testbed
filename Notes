@@ -80,6 +80,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -31/01/14
 --El geoJSON esta mal hecho y me faltan cables para conectar con el sensor de calidad de aire.
 --En la pagina el json funciona pero con el curl no funciona, hablar con palacin.
+-3/01/14
+--He hecho la introducción de la thesis.
+--He vuelto a probar el curl y ahora magicamente funciona.
 
 
 

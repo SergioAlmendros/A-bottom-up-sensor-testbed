@@ -40,6 +40,13 @@
 \addto\captionscatalan
   {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~
+% CUSTOM PACKAGES
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~
+\usepackage{hyperref}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{pdfpages}
 
 %AFEGIU EN AQUESTA PART LES VOSTRES DADES
 \title{A bottom up sensor testbed}
@@ -51,6 +58,9 @@
 
 \begin{document}
 
+\pdfstringdefDisableCommands{%
+\let\MakeUppercase\relax
+}
 
 \frontmatter
 
@@ -94,7 +104,7 @@ This solution will show how to create a sensor platform and see the result very 
 \section*{\Large \sffamily  Resum}
 
 Un banc de proves de sensors de baix a dalt és una plataforma de sensors que recull dades de sensors. En aquesta tesi es desenvoluparà una plataforma de sensors que es pot conectar a nodes guifi per recopilar i compartir dades de sensors a través de la xarxa guifi i opencities. 
-Guifi és una xarxa oberta construïda per a tothom pot unir-se a ella proporcionant la seva pròpia connexió i OPENCities és una plataforma de desenvolupament a la UPF, que permet a qualsevol usuari per carregar i descarregar les dades sensorials. \\ 
+Guifi és una xarxa oberta construïda per a tothom pot unir-se a ella proporcionant la seva pròpia connexió i opencities és una plataforma desenvolupada a la UPF, que permet a qualsevol usuari pujar i descarregar dades sensorials. \\ 
 Per als nodes guifi utilitzarem un Arduino YUN (Arduino és una plataforma de creació de prototips electrònics de codi obert) per reunir les dades de sensors i enviar-les a openities, i a continuació, una aplicació per Android descarregarà i visualitzarà aquestes dades. 
 \\
 Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat molt ràpid, el que podria ajudar a altres desenvolupadors a construir la seva pròpia plataforma per compartir dades de sensors.
@@ -113,6 +123,7 @@ Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat
 
 
 %TAULA DE CONTINGUTS: OBLIGATÒRIA
+\selectlanguage{english}
 \tableofcontents
 
 %INDEX DE FIGURES; NOMÉS ES POSA SI HI HA FIGURES
@@ -125,32 +136,34 @@ Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat
 %Fa que aparegui al sumari
 \addcontentsline{toc}{chapter}{List of tables}
 
-%INDEX DE ACRONIMS
-\cleardoublepage
-\thispagestyle{empty}
-\addcontentsline{toc}{chapter}{List of Abbreviations}
-\vspace*{1.95cm} \hspace*{-0.155cm} %,88
-\textbf{{\huge \sffamily List of Abbreviations}\\}
-\vspace*{0.5cm}         
-\begin{acronym}
-
-\acro{AY}{Arduino YUN}
-
-\end{acronym}
-
 
 %COMENÇA EL TEXT
 \mainmatter
 \chapter{Introduction}
-  
-  
+\label{Chapter1}
+
+A sensor testbed is a small sensor network which has the goal to gather data, and test the technologies used as nodes to see if they are the best options to create a real one.
+
+Bottom-up is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to the guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users, which prevents big companies or government to hide this information.
+ 
+This project is an easy way to understand the importance of sensor networks and how they can help us to know, for example, if there is low quality air in our city, and do something about it.
+
+As sensor nodes we will use an Arduino YUN, Arduino is an open-source electronics prototyping platform, that allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi nodes and send the sensory data to a sensor platform, like opencities. 
+
+When the sensory data is stored, we will develop an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
+
+In the following chapters I will explain the state of sensor networks nowadays \ref{Chapter2}, which technologies we will use \ref{Chapter3}, and how the project has been done, as well as all the problems found during the process \ref{Chapter4}. 
+
+The final goal of the project is to build a sensor testbed and there will be the results \ref{Chapter5}, and, to finish, the conclusions \ref{Chapter6} and the future work \ref{Chapter7}.
   
 \chapter{State of the Art}
+\label{Chapter2}
 
   \section{Sensor platforms}
   \section{Opendata services: opencities, sentilo, xively, ...}
 
 \chapter{Technologies}
+\label{Chapter3}
 
   \section{Arduino}
   \section{Android}
@@ -158,18 +171,26 @@ Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat
   \section{Guifi network and opencities}
 
 \chapter{Bottom up sensor testbed}
-  
+\label{Chapter4}
+
   \section{Guifi nodes}
   \section{Arduino: software}
     \subsection{Collect sensory data}
     \subsection{Communication with opencities}
   \section{Android app}
 
+\chapter{Testbed results}
+\label{Chapter5}
+
 \chapter{Conclusions}
+\label{Chapter6}
 
 \chapter{Future work}
+\label{Chapter7}
 
 \chapter{Appendixes}
+\label{Chapter8}
+
   \section{Pilot Charter}
   \section{Documentation}
 

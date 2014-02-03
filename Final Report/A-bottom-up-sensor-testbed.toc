@@ -3,26 +3,27 @@
 \select@language {english}
 \select@language {catalan}
 \select@language {english}
-\contentsline {chapter}{List of figures}{xi}
-\contentsline {chapter}{List of tables}{xiii}
-\contentsline {chapter}{List of Abbreviations}{xv}
-\contentsline {chapter}{\numberline {1}{\MakeUppercase { Introduction}}}{1}
-\contentsline {chapter}{\numberline {2}{\MakeUppercase { State of the Art}}}{3}
-\contentsline {section}{\numberline {2.1}Sensor platforms}{3}
-\contentsline {section}{\numberline {2.2}Opendata services: opencities, sentilo, xively, ...}{3}
-\contentsline {chapter}{\numberline {3}{\MakeUppercase { Technologies}}}{5}
-\contentsline {section}{\numberline {3.1}Arduino}{5}
-\contentsline {section}{\numberline {3.2}Android}{5}
-\contentsline {section}{\numberline {3.3}Sensors}{5}
-\contentsline {section}{\numberline {3.4}Guifi network and opencities}{5}
-\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{7}
-\contentsline {section}{\numberline {4.1}Guifi nodes}{7}
-\contentsline {section}{\numberline {4.2}Arduino: software}{7}
-\contentsline {subsection}{\numberline {4.2.1}Collect sensory data}{7}
-\contentsline {subsection}{\numberline {4.2.2}Communication with opencities}{7}
-\contentsline {section}{\numberline {4.3}Android app}{7}
-\contentsline {chapter}{\numberline {5}{\MakeUppercase { Conclusions}}}{9}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Future work}}}{11}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Appendixes}}}{13}
-\contentsline {section}{\numberline {7.1}Pilot Charter}{13}
-\contentsline {section}{\numberline {7.2}Documentation}{13}
+\select@language {english}
+\contentsline {chapter}{List of figures}{xi}{chapter*.2}
+\contentsline {chapter}{List of tables}{xiii}{chapter*.3}
+\contentsline {chapter}{\numberline {1}{\MakeUppercase { Introduction}}}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}{\MakeUppercase { State of the Art}}}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Sensor platforms}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Opendata services: opencities, sentilo, xively, ...}{3}{section.2.2}
+\contentsline {chapter}{\numberline {3}{\MakeUppercase { Technologies}}}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Arduino}{5}{section.3.1}
+\contentsline {section}{\numberline {3.2}Android}{5}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sensors}{5}{section.3.3}
+\contentsline {section}{\numberline {3.4}Guifi network and opencities}{5}{section.3.4}
+\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Guifi nodes}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Arduino: software}{7}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Collect sensory data}{7}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Communication with opencities}{7}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Android app}{7}{section.4.3}
+\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{9}{chapter.5}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{11}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{13}{chapter.7}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{15}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{15}{section.8.1}
+\contentsline {section}{\numberline {8.2}Documentation}{15}{section.8.2}
