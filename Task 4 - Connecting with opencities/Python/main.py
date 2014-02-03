@@ -4,9 +4,6 @@ import geojson
 import datetime
 from httplib2 import Http
 from geopy import geocoders
-import requests
-import json
-import urllib2
 
 
 class Arduino:
@@ -146,7 +143,7 @@ def createJSON(arduino):
     )
     data = geojson.dumps(p)
     data = data.replace(" \"id\": \"d25830850271b4e90cc5dcdd0fb18daf\", ", " ")
-    print data
+    #print data
 
     print "Done creating the GeoJSON"
     return data

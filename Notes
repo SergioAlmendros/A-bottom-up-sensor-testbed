@@ -84,6 +84,7 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --He hecho la introducción de la thesis.
 --He vuelto a probar el curl y ahora magicamente funciona.
 --El problema es que enviaba un id=null, asi que manuel me ha dicho que ponga un valor a este id (MD5) y que lo reemplaze en el string y ya ha funcionado.
+--Fallaba por que importaba librerias que no tenia, pero ya funciona en el arduino!!!!
 
 
 
