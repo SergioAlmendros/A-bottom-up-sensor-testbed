@@ -12,7 +12,7 @@ class Arduino:
         self.light = light
         self.noise = noise
         self.humidity = humidity
-        self.id = 0
+        self.id = ""
         self.location = "BCN-UPFPOBLENOU"
         self.datasetId = 'temperature'
         self.address = 'Carrer de Tanger, Barcelona'
@@ -29,7 +29,7 @@ def collectdata():
     #1- Collect the data.
     print "Collecting the data from the arduino sensors"
     arduino = Arduino(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
-    arduino.id = int(sys.argv[1])
+    arduino.id = sys.argv[1]
     print "Done collecting"
     return arduino
 
@@ -76,7 +76,7 @@ def createJSON(arduino):
                 tags=['temperature', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
-                    'id': "%s" % (str(arduino.id) + ".1"),
+                    'id': "%s" % (arduino.id + ".1"),
                     'name': "%s" % ("SENSOR-TEMP" + arduino.location),
                     'datasetId': "%s" % arduino.datasetId,
                     'datasetName': "%s" % arduino.datasetId,
@@ -93,14 +93,14 @@ def createJSON(arduino):
                 tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
-                    'id': "%s" % (str(arduino.id) + ".2"),
+                    'id': "%s" % (arduino.id + ".2"),
                     'name': "%s" % ("SENSOR-LIGHT" + arduino.location),
                     'datasetId': "%s" % arduino.datasetId,
                     'datasetName': "%s" % arduino.datasetId,
                     'address': "%s" % arduino.address,
                     'description': "%s" % ('Light sensor of ' + arduino.location),
                     'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.temperature,
+                    'value': "%s" % arduino.light,
                     'unit': "%s" % 'Cel'
                 }
             ),
@@ -110,14 +110,14 @@ def createJSON(arduino):
                 tags=['noise', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
-                    'id': "%s" % (str(arduino.id) + ".3"),
+                    'id': "%s" % (arduino.id + ".3"),
                     'name': "%s" % ("SENSOR-NOISE" + arduino.location),
                     'datasetId': "%s" % arduino.datasetId,
                     'datasetName': "%s" % arduino.datasetId,
                     'address': "%s" % arduino.address,
                     'description': "%s" % ('Noise sensor of ' + arduino.location),
                     'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.temperature,
+                    'value': "%s" % arduino.noise,
                     'unit': "%s" % 'Cel'
                 }
             ),
@@ -127,14 +127,14 @@ def createJSON(arduino):
                 tags=['humidity', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
-                    'id': "%s" % (str(arduino.id) + ".4"),
+                    'id': "%s" % (arduino.id + ".4"),
                     'name': "%s" % ("SENSOR-HUMIDITY" + arduino.location),
                     'datasetId': "%s" % arduino.datasetId,
                     'datasetName': "%s" % arduino.datasetId,
                     'address': "%s" % arduino.address,
                     'description': "%s" % ('Humidity sensor of ' + arduino.location),
                     'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.temperature,
+                    'value': "%s" % arduino.humidity,
                     'unit': "%s" % 'Cel'
                 }
             )

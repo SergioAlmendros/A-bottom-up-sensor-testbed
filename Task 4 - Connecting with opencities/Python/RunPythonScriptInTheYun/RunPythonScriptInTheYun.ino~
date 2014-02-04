@@ -2,15 +2,15 @@
 #include <FileIO.h>
 #include <DHT.h>
 
-#define DHTPIN 2 //data pin of the DHT sensor
+#define DHTPIN 1 //data pin of the DHT sensor
 #define DHTTYPE DHT22 //DHT 22
-String ARDUINO_YUN_UNIQUE_ID = "1";
+#define ARDUINO_YUN_UNIQUE_ID 1
 
 DHT dht(DHTPIN, DHTTYPE);
 
-int TEMPERATURE_SENSOR = 1;
+int TEMPERATURE_SENSOR = 0;
 int LIGHT_SENSOR = 2;
-int NOISE_SENSOR = 0;
+int NOISE_SENSOR = 3;
 
 void setup() {
   Bridge.begin();	// Initialize the Bridge
@@ -63,10 +63,10 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
   int c = 0;
 
   if( !dataFileRead.available() ){
-    //Serial.println("archivo vacio");
+    Serial.println("archivo vacio");
     result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
   }else{
-    //Serial.println("archivo lleno");
+    Serial.println("archivo lleno");
     
     while(dataFileRead.available()){
         output += (char)dataFileRead.read(); 
