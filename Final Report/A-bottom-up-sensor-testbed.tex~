@@ -142,6 +142,8 @@ Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat
 \chapter{Introduction}
 \label{Chapter1}
 
+The development of this project involves two parts, recollect data from sensors with the arduino and send it to opencities, there is when we will make the sensor testbed, and download the data from an Android Application to show it.
+
 A sensor testbed is a small sensor network which has the goal to gather data, and test the technologies used as nodes to see if they are the best options to create a real one.
 
 Bottom-up is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to the guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users, which prevents big companies or government to hide this information.
@@ -150,7 +152,7 @@ This project is an easy way to understand the importance of sensor networks and 
 
 As sensor nodes we will use an Arduino YUN, Arduino is an open-source electronics prototyping platform, that allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi nodes and send the sensory data to a sensor platform, like opencities. 
 
-When the sensory data is stored, we will develop an Android application to visualize this data and make it more accessible to other users not involve with guifi.net.
+When the sensory data is stored, we will develop an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
 
 In the following chapters I will explain the state of sensor networks nowadays \ref{Chapter2}, which technologies we will use \ref{Chapter3}, and how the project has been done, as well as all the problems found during the process \ref{Chapter4}. 
 
@@ -159,7 +161,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \chapter{State of the Art}
 \label{Chapter2}
 
-  \section{Sensor platforms}
+  \section{Sensor networks}
   \section{Opendata services: opencities, sentilo, xively, ...}
 
 \chapter{Technologies}

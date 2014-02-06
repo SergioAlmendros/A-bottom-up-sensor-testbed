@@ -8,8 +8,9 @@
 \contentsline {chapter}{List of tables}{xiii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{\MakeUppercase { Introduction}}}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}{\MakeUppercase { State of the Art}}}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Sensor platforms}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Opendata services: opencities, sentilo, xively, ...}{3}{section.2.2}
+\contentsline {section}{\numberline {2.1}Introduction}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Sensor networks}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Opendata services: opencities, sentilo, xively, ...}{3}{section.2.3}
 \contentsline {chapter}{\numberline {3}{\MakeUppercase { Technologies}}}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Arduino}{5}{section.3.1}
 \contentsline {section}{\numberline {3.2}Android}{5}{section.3.2}

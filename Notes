@@ -80,16 +80,27 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -31/01/14
 --El geoJSON esta mal hecho y me faltan cables para conectar con el sensor de calidad de aire.
 --En la pagina el json funciona pero con el curl no funciona, hablar con palacin.
--3/01/14
+-3/02/14
 --He hecho la introducción de la thesis.
 --He vuelto a probar el curl y ahora magicamente funciona.
 --El problema es que enviaba un id=null, asi que manuel me ha dicho que ponga un valor a este id (MD5) y que lo reemplaze en el string y ya ha funcionado.
 --Fallaba por que importaba librerias que no tenia, pero ya funciona en el arduino!!!!
 --Estan hechas todas las funciones para leer los sensores, solo falta la de calidad de aire porque aun no puedo probar el sensor por culpa de los pines.
--4/01/14
+-4/02/14
 --He conectado 4 sensores al arduino: temperatura (analogico), luz, humedad, ruido.
 --He cambiado el id del arduino para que el primer numero sea unico en cada arduino (1.1.1 == Arduino 1, Id 1, Temperatura)
 --Ya funciona.
+--Voy a mirar que version de Eclipse necesito para programar la app de android en mi portatil.
+-5/02/14
+--Se estan instalando paquetes para programar la app
+--Mejor empiezo ha escribir la memoria de lo que tengo hecho.
+-6/02/14
+--He empezado a leer el articulo: Sensor Networks: Evolution, opportunities, and challenges.
+--Quiero leer:
+---[Caragliu et al., 2009] Caragliu, A., Del Bo, C., Nijkamp, P., et al. (2009). Smart cities in Europe. Vrije Universiteit, Faculty of Economics and Business Administration.
+---[Gertz and Di Justo, 2012] Gertz, E. and Di Justo, P. (2012). Environmental Monitoring with Arduino: Building Simple Devices to Collect Data about the World Around Us. Make.
+---[Nafis, 2012] Nafis, C. (2012). Monitoring your air quality. [Online; accessed 4-April-2013].
+--He metido estos articulos en el archivo bibliography.bib
 
 
 
