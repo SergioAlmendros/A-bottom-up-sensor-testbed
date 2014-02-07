@@ -8,3 +8,59 @@
   year={2003},
   publisher={IEEE}
 }
+
+@misc{airquality,
+    author = "Chris Nafis",
+    title = "Monitoring your Air Quality",
+    year = "2012",
+    url = "http://www.howmuchsnow.com/arduino/airquality/",
+    note = "[Online; accessed 4-April-2013]"
+}
+
+@book{gertz2012environmental,
+  title={Environmental Monitoring with Arduino: Building Simple Devices to Collect Data about the World Around Us},
+  author={Gertz, Emily and Di Justo, Patrick},
+  year={2012},
+  publisher={Make}
+}
+
+@misc{Smart city Amsterdam,
+    author = "http://amsterdamsmartcity.com/",
+    title = "Smart city in Amsterdam",
+    year = "2013",
+    url = "http://amsterdamsmartcity.com/",
+    note = "[Online; accessed 07/02/14]"
+}
+
+
+@misc{Smart city Amsterdam,
+    author = "Wikipedia",
+    title = "Smart city",
+    year = "2013",
+    url = "http://en.wikipedia.org/wiki/Smart_city",
+    note = "[Online; accessed 07/02/14]"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

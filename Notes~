@@ -101,8 +101,6 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 ---[Gertz and Di Justo, 2012] Gertz, E. and Di Justo, P. (2012). Environmental Monitoring with Arduino: Building Simple Devices to Collect Data about the World Around Us. Make.
 ---[Nafis, 2012] Nafis, C. (2012). Monitoring your air quality. [Online; accessed 4-April-2013].
 --He metido estos articulos en el archivo bibliography.bib
--7/02/14
---Sigo con el state of the art
 
 
 

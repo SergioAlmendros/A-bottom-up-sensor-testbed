@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  6 FEB 2014 11:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  7 FEB 2014 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,7 +697,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 68.
 
-<logo_upf.png, id=103, 36.135pt x 13.2495pt>
+<logo_upf.png, id=7, 36.135pt x 13.2495pt>
 File: logo_upf.png Graphic file (type png)
  <use logo_upf.png>
 Package pdftex.def Info: logo_upf.png used on input line 68.
@@ -733,34 +733,33 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
- (./A-bottom-up-sensor-testbed.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
-)
+
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write7
 \openout7 = `A-bottom-up-sensor-testbed.toc'.
 
- [9
+[9
 
 
-] [10]
-(./A-bottom-up-sensor-testbed.lof)
+] [10
+
+
+]
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write8
 \openout8 = `A-bottom-up-sensor-testbed.lof'.
 
- [11
+[11] [12
 
 
-] [12
+]
 
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
 
-] (./A-bottom-up-sensor-testbed.lot)
 \tf@lot=\write9
 \openout9 = `A-bottom-up-sensor-testbed.lot'.
 
@@ -769,6 +768,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 157.
+
+LaTeX Warning: Reference `Chapter2' on page 1 undefined on input line 157.
+
+
+LaTeX Warning: Reference `Chapter3' on page 1 undefined on input line 157.
+
+
+LaTeX Warning: Reference `Chapter4' on page 1 undefined on input line 157.
+
+
+LaTeX Warning: Reference `Chapter5' on page 1 undefined on input line 159.
+
+
+LaTeX Warning: Reference `Chapter6' on page 1 undefined on input line 159.
+
+
+LaTeX Warning: Reference `Chapter7' on page 1 undefined on input line 159.
+
 [1
 
 
@@ -777,25 +796,22 @@ Chapter 1.
 
 ]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 166.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
- [3] [4
+Underfull \vbox (badness 5189) has occurred while \output is active []
 
-
-]
+ [3]
+[4]
 Chapter 3.
-[5] [6
+[5
+
+
+] [6
 
 
 ]
 Chapter 4.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 187.
 [7] [8
 
 
@@ -822,34 +838,46 @@ No file A-bottom-up-sensor-testbed.bbl.
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 (./A-bottom-up-sensor-testbed.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
-Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
-ged.
-(rerunfilecheck)             Checksum: B908527FABD968B5E92E2105303664BC;1414.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
+
+
+Package rerunfilecheck Warning: File `A-bottom-up-sensor-testbed.out' has chang
+ed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `A-bottom-up-sensor-testbed.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  F884965465C60891642FB471554B37BC;1635.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  ) 
 Here is how much of TeX's memory you used:
- 17951 strings out of 493307
- 326203 string characters out of 6139906
- 425081 words of memory out of 5000000
- 20984 multiletter control sequences out of 15000+600000
- 24715 words of font info for 48 fonts, out of 8000000 for 9000
+ 17890 strings out of 493307
+ 325294 string characters out of 6139906
+ 422679 words of memory out of 5000000
+ 20935 multiletter control sequences out of 15000+600000
+ 22277 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,10n,59p,434b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,10n,59p,454b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
->
-Output written on A-bottom-up-sensor-testbed.pdf (30 pages, 78034 bytes).
+e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
+8a.pfb>
+Output written on A-bottom-up-sensor-testbed.pdf (30 pages, 69593 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
