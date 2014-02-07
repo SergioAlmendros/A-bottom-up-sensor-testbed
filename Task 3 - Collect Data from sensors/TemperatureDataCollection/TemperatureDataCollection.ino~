@@ -12,7 +12,7 @@ void setup() {
 void loop() { 
   readValue = analogRead(analogPin);
   //Serial.println(readValue);
-  temperature = (readValue * 0.0049); // 5V/1024 (10 bits)
+  temperature = (readValue * 0.0049); 
   temperature = temperature * 100; 
   temperatureF = (temperature * 1.8) + 32;
   Serial.print("Temperature: "); 

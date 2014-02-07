@@ -201,10 +201,36 @@ The final goal of the project is to build a sensor testbed and there will be the
     
     In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
     
-    \subsection{Temperature}
+    \subsection{LM35: Temperature}
+      LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino.
+      [image]
+      
+    \subsection{Light Dependent Resistor (LDR)}
+      The LDR is a sensor which returns high voltage if there is more luminosity, and also it connects directly to an analog pin in the arduino, but with a resistor.
+      [image]
+      
+    \subsection{Emartee Mini Sound Sensor: Noise}
+      This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin.
+      [image]
+      
+    \subsection{Aosong DHT22: Humidity}
+      DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed.
+      [image]
+      
+    \subsection{Sharp GP2Y1010AU0F: Air Quality}
+      This sensor is an optical dust sensor, and we will used to measured air quality. But because the output pins are a little bit inaccessible, it is needed an adaptor to be able to connect it to the arduino.
+      [image]
   
   \section{Arduino}
+    The Arduino board that we use is an arduino YUN, which has supports a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
+    
+    We also have planned to attached a power over ethernet (PoE) module because the arduino's will be attached to guifi nodes which are also PoE.
+    
   \section{Guifi network and opencities}
+    Guifi network is the network where the arduino's will be installed, and the one which will provide the access to the Internet and opencities.
+    
+    Opencities is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
+    
   \section{Android}
 
 \chapter{Bottom up sensor testbed}
