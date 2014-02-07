@@ -7,21 +7,22 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Amsterdam smart city}{section.2.2}% 7
 \BOOKMARK [2][-]{subsection.2.2.2}{Santander smart city}{section.2.2}% 8
 \BOOKMARK [1][-]{section.2.3}{Companies}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.4}{Opendata services: opencities, sentilo, xively, ...}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Opendata services}{chapter.2}% 10
 \BOOKMARK [0][-]{chapter.3}{ Technologies}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Arduino}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Android}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Sensors}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Guifi network and opencities}{chapter.3}% 15
-\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Guifi nodes}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.2}{Arduino: software}{chapter.4}% 18
-\BOOKMARK [2][-]{subsection.4.2.1}{Collect sensory data}{section.4.2}% 19
-\BOOKMARK [2][-]{subsection.4.2.2}{Communication with opencities}{section.4.2}% 20
-\BOOKMARK [1][-]{section.4.3}{Android app}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 22
-\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 23
-\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 24
-\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 25
-\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 26
-\BOOKMARK [1][-]{section.8.2}{Documentation}{chapter.8}% 27
+\BOOKMARK [1][-]{section.3.1}{Sensors}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.1.1}{Temperature}{section.3.1}% 13
+\BOOKMARK [1][-]{section.3.2}{Arduino}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Guifi network and opencities}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Android}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Guifi nodes}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Arduino: software}{chapter.4}% 19
+\BOOKMARK [2][-]{subsection.4.2.1}{Collect sensory data}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.2}{Communication with opencities}{section.4.2}% 21
+\BOOKMARK [1][-]{section.4.3}{Android app}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 23
+\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 24
+\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 25
+\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 26
+\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 27
+\BOOKMARK [1][-]{section.8.2}{Documentation}{chapter.8}% 28
