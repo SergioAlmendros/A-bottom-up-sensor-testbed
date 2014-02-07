@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  7 FEB 2014 15:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  7 FEB 2014 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,7 +697,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 68.
 
-<logo_upf.png, id=115, 36.135pt x 13.2495pt>
+<logo_upf.png, id=139, 36.135pt x 13.2495pt>
 File: logo_upf.png Graphic file (type png)
  <use logo_upf.png>
 Package pdftex.def Info: logo_upf.png used on input line 68.
@@ -788,71 +788,64 @@ Chapter 3.
 [5
 
 
-] [6
+] [6] [7] [8
 
 
 ]
 Chapter 4.
-[7] [8
-
-
-]
-Chapter 5.
 [9] [10
 
 
 ]
-Chapter 6.
+Chapter 5.
 [11] [12
 
 
 ]
-Chapter 7.
+Chapter 6.
 [13] [14
+
+
+]
+Chapter 7.
+[15] [16
 
 
 ]
 Chapter 8.
 No file A-bottom-up-sensor-testbed.bbl.
-[15] [16
+[17] [18
 
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
 (./A-bottom-up-sensor-testbed.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
-
-
-Package rerunfilecheck Warning: File `A-bottom-up-sensor-testbed.out' has chang
-ed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `A-bottom-up-sensor-testbed.out':
-(rerunfilecheck)             Before: 5BBA099E4A6084ABC9113DF0070D93D4;1601
-(rerunfilecheck)             After:  0367FCE9F743D8B19DB017FA73B4F15B;1666.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
+Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
+ged.
+(rerunfilecheck)             Checksum: 228FA82E104E98EFBEECD7441B53CCF3;2058.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
  ) 
 Here is how much of TeX's memory you used:
- 17942 strings out of 493307
- 326034 string characters out of 6139906
- 425081 words of memory out of 5000000
- 20974 multiletter control sequences out of 15000+600000
+ 17955 strings out of 493307
+ 326226 string characters out of 6139906
+ 426082 words of memory out of 5000000
+ 20980 multiletter control sequences out of 15000+600000
  24715 words of font info for 48 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,10n,59p,454b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,10n,59p,454b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (30 pages, 73672 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (32 pages, 78761 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

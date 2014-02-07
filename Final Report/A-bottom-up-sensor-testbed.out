@@ -10,19 +10,24 @@
 \BOOKMARK [1][-]{section.2.4}{Opendata services}{chapter.2}% 10
 \BOOKMARK [0][-]{chapter.3}{ Technologies}{}% 11
 \BOOKMARK [1][-]{section.3.1}{Sensors}{chapter.3}% 12
-\BOOKMARK [2][-]{subsection.3.1.1}{Temperature}{section.3.1}% 13
-\BOOKMARK [1][-]{section.3.2}{Arduino}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Guifi network and opencities}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.4}{Android}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Guifi nodes}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{Arduino: software}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{Collect sensory data}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.2}{Communication with opencities}{section.4.2}% 21
-\BOOKMARK [1][-]{section.4.3}{Android app}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 23
-\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 24
-\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 25
-\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 26
-\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 27
-\BOOKMARK [1][-]{section.8.2}{Documentation}{chapter.8}% 28
+\BOOKMARK [2][-]{subsection.3.1.1}{LM35: Temperature}{section.3.1}% 13
+\BOOKMARK [2][-]{subsection.3.1.2}{Light Dependent Resistor \(LDR\)}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.3}{Emartee Mini Sound Sensor: Noise}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.4}{Aosong DHT22: Humidity}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.5}{Sharp GP2Y1010AU0F: Air Quality}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Arduino}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Python}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Guifi network and opencities}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Android}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Guifi nodes}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Arduino: software}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Collect sensory data}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.2}{Communication with opencities}{section.4.2}% 26
+\BOOKMARK [1][-]{section.4.3}{Android app}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 28
+\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 29
+\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 30
+\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 31
+\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.2}{Documentation}{chapter.8}% 33

@@ -232,6 +232,9 @@ The final goal of the project is to build a sensor testbed and there will be the
     Opencities is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
     
   \section{Android}
+    Android is an open source mobile operating system from Google, it runs on smartphones, and we will use this OS to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand the values.
+    
+    This application it will be tested on a Sony Xperia Z1, with an Android 4.2.2.
 
 \chapter{Bottom up sensor testbed}
 \label{Chapter4}
