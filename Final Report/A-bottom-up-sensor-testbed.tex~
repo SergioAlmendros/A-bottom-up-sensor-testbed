@@ -174,7 +174,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \label{Chapter2}
   
   \section{Introduction}
-    Sensor networks started as a mecanism of defense develop by the military during the Cold War, with acoustic sensors they try to find Soviet submarines. But, this rearch continue at universities, trying to make this sensors smaller, and with the posibility of real-time data. 
+    Sensor networks started as a mecanism of defense develop by the military during the Cold War, with acoustic sensors they try to find Soviet submarines. But, this rearch continue at universities, trying to make this sensors smaller, and with the posibility of real-time data\cite{chong2003sensor}.
     
     Right now, the sensors are small enough, and the processors with network technology consume low energy, which allows us to deploy a test bed without bothering the people around it.
     
@@ -186,7 +186,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     In this section we introduce a few projects of sensor networks that cities deployed:
     
     \subsection{Amsterdam smart city}
-      Amsterdam have a lot of projects concerning the smart city concept, like the "Flexible street lighting", which allows the government to monitor the street and switch off the lights saving energy, or the "Smart parking" which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution.
+      Amsterdam have a lot of projects concerning the smart city concept, like the "Flexible street lighting", which allows the government to monitor the street and switch off the lights saving energy, or the "Smart parking" which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution\cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
       Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring
@@ -313,38 +313,36 @@ The final goal of the project is to build a sensor testbed and there will be the
       
       To read and write into the logData file the FileIO library\footnote{\url{http://arduino.cc/en/Reference/YunFileIOConstructor}} is needed, and to call the python script we need the Process library\footnote{\url{http://arduino.cc/en/Reference/YunProcessConstructor}}.
       
-      The \ref{fig:Flow Chart} figure explain how the arduino sketch works:\\
+      The figure \ref{fig:Arduino sketch Flow Chart} explain how the arduino sketch works, but because is a process a little bit long, a more specific explanation will be in the appendix:\\
       
       \begin{figure}[htbp]
       \centering
 
       \begin{tikzpicture}[node distance=2cm]
 
-        \node (start) [startstop] {Start};
-        \node (in1) [io, below of=start] {Input};
-        \node (pro1) [process, below of=in1] {Process 1};
-        \node (dec1) [decision, below of=pro1, yshift=-0.5cm] {Decision 1};
-        \node (pro2a) [process, below of=dec1, yshift=-0.5cm] {Process 2a};
-        \node (pro2b) [process, right of=dec1, xshift=2cm] {Process 2b};
-        \node (out1) [io, below of=pro2a] {Output};
-        \node (stop) [startstop, below of=out1] {Stop};
+        \node (bridge) [startstop] {Initialize Bridge};
+        \node (Serial) [process, below of=bridge] {Initialize Serial};
+        \node (FileSystem) [process, below of=Serial] {Initialize FileSystem};
+        \node (ReadSensors) [process, below of=FileSystem] {Read Sensors};
+        \node (ReadFile) [process, below of=ReadSensors] {Read \& Write File};
+        \node (delay) [process, right of=ReadFile, xshift=2cm] {Dealy of 5 seconds};
+        \node (ExecutePython) [process, below of=ReadFile] {Execute Python Script};
         
-        \draw [arrow] (start) -- (in1);
-        \draw [arrow] (in1) -- (pro1);
-        \draw [arrow] (pro1) -- (dec1);
-        \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
-        \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
-        \draw [arrow] (pro2b) |- (pro1);
-        \draw [arrow] (pro2a) -- (out1);
-        \draw [arrow] (out1) -- (stop);
-        
+        \draw [arrow] (bridge) -- (Serial);
+        \draw [arrow] (Serial) -- (FileSystem);
+        \draw [arrow] (FileSystem) -- (ReadSensors);
+        \draw [arrow] (ReadSensors) -- (ReadFile);
+        \draw [arrow] (ReadFile) -- (ExecutePython);
+        \draw [arrow] (ExecutePython) -| (delay);
+        \draw [arrow] (delay) |- (ReadSensors);
 
       \end{tikzpicture}
       \rule{35em}{0.5pt}
-      \caption[Flow Chart]{Flow Chart}
-      \label{fig:Flow Chart}
+      \caption[Arduino sketch Flow Chart]{Arduino sketch Flow Chart.}
+      \label{fig:Arduino sketch Flow Chart}
       \end{figure}
- 
+
+
     
     \subsection{Communication with opencities}
     
@@ -352,14 +350,60 @@ The final goal of the project is to build a sensor testbed and there will be the
       
       We need the sys and datetime library that are already installed, but we need the geopy library to get the latitud and longitude that will be include in the geojson, to do that we need the geojson library. To post the sensory data into opencities we use the httplib2.
       
-      Now it will be explained all the steps to install this libraries already mentioned:
+      Now all the steps to install the libraries mentioned above are explained:
       
       \begin{enumerate}
-        \item First we need to configure the onboard wifi, in this website it is explained how\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun#toc13}}.
-        \item When the YUN have an IP, now we can get into the linino by Secure Shell, if the YUN IP is 192.168.2.149: ssh root@192.168.2.149
+        \item First we need to configure the onboard wifi, in this website it is explained how\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}
+        \item When the YUN have an IP, now we can get into the linino by Secure Shell: 
+          \\ {\centering\textbf{ssh root@X.Y.Z.W}\par}
+        \item Now that we are in the linino, we begin to install the necesary packets:
+          \\ {\centering
+            \textbf{
+              opkg update \\
+              opkg install distribute \\
+              opkg install python-openssl \\
+              easy\_install pip \\
+              pip install geojson \\
+              pip install geopy \\
+              pip install httplib2
+            }
+          \par}
       \end{enumerate}
       
+      With all this libraries we can communicate with opencities and store the sensory data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the arduino sketch works:\\
+      
+      \begin{figure}[!htbp]
+      \centering
+
+      \begin{tikzpicture}[node distance=2cm]      
+        
+        \node (start) [startstop] {Called by the arduino};
+        \node (CorrectUsage) [decision, below of=start, yshift=-2cm] {Is the usage correct};
+        \node (collectdata) [process, below of=CorrectUsage, yshift=-2cm] {Store the arguments as sensory data};
+        \node (ShowCorrectWay) [process, right of=CorrectUsage, xshift=4cm] {Show the correct usage};
+        \node (StopUsage) [startstop, right of=ShowCorrectWay, xshift=2cm] {Stop};
+        \node (CreateGeoJSON) [process, below of=collectdata] {Create GeoJSON};
+        \node (PostOpencities) [process, below of=CreateGeoJSON] {POST in Opencities};
+        \node (stop) [startstop, below of=PostOpencities] {Stop};
+        
+        \draw [arrow] (start) -- (CorrectUsage);
+        \draw [arrow] (CorrectUsage) -- node[anchor=east] {yes} (collectdata);
+        \draw [arrow] (CorrectUsage) -- node[anchor=south] {no} (ShowCorrectWay);
+        \draw [arrow] (ShowCorrectWay) -- (StopUsage);
+        \draw [arrow] (collectdata) -- (CreateGeoJSON);
+        \draw [arrow] (CreateGeoJSON) -- (PostOpencities);
+        \draw [arrow] (PostOpencities) -- (stop);
+        
+
+      \end{tikzpicture}
+      \rule{35em}{0.5pt}
+      \caption[Python Script Flow Chart]{Python Script Flow Chart.}
+      \label{fig:Python Script Flow Chart}
+      \end{figure}
+      
   \section{Android app}
+  
+  
 
 \chapter{Testbed results}
 \label{Chapter5}

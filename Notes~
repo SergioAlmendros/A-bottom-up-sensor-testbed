@@ -108,7 +108,11 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -10/02/14
 --He acabado las tecnologias.
 --Empiezo a explicar lo que llevo hecho del trabajo.
---Me da problemas cuando quiero poner un pie de pagina en un itemize
+--Me da problemas cuando quiero poner un pie de pagina en un item
+--La URL no le gustaba
+--He empezado ha hacer el flowchart del codigo.
+--He acabado los flow chart generales, los especificos los hare como apendices si me da tiempo.
+--He creado un makefile, pero con vim poniendo :set list porque gedit no hace bien las tabulaciones.
 
 
 

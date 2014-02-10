@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="41" selection-start="4789" selection-end="4789" vertical-scroll-proportion="0.0" vertical-offset="2124" max-vertical-offset="3708">
+            <state line="19" column="24" selection-start="522" selection-end="522" vertical-scroll-proportion="0.44554454" vertical-offset="162" max-vertical-offset="3708">
               <folding>
                 <element signature="e#13#23#0" expanded="true" />
               </folding>
@@ -80,7 +80,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -101,17 +100,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -465,7 +465,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="41" selection-start="4789" selection-end="4789" vertical-scroll-proportion="0.0" vertical-offset="2035" max-vertical-offset="3708">
+        <state line="19" column="24" selection-start="522" selection-end="522" vertical-scroll-proportion="0.44554454" vertical-offset="162" max-vertical-offset="3708">
           <folding>
             <element signature="e#13#23#0" expanded="true" />
           </folding>

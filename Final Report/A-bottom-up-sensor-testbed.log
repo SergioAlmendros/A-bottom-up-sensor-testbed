@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  10 FEB 2014 13:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  10 FEB 2014 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -780,12 +780,23 @@ Chapter 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
 
+Overfull \hbox (62.73195pt too wide) in paragraph at lines 189--190
+\OT1/ptm/m/n/12 there are free spots to park, and, in con-se-cuence, re-duce ai
+r pollution[[]]. 
+ []
+
+
 Underfull \vbox (badness 5189) has occurred while \output is active []
 
  [3]
+Overfull \hbox (23.9244pt too wide) in paragraph at lines 192--193
+\OT1/ptm/m/n/12 door park-ing area man-age-ment, or traf-fic in-ten-sity monito
+ring[[]]. 
+ []
+
 [4]
 Chapter 3.
-<./Images/LM35.jpg, id=269, 240.9pt x 240.9pt>
+<./Images/LM35.jpg, id=277, 240.9pt x 240.9pt>
 File: ./Images/LM35.jpg Graphic file (type jpg)
  <use ./Images/LM35.jpg>
 Package pdftex.def Info: ./Images/LM35.jpg used on input line 221.
@@ -795,7 +806,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 221--223
  [] 
  []
 
-<./Images/LDR.jpg, id=270, 361.35pt x 361.35pt>
+<./Images/LDR.jpg, id=278, 361.35pt x 361.35pt>
 File: ./Images/LDR.jpg Graphic file (type jpg)
  <use ./Images/LDR.jpg>
 Package pdftex.def Info: ./Images/LDR.jpg used on input line 232.
@@ -809,7 +820,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 232--234
 
 
  <./Images/LM35.jpg>]
-<./Images/MiniSoundSensor.jpg, id=276, 376.40625pt x 369.63094pt>
+<./Images/MiniSoundSensor.jpg, id=284, 376.40625pt x 369.63094pt>
 File: ./Images/MiniSoundSensor.jpg Graphic file (type jpg)
 
 <use ./Images/MiniSoundSensor.jpg>
@@ -821,7 +832,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 243--245
  []
 
 [6 <./Images/LDR.jpg> <./Images/MiniSoundSensor.jpg>]
-<./Images/dht22.jpg, id=281, 188.20313pt x 188.20313pt>
+<./Images/dht22.jpg, id=289, 188.20313pt x 188.20313pt>
 File: ./Images/dht22.jpg Graphic file (type jpg)
 
 <use ./Images/dht22.jpg>
@@ -832,7 +843,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 254--256
  [] 
  []
 
-<./Images/sharp.jpg, id=282, 144.54pt x 144.54pt>
+<./Images/sharp.jpg, id=290, 144.54pt x 144.54pt>
 File: ./Images/sharp.jpg Graphic file (type jpg)
  <use ./Images/sharp.jpg>
 Package pdftex.def Info: ./Images/sharp.jpg used on input line 265.
@@ -855,7 +866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--272
  []
 
 [7 <./Images/dht22.jpg> <./Images/sharp.jpg>]
-<./Images/ArduinoYunFront_2_450px.jpg, id=293, 451.6875pt x 301.125pt>
+<./Images/ArduinoYunFront_2_450px.jpg, id=301, 451.6875pt x 301.125pt>
 File: ./Images/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
 
 <use ./Images/ArduinoYunFront_2_450px.jpg>
@@ -878,16 +889,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--317
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 342--344
+Overfull \hbox (30.0pt too wide) in paragraph at lines 339--341
  [] 
  []
 
-[11] [12] [13] [14
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
 
 
-]
+Overfull \hbox (30.0pt too wide) in paragraph at lines 398--400
+ [] 
+ []
+
+[13] [14]
 Chapter 5.
-[15] [16
+[15
+
+
+] [16
 
 
 ]
@@ -902,39 +923,42 @@ Chapter 7.
 
 ]
 Chapter 8.
-No file A-bottom-up-sensor-testbed.bbl.
-[21] [22
+(./A-bottom-up-sensor-testbed.bbl [21] [22
+
+
+]) [23] [24
 
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
 (./A-bottom-up-sensor-testbed.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
 Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: 45E89E5782C1D337FA5F89E354B9F8C3;1995.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
  ) 
 Here is how much of TeX's memory you used:
- 18191 strings out of 493307
- 330685 string characters out of 6139906
- 427869 words of memory out of 5000000
- 21184 multiletter control sequences out of 15000+600000
- 28907 words of font info for 55 fonts, out of 8000000 for 9000
+ 18245 strings out of 493307
+ 331931 string characters out of 6139906
+ 428123 words of memory out of 5000000
+ 21225 multiletter control sequences out of 15000+600000
+ 30591 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,11n,59p,499b,705s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,11n,59p,499b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (36 pages, 460192 bytes).
+mb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on A-bottom-up-sensor-testbed.pdf (38 pages, 472640 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 94 named destinations out of 1000 (max. 500000)
  304 words of extra memory for PDF output out of 10000 (max. 10000000)
 
