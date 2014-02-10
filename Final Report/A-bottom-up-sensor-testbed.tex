@@ -1,5 +1,6 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
+\usepackage{float}
 
 %CODIFICACIÓ
 \usepackage[latin1]{inputenc}
@@ -203,36 +204,79 @@ The final goal of the project is to build a sensor testbed and there will be the
     
     \subsection{LM35: Temperature}
       LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino.
-      [image]
+
+\begin{figure}[!htbp]
+    \centering
+        \includegraphics[scale=0.5]{./Images/LM35.jpg}
+        \rule{35em}{0.5pt}
+    \caption[LM35 sensor]{LM35 temperature sensor.}
+    \label{fig:LM35}
+\end{figure}
       
     \subsection{Light Dependent Resistor (LDR)}
       The LDR is a sensor which returns high voltage if there is more luminosity, and also it connects directly to an analog pin in the arduino, but with a resistor.
-      [image]
-      
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.3]{./Images/LDR.jpg}
+        \rule{35em}{0.5pt}
+    \caption[LDR sensor]{photoresistor or light-dependent resistor.}
+    \label{fig:LDR}
+\end{figure}
+ 
     \subsection{Emartee Mini Sound Sensor: Noise}
       This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin.
-      [image]
+
+\begin{figure}[!htbp]
+    \centering
+        \includegraphics[scale=0.5]{./Images/MiniSoundSensor.jpg}
+        \rule{35em}{0.5pt}
+    \caption[Mini Sound Sensor]{Mini Sound Sensor.}
+    \label{fig:MSS}
+\end{figure}
       
     \subsection{Aosong DHT22: Humidity}
       DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed.
-      [image]
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.5]{./Images/dht22.jpg}
+        \rule{35em}{0.5pt}
+    \caption[DHT22 sensor]{DHT22 humidity and temperature sensor.}
+    \label{fig:DHT22}
+\end{figure}
       
     \subsection{Sharp GP2Y1010AU0F: Air Quality}
       This sensor is an optical dust sensor, and we will used to measured air quality. But because the output pins are a little bit inaccessible, it is needed an adaptor to be able to connect it to the arduino.
-      [image]
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.5]{./Images/sharp.jpg}
+        \rule{35em}{0.5pt}
+    \caption[Sharp GP2Y1010AU0F]{Sharp GP2Y1010AU0F optical dust sensor.}
+    \label{fig:Sharp}
+\end{figure}
   
   \section{Arduino}
-    The Arduino board that we use is an arduino YUN, which has supports a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
+    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}}, which has supports a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
     
     We also have planned to attached a power over ethernet (PoE) module because the arduino's will be attached to guifi nodes which are also PoE.
+    
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.5]{./Images/ArduinoYunFront_2_450px.jpg}
+        \rule{35em}{0.5pt}
+    \caption[Arduino YUN]{Arduino YUN.}
+    \label{fig:AYUN}
+\end{figure}
     
   \section{Python}
     Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities.
     
   \section{Guifi network and opencities}
-    Guifi network is the network where the arduino's will be installed, and the one which will provide the access to the Internet and opencities.
+    Guifi network\footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be installed, and the one which will provide the access to the Internet and opencities.
     
-    Opencities is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
+    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use this OS to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand the values.
