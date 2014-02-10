@@ -108,6 +108,7 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -10/02/14
 --He acabado las tecnologias.
 --Empiezo a explicar lo que llevo hecho del trabajo.
+--Me da problemas cuando quiero poner un pie de pagina en un item
 
 
 

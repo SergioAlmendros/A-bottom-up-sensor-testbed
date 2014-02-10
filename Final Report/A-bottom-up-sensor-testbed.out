@@ -20,14 +20,13 @@
 \BOOKMARK [1][-]{section.3.4}{Guifi network and opencities}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.5}{Android}{chapter.3}% 21
 \BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 22
-\BOOKMARK [1][-]{section.4.1}{Guifi nodes}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.2}{Arduino: software}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.2.1}{Collect sensory data}{section.4.2}% 25
-\BOOKMARK [2][-]{subsection.4.2.2}{Communication with opencities}{section.4.2}% 26
-\BOOKMARK [1][-]{section.4.3}{Android app}{chapter.4}% 27
-\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 28
-\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 29
-\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 30
-\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 31
-\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.2}{Documentation}{chapter.8}% 33
+\BOOKMARK [1][-]{section.4.1}{Arduino Code}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensory data}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.2}{Communication with opencities}{section.4.1}% 25
+\BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 27
+\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 28
+\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 29
+\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 30
+\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.2}{Documentation}{chapter.8}% 32

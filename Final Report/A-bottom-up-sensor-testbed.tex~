@@ -1,6 +1,17 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
-\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=orange!30]
+
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
 %CODIFICACIÓ
 \usepackage[latin1]{inputenc}
@@ -271,12 +282,12 @@ The final goal of the project is to build a sensor testbed and there will be the
 \end{figure}
     
   \section{Python}
-    Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities.
+    Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities. The python installed in the arduino is the python 4.2.5. 
     
   \section{Guifi network and opencities}
-    Guifi network is the network where the arduino's will be installed, and the one which will provide the access to the Internet and opencities.
+    Guifi network\footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be installed, and the one which will provide the access to the Internet and opencities.
     
-    Opencities is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
+    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use this OS to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand the values.
@@ -286,10 +297,68 @@ The final goal of the project is to build a sensor testbed and there will be the
 \chapter{Bottom up sensor testbed}
 \label{Chapter4}
 
-  \section{Guifi nodes}
-  \section{Arduino: software}
+  This chapter focused in the process that it is been followed to complet the project, which has two main parts, the software to recollect and send the sensory data and the Android application to show it.
+  
+  \section{Arduino Code}
+    
+    The arduino YUN will run only one file, CollectAndSendData.ino, but the arduino sketches are executed with a very low memory, so we need to use a python script which will run in the linino.
+    
+    To get started with how the arduino YUN visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
+    
+    The arduino sketch is responsible for collecting the data, write it down in the logData file, and call the python script with the collected values and an unique ID, and the python script create the GeoJSON and send it to opencities.
+    
     \subsection{Collect sensory data}
+    
+      To collect almost all the data the skecth does not need to include any libray because it is read by the analog read, except for the humidity sensor (DHT22) which need an external library.
+      
+      To read and write into the logData file the FileIO library\footnote{\url{http://arduino.cc/en/Reference/YunFileIOConstructor}} is needed, and to call the python script we need the Process library\footnote{\url{http://arduino.cc/en/Reference/YunProcessConstructor}}.
+      
+      The \ref{fig:Flow Chart} figure explain how the arduino sketch works:\\
+      
+      \begin{figure}[htbp]
+      \centering
+
+      \begin{tikzpicture}[node distance=2cm]
+
+        \node (start) [startstop] {Start};
+        \node (in1) [io, below of=start] {Input};
+        \node (pro1) [process, below of=in1] {Process 1};
+        \node (dec1) [decision, below of=pro1, yshift=-0.5cm] {Decision 1};
+        \node (pro2a) [process, below of=dec1, yshift=-0.5cm] {Process 2a};
+        \node (pro2b) [process, right of=dec1, xshift=2cm] {Process 2b};
+        \node (out1) [io, below of=pro2a] {Output};
+        \node (stop) [startstop, below of=out1] {Stop};
+        
+        \draw [arrow] (start) -- (in1);
+        \draw [arrow] (in1) -- (pro1);
+        \draw [arrow] (pro1) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
+        \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
+        \draw [arrow] (pro2b) |- (pro1);
+        \draw [arrow] (pro2a) -- (out1);
+        \draw [arrow] (out1) -- (stop);
+        
+
+      \end{tikzpicture}
+      \rule{35em}{0.5pt}
+      \caption[Flow Chart]{Flow Chart}
+      \label{fig:Flow Chart}
+      \end{figure}
+ 
+    
     \subsection{Communication with opencities}
+    
+      The communication with opencities is done by a python script, to do this a set of libraries are needed and there are some which have to be installed in the linino.
+      
+      We need the sys and datetime library that are already installed, but we need the geopy library to get the latitud and longitude that will be include in the geojson, to do that we need the geojson library. To post the sensory data into opencities we use the httplib2.
+      
+      Now it will be explained all the steps to install this libraries already mentioned:
+      
+      \begin{enumerate}
+        \item First we need to configure the onboard wifi, in this website it is explained how\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun#toc13}}.
+        \item When the YUN have an IP, now we can get into the linino by Secure Shell, if the YUN IP is 192.168.2.149: ssh root@192.168.2.149
+      \end{enumerate}
+      
   \section{Android app}
 
 \chapter{Testbed results}
