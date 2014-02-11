@@ -189,7 +189,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       Amsterdam have a lot of projects concerning the smart city concept, like the "Flexible street lighting", which allows the government to monitor the street and switch off the lights saving energy, or the "Smart parking" which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution\cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
-      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring
+      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring\cite{SmartcitySantander}.
     
     
   \section{Companies}
@@ -269,7 +269,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \end{figure}
   
   \section{Arduino}
-    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}}, which has supports a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
+    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}}, which support a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
     
     We also have planned to attached a power over ethernet (PoE) module because the arduino's will be attached to guifi nodes which are also PoE.
     
@@ -325,7 +325,7 @@ The final goal of the project is to build a sensor testbed and there will be the
         \node (FileSystem) [process, below of=Serial] {Initialize FileSystem};
         \node (ReadSensors) [process, below of=FileSystem] {Read Sensors};
         \node (ReadFile) [process, below of=ReadSensors] {Read \& Write File};
-        \node (delay) [process, right of=ReadFile, xshift=2cm] {Dealy of 5 seconds};
+        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 5 seconds};
         \node (ExecutePython) [process, below of=ReadFile] {Execute Python Script};
         
         \draw [arrow] (bridge) -- (Serial);
