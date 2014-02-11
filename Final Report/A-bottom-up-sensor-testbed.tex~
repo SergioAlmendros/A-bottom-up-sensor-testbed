@@ -370,7 +370,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \par}
       \end{enumerate}
       
-      With all this libraries we can communicate with opencities and store the sensory data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the arduino sketch works:\\
+      With all this libraries we can communicate with opencities and store the sensory data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the arduino sketch works, but because is a process a little bit long, a more specific explanation will be in the appendix:\\
       
       \begin{figure}[!htbp]
       \centering
