@@ -1,0 +1,268 @@
+% $Header: /cvsroot/latex-beamer/latex-beamer/solutions/conference-talks/conference-ornate-20min.en.tex,v 1.7 2007/01/28 20:48:23 tantau Exp $
+
+\documentclass[compress,red]{beamer}
+
+\mode<presentation>
+\usetheme{Warsaw}
+% define your own colours:
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Blue}{rgb}{0,0,1}
+\definecolor{Green}{rgb}{0,1,0}
+\definecolor{magenta}{rgb}{1,0,.6}
+\definecolor{lightblue}{rgb}{0,.5,1}
+\definecolor{lightpurple}{rgb}{.6,.4,1}
+\definecolor{gold}{rgb}{.6,.5,0}
+\definecolor{orange}{rgb}{1,0.4,0}
+\definecolor{hotpink}{rgb}{1,0,0.5}
+\definecolor{newcolor2}{rgb}{.5,.3,.5}
+\definecolor{newcolor}{rgb}{0,.3,1}
+\definecolor{newcolor3}{rgb}{1,0,.35}
+\definecolor{darkgreen1}{rgb}{0, .35, 0}
+\definecolor{darkgreen}{rgb}{0, .6, 0}
+\definecolor{darkred}{rgb}{.75,0,0}
+\xdefinecolor{olive}{cmyk}{0.64,0,0.95,0.4}
+\xdefinecolor{purpleish}{cmyk}{0.75,0.75,0,0}
+\useoutertheme[subsection=false]{smoothbars}
+
+%{
+  %\usecolortheme[RGB={102,0,15}]{structure}
+  %\useoutertheme{infolines}
+  %\usetheme{Singapore}
+  %\setbeamertemplate{items}[ball]
+  %\setbeamertemplate{blocks}[rounded][shadow=false] 
+  %\setbeamertemplate{footline}[page number]
+  %\usetheme{Frankfurt}
+  % or ...
+
+  %\setbeamertemplate{navigation symbols}{}
+
+  %\setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+%}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,automata,shadows}
+\usepackage{psfrag}
+\usepackage{amssymb,amsmath}
+\usepackage{spot}
+
+
+
+
+\title[A bottom up sensor testbed] % (optional, use only with long paper titles)
+{
+A bottom up sensor testbed \\
+Hands on WSN \\
+2014
+}
+
+
+%\subtitle
+%{Include Only If Paper Has a Subtitle}
+
+\author[Almendros] % (optional, use only with lots of authors)
+{
+Sergio Almendros Diaz
+}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[institute] % (optional, but mostly needed)
+{
+Universitat Pompeu Fabra
+}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[date] % (optional, should be abbreviation of conference name)
+{
+February, 2014, Barcelona
+}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+\subject{}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+%\pgfdeclareimage[height=2cm]{conference-logo}{conference-logo}
+%\logo{\pgfuseimage{conference-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+%\AtBeginSection[]
+%{
+%  \begin{frame}<beamer>{Outline}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+\tikzstyle{every picture}+=[remember picture]
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+\section{Introduction}
+  \begin{frame}
+    \frametitle{Introduction}
+    
+    \begin{block}{}
+        \begin{itemize}
+          \item Arduino
+          \item Android App
+        \end{itemize}
+      \end{block}
+    
+  \end{frame}
+
+\section{Technologies}
+  \begin{frame}
+    \frametitle{Technologies}
+    
+    \begin{block}{}
+        \begin{itemize}
+          \item Arduino
+          \item Android App
+        \end{itemize}
+      \end{block}
+    
+  \end{frame}
+  
+\section{Arduino sketch}
+  \begin{frame}
+    \frametitle{Arduino sketch}
+    
+    \begin{block}{}
+        \begin{itemize}
+          \item Explanation
+          \item Problems
+          \item Solution
+        \end{itemize}
+      \end{block}
+    
+  \end{frame}
+  
+\section{Python script}
+  \begin{frame}
+    \frametitle{Python script}
+    
+    \begin{block}{}
+        \begin{itemize}
+          \item Explanation
+          \item Problems
+          \item Solution
+        \end{itemize}
+      \end{block}
+    
+  \end{frame}
+  
+\section{Opencities}
+  \begin{frame}
+    \frametitle{Opencities}
+    
+    \begin{block}{}
+        \begin{itemize}
+          \item POST
+        \end{itemize}
+      \end{block}
+    
+  \end{frame}
+
+
+\begin{frame}{Summary}
+  
+  % The following outlook is optional.
+  \vskip 1cm
+        \begin{center}
+          Thank you for your attention. 
+
+        \end{center}
+\end{frame}
+
+\end{document}
+
+
+
+\begin{frame}{Summary}
+
+  % Keep the summary *very short*.
+  \begin{block}{}
+        \begin{center}
+          \begin{itemize}
+            \item Arduino
+            \item Android App
+          \end{itemize}
+        \end{center}
+  \end{block}
+  
+  % The following outlook is optional.
+  \vskip 1cm
+        \begin{center}
+          Thank you for your attention. 
+
+        \end{center}
+\end{frame}
+
+\end{document}
+
+
