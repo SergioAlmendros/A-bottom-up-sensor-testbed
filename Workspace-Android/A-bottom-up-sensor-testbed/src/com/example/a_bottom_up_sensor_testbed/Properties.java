@@ -1,10 +1,10 @@
 package com.example.a_bottom_up_sensor_testbed;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Properties {
 	
-	private List<String> tags;
+	private ArrayList<String> tags;
 	private String id;
 	private String unit;
 	private String timeStamp;
@@ -15,7 +15,11 @@ public class Properties {
 	private String name;
 	private float value;
 	
-	public Properties(List<String> tags, String id, String unit,
+	public Properties() {
+		super();
+	}
+	
+	public Properties(ArrayList<String> tags, String id, String unit,
 			String timeStamp, String address, String datasetName,
 			String description, String datasetId, String name, float value) {
 		super();
@@ -31,11 +35,11 @@ public class Properties {
 		this.value = value;
 	}
 
-	public List<String> getTags() {
+	public ArrayList<String> getTags() {
 		return tags;
 	}
 
-	public void setTags(List<String> tags) {
+	public void setTags(ArrayList<String> tags) {
 		this.tags = tags;
 	}
 

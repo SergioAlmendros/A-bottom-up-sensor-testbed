@@ -41,7 +41,6 @@ String readTemperatureSensor(int sensorvalue){
 
 String readNoiseSensor(){
   //Hay que hacer pruebas para saber que valor es silencio, y que valor es mucho ruido
-  //Hay que hacer varias medidas y hacer el average
   float sensorvalue = 0.0;
   int rounds = 10;
   for(int i=0; i<rounds; i++){

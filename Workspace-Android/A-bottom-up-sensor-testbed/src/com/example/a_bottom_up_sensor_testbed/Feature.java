@@ -1,17 +1,21 @@
 package com.example.a_bottom_up_sensor_testbed;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Feature {
 	
 	//Attributes: tags, properties, geometry.
 	
-	private List<String> tags;
+	private ArrayList<String> tags;
 	private Properties properties;
 	private String type;
 	private Geometry geometry;
 	
-	public Feature(List<String> tags, Properties properties, String type,
+	public Feature() {
+		super();
+	}
+
+	public Feature(ArrayList<String> tags, Properties properties, String type,
 			Geometry geometry) {
 		super();
 		this.tags = tags;
@@ -20,11 +24,11 @@ public class Feature {
 		this.geometry = geometry;
 	}
 
-	public List<String> getTags() {
+	public ArrayList<String> getTags() {
 		return tags;
 	}
 
-	public void setTags(List<String> tags) {
+	public void setTags(ArrayList<String> tags) {
 		this.tags = tags;
 	}
 

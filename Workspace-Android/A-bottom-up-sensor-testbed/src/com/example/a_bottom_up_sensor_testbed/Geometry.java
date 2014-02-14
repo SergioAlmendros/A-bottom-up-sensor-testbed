@@ -7,6 +7,10 @@ public class Geometry {
 	private String type;
 	private Vector<Float> coordinates;
 	
+	public Geometry() {
+		super();
+	}
+	
 	public Geometry(String type, Vector<Float> coordinates) {
 		super();
 		this.type = type;

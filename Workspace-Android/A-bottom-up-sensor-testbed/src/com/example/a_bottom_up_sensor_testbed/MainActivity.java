@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -133,39 +134,57 @@ public class MainActivity extends Activity {
 				JsonParserFactory factory = JsonParserFactory.getInstance();
 				JSONParser parser=factory.newJsonParser();
 				Map jsonMap;
-				
+				HashMap propertiesHM, geometryHM;
+				ArrayList tagsAL, coordinatesAL, tagsALp;
+				Vector<Float> coordinatesV;
 				
 				Feature feature;
 				Properties properties;
 				Geometry geometry;
 				
+				ArrayList<Feature> Lfeatures = new ArrayList<Feature>(); 
+				
 				for(int i=0; i<listFeatures.size(); i++){
 					
 					jsonMap = parser.parseJson(listFeatures.get(i));
 					
-					//etResponse.setText(jsonMap.keySet().toString());
-					//etResponse.append("\n" + jsonMap.get("properties").toString());
+					propertiesHM = (HashMap)jsonMap.get("properties");
+					geometryHM = (HashMap)jsonMap.get("geometry");
+					tagsAL = (ArrayList) jsonMap.get("tags");
+					coordinatesAL = (ArrayList) geometryHM.get("coordinates");
 					
-					HashMap propertiesHM = (HashMap)jsonMap.get("properties");
+					String[] t = ((String) propertiesHM.get("tags")).split(",");
 					
-					etResponse.append("\n" + propertiesHM.keySet().toString());
-					etResponse.append("\n" + propertiesHM.get("tags").getClass().toString());
+					tagsALp = new ArrayList<String>();
 					
-					/*etResponse.setText(tagsMap.keySet().toString()+"\n");
-					etResponse.append(propertiesMap.keySet().toString()+"\n");
-					etResponse.append(geometryMap.keySet().toString());*/
+					for(int j=0; j<t.length; j++){
+						tagsALp.add(t[j]);
+					}
+										
+					properties = new Properties(
+							tagsALp, 
+							(String)propertiesHM.get("id"),
+							(String)propertiesHM.get("unit"),
+							(String)propertiesHM.get("timeStamp"),
+							(String)propertiesHM.get("address"),
+							(String)propertiesHM.get("datasetName"),
+							(String)propertiesHM.get("description"),
+							(String)propertiesHM.get("datasetId"),
+							(String)propertiesHM.get("name"),
+							Float.parseFloat( (String) propertiesHM.get("value") ));
 					
+					coordinatesV = new Vector<Float>();
 					
+					for(int j=0; j<coordinatesAL.size(); j++){
+						coordinatesV.add(Float.parseFloat((String)coordinatesAL.get(j)));
+					}
 					
-					break;
+					geometry = new Geometry((String)geometryHM.get("type"), coordinatesV);
+					
+					feature = new Feature(tagsAL,properties,(String)jsonMap.get("type"),geometry);
+					
+					Lfeatures.add(feature);
 				}
-				
-				
-				
-				
-
-				//De esta forma consigo los diferentes features.
-				//etResponse.append( arrayOfFeatures.get(1).toString() );
 				
 				
 				

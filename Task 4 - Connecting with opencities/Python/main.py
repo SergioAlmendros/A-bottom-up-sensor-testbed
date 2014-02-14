@@ -101,7 +101,7 @@ def createJSON(arduino):
                     'description': "%s" % ('Light sensor of ' + arduino.location),
                     'timeStamp': "%s" % timestamp,
                     'value': "%s" % arduino.light,
-                    'unit': "%s" % 'Cel'
+                    'unit': "%s" % 'lux'
                 }
             ),
             geojson.Feature(
@@ -118,7 +118,7 @@ def createJSON(arduino):
                     'description': "%s" % ('Noise sensor of ' + arduino.location),
                     'timeStamp': "%s" % timestamp,
                     'value': "%s" % arduino.noise,
-                    'unit': "%s" % 'Cel'
+                    'unit': "%s" % 'x'
                 }
             ),
             geojson.Feature(
@@ -135,7 +135,7 @@ def createJSON(arduino):
                     'description': "%s" % ('Humidity sensor of ' + arduino.location),
                     'timeStamp': "%s" % timestamp,
                     'value': "%s" % arduino.humidity,
-                    'unit': "%s" % 'Cel'
+                    'unit': "%s" % '%'
                 }
             )
 

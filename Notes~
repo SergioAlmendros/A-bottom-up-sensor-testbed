@@ -118,8 +118,10 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --He cambiado la carpeta de Images por Figures, y voy a empezar ha hacer la presentacion
 --He acabado la presentacion
 --Empiezo la aplicacion.
-
-
+-12/02/14
+--He tenido que instalar mil historias pero al final puedo trabajar con mi movil.
+--Tengo hecho el get, pero falla algo porque me da un error al tratar de crear un objeto JSON con la string que devuelve.
+--He seguido haciendo lo del parser para JSON, y estoy utilizando una libreria nueva, quick-json "https://code.google.com/p/quick-json/", y parece que va bien.
 
 
 
