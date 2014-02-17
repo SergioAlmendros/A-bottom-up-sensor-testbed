@@ -45,7 +45,7 @@ String readNoiseSensor(){
   int rounds = 10;
   for(int i=0; i<rounds; i++){
     sensorvalue = sensorvalue + analogRead(NOISE_SENSOR);
-    delay(100);
+    delay(1000);
   }
   sensorvalue = sensorvalue/rounds;
   return String(sensorvalue);
@@ -151,8 +151,7 @@ void loop() {
   int id = readFile(&temperature, &humidity, &noise, &ligth);
   executePythonScritp(id,&temperature, &humidity, &noise, &ligth); 
 
-  //delay(60000);  // wait 60 seconds before you do it again
-  delay(5000);
+  delay(48000); //This delay plus the delay added at the noise read plus the processing delay would make a total delay of 1 minute.
 }
 
 

@@ -14,12 +14,12 @@ class Arduino:
         self.humidity = humidity
         self.id = ""
         self.location = "BCN-UPFPOBLENOU"
-        self.datasetId = 'temperature'
-        self.address = 'Carrer de Tanger, Barcelona'
+        self.datasetId = 'handsonwsn'
+        self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'
         self.description = ''
         self.apikey = "7b1611c3-c688-474b-bcab-6e4921bfb109"
         g = geocoders.GoogleV3()
-        place, (lat, lng) = g.geocode("Tanger Bldg in Barcelona")
+        place, (lat, lng) = g.geocode("Sagrada Familia, Carrer de Mallorca, Barcelona, spain")
         self.latitud = lat
         self.longitud = lng
         #print "%s: %.5f, %.5f" % (place, lat, lng)
@@ -90,23 +90,6 @@ def createJSON(arduino):
             geojson.Feature(
                 id='d25830850271b4e90cc5dcdd0fb18daf',
                 type='Feature',
-                tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
-                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
-                properties={
-                    'id': "%s" % (arduino.id + ".2"),
-                    'name': "%s" % ("SENSOR-LIGHT" + arduino.location),
-                    'datasetId': "%s" % arduino.datasetId,
-                    'datasetName': "%s" % arduino.datasetId,
-                    'address': "%s" % arduino.address,
-                    'description': "%s" % ('Light sensor of ' + arduino.location),
-                    'timeStamp': "%s" % timestamp,
-                    'value': "%s" % arduino.light,
-                    'unit': "%s" % 'lux'
-                }
-            ),
-            geojson.Feature(
-                id='d25830850271b4e90cc5dcdd0fb18daf',
-                type='Feature',
                 tags=['noise', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
@@ -136,6 +119,23 @@ def createJSON(arduino):
                     'timeStamp': "%s" % timestamp,
                     'value': "%s" % arduino.humidity,
                     'unit': "%s" % '%'
+                }
+            ),
+            geojson.Feature(
+                id='d25830850271b4e90cc5dcdd0fb18daf',
+                type='Feature',
+                tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
+                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
+                properties={
+                    'id': "%s" % (arduino.id + ".2"),
+                    'name': "%s" % ("SENSOR-LIGHT" + arduino.location),
+                    'datasetId': "%s" % arduino.datasetId,
+                    'datasetName': "%s" % arduino.datasetId,
+                    'address': "%s" % arduino.address,
+                    'description': "%s" % ('Light sensor of ' + arduino.location),
+                    'timeStamp': "%s" % timestamp,
+                    'value': "%s" % arduino.light,
+                    'unit': "%s" % 'lux'
                 }
             )
 

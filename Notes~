@@ -122,8 +122,13 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --He tenido que instalar mil historias pero al final puedo trabajar con mi movil.
 --Tengo hecho el get, pero falla algo porque me da un error al tratar de crear un objeto JSON con la string que devuelve.
 --He seguido haciendo lo del parser para JSON, y estoy utilizando una libreria nueva, quick-json "https://code.google.com/p/quick-json/", y parece que va bien.
-
-
+-14/02/14
+--Ya Tengo todas las features guardadas en una lista.
+--Voy a ver si puedo hacer que se vea un mapa en la app.
+-17/02/14
+--Hace falta una clave SHA-1 y una key para que funcione.
+---https://developers.google.com/maps/documentation/android/start#getting_the_google_maps_android_api_v2
+---https://code.google.com/apis/console/?noredirect#project:674441775414:access
 
 
 
