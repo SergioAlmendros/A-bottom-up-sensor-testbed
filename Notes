@@ -130,8 +130,10 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 ---https://developers.google.com/maps/documentation/android/start#getting_the_google_maps_android_api_v2
 ---https://code.google.com/apis/console/?noredirect#project:674441775414:access
 --Hay algun error en la autenticacion
-
-
+-18/02/14
+--Vuelvo a crear una api key para google maps v2
+--Eclipse ya crea la clave SHA-1, WINDOW>Preferences>Android>Build
+--No se como pero va el ejemplo basico que sale en https://developers.google.com/maps/documentation/android/start
 
 
 

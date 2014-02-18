@@ -1,0 +1,7 @@
+INDEX VERSION 1.126+/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/.metadata/.plugins/org.eclipse.jdt.core
+2855083421.index
+1415693123.index
+4126278445.index
+1355485485.index
+994699459.index
+6939385.index
