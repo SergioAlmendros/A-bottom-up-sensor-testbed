@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.CameraUpdateFactory"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.MarkerOptions"/>
+<fullyQualifiedTypeName name="android.os.SystemClock"/>
+</qualifiedTypeNameHistroy>

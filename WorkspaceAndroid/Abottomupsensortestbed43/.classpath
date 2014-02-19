@@ -6,5 +6,6 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="lib" path="/home/sergio/EcSdk/android-sdk-linux/extras/google/google_play_services/libproject/google-play-services_lib/libs/google-play-services.jar"/>
+	<classpathentry kind="lib" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/libs/quick-json-1.0.2.3.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

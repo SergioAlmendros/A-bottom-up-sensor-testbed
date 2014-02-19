@@ -1,0 +1,29 @@
+package com.upf.abottomupsensortestbed43;
+
+import java.util.ArrayList;
+
+public class DataBase {
+    private static DataBase mInstance = null;
+
+    private ArrayList<Feature> Lfeatures = new ArrayList<Feature>();
+
+    private DataBase(){
+        mString = "Hello";
+    }
+
+    public static DataBase getInstance(){
+        if(mInstance == null)
+        {
+            mInstance = new DataBase();
+        }
+        return mInstance;
+    }
+
+    public String getString(){
+        return this.mString;
+    }
+
+    public void setString(String value){
+        mString = value;
+    }
+}
