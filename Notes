@@ -136,6 +136,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --No se como pero va el ejemplo basico que sale en https://developers.google.com/maps/documentation/android/start
 -19/02/14
 --Ya he creado una clase singleton para añadir los marcadores con los datos de los sensores
+-20/02/14
+--Voy a crear los marcadores bien
+--Para obtener la localizacion actual he usado la pagina: http://stackoverflow.com/questions/1513485/how-do-i-get-the-current-gps-location-programmatically-in-android/10917500#10917500, el post answered Apr 2 '13 at 6:53 Nirav Ranpara.
 
 
 

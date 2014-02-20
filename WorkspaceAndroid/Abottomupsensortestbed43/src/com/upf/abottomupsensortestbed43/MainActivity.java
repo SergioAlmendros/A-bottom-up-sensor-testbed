@@ -21,29 +21,67 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.json.parsers.JSONParser;
 import com.json.parsers.JsonParserFactory;
 
 public class MainActivity extends Activity {
 
-	
-	
+	Button btnShowLocation;
+
+	// GPSTracker class
+	GPSTracker gps;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		DataBase dataBase = DataBase.getInstance();
-		
+
+		btnShowLocation = (Button) findViewById(R.id.btnShowLocation);
+
+		// show location button click event
+		btnShowLocation.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View arg0) {
+				// create class object
+				gps = new GPSTracker(MainActivity.this);
+
+				// check if GPS enabled
+				if (gps.canGetLocation()) {
+
+					double latitude = gps.getLatitude();
+					double longitude = gps.getLongitude();
+
+					// \n is for new line
+					// Toast.makeText(getApplicationContext(),
+					// "Your Location is - \nLat: " + latitude + "\nLong: " +
+					// longitude, Toast.LENGTH_LONG).show();
+					dataBase.map.setMyLocationEnabled(true);
+					dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(
+							new LatLng(latitude, longitude), 13));
+				} else {
+					// can't get location
+					// GPS or Network is not enabled
+					// Ask user to enable GPS/network in settings
+					gps.showSettingsAlert();
+				}
+
+			}
+		});
+
 		// Get a handle to the Map Fragment
 		dataBase.map = ((MapFragment) getFragmentManager().findFragmentById(
 				R.id.map)).getMap();
@@ -51,15 +89,18 @@ public class MainActivity extends Activity {
 		new HttpAsyncTask()
 				.execute("http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/androidpruebas/1");
 
-		LatLng sydney = new LatLng(-33.867, 151.206);
-		//LatLng sydney = new LatLng(this.Lfeatures.get(0).getGeometry().getCoordinates().get(0), this.Lfeatures.get(0).getGeometry().getCoordinates().get(1));
+		/*
+		 * LatLng sydney = new LatLng(-33.867, 151.206); //LatLng sydney = new
+		 * LatLng(this.Lfeatures.get(0).getGeometry().getCoordinates().get(0),
+		 * this.Lfeatures.get(0).getGeometry().getCoordinates().get(1));
+		 * 
+		 * dataBase.map.setMyLocationEnabled(true);
+		 * dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,
+		 * 13));
+		 */
 
-		dataBase.map.setMyLocationEnabled(true);
-		dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
-		
-		
-		
-		
+		// The camera has to point to where the user is
+
 	}
 
 	public static String GET(String url) {
@@ -113,8 +154,8 @@ public class MainActivity extends Activity {
 		// onPostExecute displays the results of the AsyncTask.
 		@Override
 		protected void onPostExecute(String result) {
-			Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG)
-					.show();
+			// Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG)
+			// .show();
 			// The JSON comes with the word callback which I don't want
 			String nuevo = result.substring(9, result.length() - 1);
 			JSONObject json;
@@ -142,7 +183,7 @@ public class MainActivity extends Activity {
 				Feature feature;
 				Properties properties;
 				Geometry geometry;
-				
+
 				DataBase dataBase = DataBase.getInstance();
 
 				for (int i = 0; i < listFeatures.size(); i++) {
@@ -186,23 +227,21 @@ public class MainActivity extends Activity {
 
 					feature = new Feature(tagsAL, properties,
 							(String) jsonMap.get("type"), geometry);
-					
-					
-					
+
 					dataBase.getLfeatures().add(feature);
-					
+
 				}
-				Toast.makeText(getBaseContext(), "JSON parsed!",
-						Toast.LENGTH_LONG).show();
-				
+				// Toast.makeText(getBaseContext(), "JSON parsed!",
+				// Toast.LENGTH_LONG).show();
+
 				dataBase.setState("ready");
-				dataBase.addMarker();
+				dataBase.addMarkers();
 
 			} catch (JSONException e) {
 				// etResponse.setText("Failed to extract the JSON: \n" + e);
-				Toast.makeText(getBaseContext(),
-						"There was a problem parsing the JSON!",
-						Toast.LENGTH_LONG).show();
+				// Toast.makeText(getBaseContext(),
+				// "There was a problem parsing the JSON!",
+				// Toast.LENGTH_LONG).show();
 			}
 
 		}

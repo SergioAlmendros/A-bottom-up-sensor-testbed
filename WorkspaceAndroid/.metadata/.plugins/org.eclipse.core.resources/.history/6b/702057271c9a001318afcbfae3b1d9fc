@@ -1,0 +1,392 @@
+package com.upf.abottomupsensortestbed43;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.Dialog;
+
+import android.content.Intent;
+import android.content.IntentSender;
+import android.location.Location;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.DialogFragment;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.json.parsers.JSONParser;
+import com.json.parsers.JsonParserFactory;
+
+public class MainActivity extends FragmentActivity implements
+		GooglePlayServicesClient.ConnectionCallbacks,
+		GooglePlayServicesClient.OnConnectionFailedListener {
+
+	private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
+	private LocationClient mLocationClient;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		
+
+		DataBase dataBase = DataBase.getInstance();
+
+		// Get a handle to the Map Fragment
+		dataBase.map = ((MapFragment) getFragmentManager().findFragmentById(
+				R.id.map)).getMap();
+
+		new HttpAsyncTask()
+				.execute("http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/androidpruebas/1");
+
+		/*
+		 * LatLng sydney = new LatLng(-33.867, 151.206); //LatLng sydney = new
+		 * LatLng(this.Lfeatures.get(0).getGeometry().getCoordinates().get(0),
+		 * this.Lfeatures.get(0).getGeometry().getCoordinates().get(1));
+		 * 
+		 * dataBase.map.setMyLocationEnabled(true);
+		 * dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,
+		 * 13));
+		 */
+
+		// The camera has to point to where the user is
+
+		/*
+		 * Create a new location client, using the enclosing class to handle
+		 * callbacks.
+		 */
+		this.mLocationClient = new LocationClient(this, this, this);
+
+		Location mCurrentLocation;
+		mCurrentLocation = this.mLocationClient.getLastLocation();
+
+		dataBase.map.setMyLocationEnabled(true);
+		dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(
+				new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation
+						.getLongitude()), 13));
+
+	}
+	public static class ErrorDialogFragment extends DialogFragment {
+        // Global field to contain the error dialog
+        private Dialog mDialog;
+        // Default constructor. Sets the dialog field to null
+        public ErrorDialogFragment() {
+            super();
+            mDialog = null;
+        }
+        // Set the dialog to display
+        public void setDialog(Dialog dialog) {
+            mDialog = dialog;
+        }
+        // Return a Dialog to the DialogFragment.
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            return mDialog;
+        }
+    }
+
+    /*
+     * Handle results returned to the FragmentActivity
+     * by Google Play services
+     */
+    @Override
+    protected void onActivityResult(
+            int requestCode, int resultCode, Intent data) {
+        // Decide what to do based on the original request code
+        switch (requestCode) {
+
+            case CONNECTION_FAILURE_RESOLUTION_REQUEST :
+            /*
+             * If the result code is Activity.RESULT_OK, try
+             * to connect again
+             */
+                switch (resultCode) {
+                    case Activity.RESULT_OK :
+                    /*
+                     * Try the request again
+                     */
+                    
+                    break;
+                }
+            
+        }
+     }
+
+    private boolean servicesConnected() {
+        // Check that Google Play services is available
+        int resultCode =
+                GooglePlayServicesUtil.
+                        isGooglePlayServicesAvailable(this);
+        // If Google Play services is available
+        if (ConnectionResult.SUCCESS == resultCode) {
+            // In debug mode, log the status
+            Log.d("Location Updates",
+                    "Google Play services is available.");
+            // Continue
+            return true;
+        // Google Play services was not available for some reason
+        } else {
+           
+            // Get the error dialog from Google Play services
+            Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog(
+                    resultCode,
+                    this,
+                    CONNECTION_FAILURE_RESOLUTION_REQUEST);
+
+            // If Google Play services can provide an error dialog
+            if (errorDialog != null) {
+                // Create a new DialogFragment for the error dialog
+                ErrorDialogFragment errorFragment =
+                        new ErrorDialogFragment();
+                // Set the dialog in the DialogFragment
+                errorFragment.setDialog(errorDialog);
+                // Show the error dialog in the DialogFragment
+                errorFragment.show(getSupportFragmentManager(),
+                        "Location Updates");
+            }
+            return false;
+        }
+    }
+
+
+
+	/*
+	 * Called when the Activity becomes visible.
+	 */
+	@Override
+	protected void onStart() {
+		super.onStart();
+		// Connect the client.
+		this.mLocationClient.connect();
+	}
+
+	/*
+	 * Called when the Activity is no longer visible.
+	 */
+	@Override
+	protected void onStop() {
+		// Disconnecting the client invalidates it.
+		this.mLocationClient.disconnect();
+		super.onStop();
+	}
+
+	public static String GET(String url) {
+		InputStream inputStream = null;
+		String result = "";
+		try {
+
+			// create HttpClient
+			HttpClient httpclient = new DefaultHttpClient();
+
+			// make GET request to the given URL
+			HttpResponse httpResponse = httpclient.execute(new HttpGet(url));
+
+			// receive response as inputStream
+			inputStream = httpResponse.getEntity().getContent();
+
+			// convert inputstream to string
+			if (inputStream != null)
+				result = convertInputStreamToString(inputStream);
+			else
+				result = "Did not work!";
+
+		} catch (Exception e) {
+			Log.d("InputStream", e.getLocalizedMessage());
+		}
+
+		return result;
+	}
+
+	private static String convertInputStreamToString(InputStream inputStream)
+			throws IOException {
+		BufferedReader bufferedReader = new BufferedReader(
+				new InputStreamReader(inputStream));
+		String line = "";
+		String result = "";
+		while ((line = bufferedReader.readLine()) != null)
+			result += line;
+
+		inputStream.close();
+		return result;
+
+	}
+
+	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+		@Override
+		protected String doInBackground(String... urls) {
+
+			return GET(urls[0]);
+		}
+
+		// onPostExecute displays the results of the AsyncTask.
+		@Override
+		protected void onPostExecute(String result) {
+			Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG)
+					.show();
+			// The JSON comes with the word callback which I don't want
+			String nuevo = result.substring(9, result.length() - 1);
+			JSONObject json;
+
+			try {
+				json = new JSONObject(nuevo);
+				// etResponse.setText(json.toString(1));
+
+				// JSONObject o = new JSONObject();
+
+				JSONArray features = (JSONArray) json.get("features");
+
+				List<String> listFeatures = new ArrayList<String>();
+
+				for (int i = 0; i < features.length(); i++) {
+					listFeatures.add(features.get(i).toString());
+				}
+				JsonParserFactory factory = JsonParserFactory.getInstance();
+				JSONParser parser = factory.newJsonParser();
+				Map jsonMap;
+				HashMap propertiesHM, geometryHM;
+				ArrayList tagsAL, coordinatesAL, tagsALp;
+				Vector<Float> coordinatesV;
+
+				Feature feature;
+				Properties properties;
+				Geometry geometry;
+
+				DataBase dataBase = DataBase.getInstance();
+
+				for (int i = 0; i < listFeatures.size(); i++) {
+
+					jsonMap = parser.parseJson(listFeatures.get(i));
+
+					propertiesHM = (HashMap) jsonMap.get("properties");
+					geometryHM = (HashMap) jsonMap.get("geometry");
+					tagsAL = (ArrayList) jsonMap.get("tags");
+					coordinatesAL = (ArrayList) geometryHM.get("coordinates");
+
+					String[] t = ((String) propertiesHM.get("tags")).split(",");
+
+					tagsALp = new ArrayList<String>();
+
+					for (int j = 0; j < t.length; j++) {
+						tagsALp.add(t[j]);
+					}
+
+					properties = new Properties(
+							tagsALp,
+							(String) propertiesHM.get("id"),
+							(String) propertiesHM.get("unit"),
+							(String) propertiesHM.get("timeStamp"),
+							(String) propertiesHM.get("address"),
+							(String) propertiesHM.get("datasetName"),
+							(String) propertiesHM.get("description"),
+							(String) propertiesHM.get("datasetId"),
+							(String) propertiesHM.get("name"),
+							Float.parseFloat((String) propertiesHM.get("value")));
+
+					coordinatesV = new Vector<Float>();
+
+					for (int j = 0; j < coordinatesAL.size(); j++) {
+						coordinatesV.add(Float
+								.parseFloat((String) coordinatesAL.get(j)));
+					}
+
+					geometry = new Geometry((String) geometryHM.get("type"),
+							coordinatesV);
+
+					feature = new Feature(tagsAL, properties,
+							(String) jsonMap.get("type"), geometry);
+
+					dataBase.getLfeatures().add(feature);
+
+				}
+				Toast.makeText(getBaseContext(), "JSON parsed!",
+						Toast.LENGTH_LONG).show();
+
+				dataBase.setState("ready");
+				dataBase.addMarkers();
+
+			} catch (JSONException e) {
+				// etResponse.setText("Failed to extract the JSON: \n" + e);
+				Toast.makeText(getBaseContext(),
+						"There was a problem parsing the JSON!",
+						Toast.LENGTH_LONG).show();
+			}
+
+		}
+	}
+
+	@Override
+	public void onConnected(Bundle dataBundle) {
+		// Display the connection status
+		Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show();
+
+	}
+
+	/*
+	 * Called by Location Services if the connection to the location client
+	 * drops because of an error.
+	 */
+	@Override
+	public void onDisconnected() {
+		// Display the connection status
+		Toast.makeText(this, "Disconnected. Please re-connect.",
+				Toast.LENGTH_SHORT).show();
+	}
+
+	/*
+	 * Called by Location Services if the attempt to Location Services fails.
+	 */
+	@Override
+	public void onConnectionFailed(ConnectionResult connectionResult) {
+		/*
+		 * Google Play services can resolve some errors it detects. If the error
+		 * has a resolution, try sending an Intent to start a Google Play
+		 * services activity that can resolve error.
+		 */
+		if (connectionResult.hasResolution()) {
+			try {
+				// Start an Activity that tries to resolve the error
+				connectionResult.startResolutionForResult(this,
+						CONNECTION_FAILURE_RESOLUTION_REQUEST);
+				/*
+				 * Thrown if Google Play services canceled the original
+				 * PendingIntent
+				 */
+			} catch (IntentSender.SendIntentException e) {
+				// Log the error
+				e.printStackTrace();
+			}
+		} else {
+			/*
+			 * If no resolution is available, display a dialog to the user with
+			 * the error.
+			 */
+			showDialog(connectionResult.getErrorCode());
+		}
+	}
+
+}
