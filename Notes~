@@ -143,6 +143,7 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Voy poner algo que compruebe que los valores son validos, ya esta, si hay un valor NAN, no guarda la feature.
 --Tiene que mostrar el ultimo valor en tiempo de esa coordenada.
 --Tengo que guardar el timestamp como una variable timestamp, no como una string.
+--Tengo que obtener las otras features que se subieron al mismo tiempo que la del maximo timestamp.
 
 TODO:
 -Tiene que comprobar que los datos son correctos (por ejemplo: value = NAN) - DONE

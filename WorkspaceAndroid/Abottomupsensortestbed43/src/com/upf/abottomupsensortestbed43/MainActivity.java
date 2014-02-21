@@ -4,11 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Date;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +27,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.MapFragment;
@@ -51,6 +53,8 @@ public class MainActivity extends Activity {
 		// Get a handle to the Map Fragment
 		dataBase.map = ((MapFragment) getFragmentManager().findFragmentById(
 				R.id.map)).getMap();
+		
+		dataBase.textView = (TextView) findViewById(R.id.textView1);
 
 		// create class object
 		gps = new GPSTracker(MainActivity.this);
@@ -76,12 +80,17 @@ public class MainActivity extends Activity {
 		dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
 				latitude, longitude), 13));
 
+		String url = "http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/"
+				+ dataBase.getAPIKEY()
+				+ "/"
+				+ dataBase.getDATASETID()
+				+ "/1";
+		
+//		Toast.makeText(getBaseContext(), url,
+//				Toast.LENGTH_LONG).show();
+		
 		new HttpAsyncTask()
-				.execute("http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/"
-						+ dataBase.getAPIKEY()
-						+ "/"
-						+ dataBase.getDATASETID()
-						+ "/1");
+				.execute(url);
 
 		/*
 		 * LatLng sydney = new LatLng(-33.867, 151.206); //LatLng sydney = new
@@ -182,6 +191,7 @@ public class MainActivity extends Activity {
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
 				Date parsedDate;
 				Timestamp timestamp;
+				String tmstamp;
 
 				for (int i = 0; i < listFeatures.size(); i++) {
 
@@ -199,10 +209,14 @@ public class MainActivity extends Activity {
 					for (int j = 0; j < t.length; j++) {
 						tagsALp.add(t[j]);
 					}
+					tmstamp = (String) propertiesHM.get("timeStamp");
 					
-					parsedDate = dateFormat.parse((String) propertiesHM.get("timeStamp"));
+					tmstamp = tmstamp.replace("T", " ");
+					tmstamp = tmstamp.replace("Z", "");
+
+					parsedDate = dateFormat.parse(tmstamp);
 				    timestamp = new java.sql.Timestamp(parsedDate.getTime());
-					
+				    
 					if (((String) propertiesHM.get("value"))
 							.matches("[-+]?[0-9]*\\.?[0-9]+")) {
 						properties = new Properties(tagsALp,
@@ -229,25 +243,23 @@ public class MainActivity extends Activity {
 
 						feature = new Feature(tagsAL, properties,
 								(String) jsonMap.get("type"), geometry);
-
+						
 						dataBase.getLfeatures().add(feature);
 					}
-
 				}
-				// Toast.makeText(getBaseContext(), "JSON parsed!",
-				// Toast.LENGTH_LONG).show();
-
+				Toast.makeText(getBaseContext(), "JSON parsed!",
+				Toast.LENGTH_LONG).show();
+				
+				dataBase.createFeaturesByCoordinates();
 				dataBase.setState("ready");
 				dataBase.addMarkers();
 
 			} catch (JSONException e) {
-				// etResponse.setText("Failed to extract the JSON: \n" + e);
-				// Toast.makeText(getBaseContext(),
-				// "There was a problem parsing the JSON!",
-				// Toast.LENGTH_LONG).show();
+				Toast.makeText(getBaseContext(),e.toString(),
+						Toast.LENGTH_LONG).show();
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Toast.makeText(getBaseContext(),e.toString(),
+						Toast.LENGTH_LONG).show();
 			}
 
 		}

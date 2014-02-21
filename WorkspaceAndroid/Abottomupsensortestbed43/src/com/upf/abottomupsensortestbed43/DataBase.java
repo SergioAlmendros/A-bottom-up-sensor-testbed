@@ -1,8 +1,16 @@
 package com.upf.abottomupsensortestbed43;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.StringTokenizer;
 
-import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
@@ -15,9 +23,10 @@ public class DataBase {
 	private String state = "busy";
 	GoogleMap map;
 	LatLng currentLocation;
-	EditText e;
+	TextView textView;
 	private String DATASETID = "temperature";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
+	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
 
 	public String getDATASETID() {
 		return DATASETID;
@@ -70,69 +79,118 @@ public class DataBase {
 	public void addMarkers() {
 
 		LatLng place;
-		// for (int i = 0; i < this.Lfeatures.size(); ++i) {
-		//
-		// place = new LatLng((float)this.Lfeatures.get(i).getGeometry()
-		// .getCoordinates().get(1), (float)this.Lfeatures.get(i)
-		// .getGeometry().getCoordinates().get(0));
-		// this.map.addMarker(new MarkerOptions()
-		// .title(this.Lfeatures.get(i).getProperties().getId())
-		// .snippet(
-		// ""
-		// + this.Lfeatures.get(i).getProperties()
-		// .getDescription()
-		// + "\n"
-		// + this.Lfeatures.get(i).getProperties()
-		// .getValue()).position(place));
-		// }
 
-		// Tiene que encontrar la ultima feature (ej: id = 1.47.1 + 1.47.2 +
-		// 1.47.3 + 1.47.4 con el timestamp mas grande
+		Feature f_maxTimeStamp = null;
+		StringTokenizer keys;
+		LinkedList<Feature> lf;
+		LinkedList<Feature> lfmt = new LinkedList<Feature>();
 
-		// Buscar el timestamp mas grande, una vez hecho esto, coger las
-		// features con id parecida
+		for (Entry<String, LinkedList<Feature>> entry : this.featuresByCoordinates
+				.entrySet()) {
+			lf = entry.getValue();
 
-		Feature f_maxTimeStamp;
+			f_maxTimeStamp = lf.get(0);
+			for (int j = 1; j < lf.size(); ++j) {
 
-		if (this.Lfeatures.size() > 0) {
-			f_maxTimeStamp = this.Lfeatures.get(0);
-			for (int i = 1; i < this.Lfeatures.size(); ++i) {
-
-				if (!f_maxTimeStamp
-						.getProperties()
-						.getTimeStamp()
-						.after(this.Lfeatures.get(i).getProperties()
-								.getTimeStamp())) {
-					f_maxTimeStamp = this.Lfeatures.get(i);
+				if (!f_maxTimeStamp.getProperties().getTimeStamp()
+						.after(lf.get(j).getProperties().getTimeStamp())) {
+					f_maxTimeStamp = lf.get(j);
 				}
-
 			}
+			lfmt.add(f_maxTimeStamp);
+
 		}
-		
+
 		ArrayList<Feature> Markerfeatures = new ArrayList<Feature>();
-		
-		for(int i=0; i<this.Lfeatures.size(); ++i){
+
+		// Parsear la id: 1.47.2:
+		// 1: ID arduino
+		// 47: ID del upload de las 4 features
+		// 2: Tipo de datos (Temperatura, ruido,...)
+		String one, two, three;
+		StringTokenizer split;
+
+		for (int i = 0; i < lfmt.size(); i++) {
+			lf = this.featuresByCoordinates.get(lfmt.get(i).getGeometry()
+					.getCoordinates().get(0)
+					+ "-" + lfmt.get(i).getGeometry().getCoordinates().get(1));
+
+			split = new StringTokenizer(lfmt.get(i).getProperties().getId(),
+					".");
 			
+			if (split.countTokens() == 3) {
+				one = split.nextToken();
+				two = split.nextToken();
+				three = split.nextToken();
+				if (one.matches("-?\\d+") && two.matches("-?\\d+")
+						&& three.matches("-?\\d+")) {
+
+					String id = one + "." + two;
+					String id2;
+
+					for (int j = 0; j < lf.size(); ++j) {
+						id2 = lf.get(j).getProperties().getId();
+						if (id2.equals(id + "." + "1")
+								|| id2.equals(id + "." + "2")
+								|| id2.equals(id + "." + "3")
+								|| id2.equals(id + "." + "4")) {
+
+							Markerfeatures.add(lf.get(j));
+
+						}
+					}
+				}
+			}
+
+		}		
+		
+		for (int i = 0; i < Markerfeatures.size(); ++i) {
+
+			place = new LatLng((float) Markerfeatures.get(i).getGeometry()
+					.getCoordinates().get(1), (float) Markerfeatures.get(i)
+					.getGeometry().getCoordinates().get(0));
+			this.map.addMarker(new MarkerOptions()
+					.title(Markerfeatures.get(i).getProperties().getId())
+					.snippet(
+							""
+									+ Markerfeatures.get(i).getProperties()
+											.getDescription()
+									+ ": "
+									+ Markerfeatures.get(i).getProperties()
+											.getValue()).position(place));
+
 		}
 
 	}
+
+	public void createFeaturesByCoordinates() {
+
+		String coordinates;
+
+		for (int i = 0; i < this.Lfeatures.size(); ++i) {
+
+			coordinates = Float.toString(this.Lfeatures.get(i).getGeometry()
+					.getCoordinates().get(0))
+					+ "-"
+					+ Float.toString(this.Lfeatures.get(i).getGeometry()
+							.getCoordinates().get(1));
+
+			if (this.featuresByCoordinates.containsKey(coordinates) == false) {
+				this.featuresByCoordinates.put(coordinates,
+						new LinkedList<Feature>());
+				this.featuresByCoordinates.get(coordinates).add(
+						this.Lfeatures.get(i));
+
+				// this.textView.setText("entra");
+
+			} else {
+				this.featuresByCoordinates.get(coordinates).add(
+						this.Lfeatures.get(i));
+
+				// this.textView.setText("entra");
+			}
+		}
+		// this.textView.setText("entra " + this.featuresByCoordinates.size());
+
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
