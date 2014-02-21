@@ -138,8 +138,16 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Ya he creado una clase singleton para añadir los marcadores con los datos de los sensores
 -20/02/14
 --Voy a crear los marcadores bien
---Para obtener la localizacion actual he usado la pagina: http://stackoverflow.com/questions/1513485/how-do-i-get-the-current-gps-location-programmatically-in-android/10917500#10917500, el post 17
+--Para obtener la localizacion actual he usado la pagina: http://stackoverflow.com/questions/1513485/how-do-i-get-the-current-gps-location-programmatically-in-android/10917500#10917500, el post answered Apr 2 '13 at 6:53 Nirav Ranpara.
+-21/02/14
+--Voy poner algo que compruebe que los valores son validos, ya esta, si hay un valor NAN, no guarda la feature.
+--Tiene que mostrar el ultimo valor en tiempo de esa coordenada.
+--Tengo que guardar el timestamp como una variable timestamp, no como una string.
 
+TODO:
+-Tiene que comprobar que los datos son correctos (por ejemplo: value = NAN) - DONE
+-Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
+-Tiene que haber la posibilidad de elegir entre humedad, temperatura, ruido, luz, y calidad de aire.
 
 
 

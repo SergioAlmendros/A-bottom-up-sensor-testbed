@@ -7,7 +7,7 @@ public class Properties {
 	private ArrayList<String> tags;
 	private String id;
 	private String unit;
-	private String timeStamp;
+	private java.sql.Timestamp timeStamp;
 	private String address;
 	private String datasetName;
 	private String description;
@@ -20,7 +20,7 @@ public class Properties {
 	}
 	
 	public Properties(ArrayList<String> tags, String id, String unit,
-			String timeStamp, String address, String datasetName,
+			java.sql.Timestamp timeStamp, String address, String datasetName,
 			String description, String datasetId, String name, float value) {
 		super();
 		this.tags = tags;
@@ -59,11 +59,11 @@ public class Properties {
 		this.unit = unit;
 	}
 
-	public String getTimeStamp() {
+	public java.sql.Timestamp getTimeStamp() {
 		return timeStamp;
 	}
 
-	public void setTimeStamp(String timeStamp) {
+	public void setTimeStamp(java.sql.Timestamp timeStamp) {
 		this.timeStamp = timeStamp;
 	}
 

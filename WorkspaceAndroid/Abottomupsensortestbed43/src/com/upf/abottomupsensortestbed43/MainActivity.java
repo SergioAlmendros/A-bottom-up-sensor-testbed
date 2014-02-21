@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Date;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,10 +26,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.MapFragment;
@@ -47,47 +48,40 @@ public class MainActivity extends Activity {
 
 		DataBase dataBase = DataBase.getInstance();
 
-		btnShowLocation = (Button) findViewById(R.id.btnShowLocation);
-
-		// show location button click event
-		btnShowLocation.setOnClickListener(new View.OnClickListener() {
-
-			DataBase dataBase = DataBase.getInstance();
-
-			@Override
-			public void onClick(View arg0) {
-				// create class object
-				gps = new GPSTracker(MainActivity.this);
-
-				// check if GPS enabled
-				if (gps.canGetLocation()) {
-
-					double latitude = gps.getLatitude();
-					double longitude = gps.getLongitude();
-
-					// \n is for new line
-					// Toast.makeText(getApplicationContext(),
-					// "Your Location is - \nLat: " + latitude + "\nLong: " +
-					// longitude, Toast.LENGTH_LONG).show();
-					dataBase.map.setMyLocationEnabled(true);
-					dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-							new LatLng(latitude, longitude), 13));
-				} else {
-					// can't get location
-					// GPS or Network is not enabled
-					// Ask user to enable GPS/network in settings
-					gps.showSettingsAlert();
-				}
-
-			}
-		});
-
 		// Get a handle to the Map Fragment
 		dataBase.map = ((MapFragment) getFragmentManager().findFragmentById(
 				R.id.map)).getMap();
 
+		// create class object
+		gps = new GPSTracker(MainActivity.this);
+
+		// check if GPS enabled
+		while (!gps.canGetLocation()) {
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		double latitude = gps.getLatitude();
+		double longitude = gps.getLongitude();
+
+		// \n is for new line
+		// Toast.makeText(getApplicationContext(),
+		// "Your Location is - \nLat: " + latitude + "\nLong: " +
+		// longitude, Toast.LENGTH_LONG).show();
+		dataBase.map.setMyLocationEnabled(true);
+		dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
+				latitude, longitude), 13));
+
 		new HttpAsyncTask()
-				.execute("http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/androidpruebas/1");
+				.execute("http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/"
+						+ dataBase.getAPIKEY()
+						+ "/"
+						+ dataBase.getDATASETID()
+						+ "/1");
 
 		/*
 		 * LatLng sydney = new LatLng(-33.867, 151.206); //LatLng sydney = new
@@ -185,6 +179,9 @@ public class MainActivity extends Activity {
 				Geometry geometry;
 
 				DataBase dataBase = DataBase.getInstance();
+				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+				Date parsedDate;
+				Timestamp timestamp;
 
 				for (int i = 0; i < listFeatures.size(); i++) {
 
@@ -202,33 +199,39 @@ public class MainActivity extends Activity {
 					for (int j = 0; j < t.length; j++) {
 						tagsALp.add(t[j]);
 					}
+					
+					parsedDate = dateFormat.parse((String) propertiesHM.get("timeStamp"));
+				    timestamp = new java.sql.Timestamp(parsedDate.getTime());
+					
+					if (((String) propertiesHM.get("value"))
+							.matches("[-+]?[0-9]*\\.?[0-9]+")) {
+						properties = new Properties(tagsALp,
+								(String) propertiesHM.get("id"),
+								(String) propertiesHM.get("unit"),
+								timestamp,
+								(String) propertiesHM.get("address"),
+								(String) propertiesHM.get("datasetName"),
+								(String) propertiesHM.get("description"),
+								(String) propertiesHM.get("datasetId"),
+								(String) propertiesHM.get("name"),
+								Float.parseFloat((String) propertiesHM
+										.get("value")));
 
-					properties = new Properties(
-							tagsALp,
-							(String) propertiesHM.get("id"),
-							(String) propertiesHM.get("unit"),
-							(String) propertiesHM.get("timeStamp"),
-							(String) propertiesHM.get("address"),
-							(String) propertiesHM.get("datasetName"),
-							(String) propertiesHM.get("description"),
-							(String) propertiesHM.get("datasetId"),
-							(String) propertiesHM.get("name"),
-							Float.parseFloat((String) propertiesHM.get("value")));
+						coordinatesV = new Vector<Float>();
 
-					coordinatesV = new Vector<Float>();
+						for (int j = 0; j < coordinatesAL.size(); j++) {
+							coordinatesV.add(Float
+									.parseFloat((String) coordinatesAL.get(j)));
+						}
 
-					for (int j = 0; j < coordinatesAL.size(); j++) {
-						coordinatesV.add(Float
-								.parseFloat((String) coordinatesAL.get(j)));
+						geometry = new Geometry(
+								(String) geometryHM.get("type"), coordinatesV);
+
+						feature = new Feature(tagsAL, properties,
+								(String) jsonMap.get("type"), geometry);
+
+						dataBase.getLfeatures().add(feature);
 					}
-
-					geometry = new Geometry((String) geometryHM.get("type"),
-							coordinatesV);
-
-					feature = new Feature(tagsAL, properties,
-							(String) jsonMap.get("type"), geometry);
-
-					dataBase.getLfeatures().add(feature);
 
 				}
 				// Toast.makeText(getBaseContext(), "JSON parsed!",
@@ -242,6 +245,9 @@ public class MainActivity extends Activity {
 				// Toast.makeText(getBaseContext(),
 				// "There was a problem parsing the JSON!",
 				// Toast.LENGTH_LONG).show();
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
 		}

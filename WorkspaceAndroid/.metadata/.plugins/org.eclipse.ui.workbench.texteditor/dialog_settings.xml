@@ -13,10 +13,13 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Toast" key="selection"/>
+		<item value="canGetLocation" key="selection"/>
 		<list key="findhistory">
+			<item value="canGetLocation"/>
+			<item value="datasetID"/>
 			<item value="toast"/>
 			<item value="toas"/>
+			<item value="onstart"/>
 			<item value="HttpAsyncTask"/>
 		</list>
 		<list key="replacehistory">

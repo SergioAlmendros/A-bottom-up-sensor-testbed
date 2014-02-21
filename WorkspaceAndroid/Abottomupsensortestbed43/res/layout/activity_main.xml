@@ -12,12 +12,5 @@
         android:layout_alignParentTop="true"
         class="com.google.android.gms.maps.MapFragment" />
 
-    <Button
-        android:id="@+id/btnShowLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Show Location" />
 
 </RelativeLayout>
