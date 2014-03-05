@@ -14,12 +14,12 @@ class Arduino:
         self.humidity = humidity
         self.id = ""
         self.location = "BCN-UPFPOBLENOU"
-        self.datasetId = 'handsonwsn'
-        self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'
+        self.datasetId = 'environmental'
+        self.address = 'Carrer de la Marina, Barcelona, Spain'
         self.description = ''
         self.apikey = "7b1611c3-c688-474b-bcab-6e4921bfb109"
         g = geocoders.GoogleV3()
-        place, (lat, lng) = g.geocode("Sagrada Familia, Carrer de Mallorca, Barcelona, spain")
+        place, (lat, lng) = g.geocode(self.address)
         self.latitud = lat
         self.longitud = lng
         #print "%s: %.5f, %.5f" % (place, lat, lng)

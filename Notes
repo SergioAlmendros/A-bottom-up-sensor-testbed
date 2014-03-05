@@ -145,9 +145,12 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Tengo que guardar el timestamp como una variable timestamp, no como una string.
 --Tengo que obtener las otras features que se subieron al mismo tiempo que la del maximo timestamp.
 --Ya pone las ultimas features de cada coordenada.
+-5/03/14
+--He escrito una noticia sobre el training week en Sant Cugat
+--Voy a meter mas puntos en un nuevo dataset para que poder hacer pruebas.
+--Tengo otro dataset (environmental) y he metido 4 nuevos puntos.
 
 TODO:
--Tiene que comprobar que los datos son correctos (por ejemplo: value = NAN) - DONE
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
 -Tiene que haber la posibilidad de elegir entre humedad, temperatura, ruido, luz, y calidad de aire.
 

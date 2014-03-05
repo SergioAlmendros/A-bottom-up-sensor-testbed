@@ -22,4 +22,5 @@
 <fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.internal.p"/>
 </qualifiedTypeNameHistroy>
