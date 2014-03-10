@@ -149,6 +149,11 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --He escrito una noticia sobre el training week en Sant Cugat
 --Voy a meter mas puntos en un nuevo dataset para que poder hacer pruebas.
 --Tengo otro dataset (environmental) y he metido 4 nuevos puntos.
+--He enviado correos para la Battlemesh.
+--Voy ha hacer que la app solo muestre datos de temperatura.
+--Creo que para pintar el mapa usaré Ground overlays (https://developers.google.com/maps/documentation/android/groundoverlay)
+-10/03/14
+--Voy a utilizar Tile Overlays (https://developers.google.com/maps/documentation/android/tileoverlay), parece que hay una aplicación que lo utiliza (http://opensignal.com/)
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.

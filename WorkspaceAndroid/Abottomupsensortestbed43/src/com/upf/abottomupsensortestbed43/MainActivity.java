@@ -253,6 +253,7 @@ public class MainActivity extends Activity {
 				dataBase.createFeaturesByCoordinates();
 				dataBase.setState("ready");
 				dataBase.addMarkers();
+				dataBase.addHeatMap();
 
 			} catch (JSONException e) {
 				Toast.makeText(getBaseContext(),e.toString(),

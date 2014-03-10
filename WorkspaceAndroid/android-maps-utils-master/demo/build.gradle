@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.+'
+    }
+}
+
+apply plugin: 'android'
+
+dependencies {
+    compile project(':library')
+    // Or, fetch from Maven:
+    // compile 'com.google.maps.android:android-maps-utils:0.3+'
+    compile 'com.google.android.gms:play-services:4.+'
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+        }
+    }
+}
+
+task startDemo(type: Exec) {
+    dependsOn 'installDebug'
+    def adb = new File("${System.env.ANDROID_HOME}", "platform-tools${File.separator}adb")
+    commandLine adb, "shell", "am", "start", "-n", "com.google.maps.android.utils.demo/.MainActivity"
+}

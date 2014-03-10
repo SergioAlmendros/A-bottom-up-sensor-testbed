@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Toke" key="selection"/>
+		<item value="move" key="selection"/>
 		<list key="findhistory">
+			<item value="move"/>
+			<item value="moveCamera"/>
+			<item value="android:label=&quot;@string/title_activity_hello_world&quot;"/>
+			<item value="uses-libra"/>
 			<item value="toke"/>
 			<item value="textview"/>
 			<item value="canGetLocation"/>
 			<item value="datasetID"/>
-			<item value="toast"/>
-			<item value="toas"/>
-			<item value="onstart"/>
-			<item value="HttpAsyncTask"/>
 		</list>
 		<list key="replacehistory">
 		</list>

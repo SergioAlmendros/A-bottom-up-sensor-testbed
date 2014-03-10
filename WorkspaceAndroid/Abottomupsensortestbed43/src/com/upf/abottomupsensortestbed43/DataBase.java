@@ -2,12 +2,12 @@ package com.upf.abottomupsensortestbed43;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Map;
+import java.util.List;
 import java.util.Map.Entry;
-import java.util.Set;
 import java.util.StringTokenizer;
+
+import org.json.JSONException;
 
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.TileOverlayOptions;
+import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
 public class DataBase {
 	private static DataBase mInstance = null;
@@ -24,7 +26,7 @@ public class DataBase {
 	GoogleMap map;
 	LatLng currentLocation;
 	TextView textView;
-	private String DATASETID = "temperature";
+	private String DATASETID = "environmental";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
 	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
 
@@ -117,7 +119,7 @@ public class DataBase {
 
 			split = new StringTokenizer(lfmt.get(i).getProperties().getId(),
 					".");
-			
+
 			if (split.countTokens() == 3) {
 				one = split.nextToken();
 				two = split.nextToken();
@@ -142,23 +144,29 @@ public class DataBase {
 				}
 			}
 
-		}		
-		
+		}
+
 		for (int i = 0; i < Markerfeatures.size(); ++i) {
 
-			place = new LatLng((float) Markerfeatures.get(i).getGeometry()
-					.getCoordinates().get(1), (float) Markerfeatures.get(i)
-					.getGeometry().getCoordinates().get(0));
-			this.map.addMarker(new MarkerOptions()
-					.title(Markerfeatures.get(i).getProperties().getId())
-					.snippet(
-							""
-									+ Markerfeatures.get(i).getProperties()
-											.getDescription()
-									+ ": "
-									+ Markerfeatures.get(i).getProperties()
-											.getValue()).position(place));
+			// DE MOMENTO SOLO QUIERO QUE SALGA LA TEMPERATURA
 
+			if (Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Temperature")) {
+				place = new LatLng((float) Markerfeatures.get(i).getGeometry()
+						.getCoordinates().get(1), (float) Markerfeatures.get(i)
+						.getGeometry().getCoordinates().get(0));
+				this.map.addMarker(new MarkerOptions()
+						.title(Markerfeatures.get(i).getProperties()
+								.getDescription())
+						.snippet(
+								""
+										+ Markerfeatures.get(i).getProperties()
+												.getValue()
+										+ " "
+										+ Markerfeatures.get(i).getProperties()
+												.getUnit()).position(place));
+
+			}
 		}
 
 	}
@@ -193,4 +201,43 @@ public class DataBase {
 		// this.textView.setText("entra " + this.featuresByCoordinates.size());
 
 	}
+
+	public void addHeatMap() {
+
+		List<LatLng> list = new ArrayList<LatLng>();
+
+		// Get the data: latitude/longitude positions of police stations.
+
+		list.add(new LatLng(41.403588, 2.193608));
+		list.add(new LatLng(41.403588, 2.193608));
+		list.add(new LatLng(41.403588, 2.193608));
+		list.add(new LatLng(41.403588, 2.193608));
+
+		// Create a heat map tile provider, passing it the flatlngs of the police
+		// stations.
+		HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder().data(list).build();
+		// Add a tile overlay to the map, using the heat map tile provider.
+		Object mOverlay = this.map.addTileOverlay(new TileOverlayOptions()
+				.tileProvider(mProvider));
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

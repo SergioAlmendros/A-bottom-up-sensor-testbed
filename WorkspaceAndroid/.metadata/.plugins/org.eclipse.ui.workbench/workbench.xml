@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1016" x="0" y="0">
+<window height="744" maximized="true" width="1010" x="1528" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -24,8 +24,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -37,21 +38,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java" title="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java" title="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6973" selectionTopPixel="3934"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2610" selectionTopPixel="715"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" partName="DataBase.java" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java" title="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" partName="DataBase.java" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java" title="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3414" selectionTopPixel="2399"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/res/layout/activity_main.xml" title="activity_main.xml" tooltip="Abottomupsensortestbed43/res/layout/activity_main.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5604" selectionTopPixel="3156"/>
 </editor>
 </editors>
 <views>
@@ -63,9 +60,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (3 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="270" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -294,7 +288,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.22133759" ratioLeft="278" ratioRight="978" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.3455414" ratioLeft="434" ratioRight="822" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.74922603" ratioLeft="484" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
@@ -328,155 +322,124 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/MainActivity/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/MainActivity/res/layout/multi_profile.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/library/res/values/styles.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/MainActivity/res/layout/multi_profile.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/MainActivity/res/values/styles.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/library/res/values/ids.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/MainActivity/AndroidManifest.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/gen/com/upf/abottomupsensortestbed43/R.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Abottomupsensortestbed43/res/raw/police_stations.json"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MainActivity/src/com/google/maps/android/utils/demo/MainActivity.java"/>
 </editors>
-<item historyLabel="DataBase.java" index="0">
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="multi_profile.xml" index="1"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="multi_profile.xml" index="1"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="MainActivity Manifest" index="0"/>
+<item historyLabel="multi_profile.xml" index="1"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="multi_profile.xml" index="3"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="multi_profile.xml" index="3"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="styles.xml" index="4"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="styles.xml" index="4"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="multi_profile.xml" index="3"/>
+<item historyLabel="ids.xml" index="5"/>
+<item historyLabel="multi_profile.xml" index="3"/>
+<item historyLabel="styles.xml" index="2"/>
+<item historyLabel="styles.xml" index="4"/>
+<item historyLabel="MainActivity Manifest" index="6"/>
+<item historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="7353" y="0"/>
+</item>
+<item historyLabel="DataBase.java" index="8">
 <position/>
 </item>
-<item historyLabel="DataBase.java" index="0">
+<item historyLabel="R.java" index="9">
 <position/>
 </item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="7128" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
+<item historyLabel="DataBase.java" index="8">
 <position/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="2669" y="0"/>
+<item historyLabel="police_stations.json" index="10">
+<position info="not_deleted" x="195" y="0"/>
 </item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="1560" y="8"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5158" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="576" y="0"/>
+<item historyLabel="police_stations.json" index="10">
+<position info="not_deleted" x="11" y="8"/>
 </item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="1805" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5257" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="576" y="0"/>
+<item historyLabel="police_stations.json" index="10">
+<position info="not_deleted" x="29" y="7"/>
 </item>
-<item historyLabel="activity_main.xml" index="2"/>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="576" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5257" y="0"/>
 </item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="1811" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5583" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="576" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5574" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="895" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5748" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="951" y="0"/>
+<item historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="7353" y="0"/>
 </item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="1811" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5748" y="0"/>
 </item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="7267" y="0"/>
+<item historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="7353" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="3974" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5655" y="4"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
+<item historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="2197" y="4"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="3787" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5655" y="4"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4349" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5216" y="44"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4711" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5145" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4409" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5143" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4442" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5145" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4441" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5395" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
+<item historyLabel="MainActivity.java" index="11">
+<position info="not_deleted" x="187" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4491" y="0"/>
+<item historyLabel="DataBase.java" index="8">
+<position info="not_deleted" x="5604" y="0"/>
 </item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="1977" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="2291" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="2745" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="2681" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="2745" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4726" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="7139" y="79"/>
-</item>
-<item historyLabel="activity_main.xml" index="2"/>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="4711" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="3980" y="27"/>
-</item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="7237" y="27"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="3980" y="27"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="2032" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="0">
-<position/>
-</item>
-<item historyLabel="MainActivity.java" index="1">
-<position info="not_deleted" x="6973" y="0"/>
-</item>
-<item active="true" historyLabel="DataBase.java" index="0">
-<position info="not_deleted" x="3590" y="0"/>
+<item active="true" historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="2197" y="4"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -500,32 +463,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Abottomupsensortestbed43/res/layout/activity_main.xml">
-<persistable path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="MainActivity/src/com/google/maps/android/utils/demo/MainActivity.java">
+<persistable path="/MainActivity/src/com/google/maps/android/utils/demo/MainActivity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Properties.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/Properties.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/Properties.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="police_stations.json" tooltip="Abottomupsensortestbed43/res/raw/police_stations.json">
+<persistable path="/Abottomupsensortestbed43/res/raw/police_stations.json"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="Abottomupsensortestbed43/gen/com/upf/abottomupsensortestbed43/R.java">
+<persistable path="/Abottomupsensortestbed43/gen/com/upf/abottomupsensortestbed43/R.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java">
 <persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GPSTracker.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/GPSTracker.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/GPSTracker.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java">
+<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="ids.xml" tooltip="library/res/values/ids.xml">
+<persistable path="/library/res/values/ids.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="multi_profile.xml" tooltip="MainActivity/res/layout/multi_profile.xml">
+<persistable path="/MainActivity/res/layout/multi_profile.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="library/res/values/styles.xml">
+<persistable path="/library/res/values/styles.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="MainActivity/res/values/styles.xml">
+<persistable path="/MainActivity/res/values/styles.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="MainActivity/res/values/strings.xml">
+<persistable path="/MainActivity/res/values/strings.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="MainActivity/res/layout/main.xml">
+<persistable path="/MainActivity/res/layout/main.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="map.xml" tooltip="MainActivity/res/layout/map.xml">
+<persistable path="/MainActivity/res/layout/map.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="Abottomupsensortestbed43/AndroidManifest.xml">
 <persistable path="/Abottomupsensortestbed43/AndroidManifest.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Geometry.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/Geometry.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/Geometry.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="MainActivity/AndroidManifest.xml">
+<persistable path="/MainActivity/AndroidManifest.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Feature.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/Feature.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/Feature.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="Abottomupsensortestbed43/res/menu/main.xml">
-<persistable path="/Abottomupsensortestbed43/res/menu/main.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Abottomupsensortestbed43/res/layout/activity_main.xml">
+<persistable path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
 </file>
 </mruList>
 </workbench>

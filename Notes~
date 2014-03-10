@@ -1,0 +1,171 @@
+-¿Que te de commons y de bottom el nostre proyecte? (Posible pregunta de la presentacion final)
+-¿Porque se tiene que dar dinero en el proyecto?
+
+-¿Como pasar del arduino al linux del arduino?
+
+-13/01/14: [Task 2] Buscar informacion para pasar un script en java al linux del arduino para comunicarme con un servidor en el portatil
+-14/01/14: [Task 2] 
+--Peta, pero hay un ejemplo de la libreria bridge de arduino que hace lo que necesito: TemperatureWebPanel, y hace falta una tarjeta microSD
+--Los nodos guifi enviaran datos siempre o solo cuando se lo pida el servidor?
+--httpclient.get(http://www.sentilo.upf.edu/Num_Arduino/Tipo_Sensor/Valor)???
+--[REUNION]
+---Hacer un usuario
+---Mirar battlemesh, ietf, y fosdem, para ver si ofrecen algo que ayude a nuestro piloto o para poder contribuir.
+-15/01/14: 
+--[Task 2] 
+---Con el httpclient.get ya funciona, aunque he cambiado un poco el servidor.
+---Google Search: arduino read http response code, he encontrado una libreria en github que se llama HttpClient que hace mas facil la interaccion con webservers desde arduino.
+-16/01/14
+--[Task 2]
+---El codigo de ejemplo funciona con Ethernet, pero en teoria deberia funcionar con Wifi, empiezo a mirarme el codigo para entenderlo.
+-17/01/14
+--[Task 2]
+---Utilizando la libreria httpclient (https://github.com/amcewen/HttpClient) y substituyendo EthernetClient por YunClient he podido hacer un get, pero no funciona con webs que redireccionan.
+---Aprender ha hacer posts!!
+---Algo falla, no se porque el sketch no se conecta con mi ordenador.
+-20/01/14
+--[Task 2]
+---Voy a intentar subir un JSON a opencities con un valor inventado de temperatura.
+---Falla opencities al intentar subir un GeoJson.
+---[GET en opencities] http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/7b1611c3-c688-474b-bcab-6e4921bfb109/raspberrylab/1
+---He cogido el codigo de Jaume para recoger los datos de una sensor de temperatura, y sale un valor un poco alto.
+---Voy a intentar hacer un get de un dataset de opencities desde arduino, pero no deja porque la libreria Httpclient que estoy usando no soporta conexiones persistentes, que supongo que son las que utiliza opencities.
+---Voy a coger valores de un sensor de luz (LDR).
+---Manuel y yo hemos intentado conectar un QRD1114 al arduino, pero aun no hemos acabado.
+-21/01/14
+--El QRD1114 estaba fundido
+--Me he bajado la libreria para hacer JSON (https://github.com/interactive-matter/aJson) y he intentado reducir el ejemplo que dan para entenderlo.
+-22/01/14
+--Haciendo el codigo para generar el geojson de ejemplo en opencities.
+--Parece que el objeto JSON es demasiado grande para la memoria del arduino.
+-23/01/14
+--Voy a intentar crear un script en python y guardarlo en el YUN, y ejecutarlo desde un sketch
+--El script en python (hello world) funciona desde el shell del yun (ssh root@ip_yun_wifi) y ya recibo el output.
+-24/01/14
+--He hecho un cursillo corto sobre python
+--Me he instalado el pycharm (IDE) en el portatil para programar en python
+--Estoy en el punto de crear el geojson
+-25/01/14
+--He empezado ha hacer la memoria final, solo he hecho el abstract.
+-27/01/14
+--He creado el geojson en python, y estoy intentando hacer un post a opencities.
+--Ya funciona el archivo en python para la temperatura
+--[TODO] Tengo que calcular las coordenadas automaticamente, cambiar las ids para meter los 4 valores de golpe y validar el geojson.
+--No encuentro nada para validar el geoJSON y no se como conseguir la latitud y longitud
+--La longitud y latitud lo hago con geopy https://code.google.com/p/geopy/wiki/GettingStarted
+--Sigo sin saber como validar
+-28/01/14
+--Para copiar un archivo en la sd del arduino desde el portatil: scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
+scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
+
+--Voy a instalar los paquetes en el arduino que necesito para que funcione el script de python (geojson y geopy)
+---Para instalar paquetes he escrito estas comandas:
+    opkg update
+    opkg install distribute
+    opkg install python-openssl
+    easy_install pip
+    pip install geojson
+    pip install geopy
+--No soy capaz de darle permisos de escritura sobre un fichero a todos los usuarios, asi que la parte de escritura la hare desde el mismo arduino, haber si deja.
+--Formateando a ext4 he podido darle permisos, pero sigue sin funcionar.
+--Al final la parte de escribir en el logData lo hago desde el skech de arduino porque desde python no lo hace.
+-29/01/14
+--Estoy haciendo la parte del logData en el skech de arduino
+--El python no funciona
+-30/01/14
+--El problema era que el python estaba cogiendo la temperatura como id, y cuando enviaba un 2 no pasaba nada, pero cuando enviaba un 5.14 petaba y no enviaba el error, pero ya funciona.
+--Voy a empezar con los sensores.
+--He hecho un sketch para leer los valores del emartee Mini Sound Sensor, pero me falta saber que devuelve.
+--Voy a mirar el de humedad, me he bajado una libreria para leer este sensor que tenia alejandro.
+-31/01/14
+--El geoJSON esta mal hecho y me faltan cables para conectar con el sensor de calidad de aire.
+--En la pagina el json funciona pero con el curl no funciona, hablar con palacin.
+-3/02/14
+--He hecho la introducción de la thesis.
+--He vuelto a probar el curl y ahora magicamente funciona.
+--El problema es que enviaba un id=null, asi que manuel me ha dicho que ponga un valor a este id (MD5) y que lo reemplaze en el string y ya ha funcionado.
+--Fallaba por que importaba librerias que no tenia, pero ya funciona en el arduino!!!!
+--Estan hechas todas las funciones para leer los sensores, solo falta la de calidad de aire porque aun no puedo probar el sensor por culpa de los pines.
+-4/02/14
+--He conectado 4 sensores al arduino: temperatura (analogico), luz, humedad, ruido.
+--He cambiado el id del arduino para que el primer numero sea unico en cada arduino (1.1.1 == Arduino 1, Id 1, Temperatura)
+--Ya funciona.
+--Voy a mirar que version de Eclipse necesito para programar la app de android en mi portatil.
+-5/02/14
+--Se estan instalando paquetes para programar la app
+--Mejor empiezo ha escribir la memoria de lo que tengo hecho.
+-6/02/14
+--He empezado a leer el articulo: Sensor Networks: Evolution, opportunities, and challenges.
+--Quiero leer:
+---[Caragliu et al., 2009] Caragliu, A., Del Bo, C., Nijkamp, P., et al. (2009). Smart cities in Europe. Vrije Universiteit, Faculty of Economics and Business Administration.
+---[Gertz and Di Justo, 2012] Gertz, E. and Di Justo, P. (2012). Environmental Monitoring with Arduino: Building Simple Devices to Collect Data about the World Around Us. Make.
+---[Nafis, 2012] Nafis, C. (2012). Monitoring your air quality. [Online; accessed 4-April-2013].
+--He metido estos articulos en el archivo bibliography.bib
+-7/02/14
+--Sigo con el state of the art
+--State of the art acabado
+--Empiezo con las tecnologias.
+-10/02/14
+--He acabado las tecnologias.
+--Empiezo a explicar lo que llevo hecho del trabajo.
+--Me da problemas cuando quiero poner un pie de pagina en un item
+--La URL no le gustaba
+--He empezado ha hacer el flowchart del codigo.
+--He acabado los flow chart generales, los especificos los hare como apendices si me da tiempo.
+--He creado un makefile, pero con vim poniendo :set list porque gedit no hace bien las tabulaciones.
+--Mañana hare la presentacion para el WSN
+-11/02/14
+--He cambiado la carpeta de Images por Figures, y voy a empezar ha hacer la presentacion
+--He acabado la presentacion
+--Empiezo la aplicacion.
+-12/02/14
+--He tenido que instalar mil historias pero al final puedo trabajar con mi movil.
+--Tengo hecho el get, pero falla algo porque me da un error al tratar de crear un objeto JSON con la string que devuelve.
+--He seguido haciendo lo del parser para JSON, y estoy utilizando una libreria nueva, quick-json "https://code.google.com/p/quick-json/", y parece que va bien.
+-14/02/14
+--Ya Tengo todas las features guardadas en una lista.
+--Voy a ver si puedo hacer que se vea un mapa en la app.
+-17/02/14
+--Hace falta una clave SHA-1 y una key para que funcione.
+---https://developers.google.com/maps/documentation/android/start#getting_the_google_maps_android_api_v2
+---https://code.google.com/apis/console/?noredirect#project:674441775414:access
+--Hay algun error en la autenticacion
+-18/02/14
+--Vuelvo a crear una api key para google maps v2
+--Eclipse ya crea la clave SHA-1, WINDOW>Preferences>Android>Build
+--No se como pero va el ejemplo basico que sale en https://developers.google.com/maps/documentation/android/start
+-19/02/14
+--Ya he creado una clase singleton para añadir los marcadores con los datos de los sensores
+-20/02/14
+--Voy a crear los marcadores bien
+--Para obtener la localizacion actual he usado la pagina: http://stackoverflow.com/questions/1513485/how-do-i-get-the-current-gps-location-programmatically-in-android/10917500#10917500, el post answered Apr 2 '13 at 6:53 Nirav Ranpara.
+-21/02/14
+--Voy poner algo que compruebe que los valores son validos, ya esta, si hay un valor NAN, no guarda la feature.
+--Tiene que mostrar el ultimo valor en tiempo de esa coordenada.
+--Tengo que guardar el timestamp como una variable timestamp, no como una string.
+--Tengo que obtener las otras features que se subieron al mismo tiempo que la del maximo timestamp.
+--Ya pone las ultimas features de cada coordenada.
+-5/03/14
+--He escrito una noticia sobre el training week en Sant Cugat
+--Voy a meter mas puntos en un nuevo dataset para que poder hacer pruebas.
+--Tengo otro dataset (environmental) y he metido 4 nuevos puntos.
+--He enviado correos para la Battlemesh.
+--Voy ha hacer que la app solo muestre datos de temperatura.
+--Creo que para pintar el mapa usaré Ground overlays (https://developers.google.com/maps/documentation/android/groundoverlay)
+-10/03/14
+--Voy a utilizar Tile Overlays (https://developers.google.com/maps/documentation/android/tileoverlay), parece que hay una aplicación que lo utiliza (http://opensignal.com/)
+TODO:
+-Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
+-Tiene que haber la posibilidad de elegir entre humedad, temperatura, ruido, luz, y calidad de aire.
+
+
+
+
+
+
+
+
+
+
+
+

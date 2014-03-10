@@ -3,6 +3,7 @@
 	<name>Abottomupsensortestbed43</name>
 	<comment></comment>
 	<projects>
+		<project>library</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
