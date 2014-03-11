@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <com.google.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:apiKey="AIzaSyCfseLKxYH8jnPp5ilycMTVXc3au04P9yg"
+        android:clickable="true" />
+
+</menu>

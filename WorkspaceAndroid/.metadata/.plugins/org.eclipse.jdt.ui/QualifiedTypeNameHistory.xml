@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.MarkerOptions"/>
+<fullyQualifiedTypeName name="android.os.SystemClock"/>
+<fullyQualifiedTypeName name="com.google.android.gms.common.GooglePlayServicesClient"/>
+<fullyQualifiedTypeName name="android.content.IntentSender"/>
+<fullyQualifiedTypeName name="android.location.Location"/>
+<fullyQualifiedTypeName name="com.google.android.gms.location.LocationClient"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentActivity"/>
+<fullyQualifiedTypeName name="android.app.DialogFragment"/>
+<fullyQualifiedTypeName name="android.support.v4.app.DialogFragment"/>
+<fullyQualifiedTypeName name="com.google.android.gms.location.LocationListener"/>
+<fullyQualifiedTypeName name="android.location.LocationManager"/>
+<fullyQualifiedTypeName name="android.app.Service"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.location.LocationListener"/>
+<fullyQualifiedTypeName name="android.media.audiofx.BassBoost.Settings"/>
+<fullyQualifiedTypeName name="android.media.audiofx.Equalizer.Settings"/>
+<fullyQualifiedTypeName name="android.media.audiofx.EnvironmentalReverb.Settings"/>
+<fullyQualifiedTypeName name="android.provider.Settings"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.CameraUpdateFactory"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.internal.p"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.google.maps.android.R"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>
