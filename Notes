@@ -159,10 +159,17 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 ---In the Main Application > Select project properties > Go to Java Build Path > Add Jars > Select the bin folder of ConnectionHandler > choose connectionhandler.jar
 ---In the ConnectionHandler project > Select project properties > Android > Check isLibrary
 ---In the MainApplication > Select project properties > Go to Android > Add reference to ConnectionHandler in the Library section.
+--Solo funcionan dos locations, y las otras dos petan.
+-26/03/14
+--He hecho que hayan puntos alrededor de los puntos reales para que la forma de visualizarlo sea mejor.
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
 -Tiene que haber la posibilidad de elegir entre humedad, temperatura, ruido, luz, y calidad de aire.
+-Entre sensor y sensor, crear más puntos interpolando el valor que tengan, para así no dejar huecos vacios.
+-Que los puntos irreales alrededor del real se expandan hasta que encuentren puntos reales o irreales.
+-Que el valor vaya degradando.
+-Que no se pueda hacer tanto zoom.
 
 
 

@@ -26,4 +26,5 @@
 <fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="com.google.maps.android.R"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.google.maps.android.heatmaps.WeightedLatLng"/>
 </qualifiedTypeNameHistroy>

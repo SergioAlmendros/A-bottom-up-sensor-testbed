@@ -247,8 +247,8 @@ public class MainActivity extends Activity {
 						dataBase.getLfeatures().add(feature);
 					}
 				}
-				Toast.makeText(getBaseContext(), "JSON parsed!",
-				Toast.LENGTH_LONG).show();
+				//Toast.makeText(getBaseContext(), "JSON parsed!",
+				//Toast.LENGTH_LONG).show();
 				
 				dataBase.createFeaturesByCoordinates();
 				dataBase.setState("ready");

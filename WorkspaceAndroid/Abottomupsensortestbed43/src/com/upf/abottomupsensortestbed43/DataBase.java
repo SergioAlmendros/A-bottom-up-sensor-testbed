@@ -3,20 +3,17 @@ package com.upf.abottomupsensortestbed43;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
-import org.json.JSONException;
-
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 import com.google.maps.android.heatmaps.HeatmapTileProvider;
+import com.google.maps.android.heatmaps.WeightedLatLng;
 
 public class DataBase {
 	private static DataBase mInstance = null;
@@ -29,6 +26,7 @@ public class DataBase {
 	private String DATASETID = "environmental";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
 	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
+	private ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
 
 	public String getDATASETID() {
 		return DATASETID;
@@ -155,19 +153,66 @@ public class DataBase {
 				place = new LatLng((float) Markerfeatures.get(i).getGeometry()
 						.getCoordinates().get(1), (float) Markerfeatures.get(i)
 						.getGeometry().getCoordinates().get(0));
-				this.map.addMarker(new MarkerOptions()
-						.title(Markerfeatures.get(i).getProperties()
-								.getDescription())
-						.snippet(
-								""
-										+ Markerfeatures.get(i).getProperties()
-												.getValue()
-										+ " "
-										+ Markerfeatures.get(i).getProperties()
-												.getUnit()).position(place));
+//				this.map.addMarker(new MarkerOptions()
+//						.title(Markerfeatures.get(i).getProperties()
+//								.getDescription())
+//						.snippet(
+//								""
+//										+ Markerfeatures.get(i).getProperties()
+//												.getValue()
+//										+ " "
+//										+ Markerfeatures.get(i).getProperties()
+//												.getUnit()).position(place));
+				// this.heatmaplist.add(new
+				// WeightedLatLng(place,Markerfeatures.get(i).getProperties().getValue()));
+
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue());
 
 			}
 		}
+
+	}
+
+	private void addWeightedLatLng(LatLng place, float value) {
+
+		float sum = (float) 0.001;
+		float sum2 = (float) 0.0008;
+		LatLng nplace;
+		
+		this.heatmaplist.add(new WeightedLatLng(place, value));
+
+		nplace = new LatLng((float) place.latitude + sum,
+				(float) place.longitude);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude,
+				(float) place.longitude + sum);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude - sum,
+				(float) place.longitude);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude,
+				(float) place.longitude - sum);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude + sum2,
+				(float) place.longitude + sum2);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude + sum2,
+				(float) place.longitude - sum2);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude - sum2,
+				(float) place.longitude + sum2);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		
+		nplace = new LatLng((float) place.latitude - sum2,
+				(float) place.longitude - sum2);
+		this.heatmaplist.add(new WeightedLatLng(nplace, value));
 
 	}
 
@@ -204,22 +249,32 @@ public class DataBase {
 
 	public void addHeatMap() {
 
-		List<LatLng> list = new ArrayList<LatLng>();
+		// // this.textView.setText(this.heatmaplist.toString());
+		// this.heatmaplist.clear();
+		// this.heatmaplist.add(new LatLng(41.396505, 2.188057));
+		// this.heatmaplist.add(new LatLng(41.402428, 2.192735));
 
-		// Get the data: latitude/longitude positions of police stations.
+		if (!this.heatmaplist.isEmpty()) {
 
-		list.add(new LatLng(41.404798, 2.189628));
-		list.add(new LatLng(41.407196, 2.196838));
-		list.add(new LatLng(41.403446, 2.198083));
-		list.add(new LatLng(41.401177, 2.191109));
+			HeatmapTileProvider mProvider = null;
+			try {
+				mProvider = new HeatmapTileProvider.Builder().weightedData(
+						this.heatmaplist).build();
+			} catch (Exception e) {
+				this.textView.setText(e.toString());
+			}
+			// mProvider.setRadius(50);
 
-		// Create a heat map tile provider, passing it the flatlngs of the
-		// police
-		// stations.
-		HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder().data(
-				list).build();
-		// Add a tile overlay to the map, using the heat map tile provider.
-		Object mOverlay = this.map.addTileOverlay(new TileOverlayOptions()
-				.tileProvider(mProvider));
+			// this.textView.setText( mProvider.getmData().toString() );
+
+			try {
+				// Add a tile overlay to the map, using the heat map tile
+				// provider.
+				this.map.addTileOverlay(new TileOverlayOptions()
+						.tileProvider(mProvider));
+			} catch (Exception e) {
+				this.textView.setText(e.toString());
+			}
+		}
 	}
 }

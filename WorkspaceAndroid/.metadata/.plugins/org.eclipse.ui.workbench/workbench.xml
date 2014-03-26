@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
-<window height="744" maximized="true" width="1010" x="1528" y="24">
+<window height="744" maximized="true" width="1010" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -16,7 +16,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -24,8 +24,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -35,21 +36,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java" title="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2610" selectionTopPixel="715"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" partName="DataBase.java" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java" title="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5604" selectionTopPixel="3156"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -60,6 +50,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (7 items)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="270" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -118,7 +111,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -288,7 +281,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.3455414" ratioLeft="434" ratioRight="822" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.2866242" ratioLeft="360" ratioRight="896" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.74922603" ratioLeft="484" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
@@ -320,128 +313,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/MainActivity/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/MainActivity/res/layout/multi_profile.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/library/res/values/styles.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/MainActivity/res/layout/multi_profile.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/MainActivity/res/values/styles.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/library/res/values/ids.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/MainActivity/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/gen/com/upf/abottomupsensortestbed43/R.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Abottomupsensortestbed43/res/raw/police_stations.json"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MainActivity/src/com/google/maps/android/utils/demo/MainActivity.java"/>
-</editors>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="multi_profile.xml" index="1"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="multi_profile.xml" index="1"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="MainActivity Manifest" index="0"/>
-<item historyLabel="multi_profile.xml" index="1"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="multi_profile.xml" index="3"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="multi_profile.xml" index="3"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="styles.xml" index="4"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="styles.xml" index="4"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="multi_profile.xml" index="3"/>
-<item historyLabel="ids.xml" index="5"/>
-<item historyLabel="multi_profile.xml" index="3"/>
-<item historyLabel="styles.xml" index="2"/>
-<item historyLabel="styles.xml" index="4"/>
-<item historyLabel="MainActivity Manifest" index="6"/>
-<item historyLabel="MainActivity.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="7">
-<position info="not_deleted" x="7353" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position/>
-</item>
-<item historyLabel="R.java" index="9">
-<position/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position/>
-</item>
-<item historyLabel="police_stations.json" index="10">
-<position info="not_deleted" x="195" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5158" y="0"/>
-</item>
-<item historyLabel="police_stations.json" index="10">
-<position info="not_deleted" x="11" y="8"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5257" y="0"/>
-</item>
-<item historyLabel="police_stations.json" index="10">
-<position info="not_deleted" x="29" y="7"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5257" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5583" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5574" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5748" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="7">
-<position info="not_deleted" x="7353" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5748" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="7">
-<position info="not_deleted" x="7353" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5655" y="4"/>
-</item>
-<item historyLabel="MainActivity.java" index="7">
-<position info="not_deleted" x="2197" y="4"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5655" y="4"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5216" y="44"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5145" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5143" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5145" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5395" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="11">
-<position info="not_deleted" x="187" y="0"/>
-</item>
-<item historyLabel="DataBase.java" index="8">
-<position info="not_deleted" x="5604" y="0"/>
-</item>
-<item active="true" historyLabel="MainActivity.java" index="7">
-<position info="not_deleted" x="2197" y="4"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -463,50 +335,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="MainActivity/src/com/google/maps/android/utils/demo/MainActivity.java">
-<persistable path="/MainActivity/src/com/google/maps/android/utils/demo/MainActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="README.txt" tooltip="appcompat_v7/README.txt">
+<persistable path="/appcompat_v7/README.txt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="police_stations.json" tooltip="Abottomupsensortestbed43/res/raw/police_stations.json">
-<persistable path="/Abottomupsensortestbed43/res/raw/police_stations.json"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="README.txt" tooltip="ChordSampleAppActivity/README.txt">
+<persistable path="/ChordSampleAppActivity/README.txt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="Abottomupsensortestbed43/gen/com/upf/abottomupsensortestbed43/R.java">
-<persistable path="/Abottomupsensortestbed43/gen/com/upf/abottomupsensortestbed43/R.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="fragment_main.xml" tooltip="HelloSMSDK/res/layout/fragment_main.xml">
+<persistable path="/HelloSMSDK/res/layout/fragment_main.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="HelloSMSDK/src/com/example/hellosmsdk/MainActivity.java">
+<persistable path="/HelloSMSDK/src/com/example/hellosmsdk/MainActivity.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HeatmapTileProvider$Builder.class" tooltip="com.google.maps.android.heatmaps.HeatmapTileProvider$Builder">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=MainActivity/\/home\/sergio\/Desktop\/android-maps-utils-master\/library\/bin\/library.jar&lt;com.google.maps.android.heatmaps(HeatmapTileProvider$Builder.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WeightedLatLng.java" tooltip="library/src/com/google/maps/android/heatmaps/WeightedLatLng.java">
+<persistable path="/library/src/com/google/maps/android/heatmaps/WeightedLatLng.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeatmapTileProvider.java" tooltip="library/src/com/google/maps/android/heatmaps/HeatmapTileProvider.java">
+<persistable path="/library/src/com/google/maps/android/heatmaps/HeatmapTileProvider.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HeatmapTileProvider.class" tooltip="com.google.maps.android.heatmaps.HeatmapTileProvider">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=MainActivity/\/home\/sergio\/Desktop\/android-maps-utils-master\/library\/bin\/library.jar&lt;com.google.maps.android.heatmaps(HeatmapTileProvider.class"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java">
 <persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="ids.xml" tooltip="library/res/values/ids.xml">
-<persistable path="/library/res/values/ids.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="police.json" tooltip="MainActivity/res/raw/police.json">
+<persistable path="/MainActivity/res/raw/police.json"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="multi_profile.xml" tooltip="MainActivity/res/layout/multi_profile.xml">
-<persistable path="/MainActivity/res/layout/multi_profile.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java">
+<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="library/res/values/styles.xml">
-<persistable path="/library/res/values/styles.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="MainActivity/res/values/styles.xml">
-<persistable path="/MainActivity/res/values/styles.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="MainActivity/res/values/strings.xml">
-<persistable path="/MainActivity/res/values/strings.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="heatmaps_demo.xml" tooltip="MainActivity/res/layout/heatmaps_demo.xml">
+<persistable path="/MainActivity/res/layout/heatmaps_demo.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="MainActivity/res/layout/main.xml">
 <persistable path="/MainActivity/res/layout/main.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="map.xml" tooltip="MainActivity/res/layout/map.xml">
-<persistable path="/MainActivity/res/layout/map.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeatmapsDemoActivity.java" tooltip="MainActivity/src/com/google/maps/android/utils/demo/HeatmapsDemoActivity.java">
+<persistable path="/MainActivity/src/com/google/maps/android/utils/demo/HeatmapsDemoActivity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="Abottomupsensortestbed43/AndroidManifest.xml">
-<persistable path="/Abottomupsensortestbed43/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="MainActivity/AndroidManifest.xml">
-<persistable path="/MainActivity/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Abottomupsensortestbed43/res/layout/activity_main.xml">
-<persistable path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HeatmapsPlacesDemoActivity.java" tooltip="MainActivity/src/com/google/maps/android/utils/demo/HeatmapsPlacesDemoActivity.java">
+<persistable path="/MainActivity/src/com/google/maps/android/utils/demo/HeatmapsPlacesDemoActivity.java"/>
 </file>
 </mruList>
 </workbench>
