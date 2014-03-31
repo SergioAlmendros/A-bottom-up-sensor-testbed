@@ -6,6 +6,9 @@ import java.util.LinkedList;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -23,10 +26,16 @@ public class DataBase {
 	GoogleMap map;
 	LatLng currentLocation;
 	TextView textView;
+	Button bTemp,bHum,bNoise,blight,bAQ;
 	private String DATASETID = "environmental";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
 	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
-	private ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
+	private ArrayList<WeightedLatLng> heatmaplistTemp = new ArrayList<WeightedLatLng>();
+	private ArrayList<WeightedLatLng> heatmaplistHum = new ArrayList<WeightedLatLng>();
+	private ArrayList<WeightedLatLng> heatmaplistNoise = new ArrayList<WeightedLatLng>();
+	private ArrayList<WeightedLatLng> heatmaplistlight = new ArrayList<WeightedLatLng>();
+	private ArrayList<WeightedLatLng> heatmaplistAQ = new ArrayList<WeightedLatLng>();
+	GradientDrawable dselected, dunselected;
 
 	public String getDATASETID() {
 		return DATASETID;
@@ -51,6 +60,19 @@ public class DataBase {
 	public static DataBase getInstance() {
 		if (mInstance == null) {
 			mInstance = new DataBase();
+			
+			mInstance.dselected = new GradientDrawable();
+			mInstance.dselected.setShape(GradientDrawable.RECTANGLE);
+			mInstance.dselected.setStroke(5, Color.argb(0, 0,0,0));
+			mInstance.dselected.setColor(Color.argb(125, 0,125,0));
+		    //dataBase.bTemp.setBackground(dselected);
+		    
+			mInstance.dunselected = new GradientDrawable();
+			mInstance.dunselected.setShape(GradientDrawable.RECTANGLE);
+			mInstance.dunselected.setStroke(5, Color.argb(0, 0,0,0));
+			mInstance.dunselected.setColor(Color.argb(125, 0,0,0));
+		    //dataBase.bTemp.setBackground(dunselected);
+			
 		}
 		return mInstance;
 	}
@@ -148,71 +170,99 @@ public class DataBase {
 
 			// DE MOMENTO SOLO QUIERO QUE SALGA LA TEMPERATURA
 
+			place = new LatLng((float) Markerfeatures.get(i).getGeometry()
+					.getCoordinates().get(1), (float) Markerfeatures.get(i)
+					.getGeometry().getCoordinates().get(0));
+			
 			if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Temperature")) {
-				place = new LatLng((float) Markerfeatures.get(i).getGeometry()
-						.getCoordinates().get(1), (float) Markerfeatures.get(i)
-						.getGeometry().getCoordinates().get(0));
-//				this.map.addMarker(new MarkerOptions()
-//						.title(Markerfeatures.get(i).getProperties()
-//								.getDescription())
-//						.snippet(
-//								""
-//										+ Markerfeatures.get(i).getProperties()
-//												.getValue()
-//										+ " "
-//										+ Markerfeatures.get(i).getProperties()
-//												.getUnit()).position(place));
-				// this.heatmaplist.add(new
-				// WeightedLatLng(place,Markerfeatures.get(i).getProperties().getValue()));
+				
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
-						.getValue());
+						.getValue(), "Temperature");
 
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Light")){
+
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue(),"Light");
+				
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Noise")){
+
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue(),"Noise");
+				
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Humidity")){
+
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue(),"Humidity");
+	
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Air Quality")){
+
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue(),"Air Quality");
+				
 			}
 		}
 
 	}
 
-	private void addWeightedLatLng(LatLng place, float value) {
+	private void addWeightedLatLng(LatLng place, float value, String type) {
 
-		float sum = (float) 0.001;
-		float sum2 = (float) 0.0008;
+		float sum = (float) 0.00001;
+		float sum2 = (float) 0.000008;
 		LatLng nplace;
+		ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
 		
-		this.heatmaplist.add(new WeightedLatLng(place, value));
+		if(type.equals("Temperature")){
+			heatmaplist = this.heatmaplistTemp;
+		}else if(type.equals("Light")){
+			heatmaplist = this.heatmaplistlight;
+		}else if(type.equals("Noise")){
+			heatmaplist = this.heatmaplistNoise;
+		}else if(type.equals("Humidity")){
+			heatmaplist = this.heatmaplistHum;
+		}else if(type.equals("Air Quality")){
+			heatmaplist = this.heatmaplistAQ;
+		}
+		
+		heatmaplist.add(new WeightedLatLng(place, value));
 
 		nplace = new LatLng((float) place.latitude + sum,
 				(float) place.longitude);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude,
 				(float) place.longitude + sum);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude - sum,
 				(float) place.longitude);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude,
 				(float) place.longitude - sum);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude + sum2,
 				(float) place.longitude + sum2);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude + sum2,
 				(float) place.longitude - sum2);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude - sum2,
 				(float) place.longitude + sum2);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
 		
 		nplace = new LatLng((float) place.latitude - sum2,
 				(float) place.longitude - sum2);
-		this.heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value));
+		
 
 	}
 
@@ -247,19 +297,32 @@ public class DataBase {
 
 	}
 
-	public void addHeatMap() {
+	public void addHeatMap(String type) {
 
-		// // this.textView.setText(this.heatmaplist.toString());
-		// this.heatmaplist.clear();
-		// this.heatmaplist.add(new LatLng(41.396505, 2.188057));
-		// this.heatmaplist.add(new LatLng(41.402428, 2.192735));
-
-		if (!this.heatmaplist.isEmpty()) {
+		// // this.textView.setText(this.heatmaplistTemp.toString());
+		// this.heatmaplistTemp.clear();
+		// this.heatmaplistTemp.add(new LatLng(41.396505, 2.188057));
+		// this.heatmaplistTemp.add(new LatLng(41.402428, 2.192735));
+ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
+		
+		if(type.equals("Temperature")){
+			heatmaplist = this.heatmaplistTemp;
+		}else if(type.equals("Light")){
+			heatmaplist = this.heatmaplistlight;
+		}else if(type.equals("Noise")){
+			heatmaplist = this.heatmaplistNoise;
+		}else if(type.equals("Humidity")){
+			heatmaplist = this.heatmaplistHum;
+		}else if(type.equals("Air Quality")){
+			heatmaplist = this.heatmaplistAQ;
+		}
+		
+		if (!heatmaplist.isEmpty()) {
 
 			HeatmapTileProvider mProvider = null;
 			try {
 				mProvider = new HeatmapTileProvider.Builder().weightedData(
-						this.heatmaplist).build();
+						heatmaplist).build();
 			} catch (Exception e) {
 				this.textView.setText(e.toString());
 			}
@@ -272,6 +335,7 @@ public class DataBase {
 				// provider.
 				this.map.addTileOverlay(new TileOverlayOptions()
 						.tileProvider(mProvider));
+				//this.map.clear();
 			} catch (Exception e) {
 				this.textView.setText(e.toString());
 			}

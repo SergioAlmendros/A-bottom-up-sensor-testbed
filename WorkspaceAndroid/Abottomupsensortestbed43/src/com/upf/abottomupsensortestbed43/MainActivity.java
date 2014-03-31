@@ -23,15 +23,21 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.*;
+import android.graphics.drawable.GradientDrawable.Orientation;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.json.parsers.JSONParser;
 import com.json.parsers.JsonParserFactory;
@@ -53,8 +59,137 @@ public class MainActivity extends Activity {
 		// Get a handle to the Map Fragment
 		dataBase.map = ((MapFragment) getFragmentManager().findFragmentById(
 				R.id.map)).getMap();
-		
+
+		dataBase.map.setOnCameraChangeListener(new OnCameraChangeListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+			Float maxZoom = 16.0f;
+
+			@Override
+			public void onCameraChange(CameraPosition cameraPosition) {
+
+				if (cameraPosition.zoom > maxZoom)
+					dataBase.map.animateCamera(CameraUpdateFactory
+							.zoomTo(maxZoom));
+			}
+		});
+
 		dataBase.textView = (TextView) findViewById(R.id.textView1);
+		dataBase.bTemp = (Button) findViewById(R.id.buttonTemperature);
+		dataBase.bNoise = (Button) findViewById(R.id.buttonNoise);
+		dataBase.blight = (Button) findViewById(R.id.buttonLight);
+		dataBase.bHum = (Button) findViewById(R.id.buttonHumidity);
+		dataBase.bAQ = (Button) findViewById(R.id.buttonAirQuality);
+		
+		dataBase.bTemp.setBackground(dataBase.dselected);
+		dataBase.bNoise.setBackground(dataBase.dunselected);
+		dataBase.blight.setBackground(dataBase.dunselected);
+		dataBase.bHum.setBackground(dataBase.dunselected);
+		dataBase.bAQ.setBackground(dataBase.dunselected);
+
+		dataBase.bTemp.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View v) {
+
+				dataBase.bTemp.setBackground(dataBase.dselected);
+				dataBase.bNoise.setBackground(dataBase.dunselected);
+				dataBase.blight.setBackground(dataBase.dunselected);
+				dataBase.bHum.setBackground(dataBase.dunselected);
+				dataBase.bAQ.setBackground(dataBase.dunselected);
+				
+				dataBase.map.clear();
+				dataBase.addHeatMap("Temperature");
+
+			}
+
+		});
+
+		dataBase.bNoise.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View v) {
+
+				dataBase.bTemp.setBackground(dataBase.dunselected);
+				dataBase.bNoise.setBackground(dataBase.dselected);
+				dataBase.blight.setBackground(dataBase.dunselected);
+				dataBase.bHum.setBackground(dataBase.dunselected);
+				dataBase.bAQ.setBackground(dataBase.dunselected);
+				
+				dataBase.map.clear();
+				dataBase.addHeatMap("Noise");
+
+			}
+
+		});
+
+		dataBase.blight.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View v) {
+
+				dataBase.bTemp.setBackground(dataBase.dunselected);
+				dataBase.bNoise.setBackground(dataBase.dunselected);
+				dataBase.blight.setBackground(dataBase.dselected);
+				dataBase.bHum.setBackground(dataBase.dunselected);
+				dataBase.bAQ.setBackground(dataBase.dunselected);
+				
+				dataBase.map.clear();
+				dataBase.addHeatMap("Light");
+
+			}
+
+		});
+
+		dataBase.bHum.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View v) {
+
+				dataBase.bTemp.setBackground(dataBase.dunselected);
+				dataBase.bNoise.setBackground(dataBase.dunselected);
+				dataBase.blight.setBackground(dataBase.dunselected);
+				dataBase.bHum.setBackground(dataBase.dselected);
+				dataBase.bAQ.setBackground(dataBase.dunselected);
+				
+				dataBase.map.clear();
+				dataBase.addHeatMap("Humidity");
+
+			}
+
+		});
+
+		dataBase.bAQ.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View v) {
+
+				dataBase.bTemp.setBackground(dataBase.dunselected);
+				dataBase.bNoise.setBackground(dataBase.dunselected);
+				dataBase.blight.setBackground(dataBase.dunselected);
+				dataBase.bHum.setBackground(dataBase.dunselected);
+				dataBase.bAQ.setBackground(dataBase.dselected);
+				
+				dataBase.map.clear();
+				dataBase.addHeatMap("Air Quality");
+
+			}
+
+		});
+
+		dataBase.map.getUiSettings().setCompassEnabled(false);
+//		dataBase.textView.setText(""
+//				+ dataBase.map.getUiSettings().isCompassEnabled());
 
 		// create class object
 		gps = new GPSTracker(MainActivity.this);
@@ -81,28 +216,12 @@ public class MainActivity extends Activity {
 				latitude, longitude), 13));
 
 		String url = "http://opendata.nets.upf.edu/osn2/api/datasets/getDatasetJsonp/"
-				+ dataBase.getAPIKEY()
-				+ "/"
-				+ dataBase.getDATASETID()
-				+ "/1";
-		
-//		Toast.makeText(getBaseContext(), url,
-//				Toast.LENGTH_LONG).show();
-		
-		new HttpAsyncTask()
-				.execute(url);
+				+ dataBase.getAPIKEY() + "/" + dataBase.getDATASETID() + "/1";
 
-		/*
-		 * LatLng sydney = new LatLng(-33.867, 151.206); //LatLng sydney = new
-		 * LatLng(this.Lfeatures.get(0).getGeometry().getCoordinates().get(0),
-		 * this.Lfeatures.get(0).getGeometry().getCoordinates().get(1));
-		 * 
-		 * dataBase.map.setMyLocationEnabled(true);
-		 * dataBase.map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,
-		 * 13));
-		 */
+		// Toast.makeText(getBaseContext(), url,
+		// Toast.LENGTH_LONG).show();
 
-		// The camera has to point to where the user is
+		new HttpAsyncTask().execute(url);
 
 	}
 
@@ -188,7 +307,8 @@ public class MainActivity extends Activity {
 				Geometry geometry;
 
 				DataBase dataBase = DataBase.getInstance();
-				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+				SimpleDateFormat dateFormat = new SimpleDateFormat(
+						"yyyy-MM-dd hh:mm:ss.SSS");
 				Date parsedDate;
 				Timestamp timestamp;
 				String tmstamp;
@@ -210,19 +330,18 @@ public class MainActivity extends Activity {
 						tagsALp.add(t[j]);
 					}
 					tmstamp = (String) propertiesHM.get("timeStamp");
-					
+
 					tmstamp = tmstamp.replace("T", " ");
 					tmstamp = tmstamp.replace("Z", "");
 
 					parsedDate = dateFormat.parse(tmstamp);
-				    timestamp = new java.sql.Timestamp(parsedDate.getTime());
-				    
+					timestamp = new java.sql.Timestamp(parsedDate.getTime());
+
 					if (((String) propertiesHM.get("value"))
 							.matches("[-+]?[0-9]*\\.?[0-9]+")) {
 						properties = new Properties(tagsALp,
 								(String) propertiesHM.get("id"),
-								(String) propertiesHM.get("unit"),
-								timestamp,
+								(String) propertiesHM.get("unit"), timestamp,
 								(String) propertiesHM.get("address"),
 								(String) propertiesHM.get("datasetName"),
 								(String) propertiesHM.get("description"),
@@ -243,23 +362,23 @@ public class MainActivity extends Activity {
 
 						feature = new Feature(tagsAL, properties,
 								(String) jsonMap.get("type"), geometry);
-						
+
 						dataBase.getLfeatures().add(feature);
 					}
 				}
-				//Toast.makeText(getBaseContext(), "JSON parsed!",
-				//Toast.LENGTH_LONG).show();
-				
+				// Toast.makeText(getBaseContext(), "JSON parsed!",
+				// Toast.LENGTH_LONG).show();
+
 				dataBase.createFeaturesByCoordinates();
 				dataBase.setState("ready");
 				dataBase.addMarkers();
-				dataBase.addHeatMap();
+				dataBase.addHeatMap("Temperature");
 
 			} catch (JSONException e) {
-				Toast.makeText(getBaseContext(),e.toString(),
+				Toast.makeText(getBaseContext(), e.toString(),
 						Toast.LENGTH_LONG).show();
 			} catch (ParseException e) {
-				Toast.makeText(getBaseContext(),e.toString(),
+				Toast.makeText(getBaseContext(), e.toString(),
 						Toast.LENGTH_LONG).show();
 			}
 

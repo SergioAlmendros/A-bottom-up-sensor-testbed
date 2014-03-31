@@ -21,4 +21,45 @@
         android:layout_marginBottom="26dp"
         android:text=" " />
 
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" 
+        android:orientation='horizontal'>
+
+        <Button
+            android:id="@+id/buttonTemperature"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="T" />
+
+        <Button
+            android:id="@+id/buttonHumidity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="H" />
+
+        <Button
+            android:id="@+id/buttonNoise"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="N" />
+        
+        <Button
+            android:id="@+id/buttonLight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="L" />
+        
+        <Button
+            android:id="@+id/buttonAirQuality"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="AQ" />
+    </RadioGroup>
+
 </RelativeLayout>

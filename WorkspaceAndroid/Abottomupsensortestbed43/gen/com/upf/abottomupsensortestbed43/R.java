@@ -227,12 +227,18 @@ containing a value of this type.
         public static final int ic_plusone_tall_off_client=0x7f020022;
     }
     public static final class id {
-        public static final int action_settings=0x7f060008;
+        public static final int action_settings=0x7f06000e;
+        public static final int buttonAirQuality=0x7f06000d;
+        public static final int buttonHumidity=0x7f06000a;
+        public static final int buttonLight=0x7f06000c;
+        public static final int buttonNoise=0x7f06000b;
+        public static final int buttonTemperature=0x7f060009;
         public static final int hybrid=0x7f060004;
         public static final int map=0x7f060006;
-        public static final int mapview=0x7f060009;
+        public static final int mapview=0x7f06000f;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
+        public static final int radioGroup1=0x7f060008;
         public static final int satellite=0x7f060002;
         public static final int terrain=0x7f060003;
         public static final int text=0x7f060005;
@@ -252,6 +258,7 @@ containing a value of this type.
         public static final int police_stations=0x7f040000;
     }
     public static final class string {
+        public static final int Popular=0x7f07001d;
         public static final int action_settings=0x7f07001b;
         public static final int app_name=0x7f07001a;
         /**   Title for notification shown when GooglePlayServices needs to be

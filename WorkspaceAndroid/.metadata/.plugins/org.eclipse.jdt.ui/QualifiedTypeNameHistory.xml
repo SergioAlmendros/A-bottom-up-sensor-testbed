@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="android.media.audiofx.EnvironmentalReverb.Settings"/>
 <fullyQualifiedTypeName name="android.provider.Settings"/>
 <fullyQualifiedTypeName name="com.google.android.gms.maps.CameraUpdateFactory"/>
-<fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="com.google.android.gms.maps.internal.p"/>
@@ -27,4 +26,17 @@
 <fullyQualifiedTypeName name="com.google.maps.android.R"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.google.maps.android.heatmaps.WeightedLatLng"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.GoogleMap.OnCameraChangeListener"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.GoogleMap.OnMapClickListener"/>
+<fullyQualifiedTypeName name="java.util.logging.Handler"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="android.os.Looper"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.graphics.drawable.Drawable"/>
+<fullyQualifiedTypeName name="android.graphics.drawable.Drawable.ConstantState"/>
+<fullyQualifiedTypeName name="android.graphics.drawable.Drawable.Callback"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
+<fullyQualifiedTypeName name="android.graphics.drawable.GradientDrawable"/>
+<fullyQualifiedTypeName name="android.graphics.drawable.GradientDrawable.Orientation"/>
 </qualifiedTypeNameHistroy>

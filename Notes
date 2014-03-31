@@ -162,6 +162,10 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Solo funcionan dos locations, y las otras dos petan.
 -26/03/14
 --He hecho que hayan puntos alrededor de los puntos reales para que la forma de visualizarlo sea mejor.
+--Voy a crear botones en la parte de arriba para poder elegir humedad, temperatura, ruido, luz, y calidad de aire.
+-31/03/14
+--Ya están hechos los botones
+--Voy ha hacer que el mapa canvie dependiendo del botón clicado.
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
@@ -169,7 +173,7 @@ TODO:
 -Entre sensor y sensor, crear más puntos interpolando el valor que tengan, para así no dejar huecos vacios.
 -Que los puntos irreales alrededor del real se expandan hasta que encuentren puntos reales o irreales.
 -Que el valor vaya degradando.
--Que no se pueda hacer tanto zoom.
+-Que no se pueda hacer tanto zoom --> No lo he conseguido como queria, ahora hay un limite, pero he tenido que juntar mucho los puntos para que no se vea mal.
 
 
 
