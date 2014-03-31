@@ -227,15 +227,16 @@ containing a value of this type.
         public static final int ic_plusone_tall_off_client=0x7f020022;
     }
     public static final class id {
-        public static final int action_settings=0x7f06000e;
-        public static final int buttonAirQuality=0x7f06000d;
-        public static final int buttonHumidity=0x7f06000a;
-        public static final int buttonLight=0x7f06000c;
-        public static final int buttonNoise=0x7f06000b;
-        public static final int buttonTemperature=0x7f060009;
+        public static final int action_settings=0x7f06000f;
+        public static final int buttonAirQuality=0x7f06000e;
+        public static final int buttonHumidity=0x7f06000b;
+        public static final int buttonLight=0x7f06000d;
+        public static final int buttonNoise=0x7f06000c;
+        public static final int buttonShowMarkers=0x7f060009;
+        public static final int buttonTemperature=0x7f06000a;
         public static final int hybrid=0x7f060004;
         public static final int map=0x7f060006;
-        public static final int mapview=0x7f06000f;
+        public static final int mapview=0x7f060010;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int radioGroup1=0x7f060008;

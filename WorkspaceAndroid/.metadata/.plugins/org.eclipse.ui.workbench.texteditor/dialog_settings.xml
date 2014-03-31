@@ -3,28 +3,31 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="312" key="DIALOG_WIDTH"/>
 		<item value="200" key="DIALOG_Y_ORIGIN"/>
-		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="918" key="DIALOG_X_ORIGIN"/>
+		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Temperature" key="selection"/>
+		<item value="this.map.addMarker(new MarkerOptions().position(heatmaplist.get).title(" key="selection"/>
 		<list key="findhistory">
-			<item value="temperature"/>
-			<item value="zoom"/>
-			<item value="place"/>
+			<item value="this.map.addMarker(new MarkerOptions().position(heatmaplist.get).title("/>
+			<item value="addMar"/>
+			<item value="text"/>
+			<item value="addHeat"/>
+			<item value="heatmaplistTemp"/>
+			<item value="ligth"/>
 			<item value="heatmaplist"/>
-			<item value="default_radius"/>
-			<item value="radiu"/>
-			<item value="toS"/>
-			<item value="get"/>
+			<item value="temperature"/>
 		</list>
 		<list key="replacehistory">
+			<item value="heatmaplist"/>
+			<item value="light"/>
+			<item value="heatmaplistTemp"/>
 		</list>
 	</section>
 </section>

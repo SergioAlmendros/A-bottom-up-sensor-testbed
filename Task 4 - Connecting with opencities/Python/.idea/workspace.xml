@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="710" selection-end="710" vertical-scroll-proportion="0.49434572" vertical-offset="108" max-vertical-offset="3708">
+            <state line="17" column="70" selection-start="487" selection-end="487" vertical-scroll-proportion="0.49434572" vertical-offset="0" max-vertical-offset="3708">
               <folding>
                 <element signature="e#13#23#0" expanded="true" />
               </folding>
@@ -80,6 +80,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -100,18 +101,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -465,7 +465,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="710" selection-end="710" vertical-scroll-proportion="0.49434572" vertical-offset="108" max-vertical-offset="3708">
+        <state line="17" column="70" selection-start="487" selection-end="487" vertical-scroll-proportion="0.49434572" vertical-offset="0" max-vertical-offset="3708">
           <folding>
             <element signature="e#13#23#0" expanded="true" />
           </folding>

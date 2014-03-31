@@ -26,7 +26,7 @@ public class DataBase {
 	GoogleMap map;
 	LatLng currentLocation;
 	TextView textView;
-	Button bTemp, bHum, bNoise, blight, bAQ;
+	Button bTemp, bHum, bNoise, blight, bAQ, bM;
 	private String DATASETID = "environmental";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
 	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
@@ -41,6 +41,8 @@ public class DataBase {
 	private ArrayList<Feature> lfeaturesMarkersL = new ArrayList<Feature>();
 	private ArrayList<Feature> lfeaturesMarkersA = new ArrayList<Feature>();
 	GradientDrawable dselected, dunselected;
+	boolean markerSelected = false;
+	String bSelected = "Temperature";
 
 	public String getDATASETID() {
 		return DATASETID;

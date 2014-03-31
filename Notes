@@ -168,6 +168,8 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Voy ha hacer que el mapa canvie dependiendo del botón clicado.
 --He creado una funcion para poner los marcadores también.
 --Creo que algo falla porque los puntos tienen todos el mismo color.
+--He hecho que los puntos tengan valores muy distintos, y los puntos de calor funcionan bien.
+--Voy ha hacer un boton para que se vean o no los marcadores.
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.

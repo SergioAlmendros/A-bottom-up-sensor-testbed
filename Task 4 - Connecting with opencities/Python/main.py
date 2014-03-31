@@ -15,7 +15,7 @@ class Arduino:
         self.id = ""
         self.location = "BCN-UPFPOBLENOU"
         self.datasetId = 'environmental'
-        self.address = 'Carrer de la Marina, Barcelona, Spain'
+        self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'
         self.description = ''
         self.apikey = "7b1611c3-c688-474b-bcab-6e4921bfb109"
         g = geocoders.GoogleV3()

@@ -32,6 +32,12 @@
         android:orientation='horizontal'>
 
         <Button
+            android:id="@+id/buttonShowMarkers"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="M" />
+        
+        <Button
             android:id="@+id/buttonTemperature"
             android:layout_width="50dp"
             android:layout_height="50dp"

@@ -80,12 +80,58 @@ public class MainActivity extends Activity {
 		dataBase.blight = (Button) findViewById(R.id.buttonLight);
 		dataBase.bHum = (Button) findViewById(R.id.buttonHumidity);
 		dataBase.bAQ = (Button) findViewById(R.id.buttonAirQuality);
-		
+		dataBase.bM = (Button) findViewById(R.id.buttonShowMarkers);
+
 		dataBase.bTemp.setBackground(dataBase.dselected);
 		dataBase.bNoise.setBackground(dataBase.dunselected);
 		dataBase.blight.setBackground(dataBase.dunselected);
 		dataBase.bHum.setBackground(dataBase.dunselected);
 		dataBase.bAQ.setBackground(dataBase.dunselected);
+		dataBase.bM.setBackground(dataBase.dselected);
+		dataBase.markerSelected = true;
+
+		dataBase.bM.setOnClickListener(new View.OnClickListener() {
+
+			DataBase dataBase = DataBase.getInstance();
+
+			@Override
+			public void onClick(View v) {
+
+				if (dataBase.markerSelected) {
+					dataBase.markerSelected = false;
+					dataBase.bM.setBackground(dataBase.dunselected);
+					dataBase.map.clear();
+					if (dataBase.bSelected.equals("Temperature")) {
+						dataBase.addHeatMap("Temperature");
+					} else if (dataBase.bSelected.equals("Light")) {
+						dataBase.addHeatMap("Light");
+					} else if (dataBase.bSelected.equals("Noise")) {
+						dataBase.addHeatMap("Noise");
+					} else if (dataBase.bSelected.equals("Humidity")) {
+						dataBase.addHeatMap("Humidity");
+					} else if (dataBase.bSelected.equals("Air Quality")) {
+						dataBase.addHeatMap("Air Quality");
+					}
+
+				} else if (!dataBase.markerSelected) {
+					dataBase.markerSelected = true;
+					dataBase.bM.setBackground(dataBase.dselected);
+					if (dataBase.bSelected.equals("Temperature")) {
+						dataBase.addMarker2("Temperature");
+					} else if (dataBase.bSelected.equals("Light")) {
+						dataBase.addMarker2("Light");
+					} else if (dataBase.bSelected.equals("Noise")) {
+						dataBase.addMarker2("Noise");
+					} else if (dataBase.bSelected.equals("Humidity")) {
+						dataBase.addMarker2("Humidity");
+					} else if (dataBase.bSelected.equals("Air Quality")) {
+						dataBase.addMarker2("Air Quality");
+					}
+				}
+
+			}
+
+		});
 
 		dataBase.bTemp.setOnClickListener(new View.OnClickListener() {
 
@@ -94,15 +140,21 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				dataBase.bSelected = "Temperature";
 				dataBase.bTemp.setBackground(dataBase.dselected);
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
 				dataBase.bAQ.setBackground(dataBase.dunselected);
-				
+
 				dataBase.map.clear();
 				dataBase.addHeatMap("Temperature");
-				dataBase.addMarker2("Temperature");
+
+				if (dataBase.markerSelected) {
+
+					dataBase.addMarker2("Temperature");
+
+				}
 
 			}
 
@@ -115,16 +167,22 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				dataBase.bSelected = "Noise";
+
 				dataBase.bTemp.setBackground(dataBase.dunselected);
 				dataBase.bNoise.setBackground(dataBase.dselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
 				dataBase.bAQ.setBackground(dataBase.dunselected);
-				
+
 				dataBase.map.clear();
 				dataBase.addHeatMap("Noise");
-				dataBase.addMarker2("Noise");
 
+				if (dataBase.markerSelected) {
+
+					dataBase.addMarker2("Noise");
+
+				}
 			}
 
 		});
@@ -136,15 +194,21 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				dataBase.bSelected = "Light";
 				dataBase.bTemp.setBackground(dataBase.dunselected);
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
 				dataBase.bAQ.setBackground(dataBase.dunselected);
-				
+
 				dataBase.map.clear();
 				dataBase.addHeatMap("Light");
-				dataBase.addMarker2("Light");
+
+				if (dataBase.markerSelected) {
+
+					dataBase.addMarker2("Light");
+
+				}
 
 			}
 
@@ -157,15 +221,21 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				dataBase.bSelected = "Humidity";
 				dataBase.bTemp.setBackground(dataBase.dunselected);
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dselected);
 				dataBase.bAQ.setBackground(dataBase.dunselected);
-				
+
 				dataBase.map.clear();
 				dataBase.addHeatMap("Humidity");
-				dataBase.addMarker2("Humidity");
+
+				if (dataBase.markerSelected) {
+
+					dataBase.addMarker2("Humidity");
+
+				}
 
 			}
 
@@ -178,23 +248,28 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				dataBase.bSelected = "Air Quality";
 				dataBase.bTemp.setBackground(dataBase.dunselected);
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
 				dataBase.bAQ.setBackground(dataBase.dselected);
-				
+
 				dataBase.map.clear();
 				dataBase.addHeatMap("Air Quality");
-				dataBase.addMarker2("Air Quality");
 
+				if (dataBase.markerSelected) {
+
+					dataBase.addMarker2("Air Quality");
+
+				}
 			}
 
 		});
 
 		dataBase.map.getUiSettings().setCompassEnabled(false);
-//		dataBase.textView.setText(""
-//				+ dataBase.map.getUiSettings().isCompassEnabled());
+		// dataBase.textView.setText(""
+		// + dataBase.map.getUiSettings().isCompassEnabled());
 
 		// create class object
 		gps = new GPSTracker(MainActivity.this);
