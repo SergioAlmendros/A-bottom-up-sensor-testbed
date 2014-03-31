@@ -102,7 +102,6 @@ public class MainActivity extends Activity {
 				
 				dataBase.map.clear();
 				dataBase.addHeatMap("Temperature");
-				dataBase.addMarker2("Temperature");
 
 			}
 
@@ -123,7 +122,6 @@ public class MainActivity extends Activity {
 				
 				dataBase.map.clear();
 				dataBase.addHeatMap("Noise");
-				dataBase.addMarker2("Noise");
 
 			}
 
@@ -144,7 +142,6 @@ public class MainActivity extends Activity {
 				
 				dataBase.map.clear();
 				dataBase.addHeatMap("Light");
-				dataBase.addMarker2("Light");
 
 			}
 
@@ -165,7 +162,6 @@ public class MainActivity extends Activity {
 				
 				dataBase.map.clear();
 				dataBase.addHeatMap("Humidity");
-				dataBase.addMarker2("Humidity");
 
 			}
 
@@ -186,7 +182,6 @@ public class MainActivity extends Activity {
 				
 				dataBase.map.clear();
 				dataBase.addHeatMap("Air Quality");
-				dataBase.addMarker2("Air Quality");
 
 			}
 

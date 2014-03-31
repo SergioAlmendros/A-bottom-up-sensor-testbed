@@ -240,35 +240,35 @@ public class DataBase {
 
 		nplace = new LatLng((float) place.latitude + sum,
 				(float) place.longitude);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude, (float) place.longitude
 				+ sum);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude - sum,
 				(float) place.longitude);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude, (float) place.longitude
 				- sum);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude + sum2,
 				(float) place.longitude + sum2);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude + sum2,
 				(float) place.longitude - sum2);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude - sum2,
 				(float) place.longitude + sum2);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 		nplace = new LatLng((float) place.latitude - sum2,
 				(float) place.longitude - sum2);
-		heatmaplist.add(new WeightedLatLng(nplace, value));
+		heatmaplist.add(new WeightedLatLng(nplace, value-1));
 
 	}
 

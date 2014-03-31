@@ -26,7 +26,7 @@ public class DataBase {
 	GoogleMap map;
 	LatLng currentLocation;
 	TextView textView;
-	Button bTemp, bHum, bNoise, blight, bAQ;
+	Button bTemp,bHum,bNoise,blight,bAQ;
 	private String DATASETID = "environmental";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
 	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
@@ -35,11 +35,6 @@ public class DataBase {
 	private ArrayList<WeightedLatLng> heatmaplistNoise = new ArrayList<WeightedLatLng>();
 	private ArrayList<WeightedLatLng> heatmaplistlight = new ArrayList<WeightedLatLng>();
 	private ArrayList<WeightedLatLng> heatmaplistAQ = new ArrayList<WeightedLatLng>();
-	private ArrayList<Feature> lfeaturesMarkersT = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersH = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersN = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersL = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersA = new ArrayList<Feature>();
 	GradientDrawable dselected, dunselected;
 
 	public String getDATASETID() {
@@ -65,19 +60,19 @@ public class DataBase {
 	public static DataBase getInstance() {
 		if (mInstance == null) {
 			mInstance = new DataBase();
-
+			
 			mInstance.dselected = new GradientDrawable();
 			mInstance.dselected.setShape(GradientDrawable.RECTANGLE);
-			mInstance.dselected.setStroke(5, Color.argb(0, 0, 0, 0));
-			mInstance.dselected.setColor(Color.argb(125, 0, 125, 0));
-			// dataBase.bTemp.setBackground(dselected);
-
+			mInstance.dselected.setStroke(5, Color.argb(0, 0,0,0));
+			mInstance.dselected.setColor(Color.argb(125, 0,125,0));
+		    //dataBase.bTemp.setBackground(dselected);
+		    
 			mInstance.dunselected = new GradientDrawable();
 			mInstance.dunselected.setShape(GradientDrawable.RECTANGLE);
-			mInstance.dunselected.setStroke(5, Color.argb(0, 0, 0, 0));
-			mInstance.dunselected.setColor(Color.argb(125, 0, 0, 0));
-			// dataBase.bTemp.setBackground(dunselected);
-
+			mInstance.dunselected.setStroke(5, Color.argb(0, 0,0,0));
+			mInstance.dunselected.setColor(Color.argb(125, 0,0,0));
+		    //dataBase.bTemp.setBackground(dunselected);
+			
 		}
 		return mInstance;
 	}
@@ -173,45 +168,43 @@ public class DataBase {
 
 		for (int i = 0; i < Markerfeatures.size(); ++i) {
 
+			// DE MOMENTO SOLO QUIERO QUE SALGA LA TEMPERATURA
+
 			place = new LatLng((float) Markerfeatures.get(i).getGeometry()
 					.getCoordinates().get(1), (float) Markerfeatures.get(i)
 					.getGeometry().getCoordinates().get(0));
-
+			
 			if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Temperature")) {
+				
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Temperature");
-				this.lfeaturesMarkersT.add(Markerfeatures.get(i));
 
-			} else if (Markerfeatures.get(i).getProperties().getDescription()
-					.contains("Light")) {
-
-				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
-						.getValue(), "Light");
-				this.lfeaturesMarkersL.add(Markerfeatures.get(i));
-
-			} else if (Markerfeatures.get(i).getProperties().getDescription()
-					.contains("Noise")) {
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Light")){
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
-						.getValue(), "Noise");
-				this.lfeaturesMarkersN.add(Markerfeatures.get(i));
-
-			} else if (Markerfeatures.get(i).getProperties().getDescription()
-					.contains("Humidity")) {
-
-				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
-						.getValue(), "Humidity");
-				this.lfeaturesMarkersH.add(Markerfeatures.get(i));
-
-			} else if (Markerfeatures.get(i).getProperties().getDescription()
-					.contains("Air Quality")) {
+						.getValue(),"Light");
+				
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Noise")){
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
-						.getValue(), "Air Quality");
-				this.lfeaturesMarkersA.add(Markerfeatures.get(i));
+						.getValue(),"Noise");
+				
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Humidity")){
 
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue(),"Humidity");
+	
+			}else if(Markerfeatures.get(i).getProperties().getDescription()
+					.contains("Air Quality")){
+
+				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
+						.getValue(),"Air Quality");
+				
 			}
 		}
 
@@ -223,52 +216,53 @@ public class DataBase {
 		float sum2 = (float) 0.000008;
 		LatLng nplace;
 		ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
-
-		if (type.equals("Temperature")) {
+		
+		if(type.equals("Temperature")){
 			heatmaplist = this.heatmaplistTemp;
-		} else if (type.equals("Light")) {
+		}else if(type.equals("Light")){
 			heatmaplist = this.heatmaplistlight;
-		} else if (type.equals("Noise")) {
+		}else if(type.equals("Noise")){
 			heatmaplist = this.heatmaplistNoise;
-		} else if (type.equals("Humidity")) {
+		}else if(type.equals("Humidity")){
 			heatmaplist = this.heatmaplistHum;
-		} else if (type.equals("Air Quality")) {
+		}else if(type.equals("Air Quality")){
 			heatmaplist = this.heatmaplistAQ;
 		}
-
+		
 		heatmaplist.add(new WeightedLatLng(place, value));
 
 		nplace = new LatLng((float) place.latitude + sum,
 				(float) place.longitude);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
-		nplace = new LatLng((float) place.latitude, (float) place.longitude
-				+ sum);
+		
+		nplace = new LatLng((float) place.latitude,
+				(float) place.longitude + sum);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
+		
 		nplace = new LatLng((float) place.latitude - sum,
 				(float) place.longitude);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
-		nplace = new LatLng((float) place.latitude, (float) place.longitude
-				- sum);
+		
+		nplace = new LatLng((float) place.latitude,
+				(float) place.longitude - sum);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
+		
 		nplace = new LatLng((float) place.latitude + sum2,
 				(float) place.longitude + sum2);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
+		
 		nplace = new LatLng((float) place.latitude + sum2,
 				(float) place.longitude - sum2);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
+		
 		nplace = new LatLng((float) place.latitude - sum2,
 				(float) place.longitude + sum2);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
-
+		
 		nplace = new LatLng((float) place.latitude - sum2,
 				(float) place.longitude - sum2);
 		heatmaplist.add(new WeightedLatLng(nplace, value));
+		
 
 	}
 
@@ -303,51 +297,26 @@ public class DataBase {
 
 	}
 
-	public void addMarker2(String type) {
-
-		ArrayList<Feature> heatmaplist = new ArrayList<Feature>();
-		if (type.equals("Temperature")) {
-			heatmaplist = this.lfeaturesMarkersT;
-		} else if (type.equals("Light")) {
-			heatmaplist = this.lfeaturesMarkersL;
-		} else if (type.equals("Noise")) {
-			heatmaplist = this.lfeaturesMarkersN;
-		} else if (type.equals("Humidity")) {
-			heatmaplist = this.lfeaturesMarkersH;
-		} else if (type.equals("Air Quality")) {
-			heatmaplist = this.lfeaturesMarkersA;
-		}
-
-		for (int i = 0; i < heatmaplist.size(); ++i) {
-			this.map.addMarker(new MarkerOptions().position(
-					new LatLng((float) heatmaplist.get(i).getGeometry()
-							.getCoordinates().get(1), (float) heatmaplist
-							.get(i).getGeometry().getCoordinates().get(0)))
-					.title(heatmaplist.get(i).getProperties().getValue()
-							+ heatmaplist.get(i).getProperties().getUnit()));
-		}
-	}
-
 	public void addHeatMap(String type) {
 
 		// // this.textView.setText(this.heatmaplistTemp.toString());
 		// this.heatmaplistTemp.clear();
 		// this.heatmaplistTemp.add(new LatLng(41.396505, 2.188057));
 		// this.heatmaplistTemp.add(new LatLng(41.402428, 2.192735));
-		ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
-
-		if (type.equals("Temperature")) {
+ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
+		
+		if(type.equals("Temperature")){
 			heatmaplist = this.heatmaplistTemp;
-		} else if (type.equals("Light")) {
+		}else if(type.equals("Light")){
 			heatmaplist = this.heatmaplistlight;
-		} else if (type.equals("Noise")) {
+		}else if(type.equals("Noise")){
 			heatmaplist = this.heatmaplistNoise;
-		} else if (type.equals("Humidity")) {
+		}else if(type.equals("Humidity")){
 			heatmaplist = this.heatmaplistHum;
-		} else if (type.equals("Air Quality")) {
+		}else if(type.equals("Air Quality")){
 			heatmaplist = this.heatmaplistAQ;
 		}
-
+		
 		if (!heatmaplist.isEmpty()) {
 
 			HeatmapTileProvider mProvider = null;
@@ -366,7 +335,7 @@ public class DataBase {
 				// provider.
 				this.map.addTileOverlay(new TileOverlayOptions()
 						.tileProvider(mProvider));
-				// this.map.clear();
+				//this.map.clear();
 			} catch (Exception e) {
 				this.textView.setText(e.toString());
 			}

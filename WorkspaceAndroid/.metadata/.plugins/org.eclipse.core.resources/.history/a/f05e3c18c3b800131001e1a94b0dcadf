@@ -182,35 +182,30 @@ public class DataBase {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Temperature");
-				this.lfeaturesMarkersT.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Light")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Light");
-				this.lfeaturesMarkersL.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Noise")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Noise");
-				this.lfeaturesMarkersN.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Humidity")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Humidity");
-				this.lfeaturesMarkersH.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Air Quality")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Air Quality");
-				this.lfeaturesMarkersA.add(Markerfeatures.get(i));
 
 			}
 		}
@@ -305,27 +300,23 @@ public class DataBase {
 
 	public void addMarker2(String type) {
 
-		ArrayList<Feature> heatmaplist = new ArrayList<Feature>();
+		ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
 		if (type.equals("Temperature")) {
-			heatmaplist = this.lfeaturesMarkersT;
+			heatmaplist = this.heatmaplistTemp;
 		} else if (type.equals("Light")) {
-			heatmaplist = this.lfeaturesMarkersL;
+			heatmaplist = this.heatmaplistlight;
 		} else if (type.equals("Noise")) {
-			heatmaplist = this.lfeaturesMarkersN;
+			heatmaplist = this.heatmaplistNoise;
 		} else if (type.equals("Humidity")) {
-			heatmaplist = this.lfeaturesMarkersH;
+			heatmaplist = this.heatmaplistHum;
 		} else if (type.equals("Air Quality")) {
-			heatmaplist = this.lfeaturesMarkersA;
+			heatmaplist = this.heatmaplistAQ;
 		}
 
-		for (int i = 0; i < heatmaplist.size(); ++i) {
-			this.map.addMarker(new MarkerOptions().position(
-					new LatLng((float) heatmaplist.get(i).getGeometry()
-							.getCoordinates().get(1), (float) heatmaplist
-							.get(i).getGeometry().getCoordinates().get(0)))
-					.title(heatmaplist.get(i).getProperties().getValue()
-							+ heatmaplist.get(i).getProperties().getUnit()));
-		}
+		this.map.addMarker(new MarkerOptions().position(
+				heatmaplist.get(0).getPoint()).title(
+				Markerfeatures.get(i).getProperties().getValue()
+						+ Markerfeatures.get(i).getProperties().getUnit()));
 	}
 
 	public void addHeatMap(String type) {

@@ -35,11 +35,6 @@ public class DataBase {
 	private ArrayList<WeightedLatLng> heatmaplistNoise = new ArrayList<WeightedLatLng>();
 	private ArrayList<WeightedLatLng> heatmaplistlight = new ArrayList<WeightedLatLng>();
 	private ArrayList<WeightedLatLng> heatmaplistAQ = new ArrayList<WeightedLatLng>();
-	private ArrayList<Feature> lfeaturesMarkersT = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersH = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersN = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersL = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersA = new ArrayList<Feature>();
 	GradientDrawable dselected, dunselected;
 
 	public String getDATASETID() {
@@ -180,37 +175,49 @@ public class DataBase {
 			if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Temperature")) {
 
+				this.map.addMarker(new MarkerOptions().position(place).title(
+						Markerfeatures.get(i).getProperties().getValue()
+								+ Markerfeatures.get(i).getProperties()
+										.getUnit()));
+
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Temperature");
-				this.lfeaturesMarkersT.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Light")) {
+				
+				this.map.addMarker(new MarkerOptions().position(place).title(
+						Markerfeatures.get(i).getProperties().getValue()
+								+ Markerfeatures.get(i).getProperties()
+										.getUnit()));
+
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Light");
-				this.lfeaturesMarkersL.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Noise")) {
+				
+
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Noise");
-				this.lfeaturesMarkersN.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Humidity")) {
+				
+
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Humidity");
-				this.lfeaturesMarkersH.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Air Quality")) {
+				
+
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Air Quality");
-				this.lfeaturesMarkersA.add(Markerfeatures.get(i));
 
 			}
 		}
@@ -302,30 +309,26 @@ public class DataBase {
 		// this.textView.setText("entra " + this.featuresByCoordinates.size());
 
 	}
-
-	public void addMarker2(String type) {
-
-		ArrayList<Feature> heatmaplist = new ArrayList<Feature>();
+	
+	public void addMarker2(String type){
+		
+		ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
 		if (type.equals("Temperature")) {
-			heatmaplist = this.lfeaturesMarkersT;
+			heatmaplist = this.heatmaplistTemp;
 		} else if (type.equals("Light")) {
-			heatmaplist = this.lfeaturesMarkersL;
+			heatmaplist = this.heatmaplistlight;
 		} else if (type.equals("Noise")) {
-			heatmaplist = this.lfeaturesMarkersN;
+			heatmaplist = this.heatmaplistNoise;
 		} else if (type.equals("Humidity")) {
-			heatmaplist = this.lfeaturesMarkersH;
+			heatmaplist = this.heatmaplistHum;
 		} else if (type.equals("Air Quality")) {
-			heatmaplist = this.lfeaturesMarkersA;
+			heatmaplist = this.heatmaplistAQ;
 		}
-
-		for (int i = 0; i < heatmaplist.size(); ++i) {
-			this.map.addMarker(new MarkerOptions().position(
-					new LatLng((float) heatmaplist.get(i).getGeometry()
-							.getCoordinates().get(1), (float) heatmaplist
-							.get(i).getGeometry().getCoordinates().get(0)))
-					.title(heatmaplist.get(i).getProperties().getValue()
-							+ heatmaplist.get(i).getProperties().getUnit()));
-		}
+		
+//		this.map.addMarker(new MarkerOptions().position(heatmaplist.get).title(
+//				Markerfeatures.get(i).getProperties().getValue()
+//						+ Markerfeatures.get(i).getProperties()
+//								.getUnit()));
 	}
 
 	public void addHeatMap(String type) {

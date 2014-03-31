@@ -318,14 +318,12 @@ public class DataBase {
 			heatmaplist = this.lfeaturesMarkersA;
 		}
 
-		for (int i = 0; i < heatmaplist.size(); ++i) {
-			this.map.addMarker(new MarkerOptions().position(
-					new LatLng((float) heatmaplist.get(i).getGeometry()
-							.getCoordinates().get(1), (float) heatmaplist
-							.get(i).getGeometry().getCoordinates().get(0)))
-					.title(heatmaplist.get(i).getProperties().getValue()
-							+ heatmaplist.get(i).getProperties().getUnit()));
-		}
+		this.map.addMarker(new MarkerOptions().position(
+				new LatLng((float) heatmaplist.get(0).getGeometry()
+						.getCoordinates().get(1), (float) heatmaplist.get(0)
+						.getGeometry().getCoordinates().get(0))).title(
+				heatmaplist.get(0).getProperties().getValue()
+						+ heatmaplist.get(0).getProperties().getUnit()));
 	}
 
 	public void addHeatMap(String type) {

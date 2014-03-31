@@ -182,35 +182,30 @@ public class DataBase {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Temperature");
-				this.lfeaturesMarkersT.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Light")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Light");
-				this.lfeaturesMarkersL.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Noise")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Noise");
-				this.lfeaturesMarkersN.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Humidity")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Humidity");
-				this.lfeaturesMarkersH.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
 					.contains("Air Quality")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
 						.getValue(), "Air Quality");
-				this.lfeaturesMarkersA.add(Markerfeatures.get(i));
 
 			}
 		}
@@ -318,14 +313,12 @@ public class DataBase {
 			heatmaplist = this.lfeaturesMarkersA;
 		}
 
-		for (int i = 0; i < heatmaplist.size(); ++i) {
-			this.map.addMarker(new MarkerOptions().position(
-					new LatLng((float) heatmaplist.get(i).getGeometry()
-							.getCoordinates().get(1), (float) heatmaplist
-							.get(i).getGeometry().getCoordinates().get(0)))
-					.title(heatmaplist.get(i).getProperties().getValue()
-							+ heatmaplist.get(i).getProperties().getUnit()));
-		}
+		this.map.addMarker(new MarkerOptions().position(
+				new LatLng((float) heatmaplist.get(0).getGeometry()
+						.getCoordinates().get(1), (float) heatmaplist.get(0)
+						.getGeometry().getCoordinates().get(0))).title(
+				heatmaplist.get(0).getProperties().getValue()
+						+ heatmaplist.get(0).getProperties().getUnit()));
 	}
 
 	public void addHeatMap(String type) {

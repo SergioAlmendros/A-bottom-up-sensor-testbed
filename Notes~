@@ -163,6 +163,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -26/03/14
 --He hecho que hayan puntos alrededor de los puntos reales para que la forma de visualizarlo sea mejor.
 --Voy a crear botones en la parte de arriba para poder elegir humedad, temperatura, ruido, luz, y calidad de aire.
+-31/03/14
+--Ya están hechos los botones
+--Voy ha hacer que el mapa canvie dependiendo del botón clicado.
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
