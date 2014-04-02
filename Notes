@@ -170,6 +170,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Creo que algo falla porque los puntos tienen todos el mismo color.
 --He hecho que los puntos tengan valores muy distintos, y los puntos de calor funcionan bien.
 --Voy ha hacer un boton para que se vean o no los marcadores.
+-1/04/14
+--He subido la aplicacion a google play, pero hay un problema con la clave para el mapa, no la acepta.
+--Voy a prepararme para probar el sensor de calidad de aire.
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.

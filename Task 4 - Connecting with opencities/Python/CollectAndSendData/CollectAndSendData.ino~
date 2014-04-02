@@ -2,15 +2,15 @@
 #include <FileIO.h>
 #include <DHT.h>
 
-#define DHTPIN 2 //data pin of the DHT sensor
+#define DHTPIN 2 // The DHT sensor has to be in the digital pin 2 
 #define DHTTYPE DHT22 //DHT 22
 String ARDUINO_YUN_UNIQUE_ID = "1";
 
 DHT dht(DHTPIN, DHTTYPE);
 
-int TEMPERATURE_SENSOR = 1;
-int LIGHT_SENSOR = 2;
-int NOISE_SENSOR = 0;
+int TEMPERATURE_SENSOR = 1; // The temperature sensor has to be in the analog pin 1
+int LIGHT_SENSOR = 2; // The light sensor has to be in the analog pin 2
+int NOISE_SENSOR = 0; // The noise sensor has to be in the analog pin 0
 
 void setup() {
   Bridge.begin();	// Initialize the Bridge
@@ -19,108 +19,124 @@ void setup() {
 }
 
 String readLightSensor(int sensorvalue){
-  float Res0=10.0;              // Resistance in the circuit of sensor 0 (KOhms)
-  float Vout0 = sensorvalue * 0.0048828125;      // calculate the voltage
-  int lux0=500/(Res0*((5-Vout0)/Vout0));  // calculate the Lux
+
+//  Resistance in the circuit of sensor 0 (KOhms)
+    float Res = 10.0;              
+    
+//  The value of the light sensor can be from 0(0V) to 1024(5V)
+//  For example, if the sensorvalue is 25, the Vout = (5/1024)*25
+    float Vout = sensorvalue * 0.0048828;
+    
+//  This formula is explained in the final report
+    float Vmax = 5.0;
+    int lux0 = (500*Vmax/Vout - 500)/Res;  // calculate the Luxs
   
   return String(lux0);
 }                    
 
 String readHumiditySensor(){
-  float humidity = dht.readHumidity();
-  return String(humidity);
+
+//  This function call the library function to calculate the humidity value
+    float humidity = dht.readHumidity();
+    return String(humidity);
 }
 
 String readTemperatureSensor(int sensorvalue){
-  int temperature = (sensorvalue * 0.0049); 
-  temperature = temperature * 100; 
-  int temperatureF = (temperature * 1.8) + 32;
+
+//  This convert the the sensorvalue in a temperature value in celsius
+    float Vmax = 5.0;
+    int temperatureC = (Vmax * sensorvalue * 100.0)/1024;
   
-  return String(temperatureF);
+  return String(temperatureC);
 }
 
 String readNoiseSensor(){
-  //Hay que hacer pruebas para saber que valor es silencio, y que valor es mucho ruido
-  float sensorvalue = 0.0;
-  int rounds = 10;
-  for(int i=0; i<rounds; i++){
-    sensorvalue = sensorvalue + analogRead(NOISE_SENSOR);
-    delay(1000);
-  }
-  sensorvalue = sensorvalue/rounds;
-  return String(sensorvalue);
+  
+//  This function measures the noise value, from 0 to 1024.
+    float sensorvalue = 0.0;
+    int rounds = 10;
+//  It measures the noise 10 times with a delay of 1 second, to avoid false measures
+    for(int i=0; i<rounds; i++){
+      sensorvalue = sensorvalue + analogRead(NOISE_SENSOR);
+      delay(1000);
+    }
+    sensorvalue = sensorvalue/rounds;
+    return String(sensorvalue);
 }
 
-void readSensors(String *temperature, String *humidity, String *noise, String *ligth){  
-  *temperature = readTemperatureSensor(analogRead(TEMPERATURE_SENSOR));
-  *humidity = readHumiditySensor();
-  *noise = readNoiseSensor();
-  *ligth = readLightSensor(analogRead(LIGHT_SENSOR));
+void readSensors(String *temperature, String *humidity, String *noise, String *ligth){
+
+//  It calls all the functions to read the values of the sensors. 
+    *temperature = readTemperatureSensor(analogRead(TEMPERATURE_SENSOR));
+    *humidity = readHumiditySensor();
+    *noise = readNoiseSensor();
+    *ligth = readLightSensor(analogRead(LIGHT_SENSOR));
 }
 
 int readFile(String *temperature, String *humidity, String *noise, String *ligth){
-  
-  File dataFileRead = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_READ);
-  
-  String output = "";
-  int id = 1;
-  String result = "";
-  
-  int c = 0;
 
-  if( !dataFileRead.available() ){
-    //Serial.println("archivo vacio");
-    result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
-  }else{
-    //Serial.println("archivo lleno");
+//  It opens the logData file to read it.
+    File dataFileRead = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_READ);
     
-    while(dataFileRead.available()){
-        output += (char)dataFileRead.read(); 
-    }
+    String output = "";
+    int id = 1;
+    String result = "";
+    
+    int c = 0;
 
-    String lastline = "";
-   
-    for( int i=output.length()-2; i>=0; --i ){
+    if( !dataFileRead.available() ){
+      //Serial.println("empty file");
+//    If the logData file is empty, it starts with an id equal to 1, and creates a String which contains the id and the values from the sensors.
+      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
+    }else{
+      //Serial.println("not empty file");
       
-      if( output[i] == '\n' )
-        break;
-      lastline += output[i];      
-    }
+//    If the logData file is not empty, it stores all the file in the output variable.
+      while(dataFileRead.available()){
+          output += (char)dataFileRead.read(); 
+      }
+
+//    This peace of code is to obtein the last ID used.
+      String lastline = "";
+      for( int i=output.length()-2; i>=0; --i ){
         
-    // remove the blank spaces at the beginning and the ending of the string
-    output.trim();
-    
-    //Coger el numero hasta que haya un espacio
-    String sid = "";
-    for( int i=lastline.length()-1; i>=0; --i ){
+        if( output[i] == '\n' )
+          break;
+        lastline += output[i];      
+      }
       
-      if( lastline[i] == ' ' )
-        break;
-      sid += lastline[i];      
+//    This is to get the last ID.
+      String sid = "";
+      for( int i=lastline.length()-1; i>=0; --i ){
+        
+        if( lastline[i] == ' ' )
+          break;
+        sid += lastline[i];      
+      }
+      id = atoi(sid.c_str());
+      id += 1;
+      
+//    This is the same string as in the first if, but with a new ID
+      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
     }
-    id = atoi(sid.c_str());
-    id += 1;
-    result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
-  }
+    
+    dataFileRead.close();
 
-  //Serial.println(result);
-  
-  dataFileRead.close();
+//  Now it writes down the new entrance in the logData file.
+    File dataFileAppend = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_APPEND);
 
-  File dataFileAppend = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_APPEND);
-
-  // if the file is available, write to it:
-  if (dataFileAppend) {
-    dataFileAppend.print(result);
-    dataFileAppend.print("\n");
-    dataFileAppend.close();
-  }  
-  // if the file isn't open, pop up an error:
-  else {
-    Serial.println("error opening datalog.txt");
-  }
-  
-  return id;
+//  If the file is available, write to it:
+    if (dataFileAppend) {
+      dataFileAppend.print(result);
+      dataFileAppend.print("\n");
+      dataFileAppend.close();
+    }  
+//  If the file isn not open, it will show an error:
+    else {
+      Serial.println("error opening datalog.txt");
+    }
+    
+    return id;
 }
 
 void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth){
@@ -146,13 +162,19 @@ void executePythonScritp(int id,String *temperature, String *humidity, String *n
 
 void loop() {
   
-  String temperature, humidity, noise, ligth;
-  readSensors(&temperature, &humidity, &noise, &ligth);
-  int id = readFile(&temperature, &humidity, &noise, &ligth);
-  executePythonScritp(id,&temperature, &humidity, &noise, &ligth); 
+    String temperature, humidity, noise, ligth;
+    
+//  The next function will call all the other functions to read the value of the sensors attached to the arduino.
+    readSensors(&temperature, &humidity, &noise, &ligth);
+    
+//  This function reads the logData file stored in the SDCard, and write a new line with the next unique ID.
+    int id = readFile(&temperature, &humidity, &noise, &ligth);
+    
+//  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
+    executePythonScritp(id,&temperature, &humidity, &noise, &ligth); 
 
-  //delay(60000);  // wait 60 seconds before you do it again
-  delay(48000);
+//  This delay plus the delay added at the noise read plus the processing delay would make an aproximate total delay of 1 minute.
+    delay(48000);
 }
 
 
