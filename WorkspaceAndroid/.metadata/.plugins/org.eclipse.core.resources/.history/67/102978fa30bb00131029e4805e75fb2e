@@ -30,7 +30,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,8 +59,6 @@ public class MainActivity extends Activity {
 		// Get a handle to the Map Fragment
 		dataBase.map = ((MapFragment) getFragmentManager().findFragmentById(
 				R.id.map)).getMap();
-		
-		
 
 		dataBase.map.setOnCameraChangeListener(new OnCameraChangeListener() {
 
@@ -84,8 +81,6 @@ public class MainActivity extends Activity {
 		dataBase.bHum = (Button) findViewById(R.id.buttonHumidity);
 		dataBase.bAQ = (Button) findViewById(R.id.buttonAirQuality);
 		dataBase.bM = (Button) findViewById(R.id.buttonShowMarkers);
-		
-		dataBase.bAQ.setLayoutParams(dataBase.bM.getLayoutParams());
 
 		dataBase.bTemp.setBackground(dataBase.dselected);
 		dataBase.bNoise.setBackground(dataBase.dunselected);

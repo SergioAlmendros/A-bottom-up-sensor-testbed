@@ -39,4 +39,5 @@
 <fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
 <fullyQualifiedTypeName name="android.graphics.drawable.GradientDrawable"/>
 <fullyQualifiedTypeName name="android.graphics.drawable.GradientDrawable.Orientation"/>
+<fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
 </qualifiedTypeNameHistroy>

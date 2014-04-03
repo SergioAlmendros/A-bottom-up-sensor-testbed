@@ -176,6 +176,10 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -2/04/14
 --He comentado el codigo de arduino.
 --Voy a ir a soldar.
+-3/04/14
+--He roto el cable que estaba soldado, asi que he buscado otro sensor de calidad de aire, MQ135, el cual es mucho más sencillo de utilizar.
+--Este es un enlace: http://arduino-info.wikispaces.com/Air-Gas-Sensors
+--Los proximos dias haré la memoria sobre la Aplicacion Android.
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.

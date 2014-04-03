@@ -172,6 +172,13 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Voy ha hacer un boton para que se vean o no los marcadores.
 -1/04/14
 --He subido la aplicacion a google play, pero hay un problema con la clave para el mapa, no la acepta.
+--Voy a prepararme para probar el sensor de calidad de aire.
+-2/04/14
+--He comentado el codigo de arduino.
+--Voy a ir a soldar.
+-3/04/14
+--He roto el cable que estaba soldado, asi que he buscado otro sensor de calidad de aire, MQ135, el cual es mucho más sencillo de utilizar.
+--Este es un enlace: http://arduino-info.wikispaces.com/Air-Gas-Sensors
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.

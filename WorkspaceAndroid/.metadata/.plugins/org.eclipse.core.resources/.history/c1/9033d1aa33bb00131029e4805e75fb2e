@@ -85,7 +85,8 @@ public class MainActivity extends Activity {
 		dataBase.bAQ = (Button) findViewById(R.id.buttonAirQuality);
 		dataBase.bM = (Button) findViewById(R.id.buttonShowMarkers);
 		
-		dataBase.bAQ.setLayoutParams(dataBase.bM.getLayoutParams());
+		int btnSize=dataBase.bM.getLayoutParams().width;
+		dataBase.bAQ.setLayoutParams(new LayoutParams(btnSize, btnSize));
 
 		dataBase.bTemp.setBackground(dataBase.dselected);
 		dataBase.bNoise.setBackground(dataBase.dunselected);

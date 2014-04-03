@@ -30,7 +30,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -85,7 +84,7 @@ public class MainActivity extends Activity {
 		dataBase.bAQ = (Button) findViewById(R.id.buttonAirQuality);
 		dataBase.bM = (Button) findViewById(R.id.buttonShowMarkers);
 		
-		dataBase.bAQ.setLayoutParams(dataBase.bM.getLayoutParams());
+		dataBase.bM.setText(""+dataBase.bAQ.getHeight());
 
 		dataBase.bTemp.setBackground(dataBase.dselected);
 		dataBase.bNoise.setBackground(dataBase.dunselected);
