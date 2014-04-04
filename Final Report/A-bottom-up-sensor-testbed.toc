@@ -30,9 +30,12 @@
 \contentsline {subsection}{\numberline {4.1.1}Collect sensory data}{11}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{13}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Android app}{13}{section.4.2}
-\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{15}{chapter.5}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{17}{chapter.6}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{19}{chapter.7}
-\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{21}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter}{21}{section.8.1}
-\contentsline {section}{\numberline {8.2}Documentation}{21}{section.8.2}
+\contentsline {subsection}{\numberline {4.2.1}Summary}{13}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Interface}{13}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Code}{15}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{17}{chapter.5}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{19}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{21}{chapter.7}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{23}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{23}{section.8.1}
+\contentsline {section}{\numberline {8.2}Documentation}{23}{section.8.2}
