@@ -180,6 +180,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --He roto el cable que estaba soldado, asi que he buscado otro sensor de calidad de aire, MQ135, el cual es mucho más sencillo de utilizar.
 --Este es un enlace: http://arduino-info.wikispaces.com/Air-Gas-Sensors
 --Los proximos dias haré la memoria sobre la Aplicacion Android.
+-8/04/14
+--He comprado 4 sensores MQ135.
+
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.
@@ -188,6 +191,7 @@ TODO:
 -Que los puntos irreales alrededor del real se expandan hasta que encuentren puntos reales o irreales.
 -Que el valor vaya degradando.
 -Que no se pueda hacer tanto zoom --> No lo he conseguido como queria, ahora hay un limite, pero he tenido que juntar mucho los puntos para que no se vea mal.
+-Tengo que utilizar el fritzing para hacer el dibujo del prototipo.
 
 
 

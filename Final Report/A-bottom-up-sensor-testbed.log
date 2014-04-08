@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  3 APR 2014 18:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  8 APR 2014 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -796,7 +796,7 @@ ring[[]].
 
 [4]
 Chapter 3.
-<./Figures/LM35.jpg, id=292, 240.9pt x 240.9pt>
+<./Figures/LM35.jpg, id=303, 240.9pt x 240.9pt>
 File: ./Figures/LM35.jpg Graphic file (type jpg)
  <use ./Figures/LM35.jpg>
 Package pdftex.def Info: ./Figures/LM35.jpg used on input line 221.
@@ -806,7 +806,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 221--223
  [] 
  []
 
-<./Figures/LDR.jpg, id=293, 361.35pt x 361.35pt>
+<./Figures/LDR.jpg, id=305, 361.35pt x 361.35pt>
 File: ./Figures/LDR.jpg Graphic file (type jpg)
  <use ./Figures/LDR.jpg>
 Package pdftex.def Info: ./Figures/LDR.jpg used on input line 232.
@@ -820,7 +820,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 232--234
 
 
  <./Figures/LM35.jpg>]
-<./Figures/MiniSoundSensor.jpg, id=299, 376.40625pt x 369.63094pt>
+<./Figures/MiniSoundSensor.jpg, id=313, 376.40625pt x 369.63094pt>
 File: ./Figures/MiniSoundSensor.jpg Graphic file (type jpg)
 
 <use ./Figures/MiniSoundSensor.jpg>
@@ -832,7 +832,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 243--245
  []
 
 [6 <./Figures/LDR.jpg> <./Figures/MiniSoundSensor.jpg>]
-<./Figures/dht22.jpg, id=305, 188.20313pt x 188.20313pt>
+<./Figures/dht22.jpg, id=319, 188.20313pt x 188.20313pt>
 File: ./Figures/dht22.jpg Graphic file (type jpg)
 
 <use ./Figures/dht22.jpg>
@@ -843,30 +843,31 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 254--256
  [] 
  []
 
-<./Figures/sharp.jpg, id=306, 144.54pt x 144.54pt>
-File: ./Figures/sharp.jpg Graphic file (type jpg)
- <use ./Figures/sharp.jpg>
-Package pdftex.def Info: ./Figures/sharp.jpg used on input line 265.
-(pdftex.def)             Requested size: 72.2698pt x 72.2698pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 261.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 261.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+<./Figures/mq135.jpg, id=323, 602.25pt x 602.25pt>
+File: ./Figures/mq135.jpg Graphic file (type jpg)
+ <use ./Figures/mq135.jpg>
+Package pdftex.def Info: ./Figures/mq135.jpg used on input line 265.
+(pdftex.def)             Requested size: 180.67639pt x 180.67639pt.
 
 Overfull \hbox (30.0pt too wide) in paragraph at lines 265--267
  [] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 272.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 272.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
 Underfull \hbox (badness 10000) in paragraph at lines 272--272
 [][][][]$\OT1/pcr/m/n/10 http : / / arduino . cc / en / Main / ArduinoBoardYun 
 ? from = Main .
  []
 
-[7 <./Figures/dht22.jpg> <./Figures/sharp.jpg>]
-<./Figures/ArduinoYunFront_2_450px.jpg, id=316, 451.6875pt x 301.125pt>
+[7 <./Figures/dht22.jpg> <./Figures/mq135.jpg>]
+<./Figures/ArduinoYunFront_2_450px.jpg, id=332, 451.6875pt x 301.125pt>
 File: ./Figures/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
 
 <use ./Figures/ArduinoYunFront_2_450px.jpg>
@@ -903,62 +904,131 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 398--400
  [] 
  []
 
-[13] [14] [15] [16
+<./Figures/App_Screenshot_3.png, id=376, 1084.05pt x 1927.2pt>
+File: ./Figures/App_Screenshot_3.png Graphic file (type png)
+
+<use ./Figures/App_Screenshot_3.png>
+Package pdftex.def Info: ./Figures/App_Screenshot_3.png used on input line 412.
+
+(pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 412--414
+ [] 
+ []
+
+[13] [14] <./Figures/App_Screenshot_1.png, id=391, 1084.05pt x 1927.2pt>
+File: ./Figures/App_Screenshot_1.png Graphic file (type png)
+
+<use ./Figures/App_Screenshot_1.png>
+Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 425.
+
+(pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 425--427
+ [] 
+ []
+
+<./Figures/App_Screenshot_2.png, id=392, 1084.05pt x 1927.2pt>
+File: ./Figures/App_Screenshot_2.png Graphic file (type png)
+
+<use ./Figures/App_Screenshot_2.png>
+Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 433.
+
+(pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 433--435
+ [] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 444.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 444.
+ [15 <./Figures/App_Screenshot_3.png>] [16 <./Figures/App_Screenshot_1.png> <./
+Figures/App_Screenshot_2.png>] <./Figures/ClassDiagram.png, id=410, 875.27pt x 
+2098.84125pt>
+File: ./Figures/ClassDiagram.png Graphic file (type png)
+
+<use ./Figures/ClassDiagram.png>
+Package pdftex.def Info: ./Figures/ClassDiagram.png used on input line 452.
+(pdftex.def)             Requested size: 175.05089pt x 419.76082pt.
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 452--454
+ [] 
+ []
 
 
-]
+LaTeX Warning: Reference `' on page 17 undefined on input line 458.
+
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 483--485
+ [] 
+ []
+
+[17 <./Figures/ClassDiagram.png (PNG copy)>] [18]
 Chapter 5.
-[17] [18
+[19
+
+
+] [20
 
 
 ]
 Chapter 6.
-[19] [20
-
-
-]
-Chapter 7.
 [21] [22
 
 
 ]
+Chapter 7.
+[23] [24
+
+
+]
 Chapter 8.
-(./A-bottom-up-sensor-testbed.bbl [23] [24
+(./A-bottom-up-sensor-testbed.bbl [25] [26
 
 
-]) [25] [26
+]) [27] [28
 
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 444.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 444.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
 (./A-bottom-up-sensor-testbed.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 444.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 444.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
 Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 7738D084F90D0FDD9434349D3FA72FBF;2177.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 444.
+(rerunfilecheck)             Checksum: A5B313F01ABFC34669B840B637DC1968;2164.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
  ) 
 Here is how much of TeX's memory you used:
- 18253 strings out of 493307
- 332072 string characters out of 6139906
- 429123 words of memory out of 5000000
- 21228 multiletter control sequences out of 15000+600000
+ 18354 strings out of 493307
+ 334460 string characters out of 6139906
+ 429363 words of memory out of 5000000
+ 21311 multiletter control sequences out of 15000+600000
  30591 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,11n,59p,494b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,11n,59p,496b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (40 pages, 474531 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on A-bottom-up-sensor-testbed.pdf (42 pages, 2750006 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 328 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 450 compressed objects within 5 object streams
+ 109 named destinations out of 1000 (max. 500000)
+ 348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

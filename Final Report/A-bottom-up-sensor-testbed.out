@@ -14,7 +14,7 @@
 \BOOKMARK [2][-]{subsection.3.1.2}{Light Dependent Resistor \(LDR\)}{section.3.1}% 14
 \BOOKMARK [2][-]{subsection.3.1.3}{Emartee Mini Sound Sensor: Noise}{section.3.1}% 15
 \BOOKMARK [2][-]{subsection.3.1.4}{Aosong DHT22: Humidity}{section.3.1}% 16
-\BOOKMARK [2][-]{subsection.3.1.5}{Sharp GP2Y1010AU0F: Air Quality}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.5}{MQ135: Air Quality}{section.3.1}% 17
 \BOOKMARK [1][-]{section.3.2}{Arduino}{chapter.3}% 18
 \BOOKMARK [1][-]{section.3.3}{Python}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.4}{Guifi network and opencities}{chapter.3}% 20

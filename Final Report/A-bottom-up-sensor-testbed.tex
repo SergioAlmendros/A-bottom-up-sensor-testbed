@@ -214,7 +214,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
     
     \subsection{LM35: Temperature}
-      LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino.
+      LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino \ref{fig:LM35}.
 
 \begin{figure}[!htbp]
     \centering
@@ -225,7 +225,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \end{figure}
       
     \subsection{Light Dependent Resistor (LDR)}
-      The LDR is a sensor which returns high voltage if there is more luminosity, and also it connects directly to an analog pin in the arduino, but with a resistor.
+      The LDR is a sensor which returns high voltage if there is more luminosity, and also it connects directly to an analog pin in the arduino, but with a resistor \ref{fig:LDR}.
 
 \begin{figure}[htbp]
     \centering
@@ -236,7 +236,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \end{figure}
  
     \subsection{Emartee Mini Sound Sensor: Noise}
-      This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin.
+      This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin\ref{fig:MSS}.
 
 \begin{figure}[!htbp]
     \centering
@@ -247,7 +247,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \end{figure}
       
     \subsection{Aosong DHT22: Humidity}
-      DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed.
+      DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed \ref{fig:DHT22}.
 
 \begin{figure}[htbp]
     \centering
@@ -257,15 +257,15 @@ The final goal of the project is to build a sensor testbed and there will be the
     \label{fig:DHT22}
 \end{figure}
       
-    \subsection{Sharp GP2Y1010AU0F: Air Quality}
-      This sensor is an optical dust sensor, and we will used to measured air quality. But because the output pins are a little bit inaccessible, it is needed an adaptor to be able to connect it to the arduino.
+    \subsection{MQ135: Air Quality}
+      This sensor is an optical dust sensor, and we will used to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connected to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}.
 
 \begin{figure}[htbp]
     \centering
-        \includegraphics[scale=0.5]{./Figures/sharp.jpg}
+        \includegraphics[scale=0.3]{./Figures/mq135.jpg}
         \rule{35em}{0.5pt}
-    \caption[Sharp GP2Y1010AU0F]{Sharp GP2Y1010AU0F optical dust sensor.}
-    \label{fig:Sharp}
+    \caption[MQ135]{MQ135 Air Quality sensor.}
+    \label{fig:MQ135}
 \end{figure}
   
   \section{Arduino}
@@ -405,21 +405,86 @@ The final goal of the project is to build a sensor testbed and there will be the
   
     \subsection{Summary}
 
-      To make easy to see the results of the testbed, I created an android application for the purpose of visualize this results. The application shows the data of the sensors in two ways, with markers which will show the actual value of the temperature or noise in that point, and, also, with heatmaps, the larger the value of the temperature or noise, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_3}.
+      To make easy to see the results of the testbed, I created an android application for the purpose of visualize them. The application shows the data of the sensors in two ways, with markers which will show the actual value of the temperature or noise in that point, and, also, with heatmap points, the larger the value of the temperature or noise, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_3}.
       
       \begin{figure}[htbp]
-        \centering
-            \includegraphics[scale=0.5]{./Figures/App_Screenshot_3.jpg}
-            \rule{35em}{0.5pt}
-        \caption[App Screenshot 3]{App Screenshot 3.}
-        \label{fig:App_Screenshot_3}
-    \end{figure}
+          \centering
+              \includegraphics[scale=0.1]{./Figures/App_Screenshot_3.png}
+              \rule{35em}{0.5pt}
+          \caption[App Screenshot 3]{App Screenshot 3.}
+          \label{fig:App_Screenshot_3}
+      \end{figure}
       
     \subsection{Interface}
-      Explain how the user can use the aplication with screenshots.
+      The application interface is a unique map view, where the user can zoom to a limit, go to their location, and, use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of data sensor which is shown as markers and as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
+      If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
+      In the figure \ref{fig:App_Screenshot_1} we can see the app with the Marker button checked, and in the figure \ref{fig:App_Screenshot_2} without.
+      
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=0.1]{./Figures/App_Screenshot_1.png}
+              \rule{35em}{0.5pt}
+          \caption[App Screenshot 1]{App Screenshot 1.}
+          \label{fig:App_Screenshot_1}
+      \end{figure}
+      
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=0.1]{./Figures/App_Screenshot_2.png}
+              \rule{35em}{0.5pt}
+          \caption[App Screenshot 2]{App Screenshot 2.}
+          \label{fig:App_Screenshot_2}
+      \end{figure}
       
     \subsection{Code}
-      With flowcharts, explain how the app function.
+      First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
+    
+      This application has the next classes, in the next figure \ref{fig:ClassDiagram} is the class diagram:
+      \begin{itemize}
+        \item MainActivity: Is the controller of the whole application.
+        \item GPSTracker: Is a class to get the current location of the user.
+        \item Feature, Geometry, and Properties: This are the classes where it will stored the data from the parsed JSON from opendata.
+        \item DataBase: This is a singleton class where all the variables are stored, because is more easy to access from different clases.
+      \end{itemize}
+      
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=0.2]{./Figures/ClassDiagram.png}
+              \rule{35em}{0.5pt}
+          \caption[Class Diagram]{Class Diagram.}
+          \label{fig:ClassDiagram}
+      \end{figure}
+      
+      The explanation of the code will be in the following flow chart \ref{}:
+      
+      \begin{figure}[!htbp]
+      \centering
+
+      \begin{tikzpicture}[node distance=1cm]      
+        
+        \node (start) [startstop] {Initialize Google Map};
+        \node (zoomlimit) [process, below of=start, yshift=-0.5cm] {Set zoom limit};
+        \node (InitializeButtons) [process, below of=zoomlimit, yshift=-0.5cm] {Initialize all the Buttons and listeners};
+        \node (GetCurrentLocation) [process, below of=InitializeButtons, yshift=-1cm] {Get Current Location using GPSTracker};
+        \node (CallOpendata) [process, below of=GetCurrentLocation, yshift=-1cm] {Call OpenData, and parse the JSON};
+        \node (CreateFeaturesByCoordinates) [process, below of=CallOpendata, yshift=-2cm] {Create a hashmap with all the features with the  coordinates as key, and a list of features for every key};
+        \node (addMarkers) [process, below of=CreateFeaturesByCoordinates, yshift=-2cm] {Save only the latest features for every coordinate};
+        \node (addHeatMapAndaddMakers2) [process, below of=addMarkers, yshift=-1.5cm] {Show the markers or heatmap points of a type of data};
+        
+        \draw [arrow] (start) -- (zoomlimit);
+        \draw [arrow] (zoomlimit) -- (InitializeButtons);
+        \draw [arrow] (InitializeButtons) -- (GetCurrentLocation);
+        \draw [arrow] (GetCurrentLocation) -- (CallOpendata);
+        \draw [arrow] (CallOpendata) -- (CreateFeaturesByCoordinates);
+        \draw [arrow] (CreateFeaturesByCoordinates) -- (addMarkers);
+        \draw [arrow] (addMarkers) -- (addHeatMapAndaddMakers2);
+        
+
+      \end{tikzpicture}
+      \rule{35em}{0.5pt}
+      \caption[Android App Flow Chart]{Android App Flow Chart.}
+      \label{fig:Android App Flow Chart}
+      \end{figure}
   
 
 \chapter{Testbed results}

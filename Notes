@@ -180,6 +180,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --He roto el cable que estaba soldado, asi que he buscado otro sensor de calidad de aire, MQ135, el cual es mucho más sencillo de utilizar.
 --Este es un enlace: http://arduino-info.wikispaces.com/Air-Gas-Sensors
 --Los proximos dias haré la memoria sobre la Aplicacion Android.
+-8/04/14
+--He comprado 4 sensores MQ135.
+--Voy a seguir haciendo el report.
 
 
 TODO:

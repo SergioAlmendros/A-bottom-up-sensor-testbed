@@ -46,7 +46,6 @@ import com.json.parsers.JsonParserFactory;
 public class MainActivity extends Activity {
 
 	Button btnShowLocation;
-	DataBase dataBase = DataBase.getInstance();
 
 	// GPSTracker class
 	GPSTracker gps;
