@@ -206,80 +206,135 @@ The final goal of the project is to build a sensor testbed and there will be the
 \chapter{Technologies}
 \label{Chapter3}
   
-  In this chapter we focused in the techonologies used to develop this project, which is divided in four parts: sensors, arduino, Guifi network and opencities, and Android. 
+  In this chapter we focused in the techonologies used to develop this project, which is divided in four parts: arduino, sensors, python, Guifi network and opencities, and Android. 
 
-  \section{Sensors}
-    A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino, 
-    
-    In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
-    
-    \subsection{LM35: Temperature}
-      LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino \ref{fig:LM35}.
-
-\begin{figure}[!htbp]
-    \centering
-        \includegraphics[scale=0.5]{./Figures/LM35.jpg}
-        \rule{35em}{0.5pt}
-    \caption[LM35 sensor]{LM35 temperature sensor.}
-    \label{fig:LM35}
-\end{figure}
-      
-    \subsection{Light Dependent Resistor (LDR)}
-      The LDR is a sensor which returns high voltage if there is more luminosity, and also it connects directly to an analog pin in the arduino, but with a resistor \ref{fig:LDR}.
-
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.3]{./Figures/LDR.jpg}
-        \rule{35em}{0.5pt}
-    \caption[LDR sensor]{photoresistor or light-dependent resistor.}
-    \label{fig:LDR}
-\end{figure}
- 
-    \subsection{Emartee Mini Sound Sensor: Noise}
-      This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin\ref{fig:MSS}.
-
-\begin{figure}[!htbp]
-    \centering
-        \includegraphics[scale=0.5]{./Figures/MiniSoundSensor.jpg}
-        \rule{35em}{0.5pt}
-    \caption[Mini Sound Sensor]{Mini Sound Sensor.}
-    \label{fig:MSS}
-\end{figure}
-      
-    \subsection{Aosong DHT22: Humidity}
-      DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed \ref{fig:DHT22}.
-
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.5]{./Figures/dht22.jpg}
-        \rule{35em}{0.5pt}
-    \caption[DHT22 sensor]{DHT22 humidity and temperature sensor.}
-    \label{fig:DHT22}
-\end{figure}
-      
-    \subsection{MQ135: Air Quality}
-      This sensor is an optical dust sensor, and we will used to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connected to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}.
-
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.3]{./Figures/mq135.jpg}
-        \rule{35em}{0.5pt}
-    \caption[MQ135]{MQ135 Air Quality sensor.}
-    \label{fig:MQ135}
-\end{figure}
   
   \section{Arduino}
     The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}}, which support a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
     
     We also have planned to attached a power over ethernet (PoE) module because the arduino's will be attached to guifi nodes which are also PoE.
     
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.5]{./Figures/ArduinoYunFront_2_450px.jpg}
-        \rule{35em}{0.5pt}
-    \caption[Arduino YUN]{Arduino YUN.}
-    \label{fig:AYUN}
-\end{figure}
+    \begin{figure}[htbp]
+        \centering
+            \includegraphics[scale=0.5]{./Figures/ArduinoYunFront_2_450px.jpg}
+            \rule{35em}{0.5pt}
+        \caption[Arduino YUN]{Arduino YUN.}
+        \label{fig:AYUN}
+    \end{figure}
+
+  \section{Sensors}
+    A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino, 
+    
+    In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
+    
+    To show how the sensors are connected I used the program fritzing\footnote{\url{http://fritzing.org/}}.
+    
+    \subsection{LM35: Temperature}
+      LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino \ref{fig:LM35} as shown in the figure \ref{fig:TemperatureSensor_bb}.
+
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=0.5]{./Figures/LM35.jpg}
+              \rule{35em}{0.5pt}
+          \caption[LM35 sensor]{LM35 temperature sensor.}
+          \label{fig:LM35}
+      \end{figure}
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/TemperatureSensor_bb.png}
+              \rule{35em}{0.5pt}
+          \caption[Temperature Sensor Breadboard]{Temperature Sensor Breadboard.}
+          \label{fig:TemperatureSensor_bb}
+      \end{figure}
+      
+    \subsection{Light Dependent Resistor (LDR)}
+      The LDR is a sensor which returns a value between 0 to 1024 depending on the light, and also it connects directly to an analog pin in the arduino, but with a resistor \ref{fig:LDR} as shown in the figure \ref{fig:LightSensor_bb}.
+
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=0.3]{./Figures/LDR.jpg}
+              \rule{35em}{0.5pt}
+          \caption[LDR sensor]{photoresistor or light-dependent resistor.}
+          \label{fig:LDR}
+      \end{figure}
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/LightSensor_bb.png}
+              \rule{35em}{0.5pt}
+          \caption[Light Sensor Breadboard]{Light Sensor Breadboard.}
+          \label{fig:LightSensor_bb}
+      \end{figure}
+ 
+    \subsection{Emartee Mini Sound Sensor: Noise}
+      This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin\ref{fig:MSS} as shown in the figure \ref{fig:NoiseSensor_bb}, but I did not find a figure for this sensor, so I put a microphone that has the same pins.
+
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=0.5]{./Figures/MiniSoundSensor.jpg}
+              \rule{35em}{0.5pt}
+          \caption[Mini Sound Sensor]{Mini Sound Sensor.}
+          \label{fig:MSS}
+      \end{figure}
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/NoiseSensor_bb.png}
+              \rule{35em}{0.5pt}
+          \caption[Noise Sensor Breadboard]{Noise Sensor Breadboard.}
+          \label{fig:NoiseSensor_bb}
+      \end{figure}
+      
+    \subsection{Aosong DHT22: Humidity}
+      DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed \ref{fig:DHT22}. The arduino and the humidity sensor will be connected as shown in the figure \ref{fig:HumiditySensor_bb}.
+
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=0.5]{./Figures/dht22.jpg}
+              \rule{35em}{0.5pt}
+          \caption[DHT22 sensor]{DHT22 humidity and temperature sensor.}
+          \label{fig:DHT22}
+      \end{figure}
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensor_bb.png}
+              \rule{35em}{0.5pt}
+          \caption[Humidity Sensor Breadboard]{Humidity Sensor Breadboard.}
+          \label{fig:HumiditySensor_bb}
+      \end{figure}
+      
+    \subsection{MQ135: Air Quality}
+      This sensor is an optical dust sensor, and we will used to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, but I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:AirQualitySensor_bb}.
+
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=0.3]{./Figures/mq135.jpg}
+              \rule{35em}{0.5pt}
+          \caption[MQ135]{MQ135 Air Quality sensor.}
+          \label{fig:MQ135}
+      \end{figure}
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/AirQualitySensor_bb.png}
+              \rule{35em}{0.5pt}
+          \caption[Air Quality Sensor Breadboard]{Air Quality Sensor Breadboard.}
+          \label{fig:AirQualitySensor_bb}
+      \end{figure}
+      
+    \subsection{BreadBoard with all the sensors}
+      
+      This \ref{} is the final prototype of the arduino YUN and all the sensors connected to it.
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/AllSensors_bb.png}
+              \rule{35em}{0.5pt}
+          \caption[Breadboard of all the sensors connected to the Arduino YUN]{Breadboard of all the sensors connected to the Arduino YUN.}
+          \label{fig:AllSensors_bb}
+      \end{figure}
     
   \section{Python}
     Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities. The python installed in the arduino is the python 4.2.5. 
@@ -455,7 +510,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \label{fig:ClassDiagram}
       \end{figure}
       
-      The explanation of the code will be in the following flow chart \ref{}:
+      The explanation of the code will be in the following flow chart \ref{fig:Android App Flow Chart}:
       
       \begin{figure}[!htbp]
       \centering

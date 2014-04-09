@@ -183,6 +183,8 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 -8/04/14
 --He comprado 4 sensores MQ135.
 --Voy a seguir haciendo el report.
+-9/04/14
+--He utilizado el fritzing para hacer el dibujo del arduino.
 
 
 TODO:

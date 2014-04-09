@@ -7,20 +7,26 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces LM35 sensor}}{5}{figure.caption.4}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces LDR sensor}}{6}{figure.caption.5}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Mini Sound Sensor}}{6}{figure.caption.6}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces DHT22 sensor}}{7}{figure.caption.7}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces MQ135}}{7}{figure.caption.8}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Arduino YUN}}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arduino YUN}}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces LM35 sensor}}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Temperature Sensor Breadboard}}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces LDR sensor}}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Light Sensor Breadboard}}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Mini Sound Sensor}}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Noise Sensor Breadboard}}{10}{figure.caption.10}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces DHT22 sensor}}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Humidity Sensor Breadboard}}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces MQ135}}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Air Quality Sensor Breadboard}}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Breadboard of all the sensors connected to the Arduino YUN}}{13}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{12}{figure.caption.10}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{14}{figure.caption.11}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{15}{figure.caption.12}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{16}{figure.caption.13}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram}}{17}{figure.caption.15}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Android App Flow Chart}}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{18}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{20}{figure.caption.19}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram}}{21}{figure.caption.21}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Android App Flow Chart}}{22}{figure.caption.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
