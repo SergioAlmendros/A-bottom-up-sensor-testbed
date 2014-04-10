@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  9 APR 2014 17:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  10 APR 2014 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -941,21 +941,13 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 321--323
  [] 
  []
 
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 329.
-
-<./Figures/Fritzing/AllSensors_bb.png, id=371, 469.755pt x 475.376pt>
+<./Figures/Fritzing/AllSensors_bb.png, id=372, 476.179pt x 523.556pt>
 File: ./Figures/Fritzing/AllSensors_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/AllSensors_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/AllSensors_bb.png used on input lin
 e 333.
-(pdftex.def)             Requested size: 469.75386pt x 475.37483pt.
-
-Overfull \hbox (79.75386pt too wide) in paragraph at lines 333--335
- [][] 
- []
-
+(pdftex.def)             Requested size: 380.94373pt x 418.84537pt.
 
 Overfull \hbox (30.0pt too wide) in paragraph at lines 333--335
  [] 
@@ -963,8 +955,10 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 333--335
 
 [9 <./Figures/MiniSoundSensor.jpg>] [10 <./Figures/Fritzing/NoiseSensor_bb.png>
  <./Figures/dht22.jpg>] [11 <./Figures/Fritzing/HumiditySensor_bb.png> <./Figur
-es/mq135.jpg>] [12 <./Figures/Fritzing/AirQualitySensor_bb.png>] [13 <./Figures
-/Fritzing/AllSensors_bb.png>] [14]
+es/mq135.jpg>] [12 <./Figures/Fritzing/AirQualitySensor_bb.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./Figures/Fritzing/AllSensors_bb.png>] [14]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 371--372
@@ -989,7 +983,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 453--455
  [] 
  []
 
-<./Figures/App_Screenshot_3.png, id=431, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_3.png, id=432, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_3.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_3.png>
@@ -1001,7 +995,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 467--469
  [] 
  []
 
-[17] [18] <./Figures/App_Screenshot_1.png, id=447, 1084.05pt x 1927.2pt>
+[17] [18] <./Figures/App_Screenshot_1.png, id=448, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_1.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_1.png>
@@ -1013,7 +1007,7 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 480--482
  [] 
  []
 
-<./Figures/App_Screenshot_2.png, id=448, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_2.png, id=449, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_2.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_2.png>
@@ -1033,7 +1027,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 499.
  [19 <./Figures/App_Screenshot_3.png>] [20 <./Figures/App_Screenshot_1.png> <./
-Figures/App_Screenshot_2.png>] <./Figures/ClassDiagram.png, id=465, 875.27pt x 
+Figures/App_Screenshot_2.png>] <./Figures/ClassDiagram.png, id=466, 875.27pt x 
 2098.84125pt>
 File: ./Figures/ClassDiagram.png Graphic file (type png)
 
@@ -1086,17 +1080,13 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 573.
 Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: C282D889048AFD76597E34D4C8120C1B;2249.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 573.
  ) 
 Here is how much of TeX's memory you used:
- 18410 strings out of 493307
- 336096 string characters out of 6139906
+ 18409 strings out of 493307
+ 336094 string characters out of 6139906
  430758 words of memory out of 5000000
- 21348 multiletter control sequences out of 15000+600000
+ 21347 multiletter control sequences out of 15000+600000
  30591 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  63i,11n,59p,521b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1107,10 +1097,10 @@ type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
 lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (46 pages, 3510865 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (46 pages, 3524244 bytes).
 PDF statistics:
- 575 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
+ 576 PDF objects out of 1000 (max. 8388607)
+ 493 compressed objects within 5 object streams
  121 named destinations out of 1000 (max. 500000)
  386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

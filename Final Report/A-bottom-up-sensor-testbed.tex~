@@ -330,10 +330,10 @@ The final goal of the project is to build a sensor testbed and there will be the
       
       \begin{figure}[!htbp]
           \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/AirQualitySensor_bb.png}
+              \includegraphics[scale=0.8]{./Figures/Fritzing/AllSensors_bb.png}
               \rule{35em}{0.5pt}
-          \caption[Air Quality Sensor Breadboard]{Air Quality Sensor Breadboard.}
-          \label{fig:AirQualitySensor_bb}
+          \caption[Breadboard of all the sensors connected to the Arduino YUN]{Breadboard of all the sensors connected to the Arduino YUN.}
+          \label{fig:AllSensors_bb}
       \end{figure}
     
   \section{Python}
