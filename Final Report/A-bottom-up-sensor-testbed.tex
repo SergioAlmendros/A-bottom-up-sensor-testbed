@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
 \usepackage{tikz}
+
 \usetikzlibrary{shapes.geometric, arrows}
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -227,7 +228,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     
     In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
     
-    To show how the sensors are connected I used the program fritzing\footnote{\url{http://fritzing.org/}}.
+    To show how the sensors are connected to the arduino YUN I used the program fritzing\footnote{\url{http://fritzing.org/}}.
     
     \subsection{LM35: Temperature}
       LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino \ref{fig:LM35} as shown in the figure \ref{fig:TemperatureSensor_bb}.
@@ -249,7 +250,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \end{figure}
       
     \subsection{Light Dependent Resistor (LDR)}
-      The LDR is a sensor which returns a value between 0 to 1024 depending on the light, and also it connects directly to an analog pin in the arduino, but with a resistor \ref{fig:LDR} as shown in the figure \ref{fig:LightSensor_bb}.
+      The LDR\ref{fig:LDR} is a light sensor that where is connected to an arduino, as shown in the figure \ref{fig:LightSensor_bb}, returns a value between 0 to 1024 depending on the light.
 
       \begin{figure}[htbp]
           \centering
@@ -268,7 +269,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \end{figure}
  
     \subsection{Emartee Mini Sound Sensor: Noise}
-      This sensor is used to measured noise levels, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin\ref{fig:MSS} as shown in the figure \ref{fig:NoiseSensor_bb}, but I did not find a figure for this sensor, so I put a microphone that has the same pins.
+      This sensor is used to measured noise levels \ref{fig:MSS}, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin as shown in the figure \ref{fig:NoiseSensor_bb}, but I did not find a figure for this sensor, so I put a microphone that has the same pins.
 
       \begin{figure}[!htbp]
           \centering
@@ -494,7 +495,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     \subsection{Code}
       First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
     
-      This application has the next classes, in the next figure \ref{fig:ClassDiagram} is the class diagram:
+      This application has the next classes, in the next figure \ref{} is the class diagram:
       \begin{itemize}
         \item MainActivity: Is the controller of the whole application.
         \item GPSTracker: Is a class to get the current location of the user.
@@ -503,11 +504,19 @@ The final goal of the project is to build a sensor testbed and there will be the
       \end{itemize}
       
       \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.2]{./Figures/ClassDiagram.png}
-              \rule{35em}{0.5pt}
-          \caption[Class Diagram]{Class Diagram.}
-          \label{fig:ClassDiagram}
+        \centering
+        \includegraphics[page=1,scale=0.65]{./AdditionalInformation/ClassDiagram1_1.pdf}
+        \rule{35em}{0.5pt}
+        \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
+        \label{fig:ClassDiagram1}
+      \end{figure}
+      
+      \begin{figure}[htbp]
+        \centering
+        \includegraphics[page=1,scale=0.65]{./AdditionalInformation/ClassDiagram1_2.pdf}
+        \rule{35em}{0.5pt}
+        \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
+        \label{fig:ClassDiagram2}
       \end{figure}
       
       The explanation of the code will be in the following flow chart \ref{fig:Android App Flow Chart}:
