@@ -40,4 +40,8 @@
 <fullyQualifiedTypeName name="android.graphics.drawable.GradientDrawable"/>
 <fullyQualifiedTypeName name="android.graphics.drawable.GradientDrawable.Orientation"/>
 <fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
+<fullyQualifiedTypeName name="android.graphics.Camera"/>
+<fullyQualifiedTypeName name="android.transition.Scene"/>
+<fullyQualifiedTypeName name="org.andengine.engine.camera.Camera"/>
+<fullyQualifiedTypeName name="org.andengine.entity.scene.Scene"/>
 </qualifiedTypeNameHistroy>

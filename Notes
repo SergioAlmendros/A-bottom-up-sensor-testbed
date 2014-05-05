@@ -165,7 +165,7 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Voy a crear botones en la parte de arriba para poder elegir humedad, temperatura, ruido, luz, y calidad de aire.
 -31/03/14
 --Ya están hechos los botones
---Voy ha hacer que el mapa canvie dependiendo del botón clicado.
+--Voy a hacer que el mapa cambie dependiendo del botón clicado.
 --He creado una funcion para poner los marcadores también.
 --Creo que algo falla porque los puntos tienen todos el mismo color.
 --He hecho que los puntos tengan valores muy distintos, y los puntos de calor funcionan bien.

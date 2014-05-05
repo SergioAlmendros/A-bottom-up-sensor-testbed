@@ -1,0 +1,20 @@
+package kiloboltgame;
+
+import java.applet.Applet;
+
+public class StartingClass extends Applet{
+
+	 public void init(){
+		 super.init();
+	 }
+	 public void start(){
+		 super.start();
+	 }
+	 public void stop(){
+		 super.stop();
+	 }
+	 public void destroy(){
+		 super.destroy();
+	 }
+
+}

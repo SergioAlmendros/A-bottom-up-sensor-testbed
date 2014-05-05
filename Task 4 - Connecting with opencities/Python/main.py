@@ -7,11 +7,12 @@ from geopy import geocoders
 
 
 class Arduino:
-    def __init__(self, temperature, light, noise, humidity):
+    def __init__(self, temperature, light, noise, humidity, gas):
         self.temperature = temperature
         self.light = light
         self.noise = noise
         self.humidity = humidity
+        self.gas = gas;
         self.id = ""
         self.location = "BCN-UPFPOBLENOU"
         self.datasetId = 'environmental'
@@ -28,38 +29,10 @@ class Arduino:
 def collectdata():
     #1- Collect the data.
     print "Collecting the data from the arduino sensors"
-    arduino = Arduino(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    arduino = Arduino(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     arduino.id = sys.argv[1]
     print "Done collecting"
     return arduino
-
-
-def readfile(arduino):
-    #2- Read a file (logData) to check if the new value is the same as the last write value.
-    #3- If the value is equal, the script will do nothing, if is different, it will write down in a new line on the file
-    print "Reading the logData to check the id value"
-    logData = open('logData', 'r')
-    lastline = ""
-    if not logData.read(1):
-        arduino.id = 0
-        prueba = '-' + str(arduino.id) + '-' + str(arduino.temperature) + '-' + str(arduino.humidity) \
-                 + '-' + str(arduino.light) + '-' + str(arduino.noise)
-    else:
-        for line in logData:
-            lastline = line
-
-        p = lastline.split("-")
-        arduino.id = int(p[0]) + 1
-        prueba = '\n' + str(arduino.id) + '-' + str(arduino.temperature) + '-' + str(arduino.humidity) \
-                 + '-' + str(arduino.light) + '-' + str(arduino.noise)
-
-    logData.close()
-    logData = open('logData', 'a')
-    logData.write(prueba)
-    logData.close()
-    arduino.id += 1
-    print "The new values had been added to the logData file"
-
 
 def createJSON(arduino):
     #4- Create the GeoJSON.
@@ -124,6 +97,23 @@ def createJSON(arduino):
             geojson.Feature(
                 id='d25830850271b4e90cc5dcdd0fb18daf',
                 type='Feature',
+                tags=['gas', 'sensor', 'arduino', 'upf', 'guifi'],
+                geometry=geojson.Point([arduino.longitud, arduino.latitud]),
+                properties={
+                    'id': "%s" % (arduino.id + ".4"),
+                    'name': "%s" % ("SENSOR-GAS" + arduino.location),
+                    'datasetId': "%s" % arduino.datasetId,
+                    'datasetName': "%s" % arduino.datasetId,
+                    'address': "%s" % arduino.address,
+                    'description': "%s" % ('Gas sensor of ' + arduino.location),
+                    'timeStamp': "%s" % timestamp,
+                    'value': "%s" % arduino.gas,
+                    'unit': "%s" % '%'
+                }
+            ),
+            geojson.Feature(
+                id='d25830850271b4e90cc5dcdd0fb18daf',
+                type='Feature',
                 tags=['light', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
@@ -174,8 +164,8 @@ def POSTopencities(arduino, data):
 
 
 def main():
-    if len(sys.argv) != 6:
-        print "Usage: python main.py id temperature light noise humidity"
+    if len(sys.argv) != 7:
+        print "Usage: python main.py id temperature light noise humidity gas"
         print "And you write: " + str(sys.argv)
         sys.exit(0)
 

@@ -11,6 +11,7 @@ DHT dht(DHTPIN, DHTTYPE);
 int TEMPERATURE_SENSOR = 1; // The temperature sensor has to be in the analog pin 1
 int LIGHT_SENSOR = 2; // The light sensor has to be in the analog pin 2
 int NOISE_SENSOR = 0; // The noise sensor has to be in the analog pin 0
+int GAS_SENSOR = 3; // The gas sensor has to be in the analog pin 3
 
 void setup() {
   Bridge.begin();	// Initialize the Bridge
@@ -18,7 +19,9 @@ void setup() {
   FileSystem.begin();  // Initialize the FileSystem
 }
 
-String readLightSensor(int sensorvalue){
+String readLightSensor(){
+
+    int sensorvalue = analogRead(LIGHT_SENSOR);
 
 //  Resistance in the circuit of sensor 0 (KOhms)
     float Res = 10.0;              
@@ -32,7 +35,12 @@ String readLightSensor(int sensorvalue){
     int lux0 = (500*Vmax/Vout - 500)/Res;  // calculate the Luxs
   
   return String(lux0);
-}                    
+}      
+
+String readGasSensor(){
+  int gas = analogRead(GAS_SENSOR);
+  return String(gas);
+}              
 
 String readHumiditySensor(){
 
@@ -41,9 +49,10 @@ String readHumiditySensor(){
     return String(humidity);
 }
 
-String readTemperatureSensor(int sensorvalue){
+String readTemperatureSensor(){
 
 //  This convert the the sensorvalue in a temperature value in celsius
+    int sensorvalue = analogRead(TEMPERATURE_SENSOR);
     float Vmax = 5.0;
     int temperatureC = (Vmax * sensorvalue * 100.0)/1024;
   
@@ -64,16 +73,17 @@ String readNoiseSensor(){
     return String(sensorvalue);
 }
 
-void readSensors(String *temperature, String *humidity, String *noise, String *ligth){
+void readSensors(String *temperature, String *humidity, String *noise, String *ligth, String *gas){
 
 //  It calls all the functions to read the values of the sensors. 
-    *temperature = readTemperatureSensor(analogRead(TEMPERATURE_SENSOR));
+    *temperature = readTemperatureSensor();
     *humidity = readHumiditySensor();
     *noise = readNoiseSensor();
-    *ligth = readLightSensor(analogRead(LIGHT_SENSOR));
+    *ligth = readLightSensor();
+    *gas = readGasSensor();
 }
 
-int readFile(String *temperature, String *humidity, String *noise, String *ligth){
+int readFile(String *temperature, String *humidity, String *noise, String *ligth, String *gas){
 
 //  It opens the logData file to read it.
     File dataFileRead = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_READ);
@@ -87,7 +97,7 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
     if( !dataFileRead.available() ){
       //Serial.println("empty file");
 //    If the logData file is empty, it starts with an id equal to 1, and creates a String which contains the id and the values from the sensors.
-      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
+      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth + " " + *gas;
     }else{
       //Serial.println("not empty file");
       
@@ -117,7 +127,7 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
       id += 1;
       
 //    This is the same string as in the first if, but with a new ID
-      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth;
+      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth + " " + *gas;
     }
     
     dataFileRead.close();
@@ -139,39 +149,40 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
     return id;
 }
 
-void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth){
-  
-  Process myscript;
-  String a = "python /mnt/sda1/arduino/www/main.py " + ARDUINO_YUN_UNIQUE_ID + "." + String(id) + " " + *temperature + " " + *ligth + " " + *noise + " " + *humidity;
-  Serial.println("Llamada a main.py: ");
-  Serial.println("\t" + a );
-  myscript.runShellCommand(a); 
-  while (myscript.running());
-  
-  String output = "";
+void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth, String *gas){
 
-  // read the output of the script
-  while (myscript.available()) {
-    output += (char)myscript.read();   
-  }
-  // remove the blank spaces at the beginning and the ending of the string
-  output.trim();
-  Serial.println(output);
+//  It calls the python script like a command shell: python main.py id temperature light noise humidity
+    Process myscript;
+    String a = "python /mnt/sda1/arduino/www/main.py " + ARDUINO_YUN_UNIQUE_ID + "." + String(id) + " " + *temperature + " " + *ligth + " " + *noise + " " + *humidity + " " + *gas;
+    Serial.println("Llamada a main.py: ");
+    Serial.println("\t" + a );
+    myscript.runShellCommand(a); 
+    while (myscript.running());
+    
+    String output = "";
+
+//  Read the output of the script
+    while (myscript.available()) {
+      output += (char)myscript.read();   
+    }
+//  Remove the blank spaces at the beginning and the ending of the string
+    output.trim();
+    Serial.println(output);
   
 }
 
 void loop() {
   
-    String temperature, humidity, noise, ligth;
+    String temperature, humidity, noise, ligth, gas;
     
 //  The next function will call all the other functions to read the value of the sensors attached to the arduino.
-    readSensors(&temperature, &humidity, &noise, &ligth);
+    readSensors(&temperature, &humidity, &noise, &ligth, &gas);
     
 //  This function reads the logData file stored in the SDCard, and write a new line with the next unique ID.
-    int id = readFile(&temperature, &humidity, &noise, &ligth);
+    int id = readFile(&temperature, &humidity, &noise, &ligth, &gas);
     
 //  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
-    executePythonScritp(id,&temperature, &humidity, &noise, &ligth); 
+    executePythonScritp(id,&temperature, &humidity, &noise, &ligth, &gas); 
 
 //  This delay plus the delay added at the noise read plus the processing delay would make an aproximate total delay of 1 minute.
     delay(48000);

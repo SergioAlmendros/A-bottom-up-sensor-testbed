@@ -1,0 +1,12 @@
+int gasSensorValue;
+
+void setup(){
+  Serial.begin(9600);
+}
+
+
+void loop(){
+  gasSensorValue = analogRead(0);
+  Serial.println(gasSensorValue, DEC);
+  delay(100);   
+}
