@@ -22,21 +22,21 @@
 \contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor: Noise}{9}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Aosong DHT22: Humidity}{9}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}MQ135: Air Quality}{9}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{13}{subsection.3.2.6}
-\contentsline {section}{\numberline {3.3}Python}{14}{section.3.3}
-\contentsline {section}{\numberline {3.4}Guifi network and opencities}{14}{section.3.4}
-\contentsline {section}{\numberline {3.5}Android}{14}{section.3.5}
-\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Arduino Code}{15}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Collect sensory data}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{17}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Android app}{17}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Summary}{17}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Interface}{19}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Code}{19}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{25}{chapter.5}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{27}{chapter.6}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{29}{chapter.7}
-\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{31}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter}{31}{section.8.1}
-\contentsline {section}{\numberline {8.2}Documentation}{31}{section.8.2}
+\contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{12}{subsection.3.2.6}
+\contentsline {section}{\numberline {3.3}Python}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Guifi network and opencities}{12}{section.3.4}
+\contentsline {section}{\numberline {3.5}Android}{15}{section.3.5}
+\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Arduino Code}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Collect sensory data}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{19}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Android app}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Summary}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Interface}{21}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Code}{21}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{27}{chapter.5}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{29}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{31}{chapter.7}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{33}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{33}{section.8.1}
+\contentsline {section}{\numberline {8.2}Documentation}{33}{section.8.2}

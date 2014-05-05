@@ -185,6 +185,9 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Voy a seguir haciendo el report.
 -9/04/14
 --He utilizado el fritzing para hacer el dibujo del arduino.
+5/05/14
+--He adaptado el codigo para el sensor de gas.
+--Voy a cambiar un poco el codigo de la aplicacion de android y seguir con el report.
 
 
 TODO:

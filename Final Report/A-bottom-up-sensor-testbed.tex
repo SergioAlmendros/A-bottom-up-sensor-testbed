@@ -2,6 +2,7 @@
 \usepackage{pgfgantt}
 \usepackage{tikz}
 
+
 \usetikzlibrary{shapes.geometric, arrows}
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -218,7 +219,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     \begin{figure}[htbp]
         \centering
             \includegraphics[scale=0.5]{./Figures/ArduinoYunFront_2_450px.jpg}
-            \rule{35em}{0.5pt}
+            \rule{18em}{0.5pt}
         \caption[Arduino YUN]{Arduino YUN.}
         \label{fig:AYUN}
     \end{figure}
@@ -233,18 +234,18 @@ The final goal of the project is to build a sensor testbed and there will be the
     \subsection{LM35: Temperature}
       LM35 is a sensor with an output voltage proportional to the Centigrade temperature, the output pin goes directly to an analog pin in the arduino \ref{fig:LM35} as shown in the figure \ref{fig:TemperatureSensor_bb}.
 
-      \begin{figure}[!htbp]
+      \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.5]{./Figures/LM35.jpg}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[LM35 sensor]{LM35 temperature sensor.}
           \label{fig:LM35}
       \end{figure}
       
-      \begin{figure}[!htbp]
+      \begin{figure}[htbp]
           \centering
               \includegraphics[scale=1]{./Figures/Fritzing/TemperatureSensor_bb.png}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Temperature Sensor Breadboard]{Temperature Sensor Breadboard.}
           \label{fig:TemperatureSensor_bb}
       \end{figure}
@@ -255,15 +256,15 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.3]{./Figures/LDR.jpg}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[LDR sensor]{photoresistor or light-dependent resistor.}
           \label{fig:LDR}
       \end{figure}
       
-      \begin{figure}[!htbp]
+      \begin{figure}[htbp]
           \centering
               \includegraphics[scale=1]{./Figures/Fritzing/LightSensor_bb.png}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Light Sensor Breadboard]{Light Sensor Breadboard.}
           \label{fig:LightSensor_bb}
       \end{figure}
@@ -274,7 +275,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[!htbp]
           \centering
               \includegraphics[scale=0.5]{./Figures/MiniSoundSensor.jpg}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Mini Sound Sensor]{Mini Sound Sensor.}
           \label{fig:MSS}
       \end{figure}
@@ -282,7 +283,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[!htbp]
           \centering
               \includegraphics[scale=1]{./Figures/Fritzing/NoiseSensor_bb.png}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Noise Sensor Breadboard]{Noise Sensor Breadboard.}
           \label{fig:NoiseSensor_bb}
       \end{figure}
@@ -293,7 +294,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.5]{./Figures/dht22.jpg}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[DHT22 sensor]{DHT22 humidity and temperature sensor.}
           \label{fig:DHT22}
       \end{figure}
@@ -301,18 +302,20 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[!htbp]
           \centering
               \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensor_bb.png}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Humidity Sensor Breadboard]{Humidity Sensor Breadboard.}
           \label{fig:HumiditySensor_bb}
       \end{figure}
       
     \subsection{MQ135: Air Quality}
-      This sensor is an optical dust sensor, and we will used to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, but I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:AirQualitySensor_bb}.
+      This sensor is gas sensor, and we will use it to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, so I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:AirQualitySensor_bb}.
+      
+      The previous sensors are more similar, but this one can be used to measure the environment by the citizens and, it can be used to control the gas in a factory for example.
 
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.3]{./Figures/mq135.jpg}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[MQ135]{MQ135 Air Quality sensor.}
           \label{fig:MQ135}
       \end{figure}
@@ -320,7 +323,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[!htbp]
           \centering
               \includegraphics[scale=1]{./Figures/Fritzing/AirQualitySensor_bb.png}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Air Quality Sensor Breadboard]{Air Quality Sensor Breadboard.}
           \label{fig:AirQualitySensor_bb}
       \end{figure}
@@ -332,7 +335,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \begin{figure}[!htbp]
           \centering
               \includegraphics[scale=0.8]{./Figures/Fritzing/AllSensors_bb.png}
-              \rule{35em}{0.5pt}
+              \rule{25em}{0.5pt}
           \caption[Breadboard of all the sensors connected to the Arduino YUN]{Breadboard of all the sensors connected to the Arduino YUN.}
           \label{fig:AllSensors_bb}
       \end{figure}
@@ -341,9 +344,9 @@ The final goal of the project is to build a sensor testbed and there will be the
     Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities. The python installed in the arduino is the python 4.2.5. 
     
   \section{Guifi network and opencities}
-    Guifi network\footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be installed, and the one which will provide the access to the Internet and opencities.
+    Guifi network\footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be installed, and the one which will provide the access opencities through the Internet.
     
-    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we chose, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
+    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we have chosen, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems can be solved more easily.
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use this OS to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand the values.
@@ -381,7 +384,7 @@ The final goal of the project is to build a sensor testbed and there will be the
         \node (FileSystem) [process, below of=Serial] {Initialize FileSystem};
         \node (ReadSensors) [process, below of=FileSystem] {Read Sensors};
         \node (ReadFile) [process, below of=ReadSensors] {Read \& Write File};
-        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 5 seconds};
+        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 1 minute};
         \node (ExecutePython) [process, below of=ReadFile] {Execute Python Script};
         
         \draw [arrow] (bridge) -- (Serial);
@@ -467,7 +470,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_3.png}
               \rule{35em}{0.5pt}
-          \caption[App Screenshot 3]{App Screenshot 3.}
+          \caption[App Screenshot 3]{App Screenshot.}
           \label{fig:App_Screenshot_3}
       \end{figure}
       
@@ -480,7 +483,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_1.png}
               \rule{35em}{0.5pt}
-          \caption[App Screenshot 1]{App Screenshot 1.}
+          \caption[App Screenshot 1]{App Screenshot.}
           \label{fig:App_Screenshot_1}
       \end{figure}
       
@@ -488,7 +491,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_2.png}
               \rule{35em}{0.5pt}
-          \caption[App Screenshot 2]{App Screenshot 2.}
+          \caption[App Screenshot 2]{App Screenshot.}
           \label{fig:App_Screenshot_2}
       \end{figure}
       

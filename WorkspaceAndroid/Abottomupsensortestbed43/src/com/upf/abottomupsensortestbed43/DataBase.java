@@ -105,7 +105,7 @@ public class DataBase {
 		return "DataBase [Lfeatures=" + Lfeatures + ", state=" + state + "]";
 	}
 
-	public void addMarkers() {
+	public void fillLists() {
 
 		LatLng place;
 
@@ -306,7 +306,7 @@ public class DataBase {
 
 	}
 
-	public void addMarker2(String type) {
+	public void addMarkers(String type) {
 
 		ArrayList<Feature> heatmaplist = new ArrayList<Feature>();
 		if (type.equals("Temperature")) {
@@ -331,12 +331,8 @@ public class DataBase {
 		}
 	}
 
-	public void addHeatMap(String type) {
+	public void addHeatMaps(String type) {
 
-		// // this.textView.setText(this.heatmaplistTemp.toString());
-		// this.heatmaplistTemp.clear();
-		// this.heatmaplistTemp.add(new LatLng(41.396505, 2.188057));
-		// this.heatmaplistTemp.add(new LatLng(41.402428, 2.192735));
 		ArrayList<WeightedLatLng> heatmaplist = new ArrayList<WeightedLatLng>();
 
 		if (type.equals("Temperature")) {
@@ -376,3 +372,20 @@ public class DataBase {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -108,30 +108,30 @@ public class MainActivity extends Activity {
 					dataBase.bM.setBackground(dataBase.dunselected);
 					dataBase.map.clear();
 					if (dataBase.bSelected.equals("Temperature")) {
-						dataBase.addHeatMap("Temperature");
+						dataBase.addHeatMaps("Temperature");
 					} else if (dataBase.bSelected.equals("Light")) {
-						dataBase.addHeatMap("Light");
+						dataBase.addHeatMaps("Light");
 					} else if (dataBase.bSelected.equals("Noise")) {
-						dataBase.addHeatMap("Noise");
+						dataBase.addHeatMaps("Noise");
 					} else if (dataBase.bSelected.equals("Humidity")) {
-						dataBase.addHeatMap("Humidity");
+						dataBase.addHeatMaps("Humidity");
 					} else if (dataBase.bSelected.equals("Air Quality")) {
-						dataBase.addHeatMap("Air Quality");
+						dataBase.addHeatMaps("Air Quality");
 					}
 
 				} else if (!dataBase.markerSelected) {
 					dataBase.markerSelected = true;
 					dataBase.bM.setBackground(dataBase.dselected);
 					if (dataBase.bSelected.equals("Temperature")) {
-						dataBase.addMarker2("Temperature");
+						dataBase.addMarkers("Temperature");
 					} else if (dataBase.bSelected.equals("Light")) {
-						dataBase.addMarker2("Light");
+						dataBase.addMarkers("Light");
 					} else if (dataBase.bSelected.equals("Noise")) {
-						dataBase.addMarker2("Noise");
+						dataBase.addMarkers("Noise");
 					} else if (dataBase.bSelected.equals("Humidity")) {
-						dataBase.addMarker2("Humidity");
+						dataBase.addMarkers("Humidity");
 					} else if (dataBase.bSelected.equals("Air Quality")) {
-						dataBase.addMarker2("Air Quality");
+						dataBase.addMarkers("Air Quality");
 					}
 				}
 
@@ -154,11 +154,11 @@ public class MainActivity extends Activity {
 				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
-				dataBase.addHeatMap("Temperature");
+				dataBase.addHeatMaps("Temperature");
 
 				if (dataBase.markerSelected) {
 
-					dataBase.addMarker2("Temperature");
+					dataBase.addMarkers("Temperature");
 
 				}
 
@@ -182,11 +182,11 @@ public class MainActivity extends Activity {
 				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
-				dataBase.addHeatMap("Noise");
+				dataBase.addHeatMaps("Noise");
 
 				if (dataBase.markerSelected) {
 
-					dataBase.addMarker2("Noise");
+					dataBase.addMarkers("Noise");
 
 				}
 			}
@@ -208,11 +208,11 @@ public class MainActivity extends Activity {
 				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
-				dataBase.addHeatMap("Light");
+				dataBase.addHeatMaps("Light");
 
 				if (dataBase.markerSelected) {
 
-					dataBase.addMarker2("Light");
+					dataBase.addMarkers("Light");
 
 				}
 
@@ -235,11 +235,11 @@ public class MainActivity extends Activity {
 				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
-				dataBase.addHeatMap("Humidity");
+				dataBase.addHeatMaps("Humidity");
 
 				if (dataBase.markerSelected) {
 
-					dataBase.addMarker2("Humidity");
+					dataBase.addMarkers("Humidity");
 
 				}
 
@@ -262,11 +262,11 @@ public class MainActivity extends Activity {
 				dataBase.bG.setBackground(dataBase.dselected);
 
 				dataBase.map.clear();
-				dataBase.addHeatMap("Air Quality");
+				dataBase.addHeatMaps("Air Quality");
 
 				if (dataBase.markerSelected) {
 
-					dataBase.addMarker2("Air Quality");
+					dataBase.addMarkers("Air Quality");
 
 				}
 			}
@@ -457,9 +457,9 @@ public class MainActivity extends Activity {
 
 				dataBase.createFeaturesByCoordinates();
 				dataBase.setState("ready");
-				dataBase.addMarkers();
-				dataBase.addHeatMap("Temperature");
-				dataBase.addMarker2("Temperature");
+				dataBase.fillLists();
+				dataBase.addHeatMaps("Temperature");
+				dataBase.addMarkers("Temperature");
 
 			} catch (JSONException e) {
 				Toast.makeText(getBaseContext(), e.toString(),
