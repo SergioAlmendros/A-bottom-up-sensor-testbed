@@ -228,7 +228,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int action_settings=0x7f06000f;
-        public static final int buttonAirQuality=0x7f06000e;
+        public static final int buttonGas=0x7f06000e;
         public static final int buttonHumidity=0x7f06000b;
         public static final int buttonLight=0x7f06000d;
         public static final int buttonNoise=0x7f06000c;

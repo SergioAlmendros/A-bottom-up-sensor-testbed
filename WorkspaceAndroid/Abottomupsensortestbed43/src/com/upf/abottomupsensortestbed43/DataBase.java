@@ -26,7 +26,7 @@ public class DataBase {
 	GoogleMap map;
 	LatLng currentLocation;
 	TextView textView;
-	Button bTemp, bHum, bNoise, blight, bAQ, bM;
+	Button bTemp, bHum, bNoise, blight, bG, bM;
 	private String DATASETID = "environmental";
 	private String APIKEY = "7b1611c3-c688-474b-bcab-6e4921bfb109";
 	private HashMap<String, LinkedList<Feature>> featuresByCoordinates = new HashMap<String, LinkedList<Feature>>();
@@ -34,12 +34,12 @@ public class DataBase {
 	private ArrayList<WeightedLatLng> heatmaplistHum = new ArrayList<WeightedLatLng>();
 	private ArrayList<WeightedLatLng> heatmaplistNoise = new ArrayList<WeightedLatLng>();
 	private ArrayList<WeightedLatLng> heatmaplistlight = new ArrayList<WeightedLatLng>();
-	private ArrayList<WeightedLatLng> heatmaplistAQ = new ArrayList<WeightedLatLng>();
+	private ArrayList<WeightedLatLng> heatmaplistG = new ArrayList<WeightedLatLng>();
 	private ArrayList<Feature> lfeaturesMarkersT = new ArrayList<Feature>();
 	private ArrayList<Feature> lfeaturesMarkersH = new ArrayList<Feature>();
 	private ArrayList<Feature> lfeaturesMarkersN = new ArrayList<Feature>();
 	private ArrayList<Feature> lfeaturesMarkersL = new ArrayList<Feature>();
-	private ArrayList<Feature> lfeaturesMarkersA = new ArrayList<Feature>();
+	private ArrayList<Feature> lfeaturesMarkersG = new ArrayList<Feature>();
 	GradientDrawable dselected, dunselected;
 	boolean markerSelected = false;
 	String bSelected = "Temperature";
@@ -162,7 +162,8 @@ public class DataBase {
 						if (id2.equals(id + "." + "1")
 								|| id2.equals(id + "." + "2")
 								|| id2.equals(id + "." + "3")
-								|| id2.equals(id + "." + "4")) {
+								|| id2.equals(id + "." + "4")
+								|| id2.equals(id + "." + "5")) {
 
 							Markerfeatures.add(lf.get(j));
 
@@ -208,11 +209,11 @@ public class DataBase {
 				this.lfeaturesMarkersH.add(Markerfeatures.get(i));
 
 			} else if (Markerfeatures.get(i).getProperties().getDescription()
-					.contains("Air Quality")) {
+					.contains("Gas")) {
 
 				addWeightedLatLng(place, Markerfeatures.get(i).getProperties()
-						.getValue(), "Air Quality");
-				this.lfeaturesMarkersA.add(Markerfeatures.get(i));
+						.getValue(), "Gas");
+				this.lfeaturesMarkersG.add(Markerfeatures.get(i));
 
 			}
 		}
@@ -234,8 +235,8 @@ public class DataBase {
 			heatmaplist = this.heatmaplistNoise;
 		} else if (type.equals("Humidity")) {
 			heatmaplist = this.heatmaplistHum;
-		} else if (type.equals("Air Quality")) {
-			heatmaplist = this.heatmaplistAQ;
+		} else if (type.equals("Gas")) {
+			heatmaplist = this.heatmaplistG;
 		}
 
 		heatmaplist.add(new WeightedLatLng(place, value));
@@ -317,7 +318,7 @@ public class DataBase {
 		} else if (type.equals("Humidity")) {
 			heatmaplist = this.lfeaturesMarkersH;
 		} else if (type.equals("Air Quality")) {
-			heatmaplist = this.lfeaturesMarkersA;
+			heatmaplist = this.lfeaturesMarkersG;
 		}
 
 		for (int i = 0; i < heatmaplist.size(); ++i) {
@@ -347,7 +348,7 @@ public class DataBase {
 		} else if (type.equals("Humidity")) {
 			heatmaplist = this.heatmaplistHum;
 		} else if (type.equals("Air Quality")) {
-			heatmaplist = this.heatmaplistAQ;
+			heatmaplist = this.heatmaplistG;
 		}
 
 		if (!heatmaplist.isEmpty()) {

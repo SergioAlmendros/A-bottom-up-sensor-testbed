@@ -100,7 +100,7 @@ def createJSON(arduino):
                 tags=['gas', 'sensor', 'arduino', 'upf', 'guifi'],
                 geometry=geojson.Point([arduino.longitud, arduino.latitud]),
                 properties={
-                    'id': "%s" % (arduino.id + ".4"),
+                    'id': "%s" % (arduino.id + ".5"),
                     'name': "%s" % ("SENSOR-GAS" + arduino.location),
                     'datasetId': "%s" % arduino.datasetId,
                     'datasetName': "%s" % arduino.datasetId,

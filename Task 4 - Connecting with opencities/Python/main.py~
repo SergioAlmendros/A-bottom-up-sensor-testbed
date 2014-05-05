@@ -164,8 +164,8 @@ def POSTopencities(arduino, data):
 
 
 def main():
-    if len(sys.argv) != 6:
-        print "Usage: python main.py id temperature light noise humidity"
+    if len(sys.argv) != 7:
+        print "Usage: python main.py id temperature light noise humidity gas"
         print "And you write: " + str(sys.argv)
         sys.exit(0)
 

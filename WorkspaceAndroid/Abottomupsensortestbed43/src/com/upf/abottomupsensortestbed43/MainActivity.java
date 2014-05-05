@@ -83,16 +83,16 @@ public class MainActivity extends Activity {
 		dataBase.bNoise = (Button) findViewById(R.id.buttonNoise);
 		dataBase.blight = (Button) findViewById(R.id.buttonLight);
 		dataBase.bHum = (Button) findViewById(R.id.buttonHumidity);
-		dataBase.bAQ = (Button) findViewById(R.id.buttonAirQuality);
+		dataBase.bG = (Button) findViewById(R.id.buttonGas);
 		dataBase.bM = (Button) findViewById(R.id.buttonShowMarkers);
 		
-		dataBase.bAQ.setLayoutParams(dataBase.bM.getLayoutParams());
+		dataBase.bG.setLayoutParams(dataBase.bM.getLayoutParams());
 
 		dataBase.bTemp.setBackground(dataBase.dselected);
 		dataBase.bNoise.setBackground(dataBase.dunselected);
 		dataBase.blight.setBackground(dataBase.dunselected);
 		dataBase.bHum.setBackground(dataBase.dunselected);
-		dataBase.bAQ.setBackground(dataBase.dunselected);
+		dataBase.bG.setBackground(dataBase.dunselected);
 		dataBase.bM.setBackground(dataBase.dselected);
 		dataBase.markerSelected = true;
 
@@ -151,7 +151,7 @@ public class MainActivity extends Activity {
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
-				dataBase.bAQ.setBackground(dataBase.dunselected);
+				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
 				dataBase.addHeatMap("Temperature");
@@ -179,7 +179,7 @@ public class MainActivity extends Activity {
 				dataBase.bNoise.setBackground(dataBase.dselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
-				dataBase.bAQ.setBackground(dataBase.dunselected);
+				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
 				dataBase.addHeatMap("Noise");
@@ -205,7 +205,7 @@ public class MainActivity extends Activity {
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
-				dataBase.bAQ.setBackground(dataBase.dunselected);
+				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
 				dataBase.addHeatMap("Light");
@@ -232,7 +232,7 @@ public class MainActivity extends Activity {
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dselected);
-				dataBase.bAQ.setBackground(dataBase.dunselected);
+				dataBase.bG.setBackground(dataBase.dunselected);
 
 				dataBase.map.clear();
 				dataBase.addHeatMap("Humidity");
@@ -247,7 +247,7 @@ public class MainActivity extends Activity {
 
 		});
 
-		dataBase.bAQ.setOnClickListener(new View.OnClickListener() {
+		dataBase.bG.setOnClickListener(new View.OnClickListener() {
 
 			DataBase dataBase = DataBase.getInstance();
 
@@ -259,7 +259,7 @@ public class MainActivity extends Activity {
 				dataBase.bNoise.setBackground(dataBase.dunselected);
 				dataBase.blight.setBackground(dataBase.dunselected);
 				dataBase.bHum.setBackground(dataBase.dunselected);
-				dataBase.bAQ.setBackground(dataBase.dselected);
+				dataBase.bG.setBackground(dataBase.dselected);
 
 				dataBase.map.clear();
 				dataBase.addHeatMap("Air Quality");

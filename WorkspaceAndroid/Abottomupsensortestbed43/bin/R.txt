@@ -65,7 +65,7 @@ int drawable ic_plusone_small_off_client 0x7f020020
 int drawable ic_plusone_standard_off_client 0x7f020021
 int drawable ic_plusone_tall_off_client 0x7f020022
 int id action_settings 0x7f06000f
-int id buttonAirQuality 0x7f06000e
+int id buttonGas 0x7f06000e
 int id buttonHumidity 0x7f06000b
 int id buttonLight 0x7f06000d
 int id buttonNoise 0x7f06000c
