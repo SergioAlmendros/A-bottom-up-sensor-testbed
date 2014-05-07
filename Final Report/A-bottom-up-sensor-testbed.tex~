@@ -2,7 +2,6 @@
 \usepackage{pgfgantt}
 \usepackage{tikz}
 
-
 \usetikzlibrary{shapes.geometric, arrows}
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -57,7 +56,8 @@
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~
 % CUSTOM PACKAGES
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~
-\usepackage{hyperref}
+%\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
 \usepackage{pdfpages}
@@ -212,7 +212,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 
   
   \section{Arduino}
-    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}}, which support a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
+    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}} as we can see in the figure \ref{fig:AYUN}, which support a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
     
     We also have planned to attached a power over ethernet (PoE) module because the arduino's will be attached to guifi nodes which are also PoE.
     
@@ -227,7 +227,7 @@ The final goal of the project is to build a sensor testbed and there will be the
   \section{Sensors}
     A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino, 
     
-    In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
+    In this project we will use five sensors that measured temperature, light, noise, humidity, and gas.
     
     To show how the sensors are connected to the arduino YUN I used the program fritzing\footnote{\url{http://fritzing.org/}}.
     
@@ -307,7 +307,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \label{fig:HumiditySensor_bb}
       \end{figure}
       
-    \subsection{MQ135: Air Quality}
+    \subsection{MQ135: Gas sensor}
       This sensor is gas sensor, and we will use it to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, so I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:AirQualitySensor_bb}.
       
       The previous sensors are more similar, but this one can be used to measure the environment by the citizens and, it can be used to control the gas in a factory for example.
@@ -346,7 +346,7 @@ The final goal of the project is to build a sensor testbed and there will be the
   \section{Guifi network and opencities}
     Guifi network\footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be installed, and the one which will provide the access opencities through the Internet.
     
-    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we have chosen, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems will be solved more easily.
+    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we have chosen, the strengths of opencities are that give us free storage, a great and easy API to upload and download the data, and, also, the developers are in the UPF and problems can be solved more easily.
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use this OS to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand the values.
@@ -384,7 +384,7 @@ The final goal of the project is to build a sensor testbed and there will be the
         \node (FileSystem) [process, below of=Serial] {Initialize FileSystem};
         \node (ReadSensors) [process, below of=FileSystem] {Read Sensors};
         \node (ReadFile) [process, below of=ReadSensors] {Read \& Write File};
-        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 5 seconds};
+        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 1 minute};
         \node (ExecutePython) [process, below of=ReadFile] {Execute Python Script};
         
         \draw [arrow] (bridge) -- (Serial);
@@ -470,7 +470,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_3.png}
               \rule{35em}{0.5pt}
-          \caption[App Screenshot 3]{App Screenshot 3.}
+          \caption[App Screenshot 3]{App Screenshot.}
           \label{fig:App_Screenshot_3}
       \end{figure}
       
@@ -483,7 +483,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_1.png}
               \rule{35em}{0.5pt}
-          \caption[App Screenshot 1]{App Screenshot 1.}
+          \caption[App Screenshot 1]{App Screenshot.}
           \label{fig:App_Screenshot_1}
       \end{figure}
       
@@ -491,7 +491,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_2.png}
               \rule{35em}{0.5pt}
-          \caption[App Screenshot 2]{App Screenshot 2.}
+          \caption[App Screenshot 2]{App Screenshot.}
           \label{fig:App_Screenshot_2}
       \end{figure}
       
@@ -556,6 +556,22 @@ The final goal of the project is to build a sensor testbed and there will be the
 
 \chapter{Testbed results}
 \label{Chapter5}
+
+  In this chapter I will explained the procedure I follow to make this testbed, and an explanation of the results.
+  
+  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype I will use in this testbed. It is composed of an Arduino YUN, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
+  
+  \begin{figure}[htbp]
+      \centering
+          \includegraphics[scale=0.1]{./Figures/TestBed_Prototype.JPG}
+          \rule{35em}{0.5pt}
+      \caption[TestBed Prototype]{TestBed Prototype.}
+      \label{fig:TestBed_Prototype}
+  \end{figure} 
+  
+  The Arduino YUN will be connected by ethernet or WiFi, the address and the ID must be set manually.
+  
+  Also, in the microSD card must be stored the python script and an empty file named 'logData'.
 
 \chapter{Conclusions}
 \label{Chapter6}

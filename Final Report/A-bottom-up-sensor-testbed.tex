@@ -2,7 +2,6 @@
 \usepackage{pgfgantt}
 \usepackage{tikz}
 
-
 \usetikzlibrary{shapes.geometric, arrows}
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -57,7 +56,8 @@
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~
 % CUSTOM PACKAGES
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~
-\usepackage{hyperref}
+%\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
 \usepackage{pdfpages}
@@ -212,7 +212,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 
   
   \section{Arduino}
-    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}}, which support a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
+    The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}} as we can see in the figure \ref{fig:AYUN}, which support a Linux distribution based on OpenWRT named Linino, and it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities.
     
     We also have planned to attached a power over ethernet (PoE) module because the arduino's will be attached to guifi nodes which are also PoE.
     
@@ -227,7 +227,7 @@ The final goal of the project is to build a sensor testbed and there will be the
   \section{Sensors}
     A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino, 
     
-    In this project we will use five sensors that measured temperature, light, noise, humidity, and air quality.
+    In this project we will use five sensors that measured temperature, light, noise, humidity, and gas.
     
     To show how the sensors are connected to the arduino YUN I used the program fritzing\footnote{\url{http://fritzing.org/}}.
     
@@ -307,7 +307,7 @@ The final goal of the project is to build a sensor testbed and there will be the
           \label{fig:HumiditySensor_bb}
       \end{figure}
       
-    \subsection{MQ135: Air Quality}
+    \subsection{MQ135: Gas sensor}
       This sensor is gas sensor, and we will use it to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, so I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:AirQualitySensor_bb}.
       
       The previous sensors are more similar, but this one can be used to measure the environment by the citizens and, it can be used to control the gas in a factory for example.
@@ -498,7 +498,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     \subsection{Code}
       First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
     
-      This application has the next classes, in the next figure \ref{} is the class diagram:
+      This application has the next classes, in the figure \ref{fig:ClassDiagram1} and {fig:ClassDiagram2} are the class diagram:
       \begin{itemize}
         \item MainActivity: Is the controller of the whole application.
         \item GPSTracker: Is a class to get the current location of the user.
@@ -556,6 +556,22 @@ The final goal of the project is to build a sensor testbed and there will be the
 
 \chapter{Testbed results}
 \label{Chapter5}
+
+  In this chapter I will explained the procedure I follow to make this testbed, and an explanation of the results.
+  
+  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype I will use in this testbed. It is composed of an Arduino YUN, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
+  
+  \begin{figure}[htbp]
+      \centering
+          \includegraphics[scale=0.1]{./Figures/TestBed_Prototype.JPG}
+          \rule{35em}{0.5pt}
+      \caption[TestBed Prototype]{TestBed Prototype.}
+      \label{fig:TestBed_Prototype}
+  \end{figure} 
+  
+  The Arduino YUN will be connected by ethernet or WiFi, the address and the ID must be set manually.
+  
+  Also, in the microSD card must be stored the python script and an empty file named 'logData'.
 
 \chapter{Conclusions}
 \label{Chapter6}

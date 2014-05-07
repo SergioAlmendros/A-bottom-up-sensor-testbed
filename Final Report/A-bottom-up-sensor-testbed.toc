@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Light Dependent Resistor (LDR)}{6}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor: Noise}{9}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Aosong DHT22: Humidity}{9}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}MQ135: Air Quality}{9}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{9}{subsection.3.2.5}
 \contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{12}{subsection.3.2.6}
 \contentsline {section}{\numberline {3.3}Python}{12}{section.3.3}
 \contentsline {section}{\numberline {3.4}Guifi network and opencities}{12}{section.3.4}
