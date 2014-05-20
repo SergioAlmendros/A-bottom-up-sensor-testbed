@@ -35,8 +35,15 @@
 \contentsline {subsection}{\numberline {4.2.2}Interface}{21}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Code}{21}{subsection.4.2.3}
 \contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{27}{chapter.5}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{29}{chapter.6}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{31}{chapter.7}
-\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{33}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter}{33}{section.8.1}
-\contentsline {section}{\numberline {8.2}Documentation}{33}{section.8.2}
+\contentsline {section}{\numberline {5.1}Connection to the Internet}{28}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Through Ethernet}{28}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Through WiFi}{28}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Install necessary packets}{31}{section.5.2}
+\contentsline {section}{\numberline {5.3}Copy the scripts}{31}{section.5.3}
+\contentsline {section}{\numberline {5.4}Attach the sensors}{31}{section.5.4}
+\contentsline {section}{\numberline {5.5}Arduino Code}{31}{section.5.5}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{33}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{35}{chapter.7}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{37}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{37}{section.8.1}
+\contentsline {section}{\numberline {8.2}Documentation}{37}{section.8.2}

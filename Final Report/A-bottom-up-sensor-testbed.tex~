@@ -498,7 +498,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     \subsection{Code}
       First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
     
-      This application has the next classes, in the next figure \ref{} is the class diagram:
+      This application has the next classes, in the figure \ref{fig:ClassDiagram1} and {fig:ClassDiagram2} are the class diagram:
       \begin{itemize}
         \item MainActivity: Is the controller of the whole application.
         \item GPSTracker: Is a class to get the current location of the user.
@@ -572,6 +572,55 @@ The final goal of the project is to build a sensor testbed and there will be the
   The Arduino YUN will be connected by ethernet or WiFi, the address and the ID must be set manually.
   
   Also, in the microSD card must be stored the python script and an empty file named 'logData'.
+  
+  Now, I will show the process to configure the node:
+  
+  \section{Connection to the Internet}
+    First of all we have to provide of Internet connection to the arduino.
+    \subsection{Through Ethernet}
+      This is the fastest way to provide of Internet connection, the arduino will behave the same way as a computer, automatically will have an IP address.
+    \subsection{Through WiFi}
+      This is a slowest way, but it provides of some features. The process is the following:
+      \begin{enumerate}
+        \item First we power the arduino YUN. 
+        \item The arduino will create his own WiFi network, and with a computer we connect to this network which will be called ArduinoYun-XXXXXXXXXXXX.
+        \item When we are connected to the YUN network, we go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. We have to put the password, which is "arduino". As we can see in the figure \ref{fig:YunWebPassword}.
+          \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=0.5]{./Figures/YunWebPassword.png}
+                \rule{35em}{0.5pt}
+            \caption[Yun web Password]{Yun web Password.}
+            \label{fig:YunWebPassword}
+          \end{figure}
+        
+        \item The next page will be an information page, click on the configure button \ref{fig:YunWebDiagnostic}.
+        
+          \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=0.5]{./Figures/YunWebDiagnostic.png}
+                \rule{35em}{0.5pt}
+            \caption[Yun web Diagnostic]{Yun web Diagnostic.}
+            \label{fig:YunWebDiagnostic}
+          \end{figure}
+        
+        \item We will give a unique name to the Yun, and the network we want to connect \ref{fig:YunWebConfig}.
+          \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=0.5]{./Figures/YunWebDiagnostic.png}
+                \rule{35em}{0.5pt}
+            \caption[Yun web Configuration]{Yun web Configuration.}
+            \label{fig:YunWebConfig}
+          \end{figure}
+          
+        \item We press the configure \& restart button.
+        \item Finally we have to connect to same network as the Yun is connected.
+        
+      \end{enumerate}
+  \section{Install necessary packets}
+  \section{Copy the scripts}
+  \section{Attach the sensors}
+  \section{Arduino Code}
+  
 
 \chapter{Conclusions}
 \label{Chapter6}

@@ -122,7 +122,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="com.objectaid.uml.ClassDiagramEditor" activePerspective="org.eclipse.wst.jsdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.wst.jsdt.ui.PackageExplorer" activePerspective="org.eclipse.wst.jsdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
