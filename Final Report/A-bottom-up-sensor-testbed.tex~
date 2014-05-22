@@ -557,7 +557,7 @@ The final goal of the project is to build a sensor testbed and there will be the
 \chapter{Testbed results}
 \label{Chapter5}
 
-  In this chapter I will explained the procedure I follow to make this testbed, and an explanation of the results.
+  In this chapter I will explained the procedure I followed to make this testbed, and an explanation of the results.
   
   In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype I will use in this testbed. It is composed of an Arduino YUN, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
   
@@ -569,21 +569,20 @@ The final goal of the project is to build a sensor testbed and there will be the
       \label{fig:TestBed_Prototype}
   \end{figure} 
   
-  The Arduino YUN will be connected by ethernet or WiFi, the address and the ID must be set manually.
+  \section{Sensor node}
   
-  Also, in the microSD card must be stored the python script and an empty file named 'logData'.
+  Now, I will show the process to configure the node, part of this process is taken of the website of arduino\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}:
   
-  Now, I will show the process to configure the node:
-  
-  \section{Connection to the Internet}
+  \subsection{Connection to the Internet}
     First of all we have to provide of Internet connection to the arduino.
-    \subsection{Through Ethernet}
+    \subsubsection{Through Ethernet}
       This is the fastest way to provide of Internet connection, the arduino will behave the same way as a computer, automatically will have an IP address.
-    \subsection{Through WiFi}
-      This is a slowest way, but it provides of some features. The process is the following:
+      
+    \subsubsection{Through WiFi}
+      This is a slowest way. The process is the following:
       \begin{enumerate}
         \item First we power the arduino YUN. 
-        \item The arduino will create his own WiFi network, and with a computer we connect to this network which will be called ArduinoYun-XXXXXXXXXXXX.
+        \item The arduino will create his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer we connect to it.
         \item When we are connected to the YUN network, we go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. We have to put the password, which is "arduino". As we can see in the figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
@@ -616,11 +615,49 @@ The final goal of the project is to build a sensor testbed and there will be the
         \item Finally we have to connect to same network as the Yun is connected.
         
       \end{enumerate}
-  \section{Install necessary packets}
-  \section{Copy the scripts}
-  \section{Attach the sensors}
-  \section{Arduino Code}
+  \subsection{Install necessary packets}
+    The arduino will run an arduino script and a python script, for the first one we do not have to install anything, but for python we will have to install some packets.
+    
+    To install any packet we first have to connect to the arduino (The password will be the one we entered when we configured the onboard WiFi or "arduino"):
+    
+    {\begin{centering} \textbf{ssh root@X.Y.Z.W}\par \end{centering}}
+    
+    Now we can install all the necessary packets:
+     
+      {\begin{centering} \textbf{
+          opkg update \\
+          opkg install distribute \\
+          opkg install python-openssl \\
+          easy\_install pip \\
+          pip install geojson \\
+          pip install geopy \\
+          pip install httplib2
+        }
+      \par \end{centering}}
+    
+  \subsection{Copy the scripts}
+    We have to copy two files in the SDCard, the file "main.py" and "logData". We can do this in two ways, we can put the SDCard in to a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
+    
+    {\begin{centering} \textbf{
+    scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py \\
+    scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
+    }\par \end{centering}}
   
+  \subsection{Attach the sensors}
+    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors_bb}.
+  
+  \subsection{Arduino Code}
+    To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
+  
+  \section{Actual Testbed}
+    We have three arduino, so we have to mount the sensor node and put it in three different places in free space but being sure it will not get wet.
+    
+    When we have decided when we are going to put them, we have to introduce manually the location and the unique ID into the python script. We can do that by entering into the arduino by secure shell as we did earlier, go to the folder where the "main.py" is, and modified the following line by using "nano":
+    {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
+    
+    After a day of collecting data, we will get the arduino's back, take the three logData files, and show the data into some graphics.
+    
+    The figures \ref{} show the testbed I did.
 
 \chapter{Conclusions}
 \label{Chapter6}
