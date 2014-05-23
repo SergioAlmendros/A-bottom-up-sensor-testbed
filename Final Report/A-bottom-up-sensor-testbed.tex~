@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
 \usepackage{tikz}
+\usepackage{eurosym}
 
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -653,6 +654,7 @@ The final goal of the project is to build a sensor testbed and there will be the
     We have three arduino, so we have to mount the sensor node and put it in three different places in free space but being sure it will not get wet.
     
     When we have decided when we are going to put them, we have to introduce manually the location and the unique ID into the python script. We can do that by entering into the arduino by secure shell as we did earlier, go to the folder where the "main.py" is, and modified the following line by using "nano":
+    
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     
     After a day of collecting data, we will get the arduino's back, take the three logData files, and show the data into some graphics.
@@ -668,8 +670,8 @@ The final goal of the project is to build a sensor testbed and there will be the
 \chapter{Appendixes}
 \label{Chapter8}
 
-  \section{Pilot Charter}
-  \section{Documentation}
+  \input{./Appendix/Pilot_Charter.tex}
+  \input{./Appendix/Planning_Report.tex}
 
 
 \bibliography{bibliography}

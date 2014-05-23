@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
 \usepackage{pgfgantt}
 \usepackage{tikz}
+\usepackage{eurosym}
 
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -105,6 +106,8 @@ Acknowledgments
 %ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
+
+
 
 A bottom up sensor testbed is a sensor platform which collect sensory data. In this thesis we will develop a sensor platform that can be attached to guifi nodes to gather and share sensory data throught the guifi network and opencities.
 Guifi is an open network built to everyone can join it providing his own connection and opencities is a platform developed in UPF which allows any user to upload and download sensory data.\\
@@ -669,8 +672,8 @@ The final goal of the project is to build a sensor testbed and there will be the
 \chapter{Appendixes}
 \label{Chapter8}
 
-  \section{Pilot Charter}
-  \section{Documentation}
+  \input{./Appendix/Pilot_Charter.tex}
+  \input{./Appendix/Planning_Report.tex}
 
 
 \bibliography{bibliography}
