@@ -107,6 +107,8 @@ Acknowledgments
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
 
+
+
 A bottom up sensor testbed is a sensor platform which collect sensory data. In this thesis we will develop a sensor platform that can be attached to guifi nodes to gather and share sensory data throught the guifi network and opencities.
 Guifi is an open network built to everyone can join it providing his own connection and opencities is a platform developed in UPF which allows any user to upload and download sensory data.\\
 For the guifi nodes we will use an Arduino YUN (Arduino is an open-source electronics prototyping platform) which will gathered the sensory data and send it to opencities, then an Android application will get and visualize this data.
