@@ -185,10 +185,11 @@ scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
 --Voy a seguir haciendo el report.
 -9/04/14
 --He utilizado el fritzing para hacer el dibujo del arduino.
-5/05/14
+-5/05/14
 --He adaptado el codigo para el sensor de gas.
 --Voy a cambiar un poco el codigo de la aplicacion de android y seguir con el report.
-
+-26/05/14
+--Voy a cambiar el logData para que incluya el timestamp
 
 TODO:
 -Tiene que haber un menu para modificar los datos necesarios de la URL (api key, dataset ID), porque el api key es muy largo para ponerlo cada vez.

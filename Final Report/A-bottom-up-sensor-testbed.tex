@@ -641,7 +641,15 @@ The final goal of the project is to build a sensor testbed and there will be the
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    We have to copy two files in the SDCard, the file "main.py" and "logData". We can do this in two ways, we can put the SDCard in to a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
+    First of all we have to create the some directories, so once we make the ssh command, go to "/mnt/sda1", make the following comands:
+    
+    {\begin{centering} \textbf{
+    mkdir arduino \\
+    cd arduino \\
+    mkdir www \\
+    }\par \end{centering}}
+    
+    We have to copy two files in the SDCard, the file "main.py" and "logData". We have two ways to do this, put the SDCard into a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py \\

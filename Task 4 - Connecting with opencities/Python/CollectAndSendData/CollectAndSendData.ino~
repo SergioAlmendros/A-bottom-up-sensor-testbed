@@ -106,7 +106,7 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
           output += (char)dataFileRead.read(); 
       }
 
-//    This peace of code is to obtein the last ID used.
+//    This peace of code is to obtein the last write line.
       String lastline = "";
       for( int i=output.length()-2; i>=0; --i ){
         
@@ -149,7 +149,7 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
     return id;
 }
 
-void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth, String *gas){
+void executePythonScript(int id,String *temperature, String *humidity, String *noise, String *ligth, String *gas){
 
 //  It calls the python script like a command shell: python main.py id temperature light noise humidity
     Process myscript;
@@ -182,7 +182,7 @@ void loop() {
     int id = readFile(&temperature, &humidity, &noise, &ligth, &gas);
     
 //  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
-    executePythonScritp(id,&temperature, &humidity, &noise, &ligth, &gas); 
+    executePythonScript(id,&temperature, &humidity, &noise, &ligth, &gas); 
 
 //  This delay plus the delay added at the noise read plus the processing delay would make an aproximate total delay of 1 minute.
     delay(48000);

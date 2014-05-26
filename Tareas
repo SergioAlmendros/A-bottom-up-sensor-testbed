@@ -1,0 +1,20 @@
+1 - Montar los tres nodos
+  1.1 - Mirar si está todo el material.
+   Material: x3
+    - Arduino YUN
+    - Protoboard
+    - Sensores de:
+      * Luz
+      * Temperature
+      * Ruido
+      * Humedad
+      * Gas
+    - 3 Resistencias
+    - Cables
+    
+  1.2 - Montarlo.
+2 - Hacer el testbed
+3 - Montar un prototipo
+  3.1 - Buscar como se hace
+  3.2 - Comprar material que falta (caja, cables, ...)
+4 - Mejorar la memoria

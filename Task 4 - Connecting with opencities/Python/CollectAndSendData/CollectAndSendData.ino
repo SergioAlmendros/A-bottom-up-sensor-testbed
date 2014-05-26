@@ -19,6 +19,27 @@ void setup() {
   FileSystem.begin();  // Initialize the FileSystem
 }
 
+// This function return a string with the time stamp
+String getTimeStamp() {
+  String res;
+  Process time;
+  // date is a command line utility to get the date and the time 
+  // in different formats depending on the additional parameter 
+  time.begin("date");
+  time.addParameter("+%D-%T");  // parameters: D for the complete date mm/dd/yy
+                                //             T for the time hh:mm:ss    
+  time.run();  // run the command
+
+  // read the output of the command
+  while(time.available()>0) {
+    char c = time.read();
+    if(c != '\n')
+      res += c;
+  }
+
+  return res;
+}
+
 String readLightSensor(){
 
     int sensorvalue = analogRead(LIGHT_SENSOR);
@@ -85,6 +106,12 @@ void readSensors(String *temperature, String *humidity, String *noise, String *l
 
 int readFile(String *temperature, String *humidity, String *noise, String *ligth, String *gas){
 
+//  If the logData file does not exist, it creates one.    
+    if( !FileSystem.exists("/mnt/sda1/arduino/www/logData") ){
+      File dataFileWrite = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_WRITE);
+      dataFileWrite.close();
+    }
+    
 //  It opens the logData file to read it.
     File dataFileRead = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_READ);
     
@@ -97,16 +124,15 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
     if( !dataFileRead.available() ){
       //Serial.println("empty file");
 //    If the logData file is empty, it starts with an id equal to 1, and creates a String which contains the id and the values from the sensors.
-      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth + " " + *gas;
+      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth + " " + *gas + " " + getTimeStamp();
     }else{
       //Serial.println("not empty file");
-      
 //    If the logData file is not empty, it stores all the file in the output variable.
       while(dataFileRead.available()){
           output += (char)dataFileRead.read(); 
       }
 
-//    This peace of code is to obtein the last ID used.
+//    This peace of code is to obtein the last write line.
       String lastline = "";
       for( int i=output.length()-2; i>=0; --i ){
         
@@ -125,9 +151,8 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
       }
       id = atoi(sid.c_str());
       id += 1;
-      
 //    This is the same string as in the first if, but with a new ID
-      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth + " " + *gas;
+      result = String(id) + " " + *temperature + " " + *humidity + " " + *noise + " " + *ligth + " " + *gas + " " + getTimeStamp();
     }
     
     dataFileRead.close();
@@ -140,16 +165,17 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
       dataFileAppend.print(result);
       dataFileAppend.print("\n");
       dataFileAppend.close();
+      Serial.println(result);
     }  
 //  If the file isn not open, it will show an error:
     else {
-      Serial.println("error opening datalog.txt");
+      Serial.println("error opening logData");
     }
     
     return id;
 }
 
-void executePythonScritp(int id,String *temperature, String *humidity, String *noise, String *ligth, String *gas){
+void executePythonScript(int id,String *temperature, String *humidity, String *noise, String *ligth, String *gas){
 
 //  It calls the python script like a command shell: python main.py id temperature light noise humidity
     Process myscript;
@@ -182,7 +208,7 @@ void loop() {
     int id = readFile(&temperature, &humidity, &noise, &ligth, &gas);
     
 //  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
-    executePythonScritp(id,&temperature, &humidity, &noise, &ligth, &gas); 
+    executePythonScript(id,&temperature, &humidity, &noise, &ligth, &gas); 
 
 //  This delay plus the delay added at the noise read plus the processing delay would make an aproximate total delay of 1 minute.
     delay(48000);
