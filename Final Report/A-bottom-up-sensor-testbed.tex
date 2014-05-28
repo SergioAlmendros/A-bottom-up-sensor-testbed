@@ -274,8 +274,8 @@ The final goal of the project is to build a sensor testbed and there will be the
           \label{fig:LightSensor_bb}
       \end{figure}
  
-    \subsection{Emartee Mini Sound Sensor: Noise}
-      This sensor is used to measured noise levels \ref{fig:MSS}, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin as shown in the figure \ref{fig:NoiseSensor_bb}, but I did not find a figure for this sensor, so I put a microphone that has the same pins.
+    \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
+      This two sensors are used to measured noise levels \ref{fig:MSS} and \ref{fig:Analognoisesensor}, which is similar to the LM35 in the connexion, the output pin goes directly to an analgo pin as shown in the figure \ref{fig:NoiseSensor_bb}, but I did not find a figure for this sensor, so I put a microphone that has the same pins.
 
       \begin{figure}[!htbp]
           \centering
@@ -287,14 +287,26 @@ The final goal of the project is to build a sensor testbed and there will be the
       
       \begin{figure}[!htbp]
           \centering
+              \includegraphics[scale=0.5]{./Figures/analognoisesensor.jpg}
+              \rule{25em}{0.5pt}
+          \caption[Analog noise sensor]{Analog noise sensor.}
+          \label{fig:Analognoisesensor}
+      \end{figure}
+
+      
+      \begin{figure}[!htbp]
+          \centering
               \includegraphics[scale=1]{./Figures/Fritzing/NoiseSensor_bb.png}
               \rule{25em}{0.5pt}
           \caption[Noise Sensor Breadboard]{Noise Sensor Breadboard.}
           \label{fig:NoiseSensor_bb}
       \end{figure}
+
+
+    \subsection{Aosong DHT22 and DHT11: Humidity}
+      DHT22\ref{fig:DHT22} is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The arduino and the humidity sensor will be connected as shown in the figure \ref{fig:HumiditySensordht22_bb}. 
       
-    \subsection{Aosong DHT22: Humidity}
-      DHT22 is a humidity and temperature sensor, although we will only use the humidity measure. The output is digital, and to read it, we use an external library already developed \ref{fig:DHT22}. The arduino and the humidity sensor will be connected as shown in the figure \ref{fig:HumiditySensor_bb}.
+      At the time I started the testbed, there was only 1 DHT22 sensor, so I had to use two DHT11 sensor, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
 
       \begin{figure}[htbp]
           \centering
@@ -308,9 +320,18 @@ The final goal of the project is to build a sensor testbed and there will be the
           \centering
               \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensor_bb.png}
               \rule{25em}{0.5pt}
-          \caption[Humidity Sensor Breadboard]{Humidity Sensor Breadboard.}
-          \label{fig:HumiditySensor_bb}
+          \caption[Humidity Sensor DHT22 Breadboard]{Humidity Sensor DHT22 Breadboard.}
+          \label{fig:HumiditySensordht22_bb}
       \end{figure}
+      
+      \begin{figure}[!htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensorDht11_bb.png}
+              \rule{25em}{0.5pt}
+          \caption[Humidity Sensor DHT11 Breadboard]{Humidity Sensor DHT11 Breadboard.}
+          \label{fig:HumiditySensorDht11_bb}
+      \end{figure}
+      
       
     \subsection{MQ135: Gas sensor}
       This sensor is gas sensor, and we will use it to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, so I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:GasSensor_bb}.
@@ -346,7 +367,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \end{figure}
     
   \section{Python}
-    Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities. The python installed in the arduino is the python 4.2.5. 
+    Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities. The version of python in the arduino is the 4.2.5.
     
   \section{Guifi network and opencities}
     Guifi network\footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be installed, and the one which will provide the access opencities through the Internet.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  23 MAY 2014 12:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  28 MAY 2014 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,21 +616,21 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 (./A-bottom-up-sensor-testbed.aux)
 \openout1 = `A-bottom-up-sensor-testbed.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 76.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -664,16 +664,16 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \l on input line 74.
-LaTeX Info: Redefining \L on input line 74.
-Package crop Info: requested driver: `' on input line 74.
-Package crop Info: detected driver: `pdftex' on input line 74.
-Package crop Info: using `pdftex' graphics driver on input line 74.
+LaTeX Info: Redefining \l on input line 76.
+LaTeX Info: Redefining \L on input line 76.
+Package crop Info: requested driver: `' on input line 76.
+Package crop Info: detected driver: `pdftex' on input line 76.
+Package crop Info: using `pdftex' graphics driver on input line 76.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring OFF on input line 74.
+Package hyperref Info: Link coloring OFF on input line 76.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -683,28 +683,28 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count149
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
 
 (./A-bottom-up-sensor-testbed.out) (./A-bottom-up-sensor-testbed.out)
 \@outlinefile=\write6
 \openout6 = `A-bottom-up-sensor-testbed.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 83.
+(Font)              <14.4> on input line 85.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 83.
+(Font)              <7> on input line 85.
 
 <logo_upf.png, id=248, 36.135pt x 13.2495pt>
 File: logo_upf.png Graphic file (type png)
  <use logo_upf.png>
-Package pdftex.def Info: logo_upf.png used on input line 83.
+Package pdftex.def Info: logo_upf.png used on input line 85.
 (pdftex.def)             Requested size: 108.40466pt x 39.74835pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -719,7 +719,7 @@ Package pdftex.def Info: logo_upf.png used on input line 83.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 97--99
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
@@ -728,15 +728,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 110.
  [7] [8
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
  (./A-bottom-up-sensor-testbed.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
@@ -782,9 +782,9 @@ Chapter 1.
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 191.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 195.
 
-Overfull \hbox (62.73195pt too wide) in paragraph at lines 192--193
+Overfull \hbox (62.73195pt too wide) in paragraph at lines 196--197
 \OT1/ptm/m/n/12 there are free spots to park, and, in con-se-cuence, re-duce ai
 r pollution[[]]. 
  []
@@ -793,7 +793,7 @@ r pollution[[]].
 Underfull \vbox (badness 5189) has occurred while \output is active []
 
  [3]
-Overfull \hbox (23.9244pt too wide) in paragraph at lines 195--196
+Overfull \hbox (23.9244pt too wide) in paragraph at lines 199--200
 \OT1/ptm/m/n/12 door park-ing area man-age-ment, or traf-fic in-ten-sity monito
 ring[[]]. 
  []
@@ -801,227 +801,249 @@ ring[[]].
 [4]
 Chapter 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 216.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 216.
+(Font)              <5> on input line 220.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 220.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
 [][][][]$\OT1/pcr/m/n/10 http : / / arduino . cc / en / Main / ArduinoBoardYun 
 ? from = Main .
  []
 
-<./Figures/ArduinoYunFront_2_450px.jpg, id=455, 451.6875pt x 301.125pt>
+<./Figures/ArduinoYunFront_2_450px.jpg, id=460, 451.6875pt x 301.125pt>
 File: ./Figures/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
 
 <use ./Figures/ArduinoYunFront_2_450px.jpg>
 Package pdftex.def Info: ./Figures/ArduinoYunFront_2_450px.jpg used on input li
-ne 222.
+ne 226.
 (pdftex.def)             Requested size: 225.84319pt x 150.56212pt.
  [5
 
 
 ]
-<./Figures/LM35.jpg, id=469, 240.9pt x 240.9pt>
+<./Figures/LM35.jpg, id=474, 240.9pt x 240.9pt>
 File: ./Figures/LM35.jpg Graphic file (type jpg)
  <use ./Figures/LM35.jpg>
-Package pdftex.def Info: ./Figures/LM35.jpg used on input line 240.
+Package pdftex.def Info: ./Figures/LM35.jpg used on input line 244.
 (pdftex.def)             Requested size: 120.44969pt x 120.44969pt.
 
-<./Figures/Fritzing/TemperatureSensor_bb.png, id=470, 209.583pt x 284.262pt>
+<./Figures/Fritzing/TemperatureSensor_bb.png, id=475, 209.583pt x 284.262pt>
 File: ./Figures/Fritzing/TemperatureSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/TemperatureSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/TemperatureSensor_bb.png used on in
-put line 248.
+put line 252.
 (pdftex.def)             Requested size: 209.58247pt x 284.26129pt.
 
-<./Figures/LDR.jpg, id=474, 361.35pt x 361.35pt>
+<./Figures/LDR.jpg, id=479, 361.35pt x 361.35pt>
 File: ./Figures/LDR.jpg Graphic file (type jpg)
  <use ./Figures/LDR.jpg>
-Package pdftex.def Info: ./Figures/LDR.jpg used on input line 259.
+Package pdftex.def Info: ./Figures/LDR.jpg used on input line 263.
 (pdftex.def)             Requested size: 108.40584pt x 108.40584pt.
 
-<./Figures/Fritzing/LightSensor_bb.png, id=475, 209.583pt x 261.778pt>
+<./Figures/Fritzing/LightSensor_bb.png, id=480, 209.583pt x 261.778pt>
 File: ./Figures/Fritzing/LightSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/LightSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/LightSensor_bb.png used on input li
-ne 267.
+ne 271.
 (pdftex.def)             Requested size: 209.58247pt x 261.77736pt.
 
 Underfull \vbox (badness 2970) has occurred while \output is active []
 
  [6 <./Figures/ArduinoYunFront_2_450px.jpg> <./Figures/LM35.jpg>] [7 <./Figures
 /Fritzing/TemperatureSensor_bb.png> <./Figures/LDR.jpg>] [8 <./Figures/Fritzing
-/LightSensor_bb.png>] <./Figures/MiniSoundSensor.jpg, id=493, 376.40625pt x 369
+/LightSensor_bb.png>] <./Figures/MiniSoundSensor.jpg, id=499, 376.40625pt x 369
 .63094pt>
 File: ./Figures/MiniSoundSensor.jpg Graphic file (type jpg)
 
 <use ./Figures/MiniSoundSensor.jpg>
-Package pdftex.def Info: ./Figures/MiniSoundSensor.jpg used on input line 278.
+Package pdftex.def Info: ./Figures/MiniSoundSensor.jpg used on input line 282.
 (pdftex.def)             Requested size: 188.20265pt x 184.815pt.
 
-<./Figures/Fritzing/NoiseSensor_bb.png, id=494, 209.583pt x 280.247pt>
+<./Figures/analognoisesensor.jpg, id=500, 501.875pt x 501.875pt>
+File: ./Figures/analognoisesensor.jpg Graphic file (type jpg)
+
+<use ./Figures/analognoisesensor.jpg>
+Package pdftex.def Info: ./Figures/analognoisesensor.jpg used on input line 290
+.
+(pdftex.def)             Requested size: 250.93687pt x 250.93687pt.
+
+<./Figures/Fritzing/NoiseSensor_bb.png, id=501, 209.583pt x 280.247pt>
 File: ./Figures/Fritzing/NoiseSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/NoiseSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/NoiseSensor_bb.png used on input li
-ne 286.
+ne 299.
 (pdftex.def)             Requested size: 209.58247pt x 280.2463pt.
 
-<./Figures/dht22.jpg, id=497, 188.20313pt x 188.20313pt>
+
+LaTeX Warning: Reference `fig:HumiditySensordht11_bb' on page 9 undefined on in
+put line 309.
+
+<./Figures/dht22.jpg, id=506, 188.20313pt x 188.20313pt>
 File: ./Figures/dht22.jpg Graphic file (type jpg)
 
 <use ./Figures/dht22.jpg>
-Package pdftex.def Info: ./Figures/dht22.jpg used on input line 297.
+Package pdftex.def Info: ./Figures/dht22.jpg used on input line 313.
 (pdftex.def)             Requested size: 94.10132pt x 94.10132pt.
 
-<./Figures/Fritzing/HumiditySensor_bb.png, id=498, 209.583pt x 312.367pt>
+<./Figures/Fritzing/HumiditySensor_bb.png, id=507, 209.583pt x 312.367pt>
 File: ./Figures/Fritzing/HumiditySensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/HumiditySensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/HumiditySensor_bb.png used on input
- line 305.
+ line 321.
 (pdftex.def)             Requested size: 209.58247pt x 312.36624pt.
 
-<./Figures/mq135.jpg, id=503, 602.25pt x 602.25pt>
+<./Figures/Fritzing/HumiditySensorDht11_bb.png, id=508, 298.716pt x 456.104pt>
+File: ./Figures/Fritzing/HumiditySensorDht11_bb.png Graphic file (type png)
+
+<use ./Figures/Fritzing/HumiditySensorDht11_bb.png>
+Package pdftex.def Info: ./Figures/Fritzing/HumiditySensorDht11_bb.png used on 
+input line 329.
+(pdftex.def)             Requested size: 298.71526pt x 456.10289pt.
+ [9 <./Figures/MiniSoundSensor.jpg>] <./Figures/mq135.jpg, id=519, 602.25pt x 6
+02.25pt>
 File: ./Figures/mq135.jpg Graphic file (type jpg)
- <use ./Figures/mq135.jpg>
-Package pdftex.def Info: ./Figures/mq135.jpg used on input line 318.
+
+<use ./Figures/mq135.jpg>
+Package pdftex.def Info: ./Figures/mq135.jpg used on input line 343.
 (pdftex.def)             Requested size: 180.67639pt x 180.67639pt.
 
-[9 <./Figures/MiniSoundSensor.jpg>] [10 <./Figures/Fritzing/NoiseSensor_bb.png>
- <./Figures/dht22.jpg>] [11 <./Figures/Fritzing/HumiditySensor_bb.png>]
-<./Figures/Fritzing/AirQualitySensor_bb.png, id=520, 214.401pt x 316.382pt>
-File: ./Figures/Fritzing/AirQualitySensor_bb.png Graphic file (type png)
+<./Figures/Fritzing/GasSensor_bb.png, id=520, 209.583pt x 280.247pt>
+File: ./Figures/Fritzing/GasSensor_bb.png Graphic file (type png)
 
-<use ./Figures/Fritzing/AirQualitySensor_bb.png>
-Package pdftex.def Info: ./Figures/Fritzing/AirQualitySensor_bb.png used on inp
-ut line 326.
-(pdftex.def)             Requested size: 214.40047pt x 316.38123pt.
+<use ./Figures/Fritzing/GasSensor_bb.png>
+Package pdftex.def Info: ./Figures/Fritzing/GasSensor_bb.png used on input line
+ 351.
+(pdftex.def)             Requested size: 209.58247pt x 280.2463pt.
 
-<./Figures/Fritzing/AllSensors_bb.png, id=522, 476.179pt x 523.556pt>
+<./Figures/Fritzing/AllSensors_bb.png, id=522, 483.406pt x 523.556pt>
 File: ./Figures/Fritzing/AllSensors_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/AllSensors_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/AllSensors_bb.png used on input lin
-e 338.
-(pdftex.def)             Requested size: 380.94373pt x 418.84537pt.
- [12 <./Figures/mq135.jpg>] [13 <./Figures/Fritzing/AirQualitySensor_bb.png>] [
-14 <./Figures/Fritzing/AllSensors_bb.png>] [15] [16
-
-
-]
+e 363.
+(pdftex.def)             Requested size: 386.72533pt x 418.84537pt.
+ [10 <./Figures/analognoisesensor.jpg>] [11 <./Figures/Fritzing/NoiseSensor_bb.
+png> <./Figures/dht22.jpg>] [12 <./Figures/Fritzing/HumiditySensor_bb.png>] [13
+ <./Figures/Fritzing/HumiditySensorDht11_bb.png>] [14 <./Figures/mq135.jpg> <./
+Figures/Fritzing/GasSensor_bb.png>]
+[15 <./Figures/Fritzing/AllSensors_bb.png>] [16]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 399--401
+Overfull \hbox (30.0pt too wide) in paragraph at lines 424--426
  [] 
  []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+[17
+
+
+] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 458--460
+Overfull \hbox (30.0pt too wide) in paragraph at lines 483--485
  [] 
  []
 
-<./Figures/App_Screenshot_3.png, id=574, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_3.png, id=586, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_3.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_3.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_3.png used on input line 472.
+Package pdftex.def Info: ./Figures/App_Screenshot_3.png used on input line 497.
 
 (pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 472--474
+Overfull \hbox (30.0pt too wide) in paragraph at lines 497--499
  [] 
  []
 
-[19] [20] <./Figures/App_Screenshot_1.png, id=590, 1084.05pt x 1927.2pt>
+[19] [20] <./Figures/App_Screenshot_1.png, id=602, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_1.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_1.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 485.
+Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 510.
 
 (pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 485--487
+Overfull \hbox (30.0pt too wide) in paragraph at lines 510--512
  [] 
  []
 
-<./Figures/App_Screenshot_2.png, id=591, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_2.png, id=603, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_2.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_2.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 493.
+Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 518.
 
 (pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 493--495
+Overfull \hbox (30.0pt too wide) in paragraph at lines 518--520
  [] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 504.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 529.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 504.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 529.
  [21 <./Figures/App_Screenshot_3.png>] [22 <./Figures/App_Screenshot_1.png> <./
 Figures/App_Screenshot_2.png>]
-<./AdditionalInformation/ClassDiagram1_1.pdf, id=608, page=1, 597.50786pt x 845
+<./AdditionalInformation/ClassDiagram1_1.pdf, id=620, page=1, 597.50786pt x 845
 .04686pt>
 File: ./AdditionalInformation/ClassDiagram1_1.pdf Graphic file (type pdf)
  <use ./AdditionalInformation/ClassDiagram1_1.pdf, page 1>
 Package pdftex.def Info: ./AdditionalInformation/ClassDiagram1_1.pdf, page1 use
-d on input line 512.
+d on input line 537.
 (pdftex.def)             Requested size: 388.3755pt x 549.27396pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 512--514
+Overfull \hbox (30.0pt too wide) in paragraph at lines 537--539
  [] 
  []
 
 
-<./AdditionalInformation/ClassDiagram1_2.pdf, id=609, page=1, 597.50786pt x 845
+<./AdditionalInformation/ClassDiagram1_2.pdf, id=621, page=1, 597.50786pt x 845
 .04686pt>
 File: ./AdditionalInformation/ClassDiagram1_2.pdf Graphic file (type pdf)
  <use ./AdditionalInformation/ClassDiagram1_2.pdf, page 1>
 Package pdftex.def Info: ./AdditionalInformation/ClassDiagram1_2.pdf, page1 use
-d on input line 520.
+d on input line 545.
 (pdftex.def)             Requested size: 388.3755pt x 549.27396pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 520--522
+Overfull \hbox (30.0pt too wide) in paragraph at lines 545--547
  [] 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 551--553
+Overfull \hbox (30.0pt too wide) in paragraph at lines 576--578
  [] 
  []
 
 [23] [24 <./AdditionalInformation/ClassDiagram1_1.pdf>] [25 <./AdditionalInform
 ation/ClassDiagram1_2.pdf>] [26]
 Chapter 5.
-<./Figures/TestBed_Prototype.JPG, id=637, 3854.4pt x 2168.1pt>
+<./Figures/TestBed_Prototype.JPG, id=649, 3854.4pt x 2168.1pt>
 File: ./Figures/TestBed_Prototype.JPG Graphic file (type jpg)
 
 <use ./Figures/TestBed_Prototype.JPG>
-Package pdftex.def Info: ./Figures/TestBed_Prototype.JPG used on input line 567
+Package pdftex.def Info: ./Figures/TestBed_Prototype.JPG used on input line 592
 .
 (pdftex.def)             Requested size: 385.46259pt x 216.8227pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 567--569
+Overfull \hbox (30.0pt too wide) in paragraph at lines 592--594
  [] 
  []
 
@@ -1032,48 +1054,48 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
  <./Figures/TestBed_Prototype.JPG>]
-Overfull \hbox (36.29596pt too wide) in paragraph at lines 586--587
+Overfull \hbox (36.29596pt too wide) in paragraph at lines 611--612
 []\OT1/ptm/m/n/12 The ar-duino will cre-ate his own WiFi net-work (ArduinoYun-X
 XXXXXXXXXXX),
  []
 
-<./Figures/YunWebPassword.png, id=647, 701.62125pt x 400.49625pt>
+<./Figures/YunWebPassword.png, id=659, 701.62125pt x 400.49625pt>
 File: ./Figures/YunWebPassword.png Graphic file (type png)
 
 <use ./Figures/YunWebPassword.png>
-Package pdftex.def Info: ./Figures/YunWebPassword.png used on input line 590.
+Package pdftex.def Info: ./Figures/YunWebPassword.png used on input line 615.
 (pdftex.def)             Requested size: 350.80975pt x 200.24763pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 590--592
+Overfull \hbox (30.0pt too wide) in paragraph at lines 615--617
  [] 
  []
 
-<./Figures/YunWebDiagnostic.png, id=649, 567.11874pt x 548.0475pt>
+<./Figures/YunWebDiagnostic.png, id=661, 567.11874pt x 548.0475pt>
 File: ./Figures/YunWebDiagnostic.png Graphic file (type png)
 
 <use ./Figures/YunWebDiagnostic.png>
-Package pdftex.def Info: ./Figures/YunWebDiagnostic.png used on input line 600.
+Package pdftex.def Info: ./Figures/YunWebDiagnostic.png used on input line 625.
 
 (pdftex.def)             Requested size: 283.55867pt x 274.02307pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 600--602
+Overfull \hbox (30.0pt too wide) in paragraph at lines 625--627
  [] 
  []
 
 File: ./Figures/YunWebDiagnostic.png Graphic file (type png)
 <use ./Figures/YunWebDiagnostic.png>
-Package pdftex.def Info: ./Figures/YunWebDiagnostic.png used on input line 609.
+Package pdftex.def Info: ./Figures/YunWebDiagnostic.png used on input line 634.
 
 (pdftex.def)             Requested size: 283.55867pt x 274.02307pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 609--611
+Overfull \hbox (30.0pt too wide) in paragraph at lines 634--636
  [] 
  []
 
 [28] [29 <./Figures/YunWebPassword.png> <./Figures/YunWebDiagnostic.png>]
 [30] [31]
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 662.
+LaTeX Warning: Reference `' on page 32 undefined on input line 694.
 
 [32]
 Chapter 6.
@@ -1099,25 +1121,25 @@ Chapter 8.
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 689.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 689.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 721.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 721.
 (./A-bottom-up-sensor-testbed.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 689.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 689.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 721.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 721.
 Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 24286E5E979B598BF941E791AED73C16;4058.
+(rerunfilecheck)             Checksum: AA2F28CBA12E136E9D828B547AF46E4B;4096.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 689.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 721.
  ) 
 Here is how much of TeX's memory you used:
- 18895 strings out of 493307
- 345828 string characters out of 6139906
- 432484 words of memory out of 5000000
- 21761 multiletter control sequences out of 15000+600000
+ 18913 strings out of 493307
+ 346354 string characters out of 6139906
+ 432575 words of memory out of 5000000
+ 21774 multiletter control sequences out of 15000+600000
  32808 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  63i,11n,63p,537b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1129,10 +1151,10 @@ nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 vr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (58 pages, 5338491 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (58 pages, 5569973 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
- 701 compressed objects within 8 object streams
- 173 named destinations out of 1000 (max. 500000)
- 598 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 819 PDF objects out of 1000 (max. 8388607)
+ 711 compressed objects within 8 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 608 words of extra memory for PDF output out of 10000 (max. 10000000)
 

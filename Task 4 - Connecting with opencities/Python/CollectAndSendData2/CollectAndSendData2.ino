@@ -99,15 +99,15 @@ void readSensors(String *temperature, String *humidity, String *noise, String *l
 
 //  It calls all the functions to read the values of the sensors. 
     *temperature = readTemperatureSensor();
-    //Serial.println("Ha leido la temperatura");
+    Serial.println("Ha leido la temperatura");
     *humidity = readHumiditySensor();
-    //Serial.println("Ha leido la humedad");
+    Serial.println("Ha leido la humedad");
     *noise = readNoiseSensor();
-    //Serial.println("Ha leido el ruido");
+    Serial.println("Ha leido el ruido");
     *ligth = readLightSensor();
-    //Serial.println("Ha leido la luz");
+    Serial.println("Ha leido la luz");
     *gas = readGasSensor();
-    //Serial.println("Ha leido el gas");
+    Serial.println("Ha leido el gas");
 }
 
 int readFile(String *temperature, String *humidity, String *noise, String *ligth, String *gas){
@@ -171,7 +171,7 @@ int readFile(String *temperature, String *humidity, String *noise, String *ligth
       dataFileAppend.print(result);
       dataFileAppend.print("\n");
       dataFileAppend.close();
-      //Serial.println(result);
+      Serial.println(result);
     }  
 //  If the file isn not open, it will show an error:
     else {
@@ -214,11 +214,11 @@ void loop() {
     int id = readFile(&temperature, &humidity, &noise, &ligth, &gas);
     
 //  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
-    executePythonScript(id,&temperature, &humidity, &noise, &ligth, &gas); 
+    //executePythonScript(id,&temperature, &humidity, &noise, &ligth, &gas); 
 
 //  This delay plus the delay added at the noise read plus the processing delay would make an aproximate total delay of 1 minute.
     delay(48000);
-}
+} 
 
 
 

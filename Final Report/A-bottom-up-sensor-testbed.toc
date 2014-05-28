@@ -19,13 +19,13 @@
 \contentsline {section}{\numberline {3.2}Sensors}{5}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}LM35: Temperature}{6}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Light Dependent Resistor (LDR)}{6}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor: Noise}{9}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Aosong DHT22: Humidity}{9}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}{9}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Aosong DHT22 and DHT11: Humidity}{9}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{9}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{12}{subsection.3.2.6}
-\contentsline {section}{\numberline {3.3}Python}{12}{section.3.3}
-\contentsline {section}{\numberline {3.4}Guifi network and opencities}{12}{section.3.4}
-\contentsline {section}{\numberline {3.5}Android}{15}{section.3.5}
+\contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{10}{subsection.3.2.6}
+\contentsline {section}{\numberline {3.3}Python}{10}{section.3.3}
+\contentsline {section}{\numberline {3.4}Guifi network and opencities}{16}{section.3.4}
+\contentsline {section}{\numberline {3.5}Android}{16}{section.3.5}
 \contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Arduino Code}{17}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Collect sensory data}{17}{subsection.4.1.1}
@@ -43,11 +43,11 @@
 \contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{31}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{31}{subsection.5.1.4}
 \contentsline {subsection}{\numberline {5.1.5}Arduino Code}{31}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Actual Testbed}{31}{section.5.2}
+\contentsline {section}{\numberline {5.2}Actual Testbed}{32}{section.5.2}
 \contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{33}{chapter.6}
 \contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{35}{chapter.7}
 \contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{37}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter: A bottom-up sensor testbed}{37}{section.8.1}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{37}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{37}{subsection.8.1.1}
 \contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{37}{subsection.8.1.2}
 \contentsline {subsection}{\numberline {8.1.3}High-level requirements}{37}{subsection.8.1.3}
