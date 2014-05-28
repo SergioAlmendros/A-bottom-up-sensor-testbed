@@ -4,8 +4,8 @@
 
 
 #define DHTPIN 2 // The DHT sensor has to be in the digital pin 2 
-#define DHTTYPE DHT22 //DHT 22
-String ARDUINO_YUN_UNIQUE_ID = "1";
+#define DHTTYPE DHT11 //DHT 11
+String ARDUINO_YUN_UNIQUE_ID = "2";
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -99,10 +99,15 @@ void readSensors(String *temperature, String *humidity, String *noise, String *l
 
 //  It calls all the functions to read the values of the sensors. 
     *temperature = readTemperatureSensor();
+    //Serial.println("Ha leido la temperatura");
     *humidity = readHumiditySensor();
+    //Serial.println("Ha leido la humedad");
     *noise = readNoiseSensor();
+    //Serial.println("Ha leido el ruido");
     *ligth = readLightSensor();
+    //Serial.println("Ha leido la luz");
     *gas = readGasSensor();
+    //Serial.println("Ha leido el gas");
 }
 
 int readFile(String *temperature, String *humidity, String *noise, String *ligth, String *gas){

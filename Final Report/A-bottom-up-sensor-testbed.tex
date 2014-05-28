@@ -313,7 +313,7 @@ The final goal of the project is to build a sensor testbed and there will be the
       \end{figure}
       
     \subsection{MQ135: Gas sensor}
-      This sensor is gas sensor, and we will use it to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, so I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:AirQualitySensor_bb}.
+      This sensor is gas sensor, and we will use it to measured air quality. In this webpage\footnote{\url{http://arduino-info.wikispaces.com/Air-Gas-Sensors}} explain how to connect the sensor to the arduino, but the one that I bought has three pins joined in one, which make it easier \ref{fig:MQ135}, but this has no figure in fritzing, so I used a gas sensor that has the same output, and the resutl is in the figure \ref{fig:GasSensor_bb}.
       
       The previous sensors are more similar, but this one can be used to measure the environment by the citizens and, it can be used to control the gas in a factory for example.
 
@@ -327,10 +327,10 @@ The final goal of the project is to build a sensor testbed and there will be the
       
       \begin{figure}[!htbp]
           \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/AirQualitySensor_bb.png}
+              \includegraphics[scale=1]{./Figures/Fritzing/GasSensor_bb.png}
               \rule{25em}{0.5pt}
-          \caption[Air Quality Sensor Breadboard]{Air Quality Sensor Breadboard.}
-          \label{fig:AirQualitySensor_bb}
+          \caption[Gas Sensor Breadboard]{Gas Sensor Breadboard.}
+          \label{fig:GasSensor_bb}
       \end{figure}
       
     \subsection{BreadBoard with all the sensors}
@@ -649,11 +649,10 @@ The final goal of the project is to build a sensor testbed and there will be the
     mkdir www \\
     }\par \end{centering}}
     
-    We have to copy two files in the SDCard, the file "main.py" and "logData". We have two ways to do this, put the SDCard into a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
+    We have to copy the python script "main.py" into the SD-Card. We have two ways to do this, put the SDCard into a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
     
     {\begin{centering} \textbf{
-    scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py \\
-    scp logData root@192.168.2.149:/mnt/sda1/arduino/www/logData
+    scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
