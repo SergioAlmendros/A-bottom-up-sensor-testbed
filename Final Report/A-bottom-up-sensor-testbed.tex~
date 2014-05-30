@@ -109,30 +109,24 @@ Acknowledgments
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
 
-Background:
+Bottom up defines the network design, deployment, and operation initiatives driven by end user needs\footnote{\url{http://bubforeurope.net}}. Sensor testbed is a deployment of several sensors over a defined location.
 
-Bottom up: defines the network design, deployment, and operation initiatives driven by end user needs. \footnode{\url{http://bubforeurope.net/}}
-sensor testbed: Is a deployment of several sensors over a defined location.
-In this project we will develop a bottom up sensor testbed, which means a deployment of a sensor testbed driven by end user needs. The sensor nodes will consist of an Arduino YUN (Arduino is an open-source electronics prototyping platform) \footnode{\url{http://arduino.cc/}} and 5 environmental sensors attach to it. 
+In this project we will develop a bottom up sensor testbed, which means a deployment of a sensor testbed driven by end user needs. The sensor nodes will consist of an Arduino\footnote{\url{http://arduino.cc/}} YUN (Arduino is an open-source electronics prototyping platform) and 5 environmental sensors attach to it. 
 
-The arduino YUN is going to be connected to Guifi nodes, which is an open network built to everyone can join it providing his own connection\footnode{\url{http://guifi.net/}}. The Guifi nodes are Power Over Ethernet (PoE), and the Arduino YUN can be connected to it with a PoE module, but there is no module compatible with it.
+The arduino YUN is connected to Guifi\footnote{\url{http://guifi.net/}}, an open network built to everyone can join it providing his own connection. The Guifi nodes are Power Over Ethernet (PoE), and the Arduino YUN can be connected to it with a PoE module, but there is no module yet.
 
-A bottom up sensor testbed is a sensor platform which collect sensory data. In this thesis we will develop a sensor platform that can be attached to guifi nodes to gather and share sensory data throught the guifi network and opencities.
-Guifi is an open network built to everyone can join it providing his own connection and opencities is a platform developed in UPF which allows any user to upload and download sensory data.\\
-For the guifi nodes we will use an Arduino YUN (Arduino is an open-source electronics prototyping platform) which will gathered the sensory data and send it to opencities, then an Android application will get and visualize this data.
-\\
-This solution will show how to create a sensor platform and see the result very quickly which could help to other developers build their own platform to share sensory data.
+The arduino send the sensory data to opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}, a platform to browse, visualize, and download open data from different participants.
+
+Finally, an Android aplication shows the data from opencities.
+
+At the end of this thesis we made a real testbed with 3 nodes, it shows that the data is send correctly and without any interruption.
 
 
 \selectlanguage{catalan}
 \vspace*{\fill}
 \section*{\Large \sffamily  Resum}
 
-Un banc de proves de sensors de baix a dalt és una plataforma de sensors que recull dades de sensors. En aquesta tesi es desenvoluparà una plataforma de sensors que es pot conectar a nodes guifi per recopilar i compartir dades de sensors a través de la xarxa guifi i opencities. 
-Guifi és una xarxa oberta construïda per a tothom pot unir-se a ella proporcionant la seva pròpia connexió i opencities és una plataforma desenvolupada a la UPF, que permet a qualsevol usuari pujar i descarregar dades sensorials. \\ 
-Per als nodes guifi utilitzarem un Arduino YUN (Arduino és una plataforma de creació de prototips electrònics de codi obert) per reunir les dades de sensors i enviar-les a openities, i a continuació, una aplicació per Android descarregarà i visualitzarà aquestes dades. 
-\\
-Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat molt ràpid, el que podria ajudar a altres desenvolupadors a construir la seva pròpia plataforma per compartir dades de sensors.
+Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
 \vspace*{\fill}
 
@@ -167,21 +161,20 @@ Aquesta solució mostrarà com crear una plataforma de sensors i veure el resultat
 \chapter{Introduction}
 \label{Chapter1}
 
-The development of this project involves two parts, recollect data from sensors with the arduino and send it to opencities, there is when we will make the sensor testbed, and download the data from an Android Application to show it.
+The development of this project involves two parts, recollect sensory data and show it.
 
-A sensor testbed is a small sensor network which has the goal to gather data, and test the technologies used as nodes to see if they are the best options to create a real one.
+A sensor testbed is a sensor network that has the goal to gather sensory data, and test the technologies used as nodes to see if they are the best option.
 
-Bottom-up is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to the guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users, which prevents big companies or government to hide this information.
- 
+Bottom-up is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to their guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users.
 This project is an easy way to understand the importance of sensor networks and how they can help us to know, for example, if there is low quality air in our city, and do something about it.
 
-As sensor nodes we will use an Arduino YUN, Arduino is an open-source electronics prototyping platform, that allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi nodes and send the sensory data to a sensor platform, like opencities. 
+As sensor nodes we will use an Arduino YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi nodes and send the sensory data to a sensor platform, like opencities.
 
 When the sensory data is stored, we will develop an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
 
-In the following chapters I will explain the state of sensor networks nowadays \ref{Chapter2}, which technologies we will use \ref{Chapter3}, and how the project has been done, as well as all the problems found during the process \ref{Chapter4}. 
+In the following chapters I will explain the state of sensor networks nowadays (Chapter \ref{Chapter2}), which technologies we will use (Chapter \ref{Chapter3}), and how the project has been done (Chapter \ref{Chapter4}). 
 
-The final goal of the project is to build a sensor testbed and there will be the results \ref{Chapter5}, and, to finish, the conclusions \ref{Chapter6} and the future work \ref{Chapter7}.
+Finally there will be the results (Chapter \ref{Chapter5}) of the testbed, and conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
   
 \chapter{State of the Art}
 \label{Chapter2}
