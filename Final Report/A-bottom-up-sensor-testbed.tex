@@ -109,13 +109,17 @@ Acknowledgments
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
 
+Background:
 
+Bottom up: defines the network design, deployment, and operation initiatives driven by end user needs. \footnode{\url{http://bubforeurope.net/}}
+sensor testbed: Is a deployment of several sensors over a defined location.
+In this project we will develop a bottom up sensor testbed, which means a deployment of a sensor testbed driven by end user needs. The sensor nodes will consist of an Arduino YUN (Arduino is an open-source electronics prototyping platform) \footnode{\url{http://arduino.cc/}} and 5 environmental sensors attach to it. 
 
-A bottom up sensor testbed is a sensor platform which collect sensory data. In this thesis we will develop a sensor platform that can be attached to guifi nodes to gather and share sensory data throught the guifi network and opencities.
-Guifi is an open network built to everyone can join it providing his own connection and opencities is a platform developed in UPF which allows any user to upload and download sensory data.\\
-For the guifi nodes we will use an Arduino YUN (Arduino is an open-source electronics prototyping platform) which will gathered the sensory data and send it to opencities, then an Android application will get and visualize this data.
-\\
-This solution will show how to create a sensor platform and see the result very quickly which could help to other developers build their own platform to share sensory data.
+The arduino YUN is connected to Guifi nodes, which is an open network built to everyone can join it providing his own connection\footnode{\url{http://guifi.net/}}. The Guifi nodes are Power Over Ethernet (PoE), and the Arduino YUN can be connected to it with a PoE module, but there is no module compatible with it yet.
+
+The arduino send the sensory data to opencities\footnode{\url{http://opendata.nets.upf.edu/web/index.php/en/}}, a platform to browse, visualize, and download Open Data from different participants.
+
+Finally, a Android aplication shows the data.
 
 
 \selectlanguage{catalan}

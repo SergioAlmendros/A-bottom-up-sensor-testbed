@@ -17,6 +17,9 @@
   1.4 - Modificar memoria porque uso otra libreria para el sensor de humedad: https://github.com/adafruit/DHT-sensor-library
   1.5 - Modificar la memoria para que se sepa que sensores nuevos estoy utilizando (Fritzing)
 2 - Hacer el testbed
+  2.1 - Instalar paquetes en los arduinos --> Hecho
+  2.2 - Formatear tarjetas sd.
+  2.3 - Ponerlo en cada lugar y mantenerlos 24h.
 3 - Montar un prototipo
   3.1 - Buscar como se hace
   3.2 - Comprar material que falta (caja, cables, ...)
