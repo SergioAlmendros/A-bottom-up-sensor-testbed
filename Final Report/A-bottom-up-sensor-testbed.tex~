@@ -1,4 +1,5 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
+\renewcommand{\baselinestretch}{1.2}
 \addtolength{\oddsidemargin}{+.550in}
 \addtolength{\evensidemargin}{-.550in}
 \usepackage{pgfgantt}
@@ -334,7 +335,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
               \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensorDht11_bb.png}
               \rule{25em}{0.5pt}
           \caption[Humidity Sensor DHT11 Breadboard]{Humidity Sensor DHT11 Breadboard.}
-          \label{fig:HumiditySensorDht11_bb}
+          \label{fig:HumiditySensordht11_bb}
       \end{figure}
       
       
@@ -504,7 +505,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
     \subsection{Summary}
 
-      To make easy to see the results of the testbed, I created an android application for the purpose of visualize them. The application shows the data of the sensors in two ways, with markers which will show the actual value of the temperature or noise in that point, and, also, with heatmap points, the larger the value of the temperature or noise, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_3}.
+      To make easy to see the results of the testbed, I developed an android application. The application shows the data of the sensors in two ways, with markers that show the actual environmental value in that point, and also with heatmap points, the larger the value, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_3}.
       
       \begin{figure}[htbp]
           \centering
@@ -515,7 +516,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{figure}
       
     \subsection{Interface}
-      The application interface is a unique map view, where the user can zoom to a limit, go to their location, and, use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of data sensor which is shown as markers and as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
+      The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
       If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
       In the figure \ref{fig:App_Screenshot_1} we can see the app with the Marker button checked, and in the figure \ref{fig:App_Screenshot_2} without.
       
@@ -538,13 +539,15 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \subsection{Code}
       First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
     
-      This application has the next classes, in the figure \ref{fig:ClassDiagram1} and {fig:ClassDiagram2} are the class diagram:
+      This application has the next classes:
       \begin{itemize}
         \item MainActivity: Is the controller of the whole application.
         \item GPSTracker: Is a class to get the current location of the user.
         \item Feature, Geometry, and Properties: This are the classes where it will stored the data from the parsed JSON from opendata.
         \item DataBase: This is a singleton class where all the variables are stored, because is more easy to access from different clases.
       \end{itemize}
+      
+      In the figure \ref{fig:ClassDiagram1} and {fig:ClassDiagram2} are the class diagram:
       
       \begin{figure}[htbp]
         \centering
@@ -562,7 +565,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \label{fig:ClassDiagram2}
       \end{figure}
       
-      The explanation of the code will be in the following flow chart \ref{fig:Android App Flow Chart}:
+      The explanation of the code is in the following flow chart \ref{fig:Android App Flow Chart}:
       
       \begin{figure}[!htbp]
       \centering
@@ -691,7 +694,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
-    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors_bb}.
+    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure {fig:AllSensors11_bb}.
   
   \subsection{Arduino Code}
     To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
@@ -713,16 +716,14 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Future work}
 \label{Chapter7}
 
+\bibliography{bibliography}
+\cleardoublepage
+
 \chapter{Appendixes}
 \label{Chapter8}
 
   \input{./Appendix/Pilot_Charter.tex}
   \input{./Appendix/Planning_Report.tex}
-
-
-\bibliography{bibliography}
-\cleardoublepage
-
 
 
 \backmatter

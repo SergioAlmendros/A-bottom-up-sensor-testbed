@@ -1,4 +1,5 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
+\renewcommand{\baselinestretch}{1.2}
 \addtolength{\oddsidemargin}{+.550in}
 \addtolength{\evensidemargin}{-.550in}
 \usepackage{pgfgantt}
@@ -334,7 +335,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
               \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensorDht11_bb.png}
               \rule{25em}{0.5pt}
           \caption[Humidity Sensor DHT11 Breadboard]{Humidity Sensor DHT11 Breadboard.}
-          \label{fig:HumiditySensorDht11_bb}
+          \label{fig:HumiditySensordht11_bb}
       \end{figure}
       
       
@@ -693,7 +694,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
-    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors_bb}.
+    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
   
   \subsection{Arduino Code}
     To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
@@ -715,16 +716,14 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Future work}
 \label{Chapter7}
 
+\bibliography{bibliography}
+\cleardoublepage
+
 \chapter{Appendixes}
 \label{Chapter8}
 
   \input{./Appendix/Pilot_Charter.tex}
   \input{./Appendix/Planning_Report.tex}
-
-
-\bibliography{bibliography}
-\cleardoublepage
-
 
 
 \backmatter
