@@ -5,7 +5,7 @@
 
 #define DHTPIN 2 // The DHT sensor has to be in the digital pin 2 
 #define DHTTYPE DHT22 //DHT 22
-String ARDUINO_YUN_UNIQUE_ID = "1";
+String ARDUINO_YUN_UNIQUE_ID = "3";
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -202,12 +202,15 @@ void loop() {
   
     String temperature, humidity, noise, ligth, gas;
     
+    Serial.println("Leyendo los sensores");
 //  The next function will call all the other functions to read the value of the sensors attached to the arduino.
     readSensors(&temperature, &humidity, &noise, &ligth, &gas);
     
+    Serial.println("Leyendo del archivo");
 //  This function reads the logData file stored in the SDCard, and write a new line with the next unique ID.
     int id = readFile(&temperature, &humidity, &noise, &ligth, &gas);
     
+    Serial.println("Ejecutando el script de python");
 //  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
     executePythonScript(id,&temperature, &humidity, &noise, &ligth, &gas); 
 

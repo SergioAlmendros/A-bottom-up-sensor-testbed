@@ -30,10 +30,10 @@
 \contentsline {section}{\numberline {4.1}Collect and Send}{21}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Collect sensory data}{22}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{23}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Android app}{23}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Summary}{23}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.2}Android app}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Summary}{25}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Interface}{25}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Code}{25}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Code}{27}{subsection.4.2.3}
 \contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Sensor node}{32}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{32}{subsection.5.1.1}
