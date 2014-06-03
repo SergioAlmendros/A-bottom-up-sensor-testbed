@@ -108,13 +108,13 @@ Acknowledgments
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
 
-Bottom up defines the network design, deployment, and operation initiatives driven by end user needs\footnote{\url{http://bubforeurope.net}}. Sensor testbed is a deployment of several sensors over a defined location.
+Bottom up defines the network design, deployment, and operation initiatives driven by end user needs. Sensor testbed is a deployment of several sensors over a defined location.
 
-In this project we will develop a bottom up sensor testbed, which means a deployment of a sensor testbed driven by end user needs. The sensor nodes will consist of an Arduino\footnote{\url{http://arduino.cc/}} YUN (Arduino is an open-source electronics prototyping platform) and 5 environmental sensors attach to it. 
+In this project we will develop a bottom up sensor testbed, which means a deployment of a sensor testbed driven by end user needs. The sensor nodes will consist of an Arduino YUN (Arduino is an open-source electronics prototyping platform) and 5 environmental sensors attach to it. 
 
-The arduino YUN is connected to Guifi\footnote{\url{http://guifi.net/}}, an open network built to everyone can join it providing his own connection. The Guifi nodes are Power Over Ethernet (PoE), and the Arduino YUN can be connected to it with a PoE module, but there is no module yet.
+The arduino YUN is connected to Guifi, an open network built to everyone can join it providing his own connection.
 
-The arduino send the sensory data to opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}, a platform to browse, visualize, and download open data from different participants.
+The arduino send the sensory data to opencities, a platform to browse, visualize, and download open data from different participants.
 
 Finally, an Android aplication shows the data from opencities.
 
@@ -164,10 +164,10 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
   A sensor testbed is a sensor network that has the goal to gather sensory data, and test the technologies used as nodes to see if they are the best option.
 
-  Bottom-up is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to their guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users.
+  Bottom-up\footnote{\url{http://bubforeurope.net}} is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to their guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users.
   This project is an easy way to understand the importance of sensor networks and how they can help us to know, for example, if there is low quality air in our city, and do something about it.
 
-  As sensor nodes we will use an Arduino YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi nodes and send the sensory data to a sensor platform, like opencities.
+  As sensor nodes we will use an Arduino\footnote{\url{http://arduino.cc/}} YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi\footnote{\url{http://guifi.net/}} nodes and send the sensory data to a sensor platform, like opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}.
 
   When the sensory data is stored, we will develop an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
 
@@ -377,7 +377,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{figure}
     
   \section{Python}
-    Because of the low memory for the arduino sketches, we have to use a python script to communicate with opencities. The version of python in the arduino is the 4.2.5.
+    Because of the low memory for the arduino sketches, we have to use a python script that will run in the linux, called by the arduino sketch, to communicate with opencities. The version of python in the arduino is the 4.2.5. 
     
   \section{Guifi network and opencities}
     Guifi \footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be deployed, and the one providing the access to Opencities through the Internet.
@@ -405,7 +405,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     To get started with how the arduino YUN visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
     
-    The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID, and the python script have to create a GeoJSON and send it to opencities.
+    The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID, finally the python script have to create a GeoJSON and send it to opencities.
+    
+    A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that we use is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
     
     \subsection{Collect sensory data}
     

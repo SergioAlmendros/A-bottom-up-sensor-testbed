@@ -1,33 +1,32 @@
 1 Iteracion:
-  - Normalmente no se usan notas a pie de página en el abstract. El abstract puede utilizarse para diseminar el trabajo en distintos medios y la inclusión de pies de página dificulta o impide esa diseminación.
-
-  - En el abstract se trata de resaltar los aspectos más importantes
-      - Creación de una plataforma de sensores pensada para combinarse con una red abierta.
-      - Utilización de software y hardware abierto.
-      - Publicación de la de la información en un repositorio de open data.
-      - Visualización de la información en una aplicación móvil.
-  - No incluiría el tema del PoE en el abstract ya que parece que al final no va a estar disponible de momento y por tanto no es uno de los resultados más interesantes.
-
+  
   HECHO - He buscado recollect en el diccionario remember (something); call to mind. ¿Querías decir collect?
 
   HECHO - Las comillas en LaTeX se ponen ``así''.
 
-  - Decimos que vamos a utilizar un sensor de gas para medir la calidad del aire. ¿Estamos seguros de que se puede utilizar para medir la calidad del aire?
-
-  - Does the python script run in the linux environment. If so, it is worth mentioning in Section 3.3
-
   HECHO - We will need to scripts -> two
 
-  HECHO - Normalmente, la tercera persona del singular acaba en "s" en inglés ... When the YUN has an IP
-
-  - Creo que estaría bien explicar que es GeoJSON, ya que no es algo que conozca todo el mundo.
+  HECHO - Normalmente, la tercera persona del singular acaba en "s" en inglés ... When the YUN has an IP  
 
   HECHO - En la bibliografia normalmente se pone el nombre del autor. El autor "city in Santander" suena un poco raro. Si es un recurso online, se debería poner la url.
 
-  - Veo que  has cambiado los márgenes que vienen por defecto en el template. Me acabo de enterar que los márgenes en el template están a propósito para poder tomar notas. A mi me iría mejor que dejaras los márgenes por defecto porque me permite leer el documento en el Kindle y descansar un poco de la pantalla del ordenador.
+  HECHO - Veo que  has cambiado los márgenes que vienen por defecto en el template. Me acabo de enterar que los márgenes en el template están a propósito para poder tomar notas. A mi me iría mejor que dejaras los márgenes por defecto porque me permite leer el documento en el Kindle y descansar un poco de la pantalla del ordenador.
+  
+  HECHO - Normalmente no se usan notas a pie de página en el abstract. El abstract puede utilizarse para diseminar el trabajo en distintos medios y la inclusión de pies de página dificulta o impide esa diseminación.
 
+  HECHO - En el abstract se trata de resaltar los aspectos más importantes
+      - Creación de una plataforma de sensores pensada para combinarse con una red abierta.
+      - Utilización de software y hardware abierto.
+      - Publicación de la información en un repositorio de open data.
+      - Visualización de la información en una aplicación móvil.
 
+  HECHO - No incluiría el tema del PoE en el abstract ya que parece que al final no va a estar disponible de momento y por tanto no es uno de los resultados más interesantes.
 
+  HECHO - Does the python script run in the linux environment. If so, it is worth mentioning in Section 3.3
+
+  HECHO - Creo que estaría bien explicar que es GeoJSON, ya que no es algo que conozca todo el mundo.
+  
+  - Decimos que vamos a utilizar un sensor de gas para medir la calidad del aire. ¿Estamos seguros de que se puede utilizar para medir la calidad del aire?
 
 
 
