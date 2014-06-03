@@ -162,7 +162,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Introduction}
 \label{Chapter1}
 
-  The development of this project involves two parts, recollect sensory data and show it.
+  The development of this project involves two parts, collect sensory data and show it.
 
   A sensor testbed is a sensor network that has the goal to gather sensory data, and test the technologies used as nodes to see if they are the best option.
 
@@ -193,14 +193,14 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     In this section we introduce a few projects of sensor networks deployed:
     
     \subsection{Amsterdam smart city}
-      Amsterdam have a lot of projects concerning the smart city concept, like the "Flexible street lighting", which allows the government to monitor the street and switch off the lights to save energy, or the "Smart parking" which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution\cite{SmartcityAmsterdam}.
+      Amsterdam have a lot of projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution\cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
       Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring\cite{SmartcitySantander}.
     
     
   \section{Companies}
-    There are some companies that are in the business of sensor networks, such as "Schneider Electric", a multinational company that produces components for energy management, or smartcitizen, a platform that allows a user to have a sensor node and share the data with everyone.
+    There are some companies that are in the business of sensor networks, such as ``Schneider Electric'', a multinational company that produces components for energy management, or smartcitizen, a platform that allows a user to have a sensor node and share the data with everyone.
 
     
   \section{Opendata services}
@@ -403,7 +403,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \section{Collect and Send}
     
-    We will need to scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the message to opencities is too big. That is why we use a python script called by the arduino sketch.
+    We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the message to opencities is too big. That is why we use a python script called by the arduino sketch.
     
     To get started with how the arduino YUN visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
     
@@ -454,7 +454,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       \begin{enumerate}
         \item First we need to configure the onboard wifi, in this website it is explained how\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}
-        \item When the YUN have an IP, now we can get into the linino by Secure Shell: 
+        \item When the YUN has an IP, now we can get into the linino by Secure Shell: 
           \\ {\centering\textbf{ssh root@X.Y.Z.W}\par}
         \item Now that we are in the linino, we begin to install the necesary packets:
           \\ {\centering
@@ -626,7 +626,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \begin{enumerate}
         \item First we power the arduino YUN. 
         \item The arduino will create his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer we connect to it.
-        \item When we are connected to the YUN network, we go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. We have to put the password, which is "arduino". As we can see in the figure \ref{fig:YunWebPassword}.
+        \item When we are connected to the YUN network, we go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. We have to put the password, which is ``arduino''. As we can see in the figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.5]{./Figures/YunWebPassword.png}
@@ -661,7 +661,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \subsection{Install necessary packets}
     The arduino will run an arduino script and a python script, for the first one we do not have to install anything, but for python we will have to install some packets.
     
-    To install any packet we first have to connect to the arduino (The password will be the one we entered when we configured the onboard WiFi or "arduino"):
+    To install any packet we first have to connect to the arduino (The password will be the one we entered when we configured the onboard WiFi or ``arduino''):
     
     {\begin{centering} \textbf{ssh root@X.Y.Z.W}\par \end{centering}}
     
@@ -679,7 +679,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    First of all we have to create the some directories, so once we make the ssh command, go to "/mnt/sda1", make the following comands:
+    First of all we have to create the some directories, so once we make the ssh command, go to ``/mnt/sda1'', make the following comands:
     
     {\begin{centering} \textbf{
     mkdir arduino \\
@@ -687,14 +687,14 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     mkdir www \\
     }\par \end{centering}}
     
-    We have to copy the python script "main.py" into the SD-Card. We have two ways to do this, put the SDCard into a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
+    We have to copy the python script ``main.py'' into the SD-Card. We have two ways to do this, put the SDCard into a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
-    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure {fig:AllSensors11_bb}.
+    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
   
   \subsection{Arduino Code}
     To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
@@ -702,7 +702,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \section{Actual Testbed}
     We have three arduino, so we have to mount the sensor node and put it in three different places in free space but being sure it will not get wet.
     
-    When we have decided when we are going to put them, we have to introduce manually the location and the unique ID into the python script. We can do that by entering into the arduino by secure shell as we did earlier, go to the folder where the "main.py" is, and modified the following line by using "nano":
+    When we have decided when we are going to put them, we have to introduce manually the location and the unique ID into the python script. We can do that by entering into the arduino by secure shell as we did earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'':
     
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     

@@ -21,10 +21,10 @@
 \contentsline {subsection}{\numberline {3.2.2}Light Dependent Resistor (LDR)}{8}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}{8}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Aosong DHT22 and DHT11: Humidity}{8}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{15}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{8}{subsection.3.2.5}
 \contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{15}{subsection.3.2.6}
 \contentsline {section}{\numberline {3.3}Python}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Guifi network and opencities}{19}{section.3.4}
+\contentsline {section}{\numberline {3.4}Guifi network and opencities}{15}{section.3.4}
 \contentsline {section}{\numberline {3.5}Android}{19}{section.3.5}
 \contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Collect and Send}{21}{section.4.1}
@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {4.2}Android app}{23}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Summary}{23}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Interface}{23}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Code}{25}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Code}{26}{subsection.4.2.3}
 \contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Sensor node}{32}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{32}{subsection.5.1.1}
@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{35}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{35}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{35}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{36}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{35}{subsection.5.1.5}
 \contentsline {section}{\numberline {5.2}Actual Testbed}{36}{section.5.2}
 \contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{37}{chapter.6}
 \contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{39}{chapter.7}
@@ -58,11 +58,11 @@
 \contentsline {section}{\numberline {8.2}Planning Report}{45}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{45}{subsection.8.2.1}
 \contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{45}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{46}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{45}{subsection.8.2.3}
 \contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{46}{subsection.8.2.4}
 \contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{46}{subsection.8.2.5}
 \contentsline {subsection}{\numberline {8.2.6}Real deployment}{46}{subsection.8.2.6}
 \contentsline {subsection}{\numberline {8.2.7}Interface}{46}{subsection.8.2.7}
 \contentsline {subsection}{\numberline {8.2.8}Sentilo module}{46}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}Final report}{47}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{47}{subsection.8.2.10}
+\contentsline {subsection}{\numberline {8.2.9}Final report}{46}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{46}{subsection.8.2.10}
