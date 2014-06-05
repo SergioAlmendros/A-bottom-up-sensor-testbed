@@ -446,7 +446,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     \subsection{Communication with opencities}
     
-      First of all, we need to create an acount in opencities, we have to follow the tutorial of the webpage\ref{\url{http://opendata.nets.upf.edu/web/index.php/en/}}.
+      First of all, we need to create an acount in opencities, we have to follow the tutorial of the webpage\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/getting-started2}}.
       When this process is complete, we will have all the necessary information.
       
       The communication with opencities is done by a python script, to do this we need a set of libraries installed in the arduino.

@@ -1,3 +1,37 @@
+2 Iteracion:
+  Paginas:
+   http://randomnerdtutorials.com/arduino-vs-raspberry-pi-vs-beaglebone-vs-pcduino/
+   http://www.open-electronics.org/arduino-yun-the-best-hacks-you-will-ever-see/
+   http://makezine.com/2013/06/10/10-hot-new-boards-to-watch/
+   http://webreflection.blogspot.com.es/2013/10/did-arduino-yun-win-them-all.html
+   http://www.tweaktown.com/news/32824/arduino-releases-new-yun-a-arduino-linux-and-wi-fi-mashup/index.html
+   http://www.linux.com/news/embedded-mobile/mobile-linux/720578-first-linux-driven-arduino-board-reaches-out-with-wifi
+   http://madscientistmaxwell.blogspot.com.es/2013/10/arduino-yun-and-raspberry-pi.html
+   http://www.ardulink.org/arduino-yun-alternative/
+   http://www.rs-online.com/designspark/electronics/blog/arduino-or-raspberry-pi
+  
+  State of the art:
+    - Explicar arduino.
+    - Explicar raspberry pi.
+    - Explicar picoboard.
+    - Añadir libellium en companies.
+    - Explciar más sobre compañias de sensores.
+    - Explicar más smartcitizen.
+    - Explicar más los servicios de opendata. (xively, sentilo, opencities, smartcitizen).
+  
+  Technologies:
+    - Arduino vs Raspberry Pi.
+    - Explicar más sobre como funciona arduino YUN.
+    - 3.4: Que sea solo guifi y explicar más.
+    - 3.5: Explicar más sobre opencities.
+    
+  Testbed:
+    - 4.1: Cambiar título.
+    - 4.1 y 4.2 explicar el codigo con palabras.
+    
+  Testbed real:
+    - 5.1: Añadir el prototipo soldado.
+
 1 Iteracion:
   
   HECHO - He buscado recollect en el diccionario remember (something); call to mind. ¿Querías decir collect?
