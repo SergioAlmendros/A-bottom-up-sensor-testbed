@@ -5,7 +5,7 @@
 
 #define DHTPIN 2 // The DHT sensor has to be in the digital pin 2 
 #define DHTTYPE DHT11 //DHT 22
-String ARDUINO_YUN_UNIQUE_ID = "1";
+String ARDUINO_YUN_UNIQUE_ID = "2";
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -272,22 +272,22 @@ void executePythonScript(){
 void loop() {
   
     setTimeStamp();
-    Serial.println("ReadSensors");
+    //Serial.println("ReadSensors");
 //  The next function will call all the other functions to read the value of the sensors attached to the arduino.
     readSensors();
     
-    Serial.println("ReadFile\n");
+    //Serial.println("ReadFile\n");
 //  Serial.println("Leyendo del archivo");
 //  This function reads the logData file stored in the SDCard, and write a new line with the next unique ID.
     readFile();
     
 //  Serial.println("Ejecutando el script de python");
 //  This function calls the python script (main.py) stored in the SDCard with the ID, and the values of the sensors.
-    //executePythonScript(); 
+    executePythonScript(); 
 
 //  This delay plus the delay added at the noise read plus the processing delay would make an aproximate total delay of 1 minute.
-    //delay(48000);
-    delay(1000);
+    delay(48000);
+    //delay(1000);
 }
 
 
