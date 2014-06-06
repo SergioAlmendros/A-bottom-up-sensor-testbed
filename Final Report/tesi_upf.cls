@@ -226,7 +226,7 @@
     {\large \@supervisor} {\normalsize \\ DEPARTMENT:\\ \@department} \par
     \vspace{3cm}
    \centering  
-    \fbox{\includegraphics[scale=3]{logo_upf.png}}
+    \fbox{\includegraphics[scale=0.2]{logo_upf.png}}
    \end{flushleft}\par
 %  \@thanks
 % \vfil\null

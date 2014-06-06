@@ -191,20 +191,78 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     In this section we introduce a few projects of sensor networks deployed:
     
     \subsection{Amsterdam smart city}
-      Amsterdam have a lot of projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution\cite{SmartcityAmsterdam}.
+      Amsterdam have a lot of projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution \cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
-      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring\cite{SmartcitySantander}.
+      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring \cite{SmartcitySantander}.
     
     
   \section{Companies}
-    There are some companies that are in the business of sensor networks, such as ``Schneider Electric'', a multinational company that produces components for energy management, or smartcitizen, a platform that allows a user to have a sensor node and share the data with everyone.
-
+    There are some companies that are in the business of sensor networks.
+    \subsection{Smartcitizen}
+      Smart Citizen\footnote{\url{http://www.smartcitizen.me/}} is platform that allows a user to buy a node based on Arduino to monitor the environment as we can see in the figure \ref{fig:SmartCitizenNode}, upload this data to their own database to anybody can see it.
+      
+      \begin{figure}[htbp]
+        \centering
+            \includegraphics[scale=0.1]{./Figures/smartcitizen.png}
+            \rule{18em}{0.5pt}
+        \caption[Smart Citizen Node]{Smart Citizen Node.}
+        \label{fig:SmartCitizenNode}
+    \end{figure}
+            
+    \subsection{Libelium}
+      This company an Internet of things platform provider\footnote{\url{http://www.libelium.com/}}, which supply an open source sensor platform for the Internet of things.
+      They have a variety of products, here are some:
+      \begin{itemize}
+        \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow, body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/eletromyography sensor. We can see the shield in the figure \ref{fig:Libeliumehealth}.
+          \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=0.6]{./Figures/Libeliume_health.png}
+                \\
+                \rule{18em}{0.5pt}
+            \caption[Libelium ehealth]{Libelium ehealth.}
+            \label{fig:Libeliumehealth}
+          \end{figure}
+        
+        \item Waspmote: A sensor node where we can attach more than 60 sensors, solar powered, and though for adjust into street light posts. We can see the node in the figure \ref{fig:LibeliumWaspmote}.
+          \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=0.5]{./Figures/LibeliumWaspmote.png}
+                \\
+                \rule{18em}{0.5pt}
+            \caption[Libelium Waspmote]{Libelium Waspmote.}
+            \label{fig:LibeliumWaspmote}
+         \end{figure}
+       
+       \item Smart Water: Is a wireless sensor platform for water quality monitoring, it also provides real-time data. We can see the node in the figure \ref{fig:LibeliumSmartWater}.
+        \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=1]{./Figures/LibeliumSmartWater.png}
+                \\
+                \rule{18em}{0.5pt}
+            \caption[Libelium Smart Water]{Libelium Smart Water.}
+            \label{fig:LibeliumSmartWater}
+         \end{figure}
+        
+      \end{itemize}
+      
+    
+    \subsection{Schneider Electric y más empresas}
     
   \section{Opendata services}
-    The sensor networks are useless if we don't store the data, although we could save it in the device, it would be too expensive to recollect it. That is why we have chosen Opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}, a platform to browse, visualize, and download open data from different participants. We will only use this platform to store and download the data in the Android App.
+    The sensor networks are useless if we don't store the data, although we could save it in the device, it would be too expensive to recollect it. That is why we are going to use an opendata service:
+    \subsection{Opencities}
+    \subsection{Xively}
+    \subsection{Sentilo}
+    
+    Opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}, a platform to browse, visualize, and download open data from different participants. We will only use this platform to store and download the data in the Android App.
     
     There are some similar services such as Xively, or sentilo, but opencities is develop in the Pompeu Fabra University, what means that if I have any problem, a solution will be found more quickly.
+    
+  \section{Sensor boards}
+    \subsection{Arduino YUN}
+    \subsection{Raspberry PI}
+    \subsection{Picoboard}
 
 \chapter{Technologies}
 \label{Chapter3}
@@ -212,7 +270,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   In this chapter we focused in the techonologies used to develop this project, which are divided in four parts: arduino, sensors, python, Guifi network and opencities, and Android. 
 
   
-  \section{Arduino}
+  \section{Arduino vs Raspberry PI}
     The Arduino board that we use is an arduino YUN\footnote{\url{http://arduino.cc/en/Main/ArduinoBoardYun?from=Main.ArduinoYUN}} as we can see in the figure \ref{fig:AYUN}, it supports a Linux distribution based on OpenWRT named Linino, it has Ethernet and wifi suport, and a micro-SD card slot, those are basically the reason why we decided to use it, as we have to store the recollected data, and send it to opencities through the Internet.
     
     We have also planned to attached a power over ethernet (PoE) module to the arduino to make more clean the deployment.
@@ -224,6 +282,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \caption[Arduino YUN]{Arduino YUN.}
         \label{fig:AYUN}
     \end{figure}
+    
+    \subsection{Arduino YUN}
 
   \section{Sensors}
     A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino.
@@ -379,9 +439,10 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \section{Python}
     Because of the low memory for the arduino sketches, we have to use a python script that will run in the linux, called by the arduino sketch, to communicate with opencities. The version of python in the arduino is the 4.2.5. 
     
-  \section{Guifi network and opencities}
+  \section{Guifi network}
     Guifi \footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be deployed, and the one providing the access to Opencities through the Internet.
     
+  \section{Opencities}  
     Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we have chosen, the strengths of opencities are:
     \begin{itemize}
       \item They give us free storage.
@@ -399,7 +460,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
   This chapter focused in the process that has been followed to complete the project, which has two main parts, the software to recollect and send the data and the Android application to show it.
   
-  \section{Collect and Send}
+  \section{Arduino}
     
     We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the message to opencities is too big. That is why we use a python script called by the arduino sketch.
     
@@ -411,9 +472,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     \subsection{Collect sensory data}
     
-      To collect almost all the data the skecth does not need to include any libray because it is read by the analog read, except for the humidity sensors (DHT22 and DHT11) which need an external library.
+      To collect almost all the data the skecth does not need to include any libray because it is read by the analog read, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
       
       To read and write into the logData file we need the FileIO library\footnote{\url{http://arduino.cc/en/Reference/YunFileIOConstructor}}, and to call the python script we need the Process library\footnote{\url{http://arduino.cc/en/Reference/YunProcessConstructor}}.
+      
+      \textbf{Code explanation}
       
       The figure \ref{fig:Arduino sketch Flow Chart} explain how the arduino sketch works.\\
       
@@ -472,6 +535,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             }
           \par}
       \end{enumerate}
+      
+      \textbf{Code explanation}
       
       With all this libraries we can communicate with opencities and store the sensory data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the python script works.\\
       
@@ -698,6 +763,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \subsection{Attach the sensors}
     Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
+    
+    \subsubsection{Prototype}
+      At the end of this project I used a proto shield instead of a breadboard to create a real prototype.
   
   \subsection{Arduino Code}
     To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.

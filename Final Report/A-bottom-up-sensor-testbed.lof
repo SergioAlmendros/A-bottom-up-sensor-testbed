@@ -6,38 +6,42 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Smart Citizen Node}}{4}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Libelium ehealth}}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Libelium Waspmote}}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Libelium Smart Water}}{6}{figure.caption.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Arduino YUN}}{6}{figure.caption.4}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces LM35 sensor}}{6}{figure.caption.5}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Temperature Sensor Breadboard}}{7}{figure.caption.6}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces LDR sensor}}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Light Sensor Breadboard}}{9}{figure.caption.8}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Mini Sound Sensor}}{10}{figure.caption.9}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Analog noise sensor}}{10}{figure.caption.10}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Noise Sensor Breadboard}}{11}{figure.caption.11}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces DHT22 sensor}}{11}{figure.caption.12}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces DHT11 sensor}}{12}{figure.caption.13}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Humidity Sensor DHT22 Breadboard}}{13}{figure.caption.14}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Humidity Sensor DHT11 Breadboard}}{14}{figure.caption.15}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces MQ135}}{15}{figure.caption.16}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Gas Sensor Breadboard}}{16}{figure.caption.17}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Sensor node Prototype with DHT22}}{17}{figure.caption.18}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Sensor node Prototype with DHT11}}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arduino YUN}}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces LM35 sensor}}{10}{figure.caption.9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Temperature Sensor Breadboard}}{11}{figure.caption.10}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces LDR sensor}}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Light Sensor Breadboard}}{13}{figure.caption.12}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Mini Sound Sensor}}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Analog noise sensor}}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Noise Sensor Breadboard}}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces DHT22 sensor}}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces DHT11 sensor}}{16}{figure.caption.17}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Humidity Sensor DHT22 Breadboard}}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Humidity Sensor DHT11 Breadboard}}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces MQ135}}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Gas Sensor Breadboard}}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Sensor node Prototype with DHT22}}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Sensor node Prototype with DHT11}}{22}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{22}{figure.caption.20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{24}{figure.caption.21}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{25}{figure.caption.22}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{26}{figure.caption.23}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{26}{figure.caption.24}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 1}}{28}{figure.caption.25}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Class Diagram of the Android App part 2}}{29}{figure.caption.26}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Android App Flow Chart}}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{28}{figure.caption.25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 1}}{32}{figure.caption.29}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Class Diagram of the Android App part 2}}{33}{figure.caption.30}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Android App Flow Chart}}{34}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{31}{figure.caption.28}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{33}{figure.caption.29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{33}{figure.caption.30}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{34}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{37}{figure.caption.33}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{37}{figure.caption.34}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{38}{figure.caption.35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{47}{figure.caption.33}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{51}{figure.caption.37}
