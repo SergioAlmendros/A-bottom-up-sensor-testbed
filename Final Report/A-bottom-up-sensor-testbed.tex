@@ -211,8 +211,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \end{figure}
             
     \subsection{Libelium}
-      This company an Internet of things platform provider\footnote{\url{http://www.libelium.com/}}, which supply an open source sensor platform for the Internet of things.
-      They have a variety of products, here are some:
+      This company is an Internet of things platform provider\footnote{\url{http://www.libelium.com/}}, which supply an open source sensor platform for the Internet of things.
+      They have a variety of products, here are some interesting ones:
       \begin{itemize}
         \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow, body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/eletromyography sensor. We can see the shield in the figure \ref{fig:Libeliumehealth}.
           \begin{figure}[htbp]
@@ -239,7 +239,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \centering
                 \includegraphics[scale=1]{./Figures/LibeliumSmartWater.png}
                 \\
-                \rule{18em}{0.5pt}
+                \rule{16em}{0.5pt}
             \caption[Libelium Smart Water]{Libelium Smart Water.}
             \label{fig:LibeliumSmartWater}
          \end{figure}
@@ -249,23 +249,63 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \section{Opendata services}
     The sensor networks are useless if we don't store the data, although we could save it in the device, it would be too expensive to recollect it. That is why we are going to use an opendata service:
     \subsection{Opencities}
+       Opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}} is a platform to browse, visualize, and download open data from different participants. They offer free space in their server, which is perfect, a very simple API to upload and download data, and a web page to visualize the stored data.
+       
     \subsection{Xively}
+      Xively\footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basicaly it let you stored sensory data, download it, and visualize it in graphics.
+    
     \subsection{Sentilo}
-    
-    Opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}, a platform to browse, visualize, and download open data from different participants. We will only use this platform to store and download the data in the Android App.
-    
-    There are some similar services such as Xively, or sentilo, but opencities is develop in the Pompeu Fabra University, what means that if I have any problem, a solution will be found more quickly.
+      Sentilo\footnote{\url{http://www.sentilo.io}} is a open source platform for Smart Cities, it allows you to use their own service to store the data, but not many, because their goal is that anyone who wants the sentilo platform will have to installed it in their server, and then use it. It also provides a interface to show the data.
     
   \section{Sensor boards}
-    In this section we discuss some of the options we have to use as node.
+    In this section we discuss some of the options we could use as node.
     
     \subsection{Arduino YUN}
-      - Explicar que tiene fisicamente.
-      - Explicar lo de los dos procesadores.
-      - Explicar la libreria bridge.
-    \subsection{Raspberry PI}
+      The Arduino YUN is a microcontroller board with two processors as we can see in the figure \ref{fig:AYUN}, an ATmega32u4 (Arduino), and an Atheros AR9331 (For a Linux distribution named OpenWrt-Yun). It also have a Ethernet and WiFi module, a USB-A port, a micro-SD card slot, 20 digital input/ouput ping, 16 MHz crystal oscillator, 16 MHz crystal oscillator, ICSP header, and 3 reset buttons.
+      \begin{figure}[htbp]
+        \centering
+            \includegraphics[scale=0.5]{./Figures/ArduinoYunFront_2_450px.jpg}
+            \rule{18em}{0.5pt}
+        \caption[Arduino YUN]{Arduino YUN.}
+        \label{fig:AYUN}
+      \end{figure}
       
+      The great thing about the arduino YUN is that the processor for the arduino sketches can communicate with the Linux processor through the bridge library, which allows you to write python scripts and execute them. In the figure \ref{fig:BridgeInShort} we can see it.
+      
+      A powe over ethernet module (PoE) can be attach to the arduino, which is perfect for the guifi network, as their nodes are PoE.
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/BridgeInShort.png}
+              \\
+              \rule{16em}{0.5pt}
+          \caption[Arduino YUN Bridge]{Arduino YUN Bridge.}
+          \label{fig:BridgeInShort}
+       \end{figure}
+        
+    \subsection{Raspberry Pi}
+      Raspberry Pi\footnote{\url{http://www.raspberrypi.org/}} is a single-board computer, they have two models, A and B. The model B is more appropiate for this project because it has an Ethernet controller. It is composed by an HDMI Micro USB, and USB 2.0 connector, an SD card slot, Input/Output (GPIO) pins, an RCA connector, an audio jack, an Ethernet controller, and a Broadcom BCM2835 processor.
+     
+      It is very easy to attach sensors to it, and it supports Linux environment like raspbian. In the figure \ref{fig:RaspberryPiB} we can see the raspberry pi B.
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/raspberry-pi-model-b-300x225.jpg}
+              \\
+              \rule{16em}{0.5pt}
+          \caption[Raspberry Pi model B]{Raspberry Pi model B.}
+          \label{fig:RaspberryPiB}
+       \end{figure}
+    
     \subsection{Picoboard}
+      PicoBoard\footnote{\url{http://www.picocricket.com/picoboard.html}} is a board to interact with the world, it can be programmed by Scratch projects. It is less flexible than the others, it is composed by a button, a light and sound sensor, a slider, and alligator clips which can be use to build custom sensors. We can see this board in the figure \ref{fig:picoboard}.
+      
+      \begin{figure}[htbp]
+          \centering
+              \includegraphics[scale=1]{./Figures/picoboard.jpg}
+              \\
+              \rule{16em}{0.5pt}
+          \caption[Picoboard]{Picoboard.}
+          \label{fig:picoboard}
+       \end{figure}
 
 \chapter{Technologies}
 \label{Chapter3}
@@ -278,15 +318,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     We have also planned to attached a power over ethernet (PoE) module to the arduino to make more clean the deployment.
     
-    \begin{figure}[htbp]
-        \centering
-            \includegraphics[scale=0.5]{./Figures/ArduinoYunFront_2_450px.jpg}
-            \rule{18em}{0.5pt}
-        \caption[Arduino YUN]{Arduino YUN.}
-        \label{fig:AYUN}
-    \end{figure}
     
-    \subsection{Arduino YUN}
+    
 
   \section{Sensors}
     A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino.
