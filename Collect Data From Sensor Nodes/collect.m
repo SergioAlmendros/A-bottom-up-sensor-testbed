@@ -61,6 +61,7 @@ function collect()
   ylabel( 'Time' );
   title( "Temperature" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  saveas (1, "../Final\ Report/Figures/GraphicTemperature.png");
   
   figure
   plot(1:i+1,hum1,'r');
@@ -72,6 +73,7 @@ function collect()
   ylabel( 'Time' );
   title( "Humidity" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  saveas (1, "../Final\ Report/Figures/GraphicHumidity.png");
   
   figure
   plot(1:i+1,noise1,'r');
@@ -83,6 +85,7 @@ function collect()
   ylabel( 'Time' );
   title( "Noise" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  saveas (1, "../Final\ Report/Figures/GraphicNoise.png");
   
   figure
   plot(1:i+1,light1,'r');
@@ -94,6 +97,7 @@ function collect()
   ylabel( 'Time' );
   title( "Light" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  saveas (1, "../Final\ Report/Figures/GraphicLight.png");
   
   figure
   plot(1:i+1,gas1,'r');
@@ -105,27 +109,6 @@ function collect()
   ylabel( 'Time' );
   title( "Air quality" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  saveas (1, "../Final\ Report/Figures/GraphicGas.png");
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

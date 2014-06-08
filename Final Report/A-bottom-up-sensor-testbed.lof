@@ -34,20 +34,26 @@
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Sensor node Prototype with DHT11}}{22}{figure.caption.28}
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Guifi sensor map}}{23}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{26}{figure.caption.30}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{28}{figure.caption.31}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{29}{figure.caption.32}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{30}{figure.caption.33}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{30}{figure.caption.34}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 1}}{32}{figure.caption.35}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Class Diagram of the Android App part 2}}{33}{figure.caption.36}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Android App Flow Chart}}{34}{figure.caption.37}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{27}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{29}{figure.caption.31}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{30}{figure.caption.32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{31}{figure.caption.33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{31}{figure.caption.34}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 1}}{33}{figure.caption.35}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Class Diagram of the Android App part 2}}{34}{figure.caption.36}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Android App Flow Chart}}{35}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{35}{figure.caption.38}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{36}{figure.caption.39}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{37}{figure.caption.40}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{38}{figure.caption.41}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{37}{figure.caption.38}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{38}{figure.caption.39}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{39}{figure.caption.40}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{40}{figure.caption.41}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{42}{figure.caption.42}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Graphic Temperature\relax }}{42}{figure.caption.43}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Graphic Light\relax }}{42}{figure.caption.43}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{42}{figure.caption.44}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{42}{figure.caption.44}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Graphic Air Quality}}{43}{figure.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{51}{figure.caption.43}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{55}{figure.caption.47}

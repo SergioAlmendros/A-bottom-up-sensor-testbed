@@ -71,6 +71,7 @@ function collect()
   xlabel( 'Humidity' );
   ylabel( 'Time' );
   title( "Humidity" );
+  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   
   figure
   plot(1:i+1,noise1,'r');
@@ -81,6 +82,7 @@ function collect()
   xlabel( 'Noise' );
   ylabel( 'Time' );
   title( "Noise" );
+  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   
   figure
   plot(1:i+1,light1,'r');
@@ -91,6 +93,7 @@ function collect()
   xlabel( 'Light' );
   ylabel( 'Time' );
   title( "Light" );
+  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   
   figure
   plot(1:i+1,gas1,'r');
@@ -101,27 +104,6 @@ function collect()
   xlabel( 'Gas presence' );
   ylabel( 'Time' );
   title( "Air quality" );
+  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

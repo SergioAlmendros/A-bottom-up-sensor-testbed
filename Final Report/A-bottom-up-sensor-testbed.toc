@@ -39,41 +39,42 @@
 \contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Arduino}{25}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Collect sensory data}{26}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{27}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Android app}{29}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Summary}{29}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Interface}{29}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Code}{31}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Sensor node}{36}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{36}{subsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.1}Through Ethernet}{36}{subsubsection.5.1.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.2}Through WiFi}{36}{subsubsection.5.1.1.2}
-\contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{37}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{38}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{38}{subsection.5.1.4}
-\contentsline {subsubsection}{\numberline {5.1.4.1}Prototype}{39}{subsubsection.5.1.4.1}
-\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{39}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Actual Testbed}{39}{section.5.2}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{41}{chapter.6}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{43}{chapter.7}
-\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{47}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter}{47}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{47}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{47}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}High-level requirements}{47}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}High-level pilot description}{48}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}High-level risks}{48}{subsection.8.1.5}
-\contentsline {subsection}{\numberline {8.1.6}Summary milestone schedule}{48}{subsection.8.1.6}
-\contentsline {subsection}{\numberline {8.1.7}Summary budget}{49}{subsection.8.1.7}
-\contentsline {section}{\numberline {8.2}Planning Report}{49}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{49}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{49}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{49}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{50}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{50}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}Real deployment}{50}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}Interface}{50}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}Sentilo module}{50}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}Final report}{50}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{50}{subsection.8.2.10}
+\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{26}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Android app}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Summary}{28}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Interface}{28}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Code}{30}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Sensor node}{38}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{38}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Through Ethernet}{38}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Through WiFi}{38}{subsubsection.5.1.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{39}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{40}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{40}{subsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.4.1}Prototype}{41}{subsubsection.5.1.4.1}
+\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{41}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Actual Testbed}{41}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Results}{41}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{45}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{47}{chapter.7}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{51}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{51}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{51}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{51}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}High-level requirements}{51}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}High-level pilot description}{52}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}High-level risks}{52}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Summary milestone schedule}{52}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}Summary budget}{53}{subsection.8.1.7}
+\contentsline {section}{\numberline {8.2}Planning Report}{53}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{53}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{53}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{53}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{54}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{54}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}Real deployment}{54}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}Interface}{54}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}Sentilo module}{54}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}Final report}{54}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{54}{subsection.8.2.10}

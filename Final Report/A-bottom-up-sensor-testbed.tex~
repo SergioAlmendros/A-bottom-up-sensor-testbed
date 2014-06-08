@@ -27,7 +27,27 @@
 \usepackage[cam,a4,center,frame]{crop}
 
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
+%\usepackage{graphicx}
+
 \usepackage{graphicx}
+\newsavebox\IBoxA \newsavebox\IBoxB \newlength\IHeight
+\newcommand\TwoFig[6]{% Image1 Caption1 Label1 Image2 ...
+  \sbox\IBoxA{\includegraphics[width=0.45\textwidth]{#1}}
+  \sbox\IBoxB{\includegraphics[width=0.45\textwidth]{#4}}%
+  \ifdim\ht\IBoxA>\ht\IBoxB
+    \setlength\IHeight{\ht\IBoxB}\else\setlength\IHeight{\ht\IBoxA}\fi%
+  \begin{figure}[H]
+  \minipage[t]{0.45\textwidth}\centering
+  \includegraphics[height=\IHeight]{#1}
+  \caption{#2}\label{#3}
+  \endminipage\hfill
+  \minipage[t]{0.45\textwidth}\centering
+  \includegraphics[height=\IHeight]{#4}
+  \caption{#5}\label{#6}
+  \endminipage 
+  \end{figure}%
+}
+
 \usepackage{caption}
 \usepackage{acronym}
 \usepackage{multirow}
@@ -67,7 +87,7 @@
 %AFEGIU EN AQUESTA PART LES VOSTRES DADES
 \title{A bottom up sensor testbed}
 \author{Sergio Almendros Díaz}
-\thyear{2013}
+\thyear{2014}
 \department{Departament de Tecnologies de la Informació i les Comunicacions (DTIC)}
 \supervisor{Jaume Barceló}
 
@@ -354,6 +374,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     \subsection{LM35: Temperature}
       LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} we can see the way to connect it to the arduino.
+      \cite{LM35}
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.4]{./Figures/LM35.jpg}
@@ -392,6 +413,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
  
     \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
       This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} we can see the way to connect them to the arduino.
+      \cite{emarteeminisound}
       \begin{figure}[!htbp]
           \centering
               \includegraphics[scale=0.3]{./Figures/MiniSoundSensor.jpg}
@@ -422,6 +444,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The arduino and the humidity sensor will be connected as shown in the figure \ref{fig:HumiditySensordht22_bb}. 
       
       At the time I started the testbed, there was only 1 DHT22 sensor, so I had to use two DHT11 sensor, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
+      \cite{dht22sensor}
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.3]{./Figures/dht22.jpg}
@@ -533,21 +556,27 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \section{Arduino}
     
-    We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the message to opencities is too big. That is why we use a python script called by the arduino sketch.
+    We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why we use a python script called by the arduino sketch.
     
-    To get started with how the arduino YUN visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
+    To get started with how the arduino YUN works, visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
     
-    The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID, finally the python script have to create a GeoJSON and send it to opencities.
+    The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script have to create a GeoJSON and send it to opencities.
     
     A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that we use is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
     
     \subsection{Collect sensory data}
     
-      To collect almost all the data the skecth does not need to include any libray because it is read by the analog read, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
+      To collect almost all the data the skecth does not need to include any libray, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
       
       To read and write into the logData file we need the FileIO library\footnote{\url{http://arduino.cc/en/Reference/YunFileIOConstructor}}, and to call the python script we need the Process library\footnote{\url{http://arduino.cc/en/Reference/YunProcessConstructor}}.
       
-      \textbf{Code explanation}
+      This sketch is code in a very simple way, the setup function will initialize the Bridge library to communicate with the linux environment, the Serial library for debugging purposes, and the FileSystem to log the process, and the loop function. The loop will call three functions: readSensors, readFile, and executePythonScript.
+      
+      \begin{itemize}
+        \item {\bf readSensors:} It call 5 different functions to read every sensor, the goal of doing a separate function is to make the code more clear.
+        \item {\bf readFile:} This function log the process, saves the ID of the message, the sensor values, and a timestamp.
+        \item {\bf executePythonScript:} The script in python located in the SD card is in charge to create the GeoJSON with all the sensory data and upload it to opencities. This script is called by the arduino sketch.
+      \end{itemize}
       
       The figure \ref{fig:Arduino sketch Flow Chart} explain how the arduino sketch works.\\
       
@@ -561,7 +590,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \node (FileSystem) [process, below of=Serial] {Initialize FileSystem};
         \node (ReadSensors) [process, below of=FileSystem] {Read Sensors};
         \node (ReadFile) [process, below of=ReadSensors] {Read \& Write File};
-        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 1 minute};
+        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 48 seconds};
         \node (ExecutePython) [process, below of=ReadFile] {Execute Python Script};
         
         \draw [arrow] (bridge) -- (Serial);
@@ -686,11 +715,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \item DataBase: This is a singleton class where all the variables are stored, because is more easy to access from different clases.
       \end{itemize}
       
-      In the figure \ref{fig:ClassDiagram1} and {fig:ClassDiagram2} are the class diagram:
+      In the figure \ref{fig:ClassDiagram1} and \ref{fig:ClassDiagram2} are the class diagram:
       
       \begin{figure}[htbp]
         \centering
-        \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_1.pdf}
+          \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_1.pdf}
         \rule{35em}{0.5pt}
         \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
         \label{fig:ClassDiagram1}
@@ -698,7 +727,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       \begin{figure}[htbp]
         \centering
-        \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
+          \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
         \rule{35em}{0.5pt}
         \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
         \label{fig:ClassDiagram2}
@@ -850,12 +879,55 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     
     After a day of collecting data, we will get the arduino's back, take the three logData files, and show the data into some graphics.
-
+    
+    In the figure \ref{fig:Testbedmap} there are the nodes deployed, the location try to be a little bit different to get distinc values.
+    \begin{figure}[htbp]
+      \centering
+          \includegraphics[scale=0.2]{./Figures/Testbedmap.png}
+          \\
+          \rule{15em}{0.5pt}
+      \caption[Testbed Map]{Testbed Map.}
+      \label{fig:Testbedmap}
+    \end{figure}
+    
+    \subsection{Results}
+      In the next figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}, there are some graphics of the testbed. It can be seen that the node in Montgat, near the sea, the humidity is bigger, on the other hand, the noise is lower than the one in Glorias.
+      
+      This graphics had been done with an octave script that analyze the logData file in every sensor node.
+      
+      \TwoFig{./Figures/GraphicTemperature.png}{Graphic Temperature}{fg:GraphicTemperature}{./Figures/GraphicLight.png}{Graphic Light}{fg:GraphicLight}
+      
+      \TwoFig{./Figures/GraphicNoise.png}{Graphic Noise}{fg:GraphicNoise}{./Figures/GraphicHumidity.png}{Graphic Humidity}{fg:GraphicHumidity}
+      
+      \begin{figure}[htbp]
+        \centering
+            \includegraphics[scale=0.5]{./Figures/GraphicGas.png}
+            \\
+            \rule{15em}{0.5pt}
+        \caption[Graphic Air Quality]{Graphic Air Quality.}
+        \label{fig:GraphicGas}
+      \end{figure}
+    
 \chapter{Conclusions}
 \label{Chapter6}
+  
+  During this project we analyzed, developed, and deployed sensor nodes into an open network, the inicials goals of the pilot.
+  
+  It is clear, therefore, that to deploy a sensor network, like the one explained in the previous chapter, is necessary a bit of knowledge about sensors, arduino, and linux. 
+  
+  The testbed shows that the nodes worked perfectly, so, in terms of scalability, the problem could be in opencities or in the Android App. Opencities proved work perfectly, but the Android App came out with a problem, it downloads all the data from opencities, so it takes a little bit of time to be ready.
+  
+  In conclusion, the project satisfies the goals presented at the start, which are share sensory data on an open network, and let the users visualize it.
 
 \chapter{Future work}
 \label{Chapter7}
+  
+  This project have three ways of improvement:
+    \begin{enumerate}
+      \item {\bf Sensor node:} Make a final prototype trying to reduce the size to make it the smaller the better, and attach the power over ethernet module.
+      \item {\bf Opencities:} It is a platform that can improved in many ways, starting with the way to create a dataset, which can be confusing, to the presentation of the data.
+      \item {\bf Android App:} It showed some problems when there is a lot of data to download, so it should be improved to download only the data that is going to show. Also it could show the data of the whole day and let the user see the changes. 
+    \end{enumerate}
 
 \bibliography{bibliography}
 \cleardoublepage

@@ -25,17 +25,17 @@
 }
 
 @misc{SmartcityAmsterdam,
-    author = "Smart city in Amsterdam",
+    author = "http://amsterdamsmartcity.com/",
     title = "Smart city in Amsterdam",
-    year = "2013",
+    year = "2014",
     url = "http://amsterdamsmartcity.com/",
     note = "[Online; accessed 07/02/14]"
 }
 
 @misc{SmartcitySantander,
-    author = "Smart city in Santander",
+    author = "http://www.smartsantander.eu/",
     title = "Smart city in Santander",
-    year = "2013",
+    year = "2014",
     url = "http://www.smartsantander.eu/",
     note = "[Online; accessed 10/02/14]"
 }

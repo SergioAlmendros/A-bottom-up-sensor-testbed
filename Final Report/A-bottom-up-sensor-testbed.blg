@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: A-bottom-up-sensor-testbed.aux
 The style file: apalike.bst
 Database file #1: bibliography.bib
-You've used 3 entries,
+You've used 6 entries,
             1935 wiz_defined-function locations,
-            491 strings with 4104 characters,
-and the built_in function-call counts, 929 in all, are:
-= -- 96
-> -- 27
-< -- 3
-+ -- 8
-- -- 8
-* -- 69
-:= -- 175
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 19
-chr.to.int$ -- 3
-cite$ -- 3
-duplicate$ -- 34
-empty$ -- 63
-format.name$ -- 13
-if$ -- 174
+            503 strings with 4358 characters,
+and the built_in function-call counts, 1664 in all, are:
+= -- 174
+> -- 48
+< -- 6
++ -- 14
+- -- 14
+* -- 114
+:= -- 322
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 37
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 64
+empty$ -- 108
+format.name$ -- 22
+if$ -- 309
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 1
-newline$ -- 18
-num.names$ -- 9
-pop$ -- 10
+newline$ -- 33
+num.names$ -- 18
+pop$ -- 19
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 37
 quote$ -- 0
-skip$ -- 30
+skip$ -- 57
 stack$ -- 0
-substring$ -- 67
+substring$ -- 103
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 18
+type$ -- 36
 warning$ -- 0
-while$ -- 8
+while$ -- 14
 width$ -- 0
-write$ -- 39
+write$ -- 75
