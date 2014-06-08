@@ -500,6 +500,17 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \section{Guifi network}
     Guifi \footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be deployed, and the one providing the access to Opencities through the Internet.
     
+    Guifi is a network where the people that are interested put their effort in creating an infrastructure which provides acces to the Internet at a fair price.
+    
+    Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their networks is large enough to become a useful sensor network, as we can see in the figure \ref{fig:Guifimap}.
+    \begin{figure}[!htbp]
+      \centering
+          \includegraphics[scale=0.5]{./Figures/Guifimap.png}
+          \rule{25em}{0.5pt}
+      \caption[Guifi sensor map]{Guifi sensor map.}
+      \label{fig:Guifimap}
+    \end{figure}
+    
   \section{Opencities}  
     Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we have chosen, the strengths of opencities are:
     \begin{itemize}
@@ -507,6 +518,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \item Easy API to upload and download the data.
       \item The developers are in the UPF and problems can be solved more easily.
     \end{itemize}
+    
+    Opencities had a getting started tutorial, so at the end, the user will have a dataset where the data will be stored.
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand it.
@@ -774,7 +787,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \item We will give a unique name to the Yun, and the network we want to connect \ref{fig:YunWebConfig}.
           \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=0.3]{./Figures/YunWebDiagnostic.png}
+                \includegraphics[scale=0.3]{./Figures/YunWebConfig.png}
                 \\
                 \rule{15em}{0.5pt}
             \caption[Yun web Configuration]{Yun web Configuration.}
