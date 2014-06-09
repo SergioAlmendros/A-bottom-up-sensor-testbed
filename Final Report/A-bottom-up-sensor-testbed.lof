@@ -11,7 +11,7 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Libelium Waspmote}}{5}{figure.caption.6}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Libelium Smart Water}}{6}{figure.caption.7}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Arduino YUN}}{7}{figure.caption.8}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Arduino YUN Bridge}}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Arduino YUN Bridge}}{7}{figure.caption.9}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Raspberry Pi model B}}{8}{figure.caption.10}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Picoboard}}{9}{figure.caption.11}
 \addvspace {10\p@ }
@@ -23,7 +23,7 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Light Sensor Breadboard\relax }}{13}{figure.caption.14}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Mini Sound Sensor\relax }}{14}{figure.caption.15}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Analog noise sensor\relax }}{14}{figure.caption.15}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Noise Sensor Breadboard}}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Noise Sensor Breadboard}}{14}{figure.caption.16}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces DHT22 sensor\relax }}{15}{figure.caption.17}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces DHT22 Breadboard\relax }}{15}{figure.caption.17}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces DHT11 sensor\relax }}{16}{figure.caption.18}
@@ -32,7 +32,7 @@
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Gas Sensor Breadboard\relax }}{16}{figure.caption.19}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Sensor node Prototype with DHT22}}{17}{figure.caption.20}
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Sensor node Prototype with DHT11}}{18}{figure.caption.21}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Guifi sensor map}}{20}{figure.caption.22}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Guifi sensor map}}{19}{figure.caption.22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{23}{figure.caption.23}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{25}{figure.caption.24}
@@ -47,11 +47,11 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{32}{figure.caption.31}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{33}{figure.caption.32}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{34}{figure.caption.33}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{36}{figure.caption.34}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{35}{figure.caption.34}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Graphic Temperature\relax }}{36}{figure.caption.35}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Graphic Light\relax }}{36}{figure.caption.35}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{37}{figure.caption.36}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{37}{figure.caption.36}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{36}{figure.caption.36}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{36}{figure.caption.36}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Graphic Air Quality}}{37}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

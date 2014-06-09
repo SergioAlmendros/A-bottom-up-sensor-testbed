@@ -3,7 +3,14 @@
 \bibitem[Aosong Electronics~Co., 2013]{dht22sensor}
 Aosong Electronics~Co., L. (2013).
 \newblock Digital-output relative humidity \& temperature sensor/module dht22.
-\newblock [Online; accessed 6-April-2013].
+\newblock
+  \url{https://cdn.shopify.com/s/files/1/0045/8932/files/DHT22.pdf?100745},
+  [Online; accessed 10-February-2014].
+
+\bibitem[Arduino, 2014]{arduino}
+Arduino (2014).
+\newblock Arduino.
+\newblock \url{http://arduino.cc/}, [Online; accessed 8-January-2014].
 
 \bibitem[Chong and Kumar, 2003]{chong2003sensor}
 Chong, C.-Y. and Kumar, S.~P. (2003).
@@ -13,21 +20,29 @@ Chong, C.-Y. and Kumar, S.~P. (2003).
 \bibitem[Emartee, 2013]{emarteeminisound}
 Emartee (2013).
 \newblock Mini sound sensor - emartee.com.
-\newblock [Online; accessed 6-April-2013].
-
-\bibitem[http://amsterdamsmartcity.com/, 2014]{SmartcityAmsterdam}
-http://amsterdamsmartcity.com/ (2014).
-\newblock Smart city in amsterdam.
-\newblock [Online; accessed 07/02/14].
-
-\bibitem[http://www.smartsantander.eu/, 2014]{SmartcitySantander}
-http://www.smartsantander.eu/ (2014).
-\newblock Smart city in santander.
-\newblock [Online; accessed 10/02/14].
+\newblock
+  \url{http://www.emartee.com/product/42148/Mini%20Sound%20Sensor%20%20Arduino%20Compatible},
+  [Online; accessed 10-February-2014].
 
 \bibitem[Instruments, 2013]{LM35}
 Instruments, T. (2013).
 \newblock Lm35.
-\newblock [Online; accessed 10-February-2014].
+\newblock \url{www.ti.com/lit/ds/symlink/lm35.pdf}, [Online; accessed
+  8-January-2014].
+
+\bibitem[Opencities, 2014]{opencities}
+Opencities (2014).
+\newblock Opencities.
+\newblock \url{http://opendata.nets.upf.edu}, [Online; accessed March-2014].
+
+\bibitem[santander, 2014]{SmartcitySantander}
+santander, S. (2014).
+\newblock Smart city in santander.
+\newblock \url{http://www.smartsantander.eu/}, [Online; accessed 10/02/14].
+
+\bibitem[smart city, 2014]{SmartcityAmsterdam}
+smart city, A. (2014).
+\newblock Smart city in amsterdam.
+\newblock \url{http://amsterdamsmartcity.com/}, [Online; accessed 07/02/14].
 
 \end{thebibliography}

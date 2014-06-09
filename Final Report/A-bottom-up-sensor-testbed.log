@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  9 JUN 2014 12:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  9 JUN 2014 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,425 +788,421 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1
 
 
-] [2]
-Chapter 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 213.
-
-Underfull \vbox (badness 1803) has occurred while \output is active []
-
- [3
+] [2
 
 
 ]
-Overfull \hbox (93.10342pt too wide) in paragraph at lines 217--219
-\OT1/ptm/m/n/12 door park-ing area man-age-ment, or traf-fic in-ten-sity mon-i-
-tor-ing. [[]] 
- []
-
-<./Figures/smartcitizen.png, id=550, 2478.25874pt x 1368.11125pt>
+Chapter 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 213.
+[3] <./Figures/smartcitizen.png, id=548, 2478.25874pt x 1368.11125pt>
 File: ./Figures/smartcitizen.png Graphic file (type png)
 
 <use ./Figures/smartcitizen.png>
-Package pdftex.def Info: ./Figures/smartcitizen.png used on input line 228.
+Package pdftex.def Info: ./Figures/smartcitizen.png used on input line 229.
 (pdftex.def)             Requested size: 198.26474pt x 109.45113pt.
- [4 <./Figures/smartcitizen.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 238.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 239.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
 
-<./Figures/Libeliume_health.png, id=563, 326.21875pt x 247.92625pt>
+<./Figures/Libeliume_health.png, id=553, 326.21875pt x 247.92625pt>
 File: ./Figures/Libeliume_health.png Graphic file (type png)
 
 <use ./Figures/Libeliume_health.png>
-Package pdftex.def Info: ./Figures/Libeliume_health.png used on input line 241.
+Package pdftex.def Info: ./Figures/Libeliume_health.png used on input line 242.
 
 (pdftex.def)             Requested size: 130.48518pt x 99.16873pt.
-
-<./Figures/LibeliumWaspmote.png, id=565, 428.60126pt x 331.2375pt>
+ [4 <./Figures/smartcitizen.png>]
+<./Figures/LibeliumWaspmote.png, id=564, 428.60126pt x 331.2375pt>
 File: ./Figures/LibeliumWaspmote.png Graphic file (type png)
 
 <use ./Figures/LibeliumWaspmote.png>
-Package pdftex.def Info: ./Figures/LibeliumWaspmote.png used on input line 251.
+Package pdftex.def Info: ./Figures/LibeliumWaspmote.png used on input line 252.
 
 (pdftex.def)             Requested size: 128.58136pt x 99.37201pt.
 
-<./Figures/LibeliumSmartWater.png, id=567, 114.4275pt x 112.9821pt>
+<./Figures/LibeliumSmartWater.png, id=566, 114.4275pt x 112.9821pt>
 File: ./Figures/LibeliumSmartWater.png Graphic file (type png)
 
 <use ./Figures/LibeliumSmartWater.png>
 Package pdftex.def Info: ./Figures/LibeliumSmartWater.png used on input line 26
-1.
+2.
 (pdftex.def)             Requested size: 91.54211pt x 90.38579pt.
  [5 <./Figures/Libeliume_health.png (PNG copy)> <./Figures/LibeliumWaspmote.png
->] [6 <./Figures/LibeliumSmartWater.png>] <./Figures/ArduinoYunFront_2_450px.jp
-g, id=591, 451.6875pt x 301.125pt>
+>]
+<./Figures/ArduinoYunFront_2_450px.jpg, id=580, 451.6875pt x 301.125pt>
 File: ./Figures/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
 
 <use ./Figures/ArduinoYunFront_2_450px.jpg>
 Package pdftex.def Info: ./Figures/ArduinoYunFront_2_450px.jpg used on input li
-ne 288.
+ne 289.
 (pdftex.def)             Requested size: 180.67178pt x 120.44786pt.
-
-<./Figures/BridgeInShort.png, id=593, 652.4375pt x 362.35374pt>
+ [6 <./Figures/LibeliumSmartWater.png>] <./Figures/BridgeInShort.png, id=589, 6
+52.4375pt x 362.35374pt>
 File: ./Figures/BridgeInShort.png Graphic file (type png)
 
 <use ./Figures/BridgeInShort.png>
-Package pdftex.def Info: ./Figures/BridgeInShort.png used on input line 300.
+Package pdftex.def Info: ./Figures/BridgeInShort.png used on input line 301.
 (pdftex.def)             Requested size: 326.21794pt x 181.17642pt.
 
-<./Figures/raspberry-pi-model-b.jpg, id=597, 725.71124pt x 558.085pt>
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+ [7 <./Figures/ArduinoYunFront_2_450px.jpg> <./Figures/BridgeInShort.png>]
+<./Figures/raspberry-pi-model-b.jpg, id=598, 725.71124pt x 558.085pt>
 File: ./Figures/raspberry-pi-model-b.jpg Graphic file (type jpg)
 
 <use ./Figures/raspberry-pi-model-b.jpg>
 Package pdftex.def Info: ./Figures/raspberry-pi-model-b.jpg used on input line 
-313.
+314.
 (pdftex.def)             Requested size: 145.13968pt x 111.61502pt.
- [7 <./Figures/ArduinoYunFront_2_450px.jpg>] [8 <./Figures/BridgeInShort.png> <
-./Figures/raspberry-pi-model-b.jpg>]
-<./Figures/picoboard.jpg, id=613, 261.97874pt x 450.68375pt>
+
+<./Figures/picoboard.jpg, id=602, 261.97874pt x 450.68375pt>
 File: ./Figures/picoboard.jpg Graphic file (type jpg)
 
 <use ./Figures/picoboard.jpg>
-Package pdftex.def Info: ./Figures/picoboard.jpg used on input line 328.
+Package pdftex.def Info: ./Figures/picoboard.jpg used on input line 329.
 (pdftex.def)             Requested size: 130.98904pt x 225.34131pt.
- [9 <./Figures/picoboard.jpg>] [10
+ [8 <./Figures/raspberry-pi-model-b.jpg>] [9 <./Figures/picoboard.jpg>] [10
 
 
 ]
 Chapter 3.
 
 LaTeX Warning: Reference `fig:arduinoethernetpoe' on page 11 undefined on input
- line 348.
+ line 349.
 
-<./Figures/arduinoethernetpoe.jpg, id=623, 602.25pt x 602.25pt>
+<./Figures/arduinoethernetpoe.jpg, id=619, 602.25pt x 602.25pt>
 File: ./Figures/arduinoethernetpoe.jpg Graphic file (type jpg)
 
 <use ./Figures/arduinoethernetpoe.jpg>
-Package pdftex.def Info: ./Figures/arduinoethernetpoe.jpg used on input line 34
-9.
+Package pdftex.def Info: ./Figures/arduinoethernetpoe.jpg used on input line 35
+0.
 (pdftex.def)             Requested size: 175.49881pt x 175.50266pt.
 
-<./Figures/poe-rpi.jpg, id=624, 602.25pt x 453.695pt>
+<./Figures/poe-rpi.jpg, id=620, 602.25pt x 453.695pt>
 File: ./Figures/poe-rpi.jpg Graphic file (type jpg)
 
 <use ./Figures/poe-rpi.jpg>
-Package pdftex.def Info: ./Figures/poe-rpi.jpg used on input line 349.
+Package pdftex.def Info: ./Figures/poe-rpi.jpg used on input line 350.
 (pdftex.def)             Requested size: 175.49881pt x 132.21199pt.
 File: ./Figures/arduinoethernetpoe.jpg Graphic file (type jpg)
  <use ./Figures/arduinoethernetpoe.jpg>
-Package pdftex.def Info: ./Figures/arduinoethernetpoe.jpg used on input line 34
-9.
+Package pdftex.def Info: ./Figures/arduinoethernetpoe.jpg used on input line 35
+0.
 (pdftex.def)             Requested size: 132.21053pt x 132.21199pt.
 File: ./Figures/poe-rpi.jpg Graphic file (type jpg)
 
 <use ./Figures/poe-rpi.jpg>
-Package pdftex.def Info: ./Figures/poe-rpi.jpg used on input line 349.
+Package pdftex.def Info: ./Figures/poe-rpi.jpg used on input line 350.
 (pdftex.def)             Requested size: 175.50266pt x 132.21199pt.
+
+Underfull \vbox (badness 1527) has occurred while \output is active []
+
  [11]
-<./Figures/LM35.jpg, id=635, 240.9pt x 240.9pt>
+<./Figures/LM35.jpg, id=631, 240.9pt x 240.9pt>
 File: ./Figures/LM35.jpg Graphic file (type jpg)
  <use ./Figures/LM35.jpg>
-Package pdftex.def Info: ./Figures/LM35.jpg used on input line 363.
+Package pdftex.def Info: ./Figures/LM35.jpg used on input line 364.
 (pdftex.def)             Requested size: 175.49881pt x 175.50264pt.
 
-<./Figures/Fritzing/TemperatureSensor_bb.png, id=636, 209.583pt x 284.262pt>
+<./Figures/Fritzing/TemperatureSensor_bb.png, id=632, 209.583pt x 284.262pt>
 File: ./Figures/Fritzing/TemperatureSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/TemperatureSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/TemperatureSensor_bb.png used on in
-put line 363.
+put line 364.
 (pdftex.def)             Requested size: 175.49881pt x 238.03673pt.
 File: ./Figures/LM35.jpg Graphic file (type jpg)
  <use ./Figures/LM35.jpg>
-Package pdftex.def Info: ./Figures/LM35.jpg used on input line 363.
+Package pdftex.def Info: ./Figures/LM35.jpg used on input line 364.
 (pdftex.def)             Requested size: 175.50632pt x 175.50264pt.
 File: ./Figures/Fritzing/TemperatureSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/TemperatureSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/TemperatureSensor_bb.png used on in
-put line 363.
+put line 364.
 (pdftex.def)             Requested size: 129.39964pt x 175.50264pt.
 
-Underfull \hbox (badness 3240) in paragraph at lines 363--363
+Underfull \hbox (badness 3240) in paragraph at lines 364--364
 []\OT1/ptm/m/n/12 Figure 3.4: |Tem-per-a-ture Sen-sor
  []
 
-<./Figures/LDR.jpg, id=639, 361.35pt x 361.35pt>
+<./Figures/LDR.jpg, id=635, 361.35pt x 361.35pt>
 File: ./Figures/LDR.jpg Graphic file (type jpg)
  <use ./Figures/LDR.jpg>
-Package pdftex.def Info: ./Figures/LDR.jpg used on input line 367.
+Package pdftex.def Info: ./Figures/LDR.jpg used on input line 368.
 (pdftex.def)             Requested size: 175.49881pt x 175.49715pt.
 
-<./Figures/Fritzing/LightSensor_bb.png, id=640, 209.583pt x 334.851pt>
+<./Figures/Fritzing/LightSensor_bb.png, id=636, 209.583pt x 334.851pt>
 File: ./Figures/Fritzing/LightSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/LightSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/LightSensor_bb.png used on input li
-ne 367.
+ne 368.
 (pdftex.def)             Requested size: 175.49881pt x 280.3992pt.
 File: ./Figures/LDR.jpg Graphic file (type jpg)
  <use ./Figures/LDR.jpg>
-Package pdftex.def Info: ./Figures/LDR.jpg used on input line 367.
+Package pdftex.def Info: ./Figures/LDR.jpg used on input line 368.
 (pdftex.def)             Requested size: 175.49715pt x 175.49715pt.
 File: ./Figures/Fritzing/LightSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/LightSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/LightSensor_bb.png used on input li
-ne 367.
+ne 368.
 (pdftex.def)             Requested size: 109.84402pt x 175.49715pt.
 
-<./Figures/MiniSoundSensor.jpg, id=645, 376.40625pt x 369.63094pt>
+<./Figures/MiniSoundSensor.jpg, id=641, 376.40625pt x 369.63094pt>
 File: ./Figures/MiniSoundSensor.jpg Graphic file (type jpg)
 
 <use ./Figures/MiniSoundSensor.jpg>
-Package pdftex.def Info: ./Figures/MiniSoundSensor.jpg used on input line 372.
+Package pdftex.def Info: ./Figures/MiniSoundSensor.jpg used on input line 373.
 (pdftex.def)             Requested size: 175.49881pt x 172.34473pt.
 
-<./Figures/analognoisesensor.jpg, id=646, 501.875pt x 501.875pt>
+<./Figures/analognoisesensor.jpg, id=642, 501.875pt x 501.875pt>
 File: ./Figures/analognoisesensor.jpg Graphic file (type jpg)
 
 <use ./Figures/analognoisesensor.jpg>
-Package pdftex.def Info: ./Figures/analognoisesensor.jpg used on input line 372
+Package pdftex.def Info: ./Figures/analognoisesensor.jpg used on input line 373
 .
 (pdftex.def)             Requested size: 175.49881pt x 175.49806pt.
 File: ./Figures/MiniSoundSensor.jpg Graphic file (type jpg)
  <use ./Figures/MiniSoundSensor.jpg>
-Package pdftex.def Info: ./Figures/MiniSoundSensor.jpg used on input line 372.
+Package pdftex.def Info: ./Figures/MiniSoundSensor.jpg used on input line 373.
 (pdftex.def)             Requested size: 175.5038pt x 172.34473pt.
 File: ./Figures/analognoisesensor.jpg Graphic file (type jpg)
 
 <use ./Figures/analognoisesensor.jpg>
-Package pdftex.def Info: ./Figures/analognoisesensor.jpg used on input line 372
+Package pdftex.def Info: ./Figures/analognoisesensor.jpg used on input line 373
 .
 (pdftex.def)             Requested size: 172.34297pt x 172.34473pt.
 
-<./Figures/Fritzing/NoiseSensor_bb.png, id=647, 209.583pt x 280.247pt>
+<./Figures/Fritzing/NoiseSensor_bb.png, id=643, 209.583pt x 280.247pt>
 File: ./Figures/Fritzing/NoiseSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/NoiseSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/NoiseSensor_bb.png used on input li
-ne 375.
+ne 376.
 (pdftex.def)             Requested size: 167.66661pt x 224.19789pt.
  [12 <./Figures/arduinoethernetpoe.jpg> <./Figures/poe-rpi.jpg>] [13 <./Figures
 /LM35.jpg> <./Figures/Fritzing/TemperatureSensor_bb.png> <./Figures/LDR.jpg> <.
-/Figures/Fritzing/LightSensor_bb.png>] <./Figures/dht22.jpg, id=667, 188.20313p
-t x 188.20313pt>
+/Figures/Fritzing/LightSensor_bb.png>] [14 <./Figures/MiniSoundSensor.jpg> <./F
+igures/analognoisesensor.jpg> <./Figures/Fritzing/NoiseSensor_bb.png>]
+<./Figures/dht22.jpg, id=669, 188.20313pt x 188.20313pt>
 File: ./Figures/dht22.jpg Graphic file (type jpg)
 
 <use ./Figures/dht22.jpg>
-Package pdftex.def Info: ./Figures/dht22.jpg used on input line 388.
+Package pdftex.def Info: ./Figures/dht22.jpg used on input line 389.
 (pdftex.def)             Requested size: 175.49881pt x 175.5124pt.
 
-<./Figures//Fritzing/HumiditySensor_bb.png, id=668, 209.583pt x 312.367pt>
+<./Figures//Fritzing/HumiditySensor_bb.png, id=670, 209.583pt x 312.367pt>
 File: ./Figures//Fritzing/HumiditySensor_bb.png Graphic file (type png)
 
 <use ./Figures//Fritzing/HumiditySensor_bb.png>
 Package pdftex.def Info: ./Figures//Fritzing/HumiditySensor_bb.png used on inpu
-t line 388.
+t line 389.
 (pdftex.def)             Requested size: 175.49881pt x 261.57144pt.
 File: ./Figures/dht22.jpg Graphic file (type jpg)
  <use ./Figures/dht22.jpg>
-Package pdftex.def Info: ./Figures/dht22.jpg used on input line 388.
+Package pdftex.def Info: ./Figures/dht22.jpg used on input line 389.
 (pdftex.def)             Requested size: 175.5239pt x 175.5124pt.
 File: ./Figures//Fritzing/HumiditySensor_bb.png Graphic file (type png)
 
 <use ./Figures//Fritzing/HumiditySensor_bb.png>
 Package pdftex.def Info: ./Figures//Fritzing/HumiditySensor_bb.png used on inpu
-t line 388.
+t line 389.
 (pdftex.def)             Requested size: 117.76222pt x 175.5124pt.
 
-<./Figures/dht11.png, id=669, 803.0pt x 803.0pt>
+<./Figures/dht11.png, id=671, 803.0pt x 803.0pt>
 File: ./Figures/dht11.png Graphic file (type png)
  <use ./Figures/dht11.png>
-Package pdftex.def Info: ./Figures/dht11.png used on input line 389.
+Package pdftex.def Info: ./Figures/dht11.png used on input line 390.
 (pdftex.def)             Requested size: 175.49881pt x 175.49654pt.
 
-<./Figures/Fritzing/HumiditySensorDht11_bb.png, id=670, 298.716pt x 456.104pt>
+<./Figures/Fritzing/HumiditySensorDht11_bb.png, id=672, 298.716pt x 456.104pt>
 File: ./Figures/Fritzing/HumiditySensorDht11_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/HumiditySensorDht11_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/HumiditySensorDht11_bb.png used on 
-input line 389.
+input line 390.
 (pdftex.def)             Requested size: 175.49881pt x 267.97157pt.
 File: ./Figures/dht11.png Graphic file (type png)
  <use ./Figures/dht11.png>
-Package pdftex.def Info: ./Figures/dht11.png used on input line 389.
+Package pdftex.def Info: ./Figures/dht11.png used on input line 390.
 (pdftex.def)             Requested size: 175.49654pt x 175.49654pt.
 File: ./Figures/Fritzing/HumiditySensorDht11_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/HumiditySensorDht11_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/HumiditySensorDht11_bb.png used on 
-input line 389.
+input line 390.
 (pdftex.def)             Requested size: 114.93991pt x 175.49654pt.
 
-<./Figures/mq135.jpg, id=673, 602.25pt x 602.25pt>
+<./Figures/mq135.jpg, id=675, 602.25pt x 602.25pt>
 File: ./Figures/mq135.jpg Graphic file (type jpg)
  <use ./Figures/mq135.jpg>
-Package pdftex.def Info: ./Figures/mq135.jpg used on input line 393.
+Package pdftex.def Info: ./Figures/mq135.jpg used on input line 394.
 (pdftex.def)             Requested size: 175.49881pt x 175.50266pt.
 
-<./Figures/Fritzing/GasSensor_bb.png, id=674, 209.583pt x 280.247pt>
+<./Figures/Fritzing/GasSensor_bb.png, id=676, 209.583pt x 280.247pt>
 File: ./Figures/Fritzing/GasSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/GasSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/GasSensor_bb.png used on input line
- 393.
+ 394.
 (pdftex.def)             Requested size: 175.49881pt x 234.67464pt.
 File: ./Figures/mq135.jpg Graphic file (type jpg)
  <use ./Figures/mq135.jpg>
-Package pdftex.def Info: ./Figures/mq135.jpg used on input line 393.
+Package pdftex.def Info: ./Figures/mq135.jpg used on input line 394.
 (pdftex.def)             Requested size: 175.50266pt x 175.50266pt.
 File: ./Figures/Fritzing/GasSensor_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/GasSensor_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/GasSensor_bb.png used on input line
- 393.
+ 394.
 (pdftex.def)             Requested size: 131.25447pt x 175.50266pt.
 
-<./Figures/Fritzing/AllSensors22_bb.png, id=677, 483.406pt x 523.556pt>
+<./Figures/Fritzing/AllSensors22_bb.png, id=679, 483.406pt x 523.556pt>
 File: ./Figures/Fritzing/AllSensors22_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/AllSensors22_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/AllSensors22_bb.png used on input l
-ine 401.
+ine 402.
 (pdftex.def)             Requested size: 386.72533pt x 418.84537pt.
- [14 <./Figures/MiniSoundSensor.jpg> <./Figures/analognoisesensor.jpg>] [15 <./
-Figures/Fritzing/NoiseSensor_bb.png> <./Figures/dht22.jpg> <./Figures//Fritzing
-/HumiditySensor_bb.png>] [16 <./Figures/dht11.png> <./Figures/Fritzing/Humidity
-SensorDht11_bb.png> <./Figures/mq135.jpg> <./Figures/Fritzing/GasSensor_bb.png>
-]
-<./Figures/Fritzing/AllSensors11_bb.png, id=698, 483.406pt x 523.556pt>
+
+<./Figures/Fritzing/AllSensors11_bb.png, id=680, 483.406pt x 523.556pt>
 File: ./Figures/Fritzing/AllSensors11_bb.png Graphic file (type png)
 
 <use ./Figures/Fritzing/AllSensors11_bb.png>
 Package pdftex.def Info: ./Figures/Fritzing/AllSensors11_bb.png used on input l
-ine 409.
+ine 410.
 (pdftex.def)             Requested size: 386.72533pt x 418.84537pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17 <./Figures/Fritzing/AllSensors22_bb.png>] [18 <./Figures/Fritzing/AllSenso
-rs11_bb.png>] <./Figures/Guifimap.png, id=713, 671.50874pt x 543.02875pt>
+ [15 <./Figures/dht22.jpg> <./Figures//Fritzing/HumiditySensor_bb.png>] [16 <./
+Figures/dht11.png> <./Figures/Fritzing/HumiditySensorDht11_bb.png> <./Figures/m
+q135.jpg> <./Figures/Fritzing/GasSensor_bb.png>] [17 <./Figures/Fritzing/AllSen
+sors22_bb.png>] [18 <./Figures/Fritzing/AllSensors11_bb.png>]
+<./Figures/Guifimap.png, id=709, 671.50874pt x 543.02875pt>
 File: ./Figures/Guifimap.png Graphic file (type png)
 
 <use ./Figures/Guifimap.png>
-Package pdftex.def Info: ./Figures/Guifimap.png used on input line 426.
+Package pdftex.def Info: ./Figures/Guifimap.png used on input line 427.
 (pdftex.def)             Requested size: 335.75356pt x 271.5137pt.
- [19] [20 <./Figures/Guifimap.png>]
+ [19 <./Figures/Guifimap.png>] [20]
 Chapter 4.
 [21
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 497--499
+Overfull \hbox (30.0pt too wide) in paragraph at lines 498--500
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 506--506
 [][][][]$\OT1/pcr/m/n/10 http : / / opendata . nets . upf . edu / web / index .
  php / en /
  []
 
 [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 559--561
+Overfull \hbox (30.0pt too wide) in paragraph at lines 560--562
  [] 
  []
 
-<./Figures/App_Screenshot_3.png, id=764, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_3.png, id=759, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_3.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_3.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_3.png used on input line 573.
+Package pdftex.def Info: ./Figures/App_Screenshot_3.png used on input line 574.
 
 (pdftex.def)             Requested size: 108.41135pt x 192.7313pt.
 
-<./Figures/App_Screenshot_1.png, id=767, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_1.png, id=762, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_1.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_1.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 584.
+Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 585.
 
 (pdftex.def)             Requested size: 175.49881pt x 311.97533pt.
 
-<./Figures/App_Screenshot_2.png, id=768, 1084.05pt x 1927.2pt>
+<./Figures/App_Screenshot_2.png, id=763, 1084.05pt x 1927.2pt>
 File: ./Figures/App_Screenshot_2.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_2.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 584.
+Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 585.
 
 (pdftex.def)             Requested size: 175.49881pt x 311.97533pt.
 File: ./Figures/App_Screenshot_1.png Graphic file (type png)
  <use ./Figures/App_Screenshot_1.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 584.
+Package pdftex.def Info: ./Figures/App_Screenshot_1.png used on input line 585.
 
 (pdftex.def)             Requested size: 175.48611pt x 311.97533pt.
 File: ./Figures/App_Screenshot_2.png Graphic file (type png)
 
 <use ./Figures/App_Screenshot_2.png>
-Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 584.
+Package pdftex.def Info: ./Figures/App_Screenshot_2.png used on input line 585.
 
 (pdftex.def)             Requested size: 175.48611pt x 311.97533pt.
- [24] [25]
-<./AdditionalInformation/ClassDiagram1_1.pdf, id=785, page=1, 597.50786pt x 845
+
+Underfull \vbox (badness 2980) has occurred while \output is active []
+
+ [24]
+[25]
+<./AdditionalInformation/ClassDiagram1_1.pdf, id=779, page=1, 597.50786pt x 845
 .04686pt>
 File: ./AdditionalInformation/ClassDiagram1_1.pdf Graphic file (type pdf)
  <use ./AdditionalInformation/ClassDiagram1_1.pdf, page 1>
 Package pdftex.def Info: ./AdditionalInformation/ClassDiagram1_1.pdf, page1 use
-d on input line 601.
+d on input line 602.
 (pdftex.def)             Requested size: 478.00693pt x 676.0384pt.
 
-Overfull \hbox (88.00693pt too wide) in paragraph at lines 601--603
+Overfull \hbox (88.00693pt too wide) in paragraph at lines 602--604
  [][] 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 601--603
+Overfull \hbox (30.0pt too wide) in paragraph at lines 602--604
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 125.93857pt on input line 605.
+LaTeX Warning: Float too large for page by 123.03839pt on input line 606.
 
 
-<./AdditionalInformation/ClassDiagram1_2.pdf, id=786, page=1, 597.50786pt x 845
+<./AdditionalInformation/ClassDiagram1_2.pdf, id=780, page=1, 597.50786pt x 845
 .04686pt>
 File: ./AdditionalInformation/ClassDiagram1_2.pdf Graphic file (type pdf)
  <use ./AdditionalInformation/ClassDiagram1_2.pdf, page 1>
 Package pdftex.def Info: ./AdditionalInformation/ClassDiagram1_2.pdf, page1 use
-d on input line 609.
+d on input line 610.
 (pdftex.def)             Requested size: 478.00693pt x 676.0384pt.
 
-Overfull \hbox (88.00693pt too wide) in paragraph at lines 609--611
+Overfull \hbox (88.00693pt too wide) in paragraph at lines 610--612
  [][] 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 609--611
+Overfull \hbox (30.0pt too wide) in paragraph at lines 610--612
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 125.93857pt on input line 613.
+LaTeX Warning: Float too large for page by 123.03839pt on input line 614.
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 640--642
+Overfull \hbox (30.0pt too wide) in paragraph at lines 641--643
  [] 
  []
 
@@ -1214,116 +1210,119 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 640--642
 igures/App_Screenshot_2.png>] [28 <./AdditionalInformation/ClassDiagram1_1.pdf>
 ] [29 <./AdditionalInformation/ClassDiagram1_2.pdf>] [30]
 Chapter 5.
-<./Figures/TestBed_Prototype.JPG, id=820, 3854.4pt x 2168.1pt>
+<./Figures/TestBed_Prototype.JPG, id=814, 3854.4pt x 2168.1pt>
 File: ./Figures/TestBed_Prototype.JPG Graphic file (type jpg)
 
 <use ./Figures/TestBed_Prototype.JPG>
-Package pdftex.def Info: ./Figures/TestBed_Prototype.JPG used on input line 656
+Package pdftex.def Info: ./Figures/TestBed_Prototype.JPG used on input line 657
 .
 (pdftex.def)             Requested size: 385.46259pt x 216.8227pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 656--658
+Overfull \hbox (30.0pt too wide) in paragraph at lines 657--659
  [] 
  []
 
 
-Underfull \vbox (badness 3199) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31
 
 
  <./Figures/TestBed_Prototype.JPG>]
-Overfull \hbox (36.29596pt too wide) in paragraph at lines 675--676
+Overfull \hbox (36.29596pt too wide) in paragraph at lines 676--677
 []\OT1/ptm/m/n/12 The ar-duino will cre-ate his own WiFi net-work (ArduinoYun-X
 XXXXXXXXXXX),
  []
 
-<./Figures/YunWebPassword.png, id=830, 701.62125pt x 400.49625pt>
+<./Figures/YunWebPassword.png, id=824, 701.62125pt x 400.49625pt>
 File: ./Figures/YunWebPassword.png Graphic file (type png)
 
 <use ./Figures/YunWebPassword.png>
-Package pdftex.def Info: ./Figures/YunWebPassword.png used on input line 679.
+Package pdftex.def Info: ./Figures/YunWebPassword.png used on input line 680.
 (pdftex.def)             Requested size: 210.48799pt x 120.1498pt.
 
-<./Figures/YunWebDiagnostic.png, id=832, 567.11874pt x 548.0475pt>
+<./Figures/YunWebDiagnostic.png, id=826, 567.11874pt x 548.0475pt>
 File: ./Figures/YunWebDiagnostic.png Graphic file (type png)
 
 <use ./Figures/YunWebDiagnostic.png>
-Package pdftex.def Info: ./Figures/YunWebDiagnostic.png used on input line 688.
+Package pdftex.def Info: ./Figures/YunWebDiagnostic.png used on input line 689.
 
 (pdftex.def)             Requested size: 170.13693pt x 164.41551pt.
- [32 <./Figures/YunWebPassword.png>]
-<./Figures/YunWebConfig.png, id=845, 580.1675pt x 795.97375pt>
+
+<./Figures/YunWebConfig.png, id=828, 580.1675pt x 795.97375pt>
 File: ./Figures/YunWebConfig.png Graphic file (type png)
 
 <use ./Figures/YunWebConfig.png>
-Package pdftex.def Info: ./Figures/YunWebConfig.png used on input line 698.
+Package pdftex.def Info: ./Figures/YunWebConfig.png used on input line 699.
 (pdftex.def)             Requested size: 174.05157pt x 238.79396pt.
+ [32 <./Figures/YunWebPassword.png>]
+Underfull \vbox (badness 1681) has occurred while \output is active []
+
  [33 <./Figures/YunWebDiagnostic.png>] [34 <./Figures/YunWebConfig.png>]
-<./Figures/Testbedmap.png, id=862, 1035.87pt x 983.675pt>
+<./Figures/Testbedmap.png, id=856, 1035.87pt x 983.675pt>
 File: ./Figures/Testbedmap.png Graphic file (type png)
 
 <use ./Figures/Testbedmap.png>
-Package pdftex.def Info: ./Figures/Testbedmap.png used on input line 765.
+Package pdftex.def Info: ./Figures/Testbedmap.png used on input line 766.
 (pdftex.def)             Requested size: 207.17032pt x 196.7315pt.
-
+ [35 <./Figures/Testbedmap.png>]
 <./Figures/GraphicTemperature.png, id=868, 578.16pt x 433.62pt>
 File: ./Figures/GraphicTemperature.png Graphic file (type png)
 
 <use ./Figures/GraphicTemperature.png>
 Package pdftex.def Info: ./Figures/GraphicTemperature.png used on input line 77
-7.
+8.
 (pdftex.def)             Requested size: 175.49881pt x 131.62202pt.
 
 <./Figures/GraphicLight.png, id=869, 578.16pt x 433.62pt>
 File: ./Figures/GraphicLight.png Graphic file (type png)
 
 <use ./Figures/GraphicLight.png>
-Package pdftex.def Info: ./Figures/GraphicLight.png used on input line 777.
+Package pdftex.def Info: ./Figures/GraphicLight.png used on input line 778.
 (pdftex.def)             Requested size: 175.49881pt x 131.62202pt.
 File: ./Figures/GraphicTemperature.png Graphic file (type png)
  <use ./Figures/GraphicTemperature.png>
 Package pdftex.def Info: ./Figures/GraphicTemperature.png used on input line 77
-7.
+8.
 (pdftex.def)             Requested size: 175.49603pt x 131.62202pt.
 File: ./Figures/GraphicLight.png Graphic file (type png)
 
 <use ./Figures/GraphicLight.png>
-Package pdftex.def Info: ./Figures/GraphicLight.png used on input line 777.
+Package pdftex.def Info: ./Figures/GraphicLight.png used on input line 778.
 (pdftex.def)             Requested size: 175.49603pt x 131.62202pt.
 
 <./Figures/GraphicNoise.png, id=870, 578.16pt x 433.62pt>
 File: ./Figures/GraphicNoise.png Graphic file (type png)
 
 <use ./Figures/GraphicNoise.png>
-Package pdftex.def Info: ./Figures/GraphicNoise.png used on input line 779.
+Package pdftex.def Info: ./Figures/GraphicNoise.png used on input line 780.
 (pdftex.def)             Requested size: 175.49881pt x 131.62202pt.
 
 <./Figures/GraphicHumidity.png, id=871, 578.16pt x 433.62pt>
 File: ./Figures/GraphicHumidity.png Graphic file (type png)
 
 <use ./Figures/GraphicHumidity.png>
-Package pdftex.def Info: ./Figures/GraphicHumidity.png used on input line 779.
+Package pdftex.def Info: ./Figures/GraphicHumidity.png used on input line 780.
 (pdftex.def)             Requested size: 175.49881pt x 131.62202pt.
 File: ./Figures/GraphicNoise.png Graphic file (type png)
  <use ./Figures/GraphicNoise.png>
-Package pdftex.def Info: ./Figures/GraphicNoise.png used on input line 779.
+Package pdftex.def Info: ./Figures/GraphicNoise.png used on input line 780.
 (pdftex.def)             Requested size: 175.49603pt x 131.62202pt.
 File: ./Figures/GraphicHumidity.png Graphic file (type png)
 
 <use ./Figures/GraphicHumidity.png>
-Package pdftex.def Info: ./Figures/GraphicHumidity.png used on input line 779.
+Package pdftex.def Info: ./Figures/GraphicHumidity.png used on input line 780.
 (pdftex.def)             Requested size: 175.49603pt x 131.62202pt.
 
 <./Figures/GraphicGas.png, id=872, 578.16pt x 433.62pt>
 File: ./Figures/GraphicGas.png Graphic file (type png)
 
 <use ./Figures/GraphicGas.png>
-Package pdftex.def Info: ./Figures/GraphicGas.png used on input line 783.
+Package pdftex.def Info: ./Figures/GraphicGas.png used on input line 784.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
- [35] [36 <./Figures/Testbedmap.png> <./Figures/GraphicTemperature.png> <./Figu
-res/GraphicLight.png>] [37 <./Figures/GraphicNoise.png> <./Figures/GraphicHumid
-ity.png> <./Figures/GraphicGas.png>] [38
+ [36 <./Figures/GraphicTemperature.png> <./Figures/GraphicLight.png> <./Figures
+/GraphicNoise.png> <./Figures/GraphicHumidity.png>] [37 <./Figures/GraphicGas.p
+ng>] [38
 
 
 ]
@@ -1337,8 +1336,37 @@ Chapter 7.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
-[]\OT1/ptm/m/n/12 http://www.smartsantander.eu/ (2014).
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+[]\OT1/ptm/m/n/12 Aosong Elec-tron-ics Co., L. (2013).
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 4--9
+\OT1/ptm/m/n/12 Digital-output rel-a-tive hu-mid-ity & tem-per-a-ture sen-sor/m
+odule dht22.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+[]$\OT1/pcr/m/n/12 https : / / cdn . shopify . com / s / files / 1 / 0045 / 893
+2 / files /
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 21--26
+[]\OT1/ptm/m/n/12 Emartee (2013).  Mini sound sen-sor - emar-tee.com.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
+[]$\OT1/pcr/m/n/12 http : / / www . emartee . com / product / 42148 / Mini % 20
+Sound %
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 21--26
+\OT1/pcr/m/n/12 20Sensor % 20 % 20Arduino % 20Compatible$[]\OT1/ptm/m/n/12 , [O
+n-line; ac-cessed 10-
  []
 
 ) [43] [44
@@ -1349,17 +1377,17 @@ Chapter 8.
 (./Appendix/Pilot_Charter.tex [45
 
 
-] [46]) (./Appendix/Planning_Report.tex
+]) (./Appendix/Planning_Report.tex [46]
 [47]) [48] [49] [50
 
 
 ]
 No file A-bottom-up-sensor-testbed.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 829.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 829.
 (./A-bottom-up-sensor-testbed.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 829.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 829.
 Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: 2A2DF0C8191C3982D44603D131627861;4777.
@@ -1370,13 +1398,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 828.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 829.
  ) 
 Here is how much of TeX's memory you used:
- 19104 strings out of 493307
- 350610 string characters out of 6139906
- 433848 words of memory out of 5000000
- 21902 multiletter control sequences out of 15000+600000
+ 19106 strings out of 493307
+ 350631 string characters out of 6139906
+ 433893 words of memory out of 5000000
+ 21906 multiletter control sequences out of 15000+600000
  32808 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  63i,11n,63p,623b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1388,10 +1416,10 @@ nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 vr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (64 pages, 12876945 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (64 pages, 12877828 bytes).
 PDF statistics:
- 1028 PDF objects out of 1200 (max. 8388607)
- 885 compressed objects within 9 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 1035 PDF objects out of 1200 (max. 8388607)
+ 892 compressed objects within 9 object streams
+ 217 named destinations out of 1000 (max. 500000)
  791 words of extra memory for PDF output out of 10000 (max. 10000000)
 

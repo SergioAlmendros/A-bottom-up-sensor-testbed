@@ -9,21 +9,6 @@
   publisher={IEEE}
 }
 
-@misc{airquality,
-    author = "Chris Nafis",
-    title = "Monitoring your Air Quality",
-    year = "2012",
-    url = "http://www.howmuchsnow.com/arduino/airquality/",
-    note = "[Online; accessed 4-April-2013]"
-}
-
-@book{gertz2012environmental,
-  title={Environmental Monitoring with Arduino: Building Simple Devices to Collect Data about the World Around Us},
-  author={Gertz, Emily and Di Justo, Patrick},
-  year={2012},
-  publisher={Make}
-}
-
 @misc{SmartcityAmsterdam,
     author = "http://amsterdamsmartcity.com/",
     title = "Smart city in Amsterdam",
@@ -45,7 +30,7 @@
     title = "LM35",
     year = "2013",
     url = "www.ti.com/lit/ds/symlink/lm35.pdf‎",
-    note = "[Online; accessed 10-February-2014]"
+    note = "[Online; accessed 8-January-2014]"
 }
 
 @misc{dht22sensor,
@@ -53,29 +38,29 @@
     title = "Digital-output relative humidity \& temperature sensor/module DHT22",
     year = "2013",
     url = "https://cdn.shopify.com/s/files/1/0045/8932/files/DHT22.pdf?100745",
-    note = "[Online; accessed 6-April-2013]"
+    note = "[Online; accessed 10-February-2014]"
 }
 
 @misc{emarteeminisound,
     author = "Emartee",
     title = "Mini Sound Sensor - emartee.com",
     year = "2013",
-    url = "http://www.emartee.com/product/42148/Mini%20Sound%20Sensor%20%20Arduino%20Compatible",
-    note = "[Online; accessed 6-April-2013]"
+    note = "\url{http://www.emartee.com/product/42148/Mini%20Sound%20Sensor%20%20Arduino%20Compatible}, [Online; accessed 10-February-2014]"
 }
 
-@misc{sharp,
-    author = "Sharp",
-    title = "GP2Y1010AU0F Compact Optical Dust Sensor",
-    year = "2006",
-    url = "http://sharp-world.com/products/device/lineup/data/pdf/datasheet/gp2y1010au_e.pdf",
-    note = "[Online; accessed 6-April-2013]"
+@misc{arduino,
+    author = "Arduino",
+    title = "Arduino",
+    year = "2014",
+    note = "\url{http://arduino.cc/}, [Online; accessed 8-January-2014]"
 }
 
-
-
-
-
+@misc{opencities,
+    author = "Opencities",
+    title = "Opencities",
+    year = "2014",
+    note = "\url{http://opendata.nets.upf.edu}, [Online; accessed March-2014]"
+}
 
 
 
