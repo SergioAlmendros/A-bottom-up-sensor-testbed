@@ -218,7 +218,6 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       \cite{SmartcitySantander}
     
-    
   \section{Companies}
     There are some companies that are in the business of sensor networks.
     \subsection{Smartcitizen}
@@ -414,7 +413,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{figure}
     
   \section{Python}
-    Because of the low memory for the arduino sketches, we have to use a python script that will run in the linux, called by the arduino sketch, to communicate with opencities. The version of python in the arduino is the 4.2.5. 
+    A main part of the project is to upload the sensory data to opencities, and it has to be wrap into a GeoJSON message. The arduino sketch have a very low memory, so the best way to do this process is to use an external script stored in the SD card and make the sketch execute it. 
+    
+    One of the best option is a python script, because is really fast to code, it has all the libraries that we need, and, because this project could be update in the future, it is easy to read and understand.
     
   \section{Guifi network}
     Guifi \footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be deployed, and the one providing the access to Opencities through the Internet.
@@ -438,10 +439,12 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \item The developers are in the UPF and problems can be solved more easily.
     \end{itemize}
     
-    Opencities had a getting started tutorial, so at the end, the user will have a dataset where the data will be stored.
+    If someone else will want to do their own 
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand it.
+    
+    Nowadays everybody owns an smartphone, so the best way to make visible the sensor network is with a mobile application. There three options: Android, iOS, windows phone. Android and iOS had practically all the market, but Android has more than iOS, so Android is the right choice.
     
     This application it will be tested on a Sony Xperia Z1, with an Android 4.4.2.
 
