@@ -128,17 +128,13 @@
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
 
-Bottom up defines the network design, deployment, and operation initiatives driven by end user needs. Sensor testbed is a deployment of several sensors over a defined location.
-
-In this project we will develop a bottom up sensor testbed, which means a deployment of a sensor testbed driven by end user needs. The sensor nodes will consist of an Arduino YUN (Arduino is an open-source electronics prototyping platform) and 5 environmental sensors attach to it. 
-
-The arduino YUN is connected to Guifi, an open network built to everyone can join it providing his own connection.
-
-The arduino send the sensory data to opencities, a platform to browse, visualize, and download open data from different participants.
-
-Finally, an Android aplication shows the data from opencities.
-
-At the end of this thesis we made a real testbed with 3 nodes, it shows that the data is send correctly and without any interruption.
+  This project aims to deploy sensor node network into the guifi network, an open network created by its users, and the visualization of this data in an intuitive way that helps final users to understand the meaning of these data without any previous scientific knowledge.
+  
+  It is important for the citizens of any city to have a simple way to obtain information from their surroundings. This way you can act accordingly if the sensors detect harmful situations, such as, for example, not going to a park where the gas sensor detects a bad air quality.
+  
+  The deployment will be on a network with nodes power over ethernet (PoE), which is why we use a device that it could be PoE, this is the reason we do not worry about battery issues.
+   
+  From this poing, arduino Yun is the best choice to be the main component of the sensor node, and through a series of sensors attached to it and the Internet connection that provides guifi, the node can communicate with a storage platform of sensor data, in this case, opencities. Finally, an android application downloads the sensory data from the servers of opencities and display them on a map.
 
 
 \selectlanguage{catalan}
@@ -439,7 +435,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \item The developers are in the UPF and problems can be solved more easily.
     \end{itemize}
     
-    If someone else will want to do their own 
+    In opendata the sensor data will upload into a dataset. Every user can have one or more datasets, and to distinguish, the datasets have an unique ID, and every user have a unique API key. 
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand it.

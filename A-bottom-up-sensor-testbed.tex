@@ -1,5 +1,5 @@
 \documentclass[12pt, a4paper,twoside]{tesi_upf}
-\renewcommand{\baselinestretch}{1.1}
+
 \usepackage{pgfgantt}
 \usepackage{tikz}
 \usepackage{eurosym}
@@ -16,18 +16,40 @@
 
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-%CODIFICACI√ì
+%CODIFICACI”
 \usepackage[latin1]{inputenc}
 
 
 %IDIOMES
 \usepackage[catalan,english]{babel}
 
-%NOM√âS PER A OBTENIR INDICACI√ì DEL MARC EN MIDA A4
+%NOM…S PER A OBTENIR INDICACI” DEL MARC EN MIDA A4
 \usepackage[cam,a4,center,frame]{crop}
 
-%PER A INCLOURE GR√ÄFICS I EL LOGO DE LA UPF
+%PER A INCLOURE GR¿FICS I EL LOGO DE LA UPF
+%\usepackage{graphicx}
+
 \usepackage{graphicx}
+\newsavebox\IBoxA \newsavebox\IBoxB \newlength\IHeight
+\newcommand\TwoFig[6]{% Image1 Caption1 Label1 Image2 ...
+  \sbox\IBoxA{\includegraphics[width=0.45\textwidth]{#1}}
+  \sbox\IBoxB{\includegraphics[width=0.45\textwidth]{#4}}%
+  \ifdim\ht\IBoxA>\ht\IBoxB
+    \setlength\IHeight{\ht\IBoxB}\else\setlength\IHeight{\ht\IBoxA}\fi%
+  \begin{figure}[htbp]
+  \minipage[t]{0.45\textwidth}\centering
+  \includegraphics[height=\IHeight]{#1}
+  \rule{14em}{0.5pt}
+  \caption{#2}\label{#3}
+  \endminipage\hfill
+  \minipage[t]{0.45\textwidth}\centering
+  \includegraphics[height=\IHeight]{#4}
+  \rule{14em}{0.5pt}
+  \caption{#5}\label{#6}
+  \endminipage 
+  \end{figure}%
+}
+
 \usepackage{caption}
 \usepackage{acronym}
 \usepackage{multirow}
@@ -40,7 +62,7 @@
 %SENSE HEADINGS: NO MODIFICAR
 \pagestyle{plain}
 
-%PER A L'√çNDEX DE MAT√àRIES
+%PER A L'ÕNDEX DE MAT»RIES
 \usepackage{makeidx}
 \makeindex
 
@@ -48,10 +70,10 @@
 \bibliographystyle{apalike}
 
 
-%AQUEST DOCUMENT √âS EN CATAL√Ä
+%AQUEST DOCUMENT …S EN CATAL¿
 \selectlanguage{english}
 
-%EN COMPTES DE √çNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
+%EN COMPTES DE ÕNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
 \addto\captionscatalan
   {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
 
@@ -66,10 +88,10 @@
 
 %AFEGIU EN AQUESTA PART LES VOSTRES DADES
 \title{A bottom up sensor testbed}
-\author{Sergio Almendros D√≠az}
-\thyear{2013}
-\department{Departament de Tecnologies de la Informaci√≥ i les Comunicacions (DTIC)}
-\supervisor{Jaume Barcel√≥}
+\author{Sergio Almendros DÌaz}
+\thyear{2014}
+\department{Departament de Tecnologies de la InformaciÛ i les Comunicacions (DTIC)}
+\supervisor{Jaume BarcelÛ}
 
 
 \begin{document}
@@ -85,28 +107,38 @@
 \cleardoublepage
 
 
-%%%%%% Dedicat√≤ria; si no es vol posar, comenteu fins a final de dedicat√≤ria
+%%%%%% DedicatÚria; si no es vol posar, comenteu fins a final de dedicatÚria
 
-\noindent Dedicat√≤ria
+%\noindent DedicatÚria
 
-\cleardoublepage
+%\cleardoublepage
 
-%%%%%% Final de dedicat√≤ria
+%%%%%% Final de dedicatÚria
 
 
-%%%%%% Agra√Øments; si no es vol posar, comenteu fins a final de agra√Øments
+%%%%%% AgraÔments; si no es vol posar, comenteu fins a final de agraÔments
 \noindent {\Large \sffamily Acknowledgments}
-\\[12pt] 
- 
-Acknowledgments
+
 
 \cleardoublepage
 
-%%%%%% Final dels agra√Øments
+%%%%%% Final dels agraÔments
 
-%ABSTRACT EN DOS IDIOMES. COM A M√çNIM CATAL√Ä. SI L'ALTRE √âS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
+%ABSTRACT EN DOS IDIOMES. COM A MÕNIM CATAL¿. SI L'ALTRE …S EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
+
+Objetivo
+
+Este proyecto tiene como objetivo el despliegue de nodos de sensores por la red de guifi, una red abierta creada por sus usuarios, y la visualizacion de estos datos de una manera intuitiva que ayude a los usuarios finales a comprender el significado de Èstos sin tener conocimientos previos.
+
+Razon
+
+Es importante para los ciudadanos tener una manera sencilla de obtener informaciÛn del medioambiente de sus alrededores. De esta forma se podr· actuar en consecuencia si los sensores detectan situaciones perjudiciales, por ejemplo, que en un parque el sensor de gas detecte una mala calidad del aire.
+
+Como
+
+El despligue se har· sobre una red con nodos power over ethernet, por este motivo utilizamos un dispositivo que tambiÈn lo es, por esto no nos tenemos que preocupar por temas de bateria. A partir de aquÌ, arduino Yun es la mejor opciÛn para ser el componente principal del nodo sensor, y mediante una serie de sensores adjuntados a Èste y la conexiÛn a Internet que proporciona guifi, podemos comunicarnos con una plataforma de almacenamiento de datos de sensores, en Èste caso, opencities. Finalmente, una aplicaciÛn android descargar· los datos de los servidores de opencities y los mostrar· en un mapa.
 
 Bottom up defines the network design, deployment, and operation initiatives driven by end user needs. Sensor testbed is a deployment of several sensors over a defined location.
 
@@ -125,7 +157,7 @@ At the end of this thesis we made a real testbed with 3 nodes, it shows that the
 \vspace*{\fill}
 \section*{\Large \sffamily  Resum}
 
-Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
+Cuando el Abstract estÈ perfecto, lo traducirÈ al catalan.
 
 \vspace*{\fill}
 
@@ -140,22 +172,22 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
 %FINAL DE PREFACI
 
 
-%TAULA DE CONTINGUTS: OBLIGAT√íRIA
+%TAULA DE CONTINGUTS: OBLIGAT“RIA
 \selectlanguage{english}
 \tableofcontents
 
-%INDEX DE FIGURES; NOM√âS ES POSA SI HI HA FIGURES
+%INDEX DE FIGURES; NOM…S ES POSA SI HI HA FIGURES
 \listoffigures
 %Fa que aparegui al sumari
 \addcontentsline{toc}{chapter}{List of figures}
 
-%INDEX DE TAULES; NOM√âS ES POSA SI HI HA TAULES
+%INDEX DE TAULES; NOM…S ES POSA SI HI HA TAULES
 \listoftables
 %Fa que aparegui al sumari
 \addcontentsline{toc}{chapter}{List of tables}
 
 
-%COMEN√áA EL TEXT
+%COMEN«A EL TEXT
 \mainmatter
 \chapter{Introduction}
 \label{Chapter1}
@@ -167,7 +199,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
   Bottom-up\footnote{\url{http://bubforeurope.net}} is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to their guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users.
   This project is an easy way to understand the importance of sensor networks and how they can help us to know, for example, if there is low quality air in our city, and do something about it.
 
-  As sensor nodes we will use an Arduino\footnote{\url{http://arduino.cc/}} YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi\footnote{\url{http://guifi.net/}} nodes and send the sensory data to a sensor platform, like opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}}.
+  As sensor nodes we will use an Arduino\cite{arduino} YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi\footnote{\url{http://guifi.net/}} nodes and send the sensory data to a sensor platform, like opencities\cite{opencities}.
 
   The project will include an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
 
@@ -194,8 +226,9 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       Amsterdam have a lot of projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution \cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
-      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring \cite{SmartcitySantander}.
-    
+      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, or traffic intensity monitoring.
+      
+      \cite{SmartcitySantander}
     
   \section{Companies}
     There are some companies that are in the business of sensor networks.
@@ -204,7 +237,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       
       \begin{figure}[htbp]
         \centering
-            \includegraphics[scale=0.1]{./Figures/smartcitizen.png}
+            \includegraphics[scale=0.08]{./Figures/smartcitizen.png}
             \rule{18em}{0.5pt}
         \caption[Smart Citizen Node]{Smart Citizen Node.}
         \label{fig:SmartCitizenNode}
@@ -217,9 +250,9 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
         \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow, body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/eletromyography sensor. We can see the shield in the figure \ref{fig:Libeliumehealth}.
           \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=0.6]{./Figures/Libeliume_health.png}
+                \includegraphics[scale=0.4]{./Figures/Libeliume_health.png}
                 \\
-                \rule{18em}{0.5pt}
+                \rule{13em}{0.5pt}
             \caption[Libelium ehealth]{Libelium ehealth.}
             \label{fig:Libeliumehealth}
           \end{figure}
@@ -227,9 +260,9 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
         \item Waspmote: A sensor node where we can attach more than 60 sensors, solar powered, and though for adjust into street light posts. We can see the node in the figure \ref{fig:LibeliumWaspmote}.
           \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=0.5]{./Figures/LibeliumWaspmote.png}
+                \includegraphics[scale=0.3]{./Figures/LibeliumWaspmote.png}
                 \\
-                \rule{18em}{0.5pt}
+                \rule{13em}{0.5pt}
             \caption[Libelium Waspmote]{Libelium Waspmote.}
             \label{fig:LibeliumWaspmote}
          \end{figure}
@@ -237,9 +270,9 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
        \item Smart Water: Is a wireless sensor platform for water quality monitoring, it also provides real-time data. We can see the node in the figure \ref{fig:LibeliumSmartWater}.
         \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=1]{./Figures/LibeliumSmartWater.png}
+                \includegraphics[scale=0.8]{./Figures/LibeliumSmartWater.png}
                 \\
-                \rule{16em}{0.5pt}
+                \rule{13em}{0.5pt}
             \caption[Libelium Smart Water]{Libelium Smart Water.}
             \label{fig:LibeliumSmartWater}
          \end{figure}
@@ -249,7 +282,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
   \section{Opendata services}
     The sensor networks are useless if we don't store the data, although we could save it in the device, it would be too expensive to recollect it. That is why we are going to use an opendata service:
     \subsection{Opencities}
-       Opencities\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/}} is a platform to browse, visualize, and download open data from different participants. They offer free space in their server, which is perfect, a very simple API to upload and download data, and a web page to visualize the stored data.
+       Opencities\cite{opencities} is a platform to browse, visualize, and download open data from different participants. They offer free space in their server, which is perfect, a very simple API to upload and download data, and a web page to visualize the stored data.
        
     \subsection{Xively}
       Xively\footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basicaly it let you stored sensory data, download it, and visualize it in graphics.
@@ -264,20 +297,21 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       The Arduino YUN is a microcontroller board with two processors as we can see in the figure \ref{fig:AYUN}, an ATmega32u4 (Arduino), and an Atheros AR9331 (For a Linux distribution named OpenWrt-Yun). It also have a Ethernet and WiFi module, a USB-A port, a micro-SD card slot, 20 digital input/ouput ping, 16 MHz crystal oscillator, 16 MHz crystal oscillator, ICSP header, and 3 reset buttons.
       \begin{figure}[htbp]
         \centering
-            \includegraphics[scale=0.5]{./Figures/ArduinoYunFront_2_450px.jpg}
-            \rule{18em}{0.5pt}
+            \includegraphics[scale=0.4]{./Figures/ArduinoYunFront_2_450px.jpg}
+            \\
+            \rule{15em}{0.5pt}
         \caption[Arduino YUN]{Arduino YUN.}
         \label{fig:AYUN}
       \end{figure}
       
       The great thing about the arduino YUN is that the processor for the arduino sketches can communicate with the Linux processor through the bridge library, which allows you to write python scripts and execute them. In the figure \ref{fig:BridgeInShort} we can see it.
       
-      A powe over ethernet module (PoE) can be attach to the arduino, which is perfect for the guifi network, as their nodes are PoE.
+      A power over ethernet module (PoE) can be attach to the arduino, which is perfect for the guifi network, as their nodes are PoE.
       \begin{figure}[htbp]
           \centering
-              \includegraphics[scale=1]{./Figures/BridgeInShort.png}
+              \includegraphics[scale=0.5]{./Figures/BridgeInShort.png}
               \\
-              \rule{16em}{0.5pt}
+              \rule{23em}{0.5pt}
           \caption[Arduino YUN Bridge]{Arduino YUN Bridge.}
           \label{fig:BridgeInShort}
        \end{figure}
@@ -288,26 +322,26 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       It is very easy to attach sensors to it, and it supports Linux environment like raspbian. In the figure \ref{fig:RaspberryPiB} we can see the raspberry pi B.
       \begin{figure}[htbp]
           \centering
-              \includegraphics[scale=1]{./Figures/raspberry-pi-model-b-300x225.jpg}
+              \includegraphics[scale=0.2]{./Figures/raspberry-pi-model-b.jpg}
               \\
-              \rule{16em}{0.5pt}
+              \rule{15em}{0.5pt}
           \caption[Raspberry Pi model B]{Raspberry Pi model B.}
           \label{fig:RaspberryPiB}
        \end{figure}
     
     \subsection{Picoboard}
-      
-      \bf{Puede que cambie Picoboard por BeagleBone}
+    
+      {\bf Puede que cambie Picoboard por BeagleBone}
       
       PicoBoard\footnote{\url{http://www.picocricket.com/picoboard.html}} is a board to interact with the world, it can be programmed by Scratch projects. It is less flexible than the others, it is composed by a button, a light and sound sensor, a slider, and alligator clips which can be use to build custom sensors. We can see this board in the figure \ref{fig:picoboard}.
       
       \begin{figure}[htbp]
-        \centering
-            \includegraphics[scale=1]{./Figures/picoboard.jpg}
-            \\
-            \rule{16em}{0.5pt}
-        \caption[Picoboard]{Picoboard.}
-        \label{fig:picoboard}
+          \centering
+              \includegraphics[scale=0.5]{./Figures/picoboard.jpg}
+              \\
+              \rule{16em}{0.5pt}
+          \caption[Picoboard]{Picoboard.}
+          \label{fig:picoboard}
        \end{figure}
 
 \chapter{Technologies}
@@ -323,26 +357,11 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
     
     The two of them had a linux environment, but with the Yun, the normal way to interact is by an arduino sketch. So RPiB will consider that you have some linux knowledge, while the Yun is better for beginners, the arduino IDE provides a variety of programs that help us to start.
     
-    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as we can see in figure \ref{fig:poerpi}.
-    \begin{figure}[htbp]
-      \centering
-          \includegraphics[scale=1]{./Figures/arduinoethernetpoe.jpg}
-          \\
-          \rule{16em}{0.5pt}
-      \caption[Arduino Ethernet PoE]{Arduino Ethernet PoE.}
-      \label{fig:arduinoethernetpoe}
-    \end{figure}
-    \begin{figure}[htbp]
-      \centering
-          \includegraphics[scale=1]{./Figures/poe-rpi.jpg}
-          \\
-          \rule{16em}{0.5pt}
-      \caption[Raspberry Pi model B PoE]{Raspberry Pi model B PoE.}
-      \label{fig:poerpi}
-    \end{figure}
-    
-    We will use the Arduino Yun instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.
-    
+    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as we can see in figure \ref{fig:poerpi}.    
+    \TwoFig{./Figures/arduinoethernetpoe.jpg}{Arduino Ethernet PoE}{fig:GraphicTemperature}{./Figures/poe-rpi.jpg}{Raspberry Pi model B PoE}{fig:poerpi}
+
+    We will use the Arduino Yun instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.  
+
   \section{Sensors}
     A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an arduino.
     
@@ -352,66 +371,22 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
     
     \subsection{LM35: Temperature}
       LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} we can see the way to connect it to the arduino.
-
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.5]{./Figures/LM35.jpg}
-              \rule{25em}{0.5pt}
-          \caption[LM35 sensor]{LM35 temperature sensor.}
-          \label{fig:LM35}
-      \end{figure}
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/TemperatureSensor_bb.png}
-              \rule{25em}{0.5pt}
-          \caption[Temperature Sensor Breadboard]{Temperature Sensor Breadboard.}
-          \label{fig:TemperatureSensor_bb}
-      \end{figure}
+      \cite{LM35}
+      \TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
       
     \subsection{Light Dependent Resistor (LDR)}
       LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} we can see the way to connect it to the arduino.
-
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.3]{./Figures/LDR.jpg}
-              \rule{25em}{0.5pt}
-          \caption[LDR sensor]{photoresistor or light-dependent resistor.}
-          \label{fig:LDR}
-      \end{figure}
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/LightSensor_bb.png}
-              \rule{25em}{0.5pt}
-          \caption[Light Sensor Breadboard]{Light Sensor Breadboard.}
-          \label{fig:LightSensor_bb}
-      \end{figure}
+      \TwoFig{./Figures/LDR.jpg}{LDR sensor}{fig:LDR}{./Figures/Fritzing/LightSensor_bb.png}{Light Sensor Breadboard}{fig:LightSensor_bb}
  
     \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
       This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} we can see the way to connect them to the arduino.
-
-      \begin{figure}[!htbp]
+      \cite{emarteeminisound}
+      \TwoFig{./Figures/MiniSoundSensor.jpg}{Mini Sound Sensor}{fig:MSS}{./Figures/analognoisesensor.jpg}{Analog noise sensor}{fig:Analognoisesensor}      
+      \begin{figure}[htbp]
           \centering
-              \includegraphics[scale=0.5]{./Figures/MiniSoundSensor.jpg}
-              \rule{25em}{0.5pt}
-          \caption[Mini Sound Sensor]{Mini Sound Sensor.}
-          \label{fig:MSS}
-      \end{figure}
-      
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=0.5]{./Figures/analognoisesensor.jpg}
-              \rule{25em}{0.5pt}
-          \caption[Analog noise sensor]{Analog noise sensor.}
-          \label{fig:Analognoisesensor}
-      \end{figure}
-
-      
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/NoiseSensor_bb.png}
-              \rule{25em}{0.5pt}
+              \includegraphics[scale=0.8]{./Figures/Fritzing/NoiseSensor_bb.png}
+              \\
+              \rule{18em}{0.5pt}
           \caption[Noise Sensor Breadboard]{Noise Sensor Breadboard.}
           \label{fig:NoiseSensor_bb}
       \end{figure}
@@ -421,58 +396,13 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The arduino and the humidity sensor will be connected as shown in the figure \ref{fig:HumiditySensordht22_bb}. 
       
       At the time I started the testbed, there was only 1 DHT22 sensor, so I had to use two DHT11 sensor, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
-
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.5]{./Figures/dht22.jpg}
-              \rule{25em}{0.5pt}
-          \caption[DHT22 sensor]{DHT22 humidity and temperature sensor.}
-          \label{fig:DHT22}
-      \end{figure}
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.5]{./Figures/dht11.png}
-              \rule{25em}{0.5pt}
-          \caption[DHT11 sensor]{DHT11 humidity and temperature sensor.}
-          \label{fig:DHT11}
-      \end{figure}
-      
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensor_bb.png}
-              \rule{25em}{0.5pt}
-          \caption[Humidity Sensor DHT22 Breadboard]{Humidity Sensor DHT22 Breadboard.}
-          \label{fig:HumiditySensordht22_bb}
-      \end{figure}
-      
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/HumiditySensorDht11_bb.png}
-              \rule{25em}{0.5pt}
-          \caption[Humidity Sensor DHT11 Breadboard]{Humidity Sensor DHT11 Breadboard.}
-          \label{fig:HumiditySensordht11_bb}
-      \end{figure}
-      
+      \cite{dht22sensor}
+      \TwoFig{./Figures/dht22.jpg}{DHT22 sensor}{fig:DHT22}{./Figures//Fritzing/HumiditySensor_bb.png}{DHT22 Breadboard}{fig:HumiditySensordht22_bb}
+      \TwoFig{./Figures/dht11.png}{DHT11 sensor}{fig:DHT11}{./Figures/Fritzing/HumiditySensorDht11_bb.png}{DHT11 Breadboard}{fig:HumiditySensordht11_bb}      
       
     \subsection{MQ135: Gas sensor}
       This is a gas sensor [Figure \ref{fig:MQ135}], and we will use it to measure air quality. This sensor does not have a figure in fritzing, so I used a gas sensor that has the same output, and int the figure \ref{fig:GasSensor_bb} we can see how to connect it to the arduino.
-
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.3]{./Figures/mq135.jpg}
-              \rule{25em}{0.5pt}
-          \caption[MQ135]{MQ135 Air Quality sensor.}
-          \label{fig:MQ135}
-      \end{figure}
-      
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=1]{./Figures/Fritzing/GasSensor_bb.png}
-              \rule{25em}{0.5pt}
-          \caption[Gas Sensor Breadboard]{Gas Sensor Breadboard.}
-          \label{fig:GasSensor_bb}
-      \end{figure}
+      \TwoFig{./Figures/mq135.jpg}{MQ135 Air Quality sensor}{fig:MQ135}{./Figures/Fritzing/GasSensor_bb.png}{Gas Sensor Breadboard}{fig:GasSensor_bb}
       
     \subsection{BreadBoard with all the sensors}
       
@@ -495,21 +425,38 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       \end{figure}
     
   \section{Python}
-    Because of the low memory for the arduino sketches, we have to use a python script that will run in the linux, called by the arduino sketch, to communicate with opencities. The version of python in the arduino is the 4.2.5. 
+    A main part of the project is to upload the sensory data to opencities, and it has to be wrap into a GeoJSON message. The arduino sketch have a very low memory, so the best way to do this process is to use an external script stored in the SD card and make the sketch execute it. 
+    
+    One of the best option is a python script, because is really fast to code, it has all the libraries that we need, and, because this project could be update in the future, it is easy to read and understand.
     
   \section{Guifi network}
     Guifi \footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be deployed, and the one providing the access to Opencities through the Internet.
     
+    Guifi is a network where the people that are interested put their effort in creating an infrastructure which provides acces to the Internet at a fair price.
+    
+    Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their networks is large enough to become a useful sensor network, as we can see in the figure \ref{fig:Guifimap}.
+    \begin{figure}[htbp]
+      \centering
+          \includegraphics[scale=0.5]{./Figures/Guifimap.png}
+          \rule{25em}{0.5pt}
+      \caption[Guifi sensor map]{Guifi sensor map.}
+      \label{fig:Guifimap}
+    \end{figure}
+    
   \section{Opencities}  
-    Opencities\footnote{\url{http://opencities.upf.edu/web/index.php/en/}} is the opendata services that we have chosen, the strengths of opencities are:
+    Opencities\cite{opencities} is the opendata services that we have chosen, the strengths of opencities are:
     \begin{itemize}
       \item They give us free storage.
       \item Easy API to upload and download the data.
       \item The developers are in the UPF and problems can be solved more easily.
     \end{itemize}
     
+    In opendata the sensor data will upload into a dataset. Every user can have one or more datasets, and to distinguish, the datasets have an unique ID, and every user have a unique API key. 
+    
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensory data stored in opencities, and show it to the user in a way that anybody can understand it.
+    
+    Nowadays everybody owns an smartphone, so the best way to make visible the sensor network is with a mobile application. There three options: Android, iOS, windows phone. Android and iOS had practically all the market, but Android has more than iOS, so Android is the right choice.
     
     This application it will be tested on a Sony Xperia Z1, with an Android 4.4.2.
 
@@ -520,21 +467,25 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
   
   \section{Arduino}
     
-    We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the message to opencities is too big. That is why we use a python script called by the arduino sketch.
+    We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why we use a python script called by the arduino sketch.
     
-    To get started with how the arduino YUN visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
-    
-    The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID, finally the python script have to create a GeoJSON and send it to opencities.
+    The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script have to create a GeoJSON and send it to opencities.
     
     A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that we use is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
     
     \subsection{Collect sensory data}
     
-      To collect almost all the data the skecth does not need to include any libray because it is read by the analog read, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
+      To collect almost all the data the skecth does not need to include any libray, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
       
       To read and write into the logData file we need the FileIO library\footnote{\url{http://arduino.cc/en/Reference/YunFileIOConstructor}}, and to call the python script we need the Process library\footnote{\url{http://arduino.cc/en/Reference/YunProcessConstructor}}.
       
-      \textbf{Code explanation}
+      This sketch is code in a very simple way, the setup function will initialize the Bridge library to communicate with the linux environment, the Serial library for debugging purposes, and the FileSystem to log the process, and the loop function. The loop will call three functions: readSensors, readFile, and executePythonScript.
+      
+      \begin{itemize}
+        \item {\bf readSensors:} It call 5 different functions to read every sensor, the goal of doing a separate function is to make the code more clear.
+        \item {\bf readFile:} This function log the process, saves the ID of the message, the sensor values, and a timestamp.
+        \item {\bf executePythonScript:} The script in python located in the SD card is in charge to create the GeoJSON with all the sensory data and upload it to opencities. This script is called by the arduino sketch.
+      \end{itemize}
       
       The figure \ref{fig:Arduino sketch Flow Chart} explain how the arduino sketch works.\\
       
@@ -548,7 +499,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
         \node (FileSystem) [process, below of=Serial] {Initialize FileSystem};
         \node (ReadSensors) [process, below of=FileSystem] {Read Sensors};
         \node (ReadFile) [process, below of=ReadSensors] {Read \& Write File};
-        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 1 minute};
+        \node (delay) [process, right of=ReadFile, xshift=2cm] {Delay of 48 seconds};
         \node (ExecutePython) [process, below of=ReadFile] {Execute Python Script};
         
         \draw [arrow] (bridge) -- (Serial);
@@ -636,7 +587,8 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_3.png}
-              \rule{35em}{0.5pt}
+              \\
+              \rule{15em}{0.5pt}
           \caption[App Screenshot 3]{App Screenshot.}
           \label{fig:App_Screenshot_3}
       \end{figure}
@@ -645,22 +597,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
       If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
       In the figure \ref{fig:App_Screenshot_1} we can see the app with the Marker button checked, and in the figure \ref{fig:App_Screenshot_2} without.
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.1]{./Figures/App_Screenshot_1.png}
-              \rule{35em}{0.5pt}
-          \caption[App Screenshot 1]{App Screenshot.}
-          \label{fig:App_Screenshot_1}
-      \end{figure}
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.1]{./Figures/App_Screenshot_2.png}
-              \rule{35em}{0.5pt}
-          \caption[App Screenshot 2]{App Screenshot.}
-          \label{fig:App_Screenshot_2}
-      \end{figure}
+      \TwoFig{./Figures/App_Screenshot_1.png}{App Screenshot}{fig:App_Screenshot_1}{./Figures/App_Screenshot_2.png}{App Screenshot}{fig:App_Screenshot_2}
       
     \subsection{Code}
       First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
@@ -673,11 +610,11 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
         \item DataBase: This is a singleton class where all the variables are stored, because is more easy to access from different clases.
       \end{itemize}
       
-      In the figure \ref{fig:ClassDiagram1} and {fig:ClassDiagram2} are the class diagram:
+      In the figure \ref{fig:ClassDiagram1} and \ref{fig:ClassDiagram2} are the class diagram:
       
       \begin{figure}[htbp]
         \centering
-        \includegraphics[page=1,scale=0.65]{./AdditionalInformation/ClassDiagram1_1.pdf}
+          \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_1.pdf}
         \rule{35em}{0.5pt}
         \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
         \label{fig:ClassDiagram1}
@@ -685,7 +622,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
       
       \begin{figure}[htbp]
         \centering
-        \includegraphics[page=1,scale=0.65]{./AdditionalInformation/ClassDiagram1_2.pdf}
+          \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
         \rule{35em}{0.5pt}
         \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
         \label{fig:ClassDiagram2}
@@ -755,18 +692,18 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
         \item When we are connected to the YUN network, we go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. We have to put the password, which is ``arduino''. As we can see in the figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=0.5]{./Figures/YunWebPassword.png}
-                \rule{35em}{0.5pt}
+                \includegraphics[scale=0.3]{./Figures/YunWebPassword.png}
+                \rule{18em}{0.5pt}
             \caption[Yun web Password]{Yun web Password.}
             \label{fig:YunWebPassword}
           \end{figure}
         
         \item The next page will be an information page, click on the configure button \ref{fig:YunWebDiagnostic}.
-        
           \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=0.5]{./Figures/YunWebDiagnostic.png}
-                \rule{35em}{0.5pt}
+                \includegraphics[scale=0.3]{./Figures/YunWebDiagnostic.png}
+                \\
+                \rule{15em}{0.5pt}
             \caption[Yun web Diagnostic]{Yun web Diagnostic.}
             \label{fig:YunWebDiagnostic}
           \end{figure}
@@ -774,8 +711,9 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
         \item We will give a unique name to the Yun, and the network we want to connect \ref{fig:YunWebConfig}.
           \begin{figure}[htbp]
             \centering
-                \includegraphics[scale=0.5]{./Figures/YunWebDiagnostic.png}
-                \rule{35em}{0.5pt}
+                \includegraphics[scale=0.3]{./Figures/YunWebConfig.png}
+                \\
+                \rule{15em}{0.5pt}
             \caption[Yun web Configuration]{Yun web Configuration.}
             \label{fig:YunWebConfig}
           \end{figure}
@@ -837,13 +775,54 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
     
     After a day of collecting data, we will get the arduino's back, take the three logData files, and show the data into some graphics.
     
-    The figures \ref{} show the testbed I did.
-
+    In the figure \ref{fig:Testbedmap} there are the nodes deployed, the location try to be a little bit different to get distinc values.
+    \begin{figure}[htbp]
+      \centering
+          \includegraphics[scale=0.2]{./Figures/Testbedmap.png}
+          \\
+          \rule{15em}{0.5pt}
+      \caption[Testbed Map]{Testbed Map.}
+      \label{fig:Testbedmap}
+    \end{figure}
+    
+    \subsection{Results}
+      In the next figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}, there are some graphics of the testbed. It can be seen that the node in Montgat, near the sea, the humidity is bigger, on the other hand, the noise is lower than the one in Glorias.
+      
+      This graphics had been done with an octave script that analyze the logData file in every sensor node.
+      
+      \TwoFig{./Figures/GraphicTemperature.png}{Graphic Temperature}{fig:GraphicTemperature}{./Figures/GraphicLight.png}{Graphic Light}{fig:GraphicLight}
+      
+      \TwoFig{./Figures/GraphicNoise.png}{Graphic Noise}{fig:GraphicNoise}{./Figures/GraphicHumidity.png}{Graphic Humidity}{fig:GraphicHumidity}
+      
+      \begin{figure}[htbp]
+        \centering
+            \includegraphics[scale=0.5]{./Figures/GraphicGas.png}
+            \\
+            \rule{15em}{0.5pt}
+        \caption[Graphic Air Quality]{Graphic Air Quality.}
+        \label{fig:GraphicGas}
+      \end{figure}
+    
 \chapter{Conclusions}
 \label{Chapter6}
+  
+  During this project we analyzed, developed, and deployed sensor nodes into an open network, the inicials goals of the pilot.
+  
+  It is clear, therefore, that to deploy a sensor network, like the one explained in the previous chapter, is necessary a bit of knowledge about sensors, arduino, and linux. 
+  
+  The testbed shows that the nodes worked perfectly, so, in terms of scalability, the problem could be in opencities or in the Android App. Opencities proved work perfectly, but the Android App came out with a problem, it downloads all the data from opencities, so it takes a little bit of time to be ready.
+  
+  In conclusion, the project satisfies the goals presented at the start, which are share sensory data on an open network, and let the users visualize it.
 
 \chapter{Future work}
 \label{Chapter7}
+  
+  This project have three ways of improvement:
+    \begin{enumerate}
+      \item {\bf Sensor node:} Make a final prototype trying to reduce the size to make it the smaller the better, and attach the power over ethernet module.
+      \item {\bf Opencities:} It is a platform that can improved in many ways, starting with the way to create a dataset, which can be confusing, to the presentation of the data.
+      \item {\bf Android App:} It showed some problems when there is a lot of data to download, so it should be improved to download only the data that is going to show. Also it could show the data of the whole day and let the user see the changes. 
+    \end{enumerate}
 
 \bibliography{bibliography}
 \cleardoublepage
@@ -865,7 +844,7 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
 \end{document}
 
 
-%NUMERACI√ì DE LA P√ÄGINA EXTERIOR EXCEPTE EN LA PRIMERA P√ÄGINA DE CADA CAP√çTOL
+%NUMERACI” DE LA P¿GINA EXTERIOR EXCEPTE EN LA PRIMERA P¿GINA DE CADA CAPÕTOL
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyfoot{}
@@ -873,13 +852,13 @@ Cuando el Abstract est√© perfecto, lo traducir√© al catalan.
 \fancyfoot[LE]{\thepage}
 
 
-%MUTIPLES √çNDEX
-%En el pre√†mbul
+%MUTIPLES ÕNDEX
+%En el pre‡mbul
 \usepackage{multind}
 \makeindex{authors}
-%Introducci√≥ d'entrades la forma
+%IntroducciÛ d'entrades la forma
 \index{authors}{Einstein}
-%Situaci√≥ de l'√çndex
+%SituaciÛ de l'Õndex
 \printindex{authors}{Author index}
 %Cal eliminar les comandes \usepakage{makeidx} \makeindex \printindex
-%cal exacutar des de la l√≠nia de comandes makeindex authors
+%cal exacutar des de la lÌnia de comandes makeindex authors

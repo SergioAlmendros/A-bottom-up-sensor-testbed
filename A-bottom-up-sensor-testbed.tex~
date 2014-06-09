@@ -171,7 +171,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
   The project will include an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
 
-  In the following chapters I will explain the state of sensor networks nowadays (Chapter \ref{Chapter2}), which technologies we will use (Chapter \ref{Chapter3}), and how the project has been done (Chapter \ref{Chapter4}). 
+  In the following chapters it will be explain the state of sensor networks nowadays (Chapter \ref{Chapter2}), which technologies we will use (Chapter \ref{Chapter3}), and how the project has been done (Chapter \ref{Chapter4}). 
 
   Finally there will be the results (Chapter \ref{Chapter5}) of the testbed, and conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
   
