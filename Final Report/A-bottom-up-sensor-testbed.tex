@@ -36,13 +36,15 @@
   \sbox\IBoxB{\includegraphics[width=0.45\textwidth]{#4}}%
   \ifdim\ht\IBoxA>\ht\IBoxB
     \setlength\IHeight{\ht\IBoxB}\else\setlength\IHeight{\ht\IBoxA}\fi%
-  \begin{figure}[H]
+  \begin{figure}[htbp]
   \minipage[t]{0.45\textwidth}\centering
   \includegraphics[height=\IHeight]{#1}
+  \rule{14em}{0.5pt}
   \caption{#2}\label{#3}
   \endminipage\hfill
   \minipage[t]{0.45\textwidth}\centering
   \includegraphics[height=\IHeight]{#4}
+  \rule{14em}{0.5pt}
   \caption{#5}\label{#6}
   \endminipage 
   \end{figure}%
@@ -343,24 +345,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     The two of them had a linux environment, but with the Yun, the normal way to interact is by an arduino sketch. So RPiB will consider that you have some linux knowledge, while the Yun is better for beginners, the arduino IDE provides a variety of programs that help us to start.
     
-    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as we can see in figure \ref{fig:poerpi}.
-    \begin{figure}[htbp]
-      \centering
-          \includegraphics[scale=0.3]{./Figures/arduinoethernetpoe.jpg}
-          \\
-          \rule{15em}{0.5pt}
-      \caption[Arduino Ethernet PoE]{Arduino Ethernet PoE.}
-      \label{fig:arduinoethernetpoe}
-    \end{figure}
-    \begin{figure}[htbp]
-      \centering
-          \includegraphics[scale=0.3]{./Figures/poe-rpi.jpg}
-          \\
-          \rule{16em}{0.5pt}
-      \caption[Raspberry Pi model B PoE]{Raspberry Pi model B PoE.}
-      \label{fig:poerpi}
-    \end{figure}
-    
+    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as we can see in figure \ref{fig:poerpi}.    
+    \TwoFig{./Figures/arduinoethernetpoe.jpg}{Arduino Ethernet PoE}{fig:GraphicTemperature}{./Figures/poe-rpi.jpg}{Raspberry Pi model B PoE}{fig:poerpi}
+
     We will use the Arduino Yun instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.  
 
   \section{Sensors}
@@ -373,62 +360,17 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \subsection{LM35: Temperature}
       LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} we can see the way to connect it to the arduino.
       \cite{LM35}
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.4]{./Figures/LM35.jpg}
-              \\
-              \rule{16em}{0.5pt}
-          \caption[LM35 sensor]{LM35 temperature sensor.}
-          \label{fig:LM35}
-      \end{figure}
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.8]{./Figures/Fritzing/TemperatureSensor_bb.png}
-              \\
-              \rule{18em}{0.5pt}
-          \caption[Temperature Sensor Breadboard]{Temperature Sensor Breadboard.}
-          \label{fig:TemperatureSensor_bb}
-      \end{figure}
+      \TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
       
     \subsection{Light Dependent Resistor (LDR)}
       LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} we can see the way to connect it to the arduino.
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.2]{./Figures/LDR.jpg}
-              \\
-              \rule{20em}{0.5pt}
-          \caption[LDR sensor]{Photoresistor or light-dependent resistor.}
-          \label{fig:LDR}
-      \end{figure}
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.8]{./Figures/Fritzing/LightSensor_bb.png}
-              \\
-              \rule{18em}{0.5pt}
-          \caption[Light Sensor Breadboard]{Light Sensor Breadboard.}
-          \label{fig:LightSensor_bb}
-      \end{figure}
+      \TwoFig{./Figures/LDR.jpg}{LDR sensor}{fig:LDR}{./Figures/Fritzing/LightSensor_bb.png}{Light Sensor Breadboard}{fig:LightSensor_bb}
  
     \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
       This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} we can see the way to connect them to the arduino.
       \cite{emarteeminisound}
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=0.3]{./Figures/MiniSoundSensor.jpg}
-              \\
-              \rule{15em}{0.5pt}
-          \caption[Mini Sound Sensor]{Mini Sound Sensor.}
-          \label{fig:MSS}
-      \end{figure}
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=0.3]{./Figures/analognoisesensor.jpg}
-              \\
-              \rule{15em}{0.5pt}
-          \caption[Analog noise sensor]{Analog noise sensor.}
-          \label{fig:Analognoisesensor}
-      \end{figure}
-      \begin{figure}[!htbp]
+      \TwoFig{./Figures/MiniSoundSensor.jpg}{Mini Sound Sensor}{fig:MSS}{./Figures/analognoisesensor.jpg}{Analog noise sensor}{fig:Analognoisesensor}      
+      \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.8]{./Figures/Fritzing/NoiseSensor_bb.png}
               \\
@@ -443,57 +385,12 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       At the time I started the testbed, there was only 1 DHT22 sensor, so I had to use two DHT11 sensor, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
       \cite{dht22sensor}
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.3]{./Figures/dht22.jpg}
-              \\
-              \rule{15em}{0.5pt}
-          \caption[DHT22 sensor]{DHT22 sensor.}
-          \label{fig:DHT22}
-      \end{figure}
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.09]{./Figures/dht11.png}
-              \\
-              \rule{15em}{0.5pt}
-          \caption[DHT11 sensor]{DHT11 sensor.}
-          \label{fig:DHT11}
-      \end{figure}
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=0.8]{./Figures/Fritzing/HumiditySensor_bb.png}
-              \\
-              \rule{18em}{0.5pt}
-          \caption[Humidity Sensor DHT22 Breadboard]{DHT22 Breadboard.}
-          \label{fig:HumiditySensordht22_bb}
-      \end{figure}
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=0.8]{./Figures/Fritzing/HumiditySensorDht11_bb.png}
-              \rule{18em}{0.5pt}
-          \caption[DHT11 Breadboard]{Humidity Sensor DHT11 Breadboard.}
-          \label{fig:HumiditySensordht11_bb}
-      \end{figure}
-      
+      \TwoFig{./Figures/dht22.jpg}{DHT22 sensor}{fig:DHT22}{./Figures//Fritzing/HumiditySensor_bb.png}{DHT22 Breadboard}{fig:HumiditySensordht22_bb}
+      \TwoFig{./Figures/dht11.png}{DHT11 sensor}{fig:DHT11}{./Figures/Fritzing/HumiditySensorDht11_bb.png}{DHT11 Breadboard}{fig:HumiditySensordht11_bb}      
       
     \subsection{MQ135: Gas sensor}
       This is a gas sensor [Figure \ref{fig:MQ135}], and we will use it to measure air quality. This sensor does not have a figure in fritzing, so I used a gas sensor that has the same output, and int the figure \ref{fig:GasSensor_bb} we can see how to connect it to the arduino.
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.2]{./Figures/mq135.jpg}
-              \\
-              \rule{15em}{0.5pt}
-          \caption[MQ135]{MQ135 Air Quality sensor.}
-          \label{fig:MQ135}
-      \end{figure}
-      \begin{figure}[!htbp]
-          \centering
-              \includegraphics[scale=0.8]{./Figures/Fritzing/GasSensor_bb.png}
-              \\
-              \rule{18em}{0.5pt}
-          \caption[Gas Sensor Breadboard]{Gas Sensor Breadboard.}
-          \label{fig:GasSensor_bb}
-      \end{figure}
+      \TwoFig{./Figures/mq135.jpg}{MQ135 Air Quality sensor}{fig:MQ135}{./Figures/Fritzing/GasSensor_bb.png}{Gas Sensor Breadboard}{fig:GasSensor_bb}
       
     \subsection{BreadBoard with all the sensors}
       
@@ -524,7 +421,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     Guifi is a network where the people that are interested put their effort in creating an infrastructure which provides acces to the Internet at a fair price.
     
     Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their networks is large enough to become a useful sensor network, as we can see in the figure \ref{fig:Guifimap}.
-    \begin{figure}[!htbp]
+    \begin{figure}[htbp]
       \centering
           \includegraphics[scale=0.5]{./Figures/Guifimap.png}
           \rule{25em}{0.5pt}
@@ -555,8 +452,6 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \section{Arduino}
     
     We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why we use a python script called by the arduino sketch.
-    
-    To get started with how the arduino YUN works, visit this website\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}.
     
     The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script have to create a GeoJSON and send it to opencities.
     
@@ -676,7 +571,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \begin{figure}[htbp]
           \centering
               \includegraphics[scale=0.1]{./Figures/App_Screenshot_3.png}
-              \rule{35em}{0.5pt}
+              \\
+              \rule{15em}{0.5pt}
           \caption[App Screenshot 3]{App Screenshot.}
           \label{fig:App_Screenshot_3}
       \end{figure}
@@ -685,22 +581,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
       If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
       In the figure \ref{fig:App_Screenshot_1} we can see the app with the Marker button checked, and in the figure \ref{fig:App_Screenshot_2} without.
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.1]{./Figures/App_Screenshot_1.png}
-              \rule{35em}{0.5pt}
-          \caption[App Screenshot 1]{App Screenshot.}
-          \label{fig:App_Screenshot_1}
-      \end{figure}
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.1]{./Figures/App_Screenshot_2.png}
-              \rule{35em}{0.5pt}
-          \caption[App Screenshot 2]{App Screenshot.}
-          \label{fig:App_Screenshot_2}
-      \end{figure}
+      \TwoFig{./Figures/App_Screenshot_1.png}{App Screenshot}{fig:App_Screenshot_1}{./Figures/App_Screenshot_2.png}{App Screenshot}{fig:App_Screenshot_2}
       
     \subsection{Code}
       First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
@@ -893,9 +774,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       This graphics had been done with an octave script that analyze the logData file in every sensor node.
       
-      \TwoFig{./Figures/GraphicTemperature.png}{Graphic Temperature}{fg:GraphicTemperature}{./Figures/GraphicLight.png}{Graphic Light}{fg:GraphicLight}
+      \TwoFig{./Figures/GraphicTemperature.png}{Graphic Temperature}{fig:GraphicTemperature}{./Figures/GraphicLight.png}{Graphic Light}{fig:GraphicLight}
       
-      \TwoFig{./Figures/GraphicNoise.png}{Graphic Noise}{fg:GraphicNoise}{./Figures/GraphicHumidity.png}{Graphic Humidity}{fg:GraphicHumidity}
+      \TwoFig{./Figures/GraphicNoise.png}{Graphic Noise}{fig:GraphicNoise}{./Figures/GraphicHumidity.png}{Graphic Humidity}{fig:GraphicHumidity}
       
       \begin{figure}[htbp]
         \centering

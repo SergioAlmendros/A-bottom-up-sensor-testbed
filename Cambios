@@ -1,3 +1,18 @@
+3 Iteracion:
+  Creo que hay algunas cosas que mejorar. Empezamos por:
+  1) el abstract. En el abstract (y en la introducción a tu tesis) tiene que quedar claro: primero el OBJETIVO de tu tesis, segundo la RAZÓN porqué haces este trabajo (acabar el grado no es una razón valida :P), y tercero COMO consigues el objetivo (tecnologías, herramientas, investigación, ...).
+
+  2) Estilo general. No es importante la tecnología que utilizas, es importante el fin que quieres conseguir. Ejemplo concreto, el apartado "python". Lo que quieres conseguir es preparar y subir los datos, el medio por hacerlo es python. ¿Cual de las dos cosas es mas importante? La primera. Entonces tienes que explicar, "(a) queremos conseguir que..." "(b) lo hacemos así y así" "(c) la mejor manera/tecnología por hacerlo es... (por ejemplo python)" y despues tienes que motivar porque es mejor python (facilitad de prototipar código, flexibilidad, modulos, nosequé...)
+  ​Esto es algo general. Por ejemplo elijes opencities? ¿Por qué? La razón que pones tu es un poco "ridícula" (disculpa no sé que palabra mejor podría utilizar), o por los menos no puede ser la única y la mas importante. En este caso especifico habría que hacer una taula con los posibles servicios parecidos a opencities, con sus características (cual tiene que). Y después argumentas porque elijes opencities.
+
+  En este apartado de "estilo" añado un otro pequeño comentario: no puedes poner frases como "To get started with how the arduino YUN visit this website1" .... es una tesis de grau, los que leen tu tesis no están leyendo un blog con las instrucciónes para construir una plataforma con sensores.
+
+  Casi todas las notas que pones podrían ser tranquilamente referencias a bibliografia.
+
+  Siempre en estilo: las imágenes puedes compactarlas un poco. Puedes juntar la foto del sensor con la imagen del circuito en una única floating figure (hay demasiadas paginas de imágenes). --> HECHO
+
+  3) El ingles :P singular/plural, pasado/presente, terceras personas, ... es todo un poco mezclado. Yo -si quieres- puedo corregirlo pero lo hago sobre papel. Hay que arreglar primero todos estos errores (que dan una mala impresión) y después mejorar la fluidez.
+
 2 Iteracion:
  
   State of the art:

@@ -15,45 +15,45 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Raspberry Pi model B}}{8}{figure.caption.10}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Picoboard}}{9}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Arduino Ethernet PoE}}{12}{figure.caption.12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Raspberry Pi model B PoE}}{12}{figure.caption.13}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces LM35 sensor}}{13}{figure.caption.14}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Temperature Sensor Breadboard}}{14}{figure.caption.15}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces LDR sensor}}{14}{figure.caption.16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Light Sensor Breadboard}}{15}{figure.caption.17}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Mini Sound Sensor}}{16}{figure.caption.18}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Analog noise sensor}}{16}{figure.caption.19}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Noise Sensor Breadboard}}{17}{figure.caption.20}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces DHT22 sensor}}{17}{figure.caption.21}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces DHT11 sensor}}{17}{figure.caption.22}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Humidity Sensor DHT22 Breadboard}}{18}{figure.caption.23}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces DHT11 Breadboard}}{19}{figure.caption.24}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces MQ135}}{19}{figure.caption.25}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Gas Sensor Breadboard}}{20}{figure.caption.26}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Sensor node Prototype with DHT22}}{21}{figure.caption.27}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Sensor node Prototype with DHT11}}{22}{figure.caption.28}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Guifi sensor map}}{23}{figure.caption.29}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arduino Ethernet PoE\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Raspberry Pi model B PoE\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces LM35 sensor\relax }}{13}{figure.caption.13}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Temperature Sensor Breadboard\relax }}{13}{figure.caption.13}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces LDR sensor\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Light Sensor Breadboard\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Mini Sound Sensor\relax }}{14}{figure.caption.15}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Analog noise sensor\relax }}{14}{figure.caption.15}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Noise Sensor Breadboard}}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces DHT22 sensor\relax }}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces DHT22 Breadboard\relax }}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces DHT11 sensor\relax }}{16}{figure.caption.18}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces DHT11 Breadboard\relax }}{16}{figure.caption.18}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces MQ135 Air Quality sensor\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Gas Sensor Breadboard\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Sensor node Prototype with DHT22}}{17}{figure.caption.20}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Sensor node Prototype with DHT11}}{18}{figure.caption.21}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Guifi sensor map}}{20}{figure.caption.22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{27}{figure.caption.30}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{29}{figure.caption.31}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{30}{figure.caption.32}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot 1}}{31}{figure.caption.33}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot 2}}{31}{figure.caption.34}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 1}}{33}{figure.caption.35}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Class Diagram of the Android App part 2}}{34}{figure.caption.36}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Android App Flow Chart}}{35}{figure.caption.37}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arduino sketch Flow Chart}}{23}{figure.caption.23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Python Script Flow Chart}}{25}{figure.caption.24}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces App Screenshot 3}}{26}{figure.caption.25}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshot\relax }}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces App Screenshot\relax }}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 1}}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Class Diagram of the Android App part 2}}{29}{figure.caption.28}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Android App Flow Chart}}{30}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{37}{figure.caption.38}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{38}{figure.caption.39}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{39}{figure.caption.40}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{40}{figure.caption.41}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{42}{figure.caption.42}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Graphic Temperature\relax }}{42}{figure.caption.43}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Graphic Light\relax }}{42}{figure.caption.43}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{42}{figure.caption.44}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{42}{figure.caption.44}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Graphic Air Quality}}{43}{figure.caption.45}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{31}{figure.caption.30}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{33}{figure.caption.32}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{34}{figure.caption.33}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{36}{figure.caption.34}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Graphic Temperature\relax }}{36}{figure.caption.35}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Graphic Light\relax }}{36}{figure.caption.35}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{37}{figure.caption.36}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{37}{figure.caption.36}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Graphic Air Quality}}{37}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{55}{figure.caption.47}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{49}{figure.caption.39}
