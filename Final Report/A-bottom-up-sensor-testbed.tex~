@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper,twoside]{tesi_upf}
+\documentclass[12pt, b5paper,twoside]{tesi_upf}
 
 \usepackage{pgfgantt}
 \usepackage{tikz}
@@ -24,7 +24,7 @@
 \usepackage[catalan,english]{babel}
 
 %NOMÉS PER A OBTENIR INDICACIÓ DEL MARC EN MIDA A4
-\usepackage[cam,a4,center,frame]{crop}
+%\usepackage[cam,a4,center,frame]{crop}
 
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
 %\usepackage{graphicx}
