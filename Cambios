@@ -6,6 +6,7 @@
     - Sustituir 'sensory data' por 'sensor data'.
     - Añadir bibliografia en el indice.
     - Se puede usar el verbo 'code'.
+    - Mantener una conjugacion, la mejor, pasiva y presente.
   
   ABSTRACT:
     - Poner un objetivo mas general, tipo aumentar la conciencia de la gente sobre el medioambiente y ademas el que ya esta puesto, que seria el concreto.
@@ -40,6 +41,7 @@
   TESTBED
     - Explicar de forma generica todo el proyecto, con alguna imagen.
     - Easy_install VS Pip.
+    - 4.1 - Cambiar titulo por 'Arduino Development'
     - 4.1.2:
       * Poner solo los paquetes, y no las comandas.
       * Explicar el codigo
@@ -48,6 +50,7 @@
    
   TESTBED RESULTS
     - Cambiar el título.
+    - La parte del prototipo, si se puede se hace para la memoria, y sino para la presentacion.
     - Gráficas:
       * Labels más grandes.
       * Poner unidades.

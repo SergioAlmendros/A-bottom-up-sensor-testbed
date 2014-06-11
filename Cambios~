@@ -35,6 +35,7 @@
     - 3.6:
       * Mejorar la explicacion y poner que uso java.
       * Poner que he contemplado más opciones, como windows phone, y iOS, y que no los he cogido por que no tengo un mac, y porque hacerlo con html5 y phonegap era demasiado.
+      * Cambiar titulo por Mobile visualization platform.
   
   TESTBED
     - Explicar de forma generica todo el proyecto, con alguna imagen.
