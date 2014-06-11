@@ -1,0 +1,204 @@
+\documentclass[12pt, a4paper,twoside]{tesi_upf}
+\usepackage{pgfgantt}
+
+%CODIFICACIÓ
+\usepackage[latin1]{inputenc}
+
+
+%IDIOMES
+\usepackage[catalan,english]{babel}
+
+%NOMÉS PER A OBTENIR INDICACIÓ DEL MARC EN MIDA A4
+\usepackage[cam,a4,center,frame]{crop}
+
+%PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{acronym}
+\usepackage{multirow}
+%FONTS TIMES O GARAMOND, 
+\usepackage{times}
+%\usepackage{garamond}
+\usepackage{url}
+
+\usepackage{pdfpages}
+%SENSE HEADINGS: NO MODIFICAR
+\pagestyle{plain}
+
+%PER A L'ÍNDEX DE MATÈRIES
+\usepackage{makeidx}
+\makeindex
+
+%ESTIL DE BIBLIOGRAFIA
+\bibliographystyle{apalike}
+
+
+%AQUEST DOCUMENT ÉS EN CATALÀ
+\selectlanguage{english}
+
+%EN COMPTES DE ÍNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
+\addto\captionscatalan
+  {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
+
+
+%AFEGIU EN AQUESTA PART LES VOSTRES DADES
+\title{A bottom up sensor testbed}
+\author{Sergio Almendros Díaz}
+\thyear{2013}
+\department{Departament de Tecnologies de la Informació i les Comunicacions (DTIC)}
+\supervisor{Jaume Barceló}
+
+
+\begin{document}
+
+
+\frontmatter
+
+\maketitle
+
+\selectlanguage{english}
+
+
+%TAULA DE CONTINGUTS: OBLIGATÒRIA
+\tableofcontents
+
+%INDEX DE FIGURES; NOMÉS ES POSA SI HI HA FIGURES
+\listoffigures
+%Fa que aparegui al sumari
+\addcontentsline{toc}{chapter}{List of figures}
+
+%COMENÇA EL TEXT
+\mainmatter
+\chapter{Planning Report}
+
+The following sections explain the tasks that I will do in the course of this project.
+
+\section{Familiarization with the Arduino Yun}
+
+In this project I will be working with an arduino Yun, but I never worked before with any type of arduino, so the first task is to start coding different kind of programs. Then I will have to learn how to interact with the linux in the arduino Yun.
+
+\section{Small problem solution}
+
+I want to do an easy example to how to connect an arduino with a server running in my computer, what I want to do is establish a bridge between an arduino program and the linux within the arduino to be able to communicate with a server in my laptop, and send a string with the value returned by a sensor.
+This is a reduce problem of the real "bottom-up sensor testbed" because, at the end, in every arduino will be a program that will have to send a message to a server with the data of the sensors attached to it.
+
+\section{Collect Data from sensors}
+
+First I will connect a temperature sensor to the arduino YUN, then, I will develop a program to collect the information from it, and send it to a server.
+When the temperature sensor works, I will do the same process with a humidity, light, and noise sensor.
+
+\section{Install Sentilo}
+
+Sentilo (www.sentilo.io) is an open source sensor and actuator platform that I will install in my laptop to act as the server between the sensor network and the interface for the users to visualize the data. 
+
+\section{Communication with Sentilo}
+
+I will adapt the messages that the arduino send to fit with the Sentilo.
+
+\section{Real deployment}
+
+At this moment, the part of the arduino and the server will be done, so I will test the server installing the arduino in real nodes of the guifi network, for example, the node in the Universitat Pompeu Fabra, and any other node that allow me to install it. The arduino will have a temperature, humidity, light, and noise sensor.
+
+\section{Interface}
+
+I want to do an interface for any user to understand the meaning of the temperature, humidity, light, and noise values. This interface will be develop for an android mobile application.
+
+\section{Sentilo module}
+
+I will contribute to Sentilo and other sensor data brokerage platforms accommodating the sensor testbed deployed in the previous tasks.
+
+\section{Final report}
+
+This task have to be done in parallel with all the other ones, and its purpose is document all the work that I will do.
+
+\section{Gantt chart}
+
+\begin{figure}[ftbp]
+  \begin{center}
+
+    \begin{ganttchart}
+    [y unit title=0.4cm, 
+    y unit chart=0.5cm,
+    vgrid,hgrid,
+    title label anchor/.style={below=-1.6ex},
+    title left shift=.05,
+    title right shift=-.05,
+    title height=1,
+    bar/.style={fill=gray!50},
+    incomplete/.style={fill=white},
+    progress label text={},
+    bar height=0.7,
+    group right shift=0,
+    group top shift=.6,
+    group height=.3,
+    group peaks height={}{}{.2}]{1}{21}
+    %labels
+    \gantttitle{2014}{21} \\
+    \gantttitle{January}{3} 
+    \gantttitle{February}{3} 
+    \gantttitle{March}{3} 
+    \gantttitle{April}{3} 
+    \gantttitle{May}{3} 
+    \gantttitle{June}{3}
+    \gantttitle{July}{3} \\
+    %tasks
+    \ganttbar{First task}{1}{1} \\
+    \ganttbar{Task 2}{2}{2} \\
+    \ganttbar{Task 3}{3}{3} \\
+    \ganttbar{Task 4}{4}{4} \\
+    \ganttbar{task 5}{5}{5} \\
+    \ganttbar{Task 6}{6}{8} \\
+    \ganttbar{Task 7}{9}{14} \\
+    \ganttbar{task 8}{15}{18} \\
+    \ganttbar{task 9}{2}{20}
+
+    %relations 
+    \ganttlink{elem0}{elem1} 
+    \ganttlink{elem1}{elem2} 
+    \ganttlink{elem2}{elem3} 
+    \ganttlink{elem3}{elem4} 
+    \ganttlink{elem4}{elem5} 
+    \ganttlink{elem5}{elem6} 
+    \ganttlink{elem6}{elem7}  
+   \end{ganttchart}
+  \end{center}
+\caption{Gantt Chart}
+\end{figure}
+
+
+
+
+
+\bibliography{bibliography}
+\cleardoublepage
+
+
+
+\backmatter
+\printindex
+
+
+
+
+
+\end{document}
+
+
+%NUMERACIÓ DE LA PÀGINA EXTERIOR EXCEPTE EN LA PRIMERA PÀGINA DE CADA CAPÍTOL
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+
+
+%MUTIPLES ÍNDEX
+%En el preàmbul
+\usepackage{multind}
+\makeindex{authors}
+%Introducció d'entrades la forma
+\index{authors}{Einstein}
+%Situació de l'Índex
+\printindex{authors}{Author index}
+%Cal eliminar les comandes \usepakage{makeidx} \makeindex \printindex
+%cal exacutar des de la línia de comandes makeindex authors

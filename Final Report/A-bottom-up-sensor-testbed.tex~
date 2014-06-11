@@ -1,4 +1,4 @@
-\documentclass[12pt, b5paper,twoside]{tesi_upf}
+\documentclass[12pt, a4paper,twoside]{tesi_upf}
 
 \usepackage{pgfgantt}
 \usepackage{tikz}

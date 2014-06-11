@@ -4,8 +4,8 @@
 
 
 #define DHTPIN 2 // The DHT sensor has to be in the digital pin 2 
-#define DHTTYPE DHT22 //DHT 22
-String ARDUINO_YUN_UNIQUE_ID = "3"; //ID 1: Ferran, ID 2: Sergio, ID 3: Uni
+#define DHTTYPE DHT11 //DHT 22
+String ARDUINO_YUN_UNIQUE_ID = "2";
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -167,7 +167,85 @@ void readFile(){
     dataFileWriteIDN.close();
    
   }
-  Serial.println(result);
+  
+  /*
+  Serial.println("1");
+//  If the logData file does not exist, it creates one.    
+    if( !FileSystem.exists("/mnt/sda1/arduino/www/logData") ){
+      File dataFileWrite = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_WRITE);
+      dataFileWrite.close();
+      //delete(&dataFileWrite);
+    }
+      Serial.println("2");
+//  It opens the logData file to read it.
+    File dataFileRead = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_READ);
+    
+    output = "";
+    ID = 1;
+    result = "";
+  Serial.println("3");
+    if( !dataFileRead.available() ){
+      //Serial.println("empty file");
+//    If the logData file is empty, it starts with an id equal to 1, and creates a String which contains the id and the values from the sensors.
+      result = String(ID) + " " + STemperatureSensor + " " + SHumiditySensor + " " + SNoiseSensor + " " + SLightSensor + " " + SGasSensor;
+      Serial.println("3.1");
+    }else{
+      //Serial.println("not empty file");
+//    If the logData file is not empty, it stores all the file in the output variable.
+Serial.println("3.2");
+      while(dataFileRead.available()){
+          output += (char)dataFileRead.read(); 
+          //Serial.print("  ");
+          //Serial.println(output);
+      }
+Serial.println("3.3");
+//    This peace of code is to obtein the last write line.
+      lastline = "";
+      for( int i=output.length()-2; i>=0; --i ){
+        
+        if( output[i] == '\n' )
+          break;
+        lastline += output[i];      
+      }
+     Serial.println("3.4"); 
+//    This is to get the last ID.
+      sid = "";
+      for( int i=lastline.length()-1; i>=0; --i ){
+        
+        if( lastline[i] == ' ' )
+          break;
+        sid += lastline[i];      
+      }
+      ID = atoi(sid.c_str());
+      Serial.print(ID);
+      Serial.print(" - ");
+      ID += 1;
+      Serial.println(ID);
+//    This is the same string as in the first if, but with a new ID
+      result = String(ID) + " " + STemperatureSensor + " " + SHumiditySensor + " " + SNoiseSensor + " " + SLightSensor + " " + SGasSensor;
+    }
+      Serial.println("4");
+    dataFileRead.close();
+    //delete(&dataFileRead);
+
+//  Now it writes down the new entrance in the logData file.
+    File dataFileAppend = FileSystem.open("/mnt/sda1/arduino/www/logData", FILE_APPEND);
+  Serial.println("5");
+//  If the file is available, write to it:
+    if (dataFileAppend) {
+      dataFileAppend.print(result);
+      dataFileAppend.print("\n");
+      dataFileAppend.close();
+      //Serial.println(result);
+    }  
+//  If the file isn not open, it will show an error:
+    else {
+      Serial.println("error opening logData");
+    }
+      Serial.println("6");
+    //delete(&dataFileAppend);
+    
+    */
 }
 
 void executePythonScript(){
