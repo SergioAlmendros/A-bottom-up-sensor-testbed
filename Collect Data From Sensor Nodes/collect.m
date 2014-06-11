@@ -65,8 +65,8 @@ function collect()
   plot(1:61,temp2,'b');
   plot(1:61,temp3,'g');
   hold off
-  xlabel( 'Temperature' );
-  ylabel( 'Time' );
+  ylabel( 'Temperature' );
+  xlabel( 'Time' );
   title( "Temperature" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   saveas (1, "../Final\ Report/Figures/GraphicTemperature.png");
@@ -77,8 +77,8 @@ function collect()
   plot(1:61,hum2,'b');
   plot(1:61,hum3,'g');
   hold off
-  xlabel( 'Humidity' );
-  ylabel( 'Time' );
+  ylabel( 'Humidity' );
+  xlabel( 'Time' );
   title( "Humidity" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   saveas (2, "../Final\ Report/Figures/GraphicHumidity.png");
@@ -89,8 +89,8 @@ function collect()
   plot(1:61,noise2,'b');
   plot(1:61,noise3,'g');
   hold off
-  xlabel( 'Noise' );
-  ylabel( 'Time' );
+  ylabel( 'Noise' );
+  xlabel( 'Time' );
   title( "Noise" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   saveas (3, "../Final\ Report/Figures/GraphicNoise.png");
@@ -101,8 +101,8 @@ function collect()
   plot(1:61,light2,'b');
   plot(1:61,light3,'g');
   hold off
-  xlabel( 'Light' );
-  ylabel( 'Time' );
+  ylabel( 'Light' );
+  xlabel( 'Time' );
   title( "Light" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   saveas (4, "../Final\ Report/Figures/GraphicLight.png");
@@ -113,8 +113,8 @@ function collect()
   plot(1:61,gas2,'b');
   plot(1:61,gas3,'g');
   hold off
-  xlabel( 'Gas presence' );
-  ylabel( 'Time' );
+  ylabel( 'Gas presence' );
+  xlabel( 'Time' );
   title( "Air quality" );
   legend('Arduino 1', 'Arduino 2', 'Arduino 3')
   saveas (5, "../Final\ Report/Figures/GraphicGas.png");
