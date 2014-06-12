@@ -179,20 +179,23 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Introduction}
 \label{Chapter1}
 
-  The development of this project involves two parts, collect sensor data and show it.
+  The development of this project has been divided into three phases: collect data from environmental sensors, display it to end users in an intuitive way, and make a testbed to demonstrate if it had a good or bad performance.
+  
+  As a sensor node has been used an Arduino\cite{arduino} YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi\footnote{\url{http://guifi.net/}} nodes and send the sensor data to a sensor platform, like opencities\cite{opencities}.
 
-  A sensor testbed is a sensor network that has the goal to gather sensor data, and test the technologies used as nodes to see if they are the best option.
+  The Bottom-up\footnote{\url{http://bubforeurope.net}} pattern has been used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to their guifi nodes to create the sensor network. With the bottom-up model, the data is being provide and use by the end users.
 
-  Bottom-up\footnote{\url{http://bubforeurope.net}} is, basically, the pattern that we used to build the sensor testbed, where the end users, in this case, guifi.net users, are the ones who have to assemble the sensor nodes and attached them to their guifi nodes to create the sensor network. With the bottom-up model, the data is provide and use by the end users.
-  This project is an easy way to understand the importance of sensor networks and how they can help us to know, for example, if there is low quality air in our city, and do something about it.
+  In this project a Android application has been made to visualize the sensor data and make it more accessible to the end users.
+  
+  A sensor testbed has been made to gather sensor data, and test the technologies used as nodes to see if they are the best option.
+  
+  This project is an easy way to understand the importance of sensor networks and how they can help us to take conscience about our environment.
 
-  As sensor nodes we will use an Arduino\cite{arduino} YUN, which allows the user to obtain analog reads from a sensor very easily and, with a Power over Ethernet module, it can be attached to guifi\footnote{\url{http://guifi.net/}} nodes and send the sensor data to a sensor platform, like opencities\cite{opencities}.
+  In the following chapters it has been explained the state of sensor networks nowadays (Chapter \ref{Chapter2}), which technologies had been used (Chapter \ref{Chapter3}), and how the project had been done (Chapter \ref{Chapter4}). 
 
-  The project will include an Android application to visualize this data and make it more accessible to other users not involved with guifi.net.
-
-  In the following chapters it will be explain the state of sensor networks nowadays (Chapter \ref{Chapter2}), which technologies we will use (Chapter \ref{Chapter3}), and how the project has been done (Chapter \ref{Chapter4}). 
-
-  Finally there will be the results (Chapter \ref{Chapter5}) of the testbed, and conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
+  There has been a testbed deployed and some data analysis (Chapter \ref{Chapter5}).
+  
+  Finally, the conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
   
 \chapter{State of the Art}
 \label{Chapter2}
@@ -207,7 +210,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     It is important to share this information, in the case that the government build the sensor network, the data should be open to everyone could see it. There are already some sensor networks functioning, some of them are from the government, and, sometimes, there are not that open about their data, but there are also some people who have sensors nodes at home and share the information with everyone.
 
   \section{Sensor networks and smart cities}
-    In this section we introduce a few projects of sensor networks deployed:
+    In this section a few projects on sensor networks deployed has been introduced:
     
     \subsection{Amsterdam smart city}
       Amsterdam have a lot of projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consecuence, reduce air pollution \cite{SmartcityAmsterdam}.
@@ -218,9 +221,10 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \cite{SmartcitySantander}
     
   \section{Companies}
-    There are some companies that are in the business of sensor networks.
+    In the following points some companies that are in the business of sensor networks have been described.
+    
     \subsection{Smartcitizen}
-      Smart Citizen\footnote{\url{http://www.smartcitizen.me/}} is platform that allows a user to buy a node based on Arduino to monitor the environment as we can see in the figure \ref{fig:SmartCitizenNode}, upload this data to their own database to anybody can see it.
+      Smart Citizen\footnote{\url{http://www.smartcitizen.me/}} is platform that allows a user to buy a node based on Arduino to monitor the environment as it can be seen in the figure \ref{fig:SmartCitizenNode}, upload this data to their own database to anybody can see it.
       
       \begin{figure}[htbp]
         \centering
@@ -234,7 +238,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       This company is an Internet of things platform provider\footnote{\url{http://www.libelium.com/}}, which supply an open source sensor platform for the Internet of things.
       They have a variety of products, here are some interesting ones:
       \begin{itemize}
-        \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow, body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/eletromyography sensor. We can see the shield in the figure \ref{fig:Libeliumehealth}.
+        \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow, body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/eletromyography sensor (Figure \ref{fig:Libeliumehealth}).
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.4]{./Figures/Libeliume_health.png}
@@ -244,7 +248,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:Libeliumehealth}
           \end{figure}
         
-        \item Waspmote: A sensor node where we can attach more than 60 sensors, solar powered, and though for adjust into street light posts. We can see the node in the figure \ref{fig:LibeliumWaspmote}.
+        \item Waspmote: A sensor node where we can attach more than 60 sensors, solar powered, and though for adjust into street light posts. (Figure \ref{fig:LibeliumWaspmote}).
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/LibeliumWaspmote.png}
@@ -254,7 +258,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:LibeliumWaspmote}
          \end{figure}
        
-       \item Smart Water: Is a wireless sensor platform for water quality monitoring, it also provides real-time data. We can see the node in the figure \ref{fig:LibeliumSmartWater}.
+       \item Smart Water: Is a wireless sensor platform for water quality monitoring, it also provides real-time data. (Figure \ref{fig:LibeliumSmartWater}).
         \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.8]{./Figures/LibeliumSmartWater.png}
@@ -267,21 +271,21 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{itemize}     
     
   \section{Opendata services}
-    The sensor networks are useless if we don't store the data, although we could save it in the device, it would be too expensive to recollect it. That is why we are going to use an opendata service:
-    \subsection{Opencities}
-       Opencities\cite{opencities} is a platform to browse, visualize, and download open data from different participants. They offer free space in their server, which is perfect, a very simple API to upload and download data, and a web page to visualize the stored data.
+    The sensor networks are useless if the data is not stored, although the data could be saved in the device, it would be too expensive to collect it. That is why an opendata service is used.
+		\subsection{Opencities}
+       Opencities\cite{opencities} is a platform to browse, visualize, and download open data from different participants. They a very simple API to upload and download data, a web page to visualize the stored data, and the possibility that the project can contribute to their system, and so they to the project.
        
     \subsection{Xively}
-      Xively\footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basicaly it let you stored sensor data, download it, and visualize it in graphics.
+      Xively\footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basicaly it let you store sensor data, download it, and visualize it in graphics.
     
     \subsection{Sentilo}
-      Sentilo\footnote{\url{http://www.sentilo.io}} is a open source platform for Smart Cities, it allows you to use their own service to store the data, but not many, because their goal is that anyone who wants the sentilo platform will have to installed it in their server, and then use it. It also provides a interface to show the data.
+      Sentilo\footnote{\url{http://www.sentilo.io}} is a open source platform for Smart Cities, it allows the user to use their own service to store the data, but not many. Their goal is that anyone who wants the sentilo platform will have to installed it in their server, and then use it. It also provides a interface to show the data.
     
   \section{Sensor boards}
-    In this section we discuss some of the options we could use as node.
+    In this section it is discussed some of the options for a sensor node.
     
     \subsection{Arduino YUN}
-      The Arduino YUN is a microcontroller board with two processors as we can see in the figure \ref{fig:AYUN}, an ATmega32u4 (Arduino), and an Atheros AR9331 (For a Linux distribution named OpenWrt-Yun). It also have a Ethernet and WiFi module, a USB-A port, a micro-SD card slot, 20 digital input/ouput ping, 16 MHz crystal oscillator, 16 MHz crystal oscillator, ICSP header, and 3 reset buttons.
+      The Arduino YUN is a microcontroller board with two processors as it can be seen in the figure \ref{fig:AYUN}, an ATmega32u4 (Arduino), and an Atheros AR9331 (For a Linux distribution named OpenWrt-Yun). It also have a Ethernet and WiFi module, a USB-A port, a micro-SD card slot, 20 digital input/ouput ping, 16 MHz crystal oscillator, 16 MHz crystal oscillator, ICSP header, and 3 reset buttons.
       \begin{figure}[htbp]
         \centering
             \includegraphics[scale=0.4]{./Figures/ArduinoYunFront_2_450px.jpg}
@@ -291,7 +295,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \label{fig:AYUN}
       \end{figure}
       
-      The great thing about the arduino YUN is that the processor for the arduino sketches can communicate with the Linux processor through the bridge library, which allows you to write python scripts and execute them. In the figure \ref{fig:BridgeInShort} we can see it.
+      The great thing about the arduino YUN is that the processor for the arduino sketches can communicate with the Linux processor through the bridge library, which allows you to write python scripts and execute them. In the figure \ref{fig:BridgeInShort} it can be seen.
       
       A power over ethernet module (PoE) can be attach to the arduino, which is perfect for the guifi network, as their nodes are PoE.
       \begin{figure}[htbp]
@@ -320,7 +324,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
       {\bf Puede que cambie Picoboard por BeagleBone}
       
-      PicoBoard\footnote{\url{http://www.picocricket.com/picoboard.html}} is a board to interact with the world, it can be programmed by Scratch projects. It is less flexible than the others, it is composed by a button, a light and sound sensor, a slider, and alligator clips which can be use to build custom sensors. We can see this board in the figure \ref{fig:picoboard}.
+      PicoBoard\footnote{\url{http://www.picocricket.com/picoboard.html}} is a board to interact with the world, it can be programmed by Scratch projects. It is less flexible than the others, it is composed by a button, a light and sound sensor, a slider, and alligator clips which can be use to build custom sensors. This board can be seen in the figure \ref{fig:picoboard}.
       
       \begin{figure}[htbp]
           \centering
@@ -334,17 +338,17 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Technologies}
 \label{Chapter3}
   
-  In this chapter we focused in the techonologies used to develop this project, which are divided in four parts: arduino, sensors, python, Guifi network and opencities, and Android. 
-
+  This chapter has been focused in the techonologies used to develop this project.
   
   \section{Arduino vs Raspberry PI}
-    For this project, we narrow down the sensor node posibilities to an Arduino Yun (Yun) or a Raspberry Pi model B (RPiB).
+    For this project, it had been narrowed down the sensor node posibilities to an Arduino Yun (Yun) or a Raspberry Pi model B (RPiB).
     
     The Yun is a microcontroller while the RPiB is a full computer, which makes it more powerful, but this project does not require too much, so both Yun and RPiB serve.
     
-    The two of them had a linux environment, but with the Yun, the normal way to interact is by an arduino sketch. So RPiB will consider that you have some linux knowledge, while the Yun is better for beginners, the arduino IDE provides a variety of programs that help us to start.
+    The two of them had a linux environment, but with the Yun, the normal way to interact is by an arduino sketch. So RPiB will consider that the developer has some linux knowledge, while the Yun is better for beginners, the arduino IDE provides a variety of programs that help to start.
     
-    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as we can see in figure \ref{fig:poerpi}.    
+    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). 
+    For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as it can be seen in figure \ref{fig:poerpi}.    
     %\TwoFig{./Figures/arduinoethernetpoe.jpg}{Arduino Ethernet PoE}{fig:GraphicTemperature}{./Figures/poe-rpi.jpg}{Raspberry Pi model B PoE}{fig:poerpi}
     
     \begin{figure}
@@ -367,7 +371,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
     Another advantage that YUN offers is the integrated WiFi module, since a person who does not have a guifi node can connect to one, and thus have access to opencities, and of course, to stored data.
     
-    We will use the Arduino Yun instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.  
+    Finally, the Arduino Yun had been used instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.  
 
   \section{Sensors}
     The goal is to analyze the environment around us, for that purpose, sensors are very useful. It has been decided for the use of environmental low cost sensors that are easily accessible and usable. 
@@ -385,11 +389,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
       
     \subsection{Light Dependent Resistor (LDR)}
-      LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} we can see the way to connect it to the arduino.
+      LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} it can be seen the way to connect it to the arduino.
       \TwoFig{./Figures/LDR.jpg}{LDR sensor}{fig:LDR}{./Figures/Fritzing/LightSensor_bb.png}{Light Sensor Breadboard}{fig:LightSensor_bb}
  
     \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
-      This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} we can see the way to connect them to the arduino.
+      This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} it can be seen the way to connect them to the arduino.
       \cite{emarteeminisound}
       \TwoFig{./Figures/MiniSoundSensor.jpg}{Mini Sound Sensor}{fig:MSS}{./Figures/analognoisesensor.jpg}{Analog noise sensor}{fig:Analognoisesensor}      
       \begin{figure}[htbp]
@@ -403,22 +407,22 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
 
     \subsection{Aosong DHT22 and DHT11: Humidity}
-      DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The arduino and the humidity sensor will be connected as shown in the figure \ref{fig:HumiditySensordht22_bb}. 
+      DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The arduino and the humidity sensor has to be connected as shown in the figure \ref{fig:HumiditySensordht22_bb}. 
       
-      At the time I started the testbed, there was only 1 DHT22 sensor, so I had to use two DHT11 sensor, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
+      At the time the testbed started, there was only 1 DHT22 sensor, so a DHT11 sensor has been used instead of the DHT22, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
       \cite{dht22sensor}
       \TwoFig{./Figures/dht22.jpg}{DHT22 sensor}{fig:DHT22}{./Figures//Fritzing/HumiditySensor_bb.png}{DHT22 Breadboard}{fig:HumiditySensordht22_bb}
       \TwoFig{./Figures/dht11.png}{DHT11 sensor}{fig:DHT11}{./Figures/Fritzing/HumiditySensorDht11_bb.png}{DHT11 Breadboard}{fig:HumiditySensordht11_bb}      
       
     \subsection{MQ135: Gas sensor}
-      This is a gas sensor [Figure \ref{fig:MQ135}], and we will use it to measure air quality. This sensor does not have a figure in fritzing, so I used a gas sensor that has the same output, and int the figure \ref{fig:GasSensor_bb} we can see how to connect it to the arduino.
+      This is a gas sensor [Figure \ref{fig:MQ135}], and is used to measure air quality. This sensor does not have a figure in fritzing, so gas sensor that has the same output has been used, and in the figure \ref{fig:GasSensor_bb} it can be seen how to connect it to the arduino.
       \TwoFig{./Figures/mq135.jpg}{MQ135 Air Quality sensor}{fig:MQ135}{./Figures/Fritzing/GasSensor_bb.png}{Gas Sensor Breadboard}{fig:GasSensor_bb}
       
       The Mq135 sensor reacts to the concentration of the following gases: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.. \ref{mq135gassensor}.
       
     \subsection{BreadBoard with all the sensors}
       
-      In the figure \ref{fig:AllSensors22_bb} we can see the final prototype with the DHT22 sensor, and in the figure \ref{fig:AllSensors11_bb} with the DHT11 sensor.
+      In the figure \ref{fig:AllSensors22_bb} it can be seen the final prototype with the DHT22 sensor, and in the figure \ref{fig:AllSensors11_bb} with the DHT11 sensor.
       
       \begin{figure}[!htbp]
           \centering
@@ -446,11 +450,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
     This being the path that is followed, there are several options for developing this script, for example, programmed in Java, C / C + +, python, etc..
 
-    We preferred to use python because of the following reasons: fast and perfect for prototyping programming, the code is shorter and therefore, easier to understand, especially if you want to improve in the future.
+    Python has been used because of the following reasons: fast and perfect for prototyping programming, the code is shorter and therefore, easier to understand, especially if you want to improve in the future.
     
     \subsection{GeoJSON}
     \label{GeoJSON}
-      A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that we use is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
+      A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that has been used is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
       
       In the figure \ref{GeoJSON} it can be see an example of a GeoJSON message that is used in this project.
       \begin{figure}[htbp]
@@ -467,7 +471,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     Guifi is a network where the people that are interested put their effort in creating an infrastructure which provides acces to the Internet at a fair price.
     
-    Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their networks is large enough to become a useful sensor network, as we can see in the figure \ref{fig:Guifimap}.
+    Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their networks is large enough to become a useful sensor network, as it can be seen in the figure \ref{fig:Guifimap}.
     \begin{figure}[htbp]
       \centering
           \includegraphics[scale=0.5]{./Figures/Guifimap.png}
@@ -477,7 +481,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \end{figure}
     
   \section{Storage Resource Broker}  
-    Opencities\cite{opencities} is the opendata services that we have chosen, the reasons opencities has been chosen are:
+    Opencities\cite{opencities} is the opendata services it has been chosen, the reasons opencities has been chosen are:
     \begin{itemize}
       \item The developers are at UPF, this helps because the platform can be tested, and because they can help solve problems and make these part of the project more easy.
       \item Easy API to upload and download the data.
@@ -517,7 +521,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \section{Arduino Development}
     
-    We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why we use a python script called by the arduino sketch.
+    Two scripts has been needed, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why a python script has been used, called first by the arduino sketch.
     
     The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script have to create a GeoJSON and send it to opencities.
     
@@ -525,7 +529,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
       To collect almost all the data the skecth does not need to include any libray, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
       
-      To read and write into the logData file we need the FileIO library\footnote{\url{http://arduino.cc/en/Reference/YunFileIOConstructor}}, and to call the python script we need the Process library\footnote{\url{http://arduino.cc/en/Reference/YunProcessConstructor}}.
+      The following libraries has been needed to develope the code: FileIO, Process library, Bridge.
       
       This sketch is code in a very simple way, the setup function will initialize the Bridge library to communicate with the linux environment, the Serial library for debugging purposes, and the FileSystem to log the process, and the loop function. The loop will call three functions: readSensors, readFile, and executePythonScript.
       
@@ -571,9 +575,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       The communication with opencities is done by a python script. This are the packages needed into the linux environment of the arduino: distribute, python-openssl, geojson, geopy, and httplib2.
       
-      \textbf{Code explanation}
+      The python script has three process, first it stores all the sensor data pass by the arduino sketch into a class. Then it creates a GeoJSON message with all the data, and all the parameters needed to upload it into opencities. Finally upload the GeoJSON message.
       
-      With all this libraries we can communicate with opencities and store the sensor data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the python script works.\\
+      With all this libraries the script can communicate with opencities and store the sensor data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the python script works.\\
       
       \begin{figure}[!htbp]
       \centering
@@ -613,7 +617,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \subsection{Interface}
       The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
       If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
-      In the figure \ref{fig:App_Screenshot_1} we can see the app with the Marker button checked, and in the figure \ref{fig:App_Screenshot_2} without.
+      In the figures \ref{fig:AppScreenshots} it can sees the app with the Marker button checked, and without.
       
       %\TwoFig{./Figures/App_Screenshot_1.png}{App Screenshot}{fig:App_Screenshot_1}{./Figures/App_Screenshot_2.png}{App Screenshot}{fig:App_Screenshot_2}
       
@@ -634,7 +638,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \end{figure}
       
     \subsection{Code}
-      First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
+      First of all, to create this application it has to be used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
     
       This application has the next classes:
       \begin{itemize}
@@ -694,7 +698,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{figure}
   
 
-\chapter{Testbed results}
+\chapter{Testbed Deployment and Results}
 \label{Chapter5}
 
   In this chapter I will explained the procedure I followed to make this testbed, and an explanation of the results.
@@ -714,16 +718,16 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   Now, I will show the process to configure the node, part of this process is taken of the website of arduino\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}:
   
   \subsection{Connection to the Internet}
-    First of all we have to provide of Internet connection to the arduino.
+    First of all Internet connection has to be provide to the arduino.
     \subsubsection{Through Ethernet}
       This is the fastest way to provide of Internet connection, the arduino will behave the same way as a computer, automatically will have an IP address.
       
     \subsubsection{Through WiFi}
       This is a slowest way. The process is the following:
       \begin{enumerate}
-        \item First we power the arduino YUN. 
-        \item The arduino will create his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer we connect to it.
-        \item When we are connected to the YUN network, we go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. We have to put the password, which is ``arduino''. As we can see in the figure \ref{fig:YunWebPassword}.
+        \item First power the arduino YUN. 
+        \item The arduino will create his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
+        \item When it is connected to the YUN network, go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. Put the password, which is ``arduino''. as it can be seen in the figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebPassword.png}
@@ -742,7 +746,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:YunWebDiagnostic}
           \end{figure}
         
-        \item We will give a unique name to the Yun, and the network we want to connect \ref{fig:YunWebConfig}.
+        \item Give a unique name to the Yun, and the network to connect \ref{fig:YunWebConfig}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebConfig.png}
@@ -752,18 +756,18 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:YunWebConfig}
           \end{figure}
           
-        \item We press the configure \& restart button.
-        \item Finally we have to connect to same network as the Yun is connected.
+        \item Press the configure \& restart button.
+        \item Finally connect to same network as the Yun is connected.
         
       \end{enumerate}
   \subsection{Install necessary packets}
-    The arduino will run an arduino script and a python script, for the first one we do not have to install anything, but for python we will have to install some packets.
+    The arduino will run an arduino script and a python script, for python some packets have to be installed.
     
-    To install any packet we first have to connect to the arduino (The password will be the one we entered when we configured the onboard WiFi or ``arduino''):
+    To install any packet, connect to the arduino (The password has to be ``arduino''):
     
     {\begin{centering} \textbf{ssh root@X.Y.Z.W}\par \end{centering}}
     
-    Now we can install all the necessary packets:
+    Now install all the necessary packets:
      
       {\begin{centering} \textbf{
           opkg update \\
@@ -777,7 +781,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    First of all we have to create the some directories, so once we make the ssh command, go to ``/mnt/sda1'', make the following comands:
+    First of all create the some directories, so once we make the ssh command, go to ``/mnt/sda1'', make the following comands:
     
     {\begin{centering} \textbf{
     mkdir arduino \\
@@ -793,9 +797,6 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \subsection{Attach the sensors}
     Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
-    
-    \subsubsection{Prototype}
-      At the end of this project I used a proto shield instead of a breadboard to create a real prototype.
   
   \subsection{Arduino Code}
     To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
@@ -820,7 +821,16 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \end{figure}
     
     \subsection{Results}
-      In the next figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}, there are some graphics of the testbed. It can be seen that the node in Montgat, near the sea, the humidity is bigger, on the other hand, the noise is lower than the one in Glorias.
+      
+      Thanks to the testbed a sensor network has been created, with only three nodes, for economical reasons, but it has been shown that the network could grow without problems.
+      
+      The data has been stored on a platform and the application has been able to access them, in this case a problem happened, the application was not designed to so much data, so it needs improvement.
+      
+      A mobile application has been made, and shows an example that could led to more people to create other applications that work with the sensor data stored in opencities.
+      
+      All the data created during this testbed has been stored in the SD card of the arduinos, and put it into graphics in the following figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}.
+      
+      The locations had been chosen to change a little bit the values, for example, the node in Montgat had more relative humidity that the one in Santa Coloma. Or the one in the UPF had more noise that the others.
       
       This graphics had been done with an octave script that analyze the logData file in every sensor node.
       
@@ -840,23 +850,26 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Conclusions}
 \label{Chapter6}
   
-  During this project we analyzed, developed, and deployed sensor nodes into an open network, the inicials goals of the pilot.
+  During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have properly.
   
-  It is clear, therefore, that to deploy a sensor network, like the one explained in the previous chapter, is necessary a bit of knowledge about sensors, arduino, and linux. 
+  Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source, and easy to use.
   
-  The testbed shows that the nodes worked perfectly, so, in terms of scalability, the problem could be in opencities or in the Android App. Opencities proved work perfectly, but the Android App came out with a problem, it downloads all the data from opencities, so it takes a little bit of time to be ready.
+  A mobile application has been developed to serve as an example, so the citizens who want to create their own find the process easier.
   
-  In conclusion, the project satisfies the goals presented at the start, which are share sensor data on an open network, and let the users visualize it.
+  All the code that it has been created during this project is open source and is online, in a Github repository.
+
+  In conclusion, the project had satisfied the goals presented at the start, which are share sensor data on an open network, and let the users visualize it.
 
 \chapter{Future work}
 \label{Chapter7}
   
-  This project have three ways of improvement:
-    \begin{enumerate}
-      \item {\bf Sensor node:} Make a final prototype trying to reduce the size to make it the smaller the better, and attach the power over ethernet module.
-      \item {\bf Opencities:} It is a platform that can improved in many ways, starting with the way to create a dataset, which can be confusing, to the presentation of the data.
-      \item {\bf Android App:} It showed some problems when there is a lot of data to download, so it should be improved to download only the data that is going to show. Also it could show the data of the whole day and let the user see the changes. 
-    \end{enumerate}
+  This project can be improved in two ways, the sensor node and the android application.
+  
+  In the case of the sensor node it will be best if a prototype is build for the node to be in the outside, and, also to make the arduino Power over Ethernet.
+  
+  On the other hand, the mobile application showed some issues, when the data is too big, the process takes a little bit, which could make the users stop using it. But there is also a line that could not be make in this project, and is to show how the data changes during a period of time.
+  
+  Finally, there has not been any difusion of the project, in the future, the project could be difuse by a webpage or conference on sensors.
 
 \bibliography{bibliography}
 \phantomsection

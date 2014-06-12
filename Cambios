@@ -43,41 +43,41 @@
   
   TESTBED
     - Easy_install VS Pip.
+    - Añadir vision global de la aplicacion, poner el diagrama de clases extenso como anexo, y hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
     - (HECHO) Explicar de forma generica todo el proyecto, con alguna imagen.
     - (HECHO) 4.1 - Cambiar titulo por 'Arduino Development'
     - 4.1.2:
       * (HECHO) Poner solo los paquetes, y no las comandas.
-      * Explicar el codigo
-    - Añadir vision global de la aplicacion, poner el diagrama de clases extenso como anexo, y hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
+      * (HECHO) Explicar el codigo
     - (HECHO) Poner solo dos screenshots
    
   TESTBED RESULTS
-    - Cambiar el título.
-    - La parte del prototipo, si se puede se hace para la memoria, y sino para la presentacion.
+    - (HECHO) Cambiar el título.
+    - (HECHO) La parte del prototipo, si se puede se hace para la memoria, y sino para la presentacion.
     - Gráficas:
       * Labels más grandes.
       * Poner unidades.
       * ¿Relative humidity?
     - 5.2.1 - Resultados
-      * Tener una red de sensores.
-      * Tener los datos almacenados.
-      * Una aplicacion de ejemplo hecha, que puede llevar a que otra gente haga otras aplicaciones.
-      * Finalmente, las gráficas, y que significan.
+      * (HECHO) Tener una red de sensores.
+      * (HECHO) Tener los datos almacenados.
+      * (HECHO) Una aplicacion de ejemplo hecha, que puede llevar a que otra gente haga otras aplicaciones.
+      * (HECHO) Finalmente, las gráficas, y que significan.
   
   CONCLUSIONES
-    - Hay que explicar una resumen de todo el proyecto, para que aquella persona que no se haya leido nada más de la memoria que las conclusiones, entienda que se ha hecho en el proyecto y los resultados.
+    - Hay que explicar un resumen de todo el proyecto, para que aquella persona que no se haya leido nada más de la memoria que las conclusiones, entienda que se ha hecho en el proyecto y los resultados.
     - No depende de nada más, asi que no puede haber referencias a capitulos anteriores.
     - Cosas que poner:
-      * Se ha desplegado un sistema.
-      * Permite a los usuarios crear su propia red, Barata, facil de utilizar, ...
-      * Dejar claro que he hecho una aplicacion para que sirva de ejemplo para otras personas, y que les sea más fácil crear la suya propia.
-      * Hacer referencia que el codigo está disponible.
+      * (HECHO) Se ha desplegado un sistema.
+      * (HECHO) Permite a los usuarios crear su propia red, Barata, facil de utilizar, ...
+      * (HECHO) Dejar claro que he hecho una aplicacion para que sirva de ejemplo para otras personas, y que les sea más fácil crear la suya propia.
+      * (HECHO) Hacer referencia que el codigo está disponible.
       
   FUTURE WORK
     - Basicamente, aqui hay que poner lo que haría del proyecto si tuvieses más tiempo.
-      * Difusión del proyecto.
-      * Prototipo.
-      * PoE.
+      * (HECHO) Difusión del proyecto.
+      * (HECHO) Prototipo.
+      * (HECHO) PoE.
     
   
   TESTBED
