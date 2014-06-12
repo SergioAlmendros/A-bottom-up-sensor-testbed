@@ -486,8 +486,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     The role of Opencities is to be the intermediary between data creators and those who want to see them.
     In Opencities, the sensor data is uploaded into a dataset. Every user have an unique API key, and can have one or more datasets. To distinguish, the datasets have a unique ID. 
     
-  \section{Android}
-    Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensor data stored in opencities, and show it to the user in a way that anybody can understand it.
+  \section{Visualization platform}
+    
+    
+    
+    Android is a mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensor data stored in opencities, and show it to the user in a way that anybody can understand it.
     
     Nowadays everybody owns an smartphone, so the best way to make visible the sensor network is with a mobile application. There three options: Android, iOS, windows phone. Android and iOS had practically all the market, but Android has more than iOS, so Android is the right choice.
     
@@ -855,9 +858,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \item {\bf Android App:} It showed some problems when there is a lot of data to download, so it should be improved to download only the data that is going to show. Also it could show the data of the whole day and let the user see the changes. 
     \end{enumerate}
 
+\bibliography{bibliography}
 \phantomsection
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
-\bibliography{bibliography}
 \cleardoublepage
 
 \chapter{Appendixes}

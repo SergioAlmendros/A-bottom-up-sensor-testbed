@@ -34,8 +34,8 @@
       * (HECHO) Quitar 'free storage'
       * (HECHO) Poner que contribuí en el proyecto de opencities, y que ellos tambien me ayudaron a mi.
       * (HECHO) Quitar ese titulo por otro mejor, como 'Storage broker'
-      * Explicar el papel de opencities.
-    - Añadir un apartado solo de GeoJSON.
+      * (HECHO) Explicar el papel de opencities.
+    - (HECHO) Añadir un apartado solo de GeoJSON.
     - 3.6:
       * Mejorar la explicacion y poner que uso java.
       * Poner que he contemplado más opciones, como windows phone, y iOS, y que no los he cogido por que no tengo un mac, y porque hacerlo con html5 y phonegap era demasiado.

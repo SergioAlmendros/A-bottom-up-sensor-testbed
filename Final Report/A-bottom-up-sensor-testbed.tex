@@ -486,8 +486,19 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     The role of Opencities is to be the intermediary between data creators and those who want to see them.
     In Opencities, the sensor data is uploaded into a dataset. Every user have an unique API key, and can have one or more datasets. To distinguish, the datasets have a unique ID. 
     
-  \section{Mobile visualization platform}
-    Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensor data stored in opencities, and show it to the user in a way that anybody can understand it.
+  \section{Visualization platform}
+    
+    Para la visualización de los datos de sensores hay varias opciones, una podría ser ver todos los datos en texto plano, pero resultaría dificil de entender. Otra opción es mostrar los datos en un mapa, esto puede hacerse en una página web o en una aplicación para mobiles, tablets, etc. 
+
+Como el objetivo es que los usuarios miren la aplicación de forma eventual, lo más adecuado es usar una aplicación mobil, ya que, en estos tiempos, prácticamente todo el mundo posee un smart phone.
+
+A partir de este paso se tiene de decidir que camino seguir para desarrollar la aplicación. Se puede hacer una aplicación directamente para el sistema operativo (iOS, Android, y Windows Phone) o bien para todos a la vez. 
+
+Para hacer la aplicación para todas estas plataformas se tendría que hacer la aplicación en html5, css, y javascript, y mediante phonegap generar las tres aplicaciones. Pero este camino resultó demasiado dificil, y se prefirió hacer directamente una aplicación para una de las plataformas.
+
+Una vez decidido que la aplicación será dirigida a un sistema operativo, es más optimo elegir el sistema operativo con más cuota de mercado. Por este motivo se ha elegido Android.
+    
+    Android is a mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensor data stored in opencities, and show it to the user in a way that anybody can understand it.
     
     Nowadays everybody owns an smartphone, so the best way to make visible the sensor network is with a mobile application. There three options: Android, iOS, windows phone. Android and iOS had practically all the market, but Android has more than iOS, so Android is the right choice.
     
@@ -855,9 +866,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \item {\bf Android App:} It showed some problems when there is a lot of data to download, so it should be improved to download only the data that is going to show. Also it could show the data of the whole day and let the user see the changes. 
     \end{enumerate}
 
+\bibliography{bibliography}
 \phantomsection
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
-\bibliography{bibliography}
 \cleardoublepage
 
 \chapter{Appendixes}
