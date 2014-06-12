@@ -32,7 +32,7 @@
 \BOOKMARK [1][-]{section.3.6}{Android}{chapter.3}% 32
 \BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 33
 \BOOKMARK [1][-]{section.4.1}{Arduino}{chapter.4}% 34
-\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensory data}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensor data}{section.4.1}% 35
 \BOOKMARK [2][-]{subsection.4.1.2}{Communication with opencities}{section.4.1}% 36
 \BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 37
 \BOOKMARK [2][-]{subsection.4.2.1}{Summary}{section.4.2}% 38
@@ -49,23 +49,24 @@
 \BOOKMARK [2][-]{subsection.5.2.1}{Results}{section.5.2}% 49
 \BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 50
 \BOOKMARK [0][-]{chapter.7}{ Future work}{}% 51
-\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 52
-\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 53
-\BOOKMARK [2][-]{subsection.8.1.1}{Pilot purpose or justification}{section.8.1}% 54
-\BOOKMARK [2][-]{subsection.8.1.2}{Measurable pilot objectives and related success criteria}{section.8.1}% 55
-\BOOKMARK [2][-]{subsection.8.1.3}{High-level requirements}{section.8.1}% 56
-\BOOKMARK [2][-]{subsection.8.1.4}{High-level pilot description}{section.8.1}% 57
-\BOOKMARK [2][-]{subsection.8.1.5}{High-level risks}{section.8.1}% 58
-\BOOKMARK [2][-]{subsection.8.1.6}{Summary milestone schedule}{section.8.1}% 59
-\BOOKMARK [2][-]{subsection.8.1.7}{Summary budget}{section.8.1}% 60
-\BOOKMARK [1][-]{section.8.2}{Planning Report}{chapter.8}% 61
-\BOOKMARK [2][-]{subsection.8.2.1}{Familiarization with the Arduino Yun}{section.8.2}% 62
-\BOOKMARK [2][-]{subsection.8.2.2}{Preliminary testbed}{section.8.2}% 63
-\BOOKMARK [2][-]{subsection.8.2.3}{Collect Data from sensors}{section.8.2}% 64
-\BOOKMARK [2][-]{subsection.8.2.4}{Install Sentilo}{section.8.2}% 65
-\BOOKMARK [2][-]{subsection.8.2.5}{Communication with Sentilo}{section.8.2}% 66
-\BOOKMARK [2][-]{subsection.8.2.6}{Real deployment}{section.8.2}% 67
-\BOOKMARK [2][-]{subsection.8.2.7}{Interface}{section.8.2}% 68
-\BOOKMARK [2][-]{subsection.8.2.8}{Sentilo module}{section.8.2}% 69
-\BOOKMARK [2][-]{subsection.8.2.9}{Final report}{section.8.2}% 70
-\BOOKMARK [2][-]{subsection.8.2.10}{Gantt chart}{section.8.2}% 71
+\BOOKMARK [0][-]{section*.38}{BIBLIOGRAPHY}{}% 52
+\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 53
+\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 54
+\BOOKMARK [2][-]{subsection.8.1.1}{Pilot purpose or justification}{section.8.1}% 55
+\BOOKMARK [2][-]{subsection.8.1.2}{Measurable pilot objectives and related success criteria}{section.8.1}% 56
+\BOOKMARK [2][-]{subsection.8.1.3}{High-level requirements}{section.8.1}% 57
+\BOOKMARK [2][-]{subsection.8.1.4}{High-level pilot description}{section.8.1}% 58
+\BOOKMARK [2][-]{subsection.8.1.5}{High-level risks}{section.8.1}% 59
+\BOOKMARK [2][-]{subsection.8.1.6}{Summary milestone schedule}{section.8.1}% 60
+\BOOKMARK [2][-]{subsection.8.1.7}{Summary budget}{section.8.1}% 61
+\BOOKMARK [1][-]{section.8.2}{Planning Report}{chapter.8}% 62
+\BOOKMARK [2][-]{subsection.8.2.1}{Familiarization with the Arduino Yun}{section.8.2}% 63
+\BOOKMARK [2][-]{subsection.8.2.2}{Preliminary testbed}{section.8.2}% 64
+\BOOKMARK [2][-]{subsection.8.2.3}{Collect Data from sensors}{section.8.2}% 65
+\BOOKMARK [2][-]{subsection.8.2.4}{Install Sentilo}{section.8.2}% 66
+\BOOKMARK [2][-]{subsection.8.2.5}{Communication with Sentilo}{section.8.2}% 67
+\BOOKMARK [2][-]{subsection.8.2.6}{Real deployment}{section.8.2}% 68
+\BOOKMARK [2][-]{subsection.8.2.7}{Interface}{section.8.2}% 69
+\BOOKMARK [2][-]{subsection.8.2.8}{Sentilo module}{section.8.2}% 70
+\BOOKMARK [2][-]{subsection.8.2.9}{Final report}{section.8.2}% 71
+\BOOKMARK [2][-]{subsection.8.2.10}{Gantt chart}{section.8.2}% 72

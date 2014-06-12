@@ -3,15 +3,16 @@
   GENERAL:
     - Frases más cortas, 2 lineas como mucho.
     - 'Such as' or 'for example'
-    - Sustituir 'sensory data' por 'sensor data'.
-    - Añadir bibliografia en el indice.
+    - (HECHO) Sustituir 'sensory data' por 'sensor data'.
+    - (HECHO) Añadir bibliografia en el indice.
     - Se puede usar el verbo 'code'.
+    - Mantener una conjugacion, la mejor, pasiva y presente.
   
   ABSTRACT:
-    - Poner un objetivo mas general, tipo aumentar la conciencia de la gente sobre el medioambiente y ademas el que ya esta puesto, que seria el concreto.
-    - Quitar el parrafo de deployment.
+    - (HECHO) Poner un objetivo mas general, tipo aumentar la conciencia de la gente sobre el medioambiente y ademas el que ya esta puesto, que seria el concreto.
+    - (HECHO) Quitar el parrafo de deployment.
     - Añadir el testbed, de forma general.
-    - Cuando defino guifi, decir lo de open, neutral, colaborativa, libre.
+    - (HECHO) Cuando defino guifi, decir lo de open, neutral, colaborativa, libre.
     
   INTRODUCCION
     - Poner en contexto cada parte del proyecto.
@@ -20,10 +21,11 @@
     - [Menos importante] Añadir más iniciativas del palo smartcitizen, o libellium.
     
   TECHNOLOGIES
-    - Sensor de gas: Que gases, que concentración, explicar lo de 10 partes por millon (ppm) que sale en el datasheet.
-    - Si es posible, hacer tres imagenes pegadas. http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Subfloats
+    - (HECHO) Sensor de gas: Que gases, que concentración, 
+    - explicar lo de 10 partes por millon (ppm) que sale en el datasheet.
+    - (HECHO) Si es posible, hacer tres imagenes pegadas. http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Subfloats
     - 3.1 - Añadir que YUN tiene wifi y se puede conectar a un nodo de guifi de otra persona y estar en la misma red, con opencities y demas.
-    - 3.2 - Explicar el porque de la eleccion de los sensores.
+    - (HECHO) 3.2 - Explicar el porque de la eleccion de los sensores.
     - 3.3 - Cambiar el titulo por algo que explique de que va el apartado, como 'upload data', y mejorar la explicacion.
     - 3.4 - Cambiar el titulo por 'Comunity network'
     - 3.5:
@@ -40,6 +42,7 @@
   TESTBED
     - Explicar de forma generica todo el proyecto, con alguna imagen.
     - Easy_install VS Pip.
+    - 4.1 - Cambiar titulo por 'Arduino Development'
     - 4.1.2:
       * Poner solo los paquetes, y no las comandas.
       * Explicar el codigo
@@ -48,6 +51,7 @@
    
   TESTBED RESULTS
     - Cambiar el título.
+    - La parte del prototipo, si se puede se hace para la memoria, y sino para la presentacion.
     - Gráficas:
       * Labels más grandes.
       * Poner unidades.
