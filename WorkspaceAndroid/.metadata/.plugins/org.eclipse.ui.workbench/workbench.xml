@@ -30,7 +30,7 @@
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditorNoSource" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -43,6 +43,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
@@ -51,8 +52,11 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7084" selectionTopPixel="3385"/>
 </editor>
-<editor activePart="true" focus="true" id="com.objectaid.uml.ClassDiagramEditor" name="abottomupsensortestbedClassDiagram.ucls" partName="abottomupsensortestbedClassDiagram.ucls" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls" title="abottomupsensortestbedClassDiagram.ucls" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls" workbook="DefaultEditorWorkbook">
+<editor id="com.objectaid.uml.ClassDiagramEditor" name="abottomupsensortestbedClassDiagram.ucls" partName="abottomupsensortestbedClassDiagram.ucls" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls" title="abottomupsensortestbedClassDiagram.ucls" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls"/>
+</editor>
+<editor activePart="true" focus="true" id="com.objectaid.uml.ClassDiagramEditor" name="prueba.ucls" partName="prueba.ucls" path="/home/sergio/Desktop/Repositori/A-bottom-up-sensor-testbed/WorkspaceAndroid/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/prueba.ucls" title="prueba.ucls" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/prueba.ucls" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/prueba.ucls"/>
 </editor>
 </editors>
 <views>
@@ -515,6 +519,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.objectaid.uml.ClassDiagramEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.objectaid.uml.ClassDiagramEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/prueba.ucls"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
 </editors>
 <item historyLabel="server.js" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -585,7 +591,12 @@
 <item historyLabel="DataBase.java" index="8">
 <position info="not_deleted" x="10200" y="0"/>
 </item>
-<item active="true" historyLabel="abottomupsensortestbedClassDiagram.ucls" index="7"/>
+<item historyLabel="abottomupsensortestbedClassDiagram.ucls" index="7"/>
+<item historyLabel="prueba.ucls" index="9"/>
+<item historyLabel="DataBase.java" index="10">
+<position info="not_deleted" x="1589" y="17"/>
+</item>
+<item active="true" historyLabel="prueba.ucls" index="9"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -608,14 +619,17 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java">
+<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.objectaid.uml.ClassDiagramEditor" name="prueba.ucls" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/prueba.ucls">
+<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/prueba.ucls"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.objectaid.uml.ClassDiagramEditor" name="abottomupsensortestbedClassDiagram.ucls" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls">
 <persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/abottomupsensortestbedClassDiagram.ucls"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Abottomupsensortestbed43/res/layout/activity_main.xml">
 <persistable path="/Abottomupsensortestbed43/res/layout/activity_main.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataBase.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java">
-<persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/DataBase.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java">
 <persistable path="/Abottomupsensortestbed43/src/com/upf/abottomupsensortestbed43/MainActivity.java"/>
@@ -649,9 +663,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ToHActivity.java" tooltip="example/src/code/ToHActivity.java">
 <persistable path="/example/src/code/ToHActivity.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="Squad/AndroidManifest.xml">
-<persistable path="/Squad/AndroidManifest.xml"/>
 </file>
 </mruList>
 </workbench>

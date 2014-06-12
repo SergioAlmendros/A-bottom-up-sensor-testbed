@@ -43,7 +43,9 @@
   
   TESTBED
     - Easy_install VS Pip.
-    - Añadir vision global de la aplicacion, poner el diagrama de clases extenso como anexo, y hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
+    - (HECHO) Añadir vision global de la aplicacion, 
+    - (HECHO) Poner el diagrama de clases extenso como anexo.
+    - (HECHO) Hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
     - (HECHO) Explicar de forma generica todo el proyecto, con alguna imagen.
     - (HECHO) 4.1 - Cambiar titulo por 'Arduino Development'
     - 4.1.2:
@@ -68,16 +70,16 @@
     - Hay que explicar un resumen de todo el proyecto, para que aquella persona que no se haya leido nada más de la memoria que las conclusiones, entienda que se ha hecho en el proyecto y los resultados.
     - No depende de nada más, asi que no puede haber referencias a capitulos anteriores.
     - Cosas que poner:
-      * Se ha desplegado un sistema.
-      * Permite a los usuarios crear su propia red, Barata, facil de utilizar, ...
-      * Dejar claro que he hecho una aplicacion para que sirva de ejemplo para otras personas, y que les sea más fácil crear la suya propia.
-      * Hacer referencia que el codigo está disponible.
+      * (HECHO) Se ha desplegado un sistema.
+      * (HECHO) Permite a los usuarios crear su propia red, Barata, facil de utilizar, ...
+      * (HECHO) Dejar claro que he hecho una aplicacion para que sirva de ejemplo para otras personas, y que les sea más fácil crear la suya propia.
+      * (HECHO) Hacer referencia que el codigo está disponible.
       
   FUTURE WORK
     - Basicamente, aqui hay que poner lo que haría del proyecto si tuvieses más tiempo.
-      * Difusión del proyecto.
-      * Prototipo.
-      * PoE.
+      * (HECHO) Difusión del proyecto.
+      * (HECHO) Prototipo.
+      * (HECHO) PoE.
     
   
   TESTBED

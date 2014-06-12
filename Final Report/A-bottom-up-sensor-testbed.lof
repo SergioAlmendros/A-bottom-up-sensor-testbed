@@ -38,21 +38,22 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Arduino sketch Flow Chart}}{25}{figure.caption.25}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Python Script Flow Chart}}{27}{figure.caption.26}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshots\relax }}{28}{figure.caption.27}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Class Diagram of the Android App part 1}}{29}{figure.caption.28}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Class Diagram of the Android App part 2}}{30}{figure.caption.29}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Android App Flow Chart}}{31}{figure.caption.30}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Reduce Class Diagram of the Android App}}{29}{figure.caption.28}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Android App Flow Chart}}{30}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{33}{figure.caption.31}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{34}{figure.caption.32}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{35}{figure.caption.33}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{36}{figure.caption.34}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{37}{figure.caption.35}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Graphic Temperature\relax }}{38}{figure.caption.36}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Graphic Light\relax }}{38}{figure.caption.36}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{38}{figure.caption.37}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{38}{figure.caption.37}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Graphic Air Quality}}{39}{figure.caption.38}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{33}{figure.caption.30}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{34}{figure.caption.31}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{36}{figure.caption.33}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{37}{figure.caption.34}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Graphic Temperature\relax }}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Graphic Light\relax }}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Noise\relax }}{38}{figure.caption.36}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Graphic Humidity\relax }}{38}{figure.caption.36}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Graphic Air Quality}}{39}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{51}{figure.caption.41}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Gantt Chart\relax }}{51}{figure.caption.40}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Class Diagram of the Android App part 1}}{52}{figure.caption.41}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Class Diagram of the Android App part 2}}{53}{figure.caption.42}

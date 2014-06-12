@@ -2,7 +2,7 @@
 
   GENERAL:
     - Frases más cortas, 2 lineas como mucho.
-    - 'Such as' or 'for example'
+    - (HECHO) 'Such as' or 'for example'
     - (HECHO) Sustituir 'sensory data' por 'sensor data'.
     - (HECHO) Añadir bibliografia en el indice.
     - Se puede usar el verbo 'code'.
@@ -43,7 +43,9 @@
   
   TESTBED
     - Easy_install VS Pip.
-    - Añadir vision global de la aplicacion, poner el diagrama de clases extenso como anexo, y hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
+    - (HECHO) Añadir vision global de la aplicacion, 
+    - (HECHO) Poner el diagrama de clases extenso como anexo.
+    - (HECHO) Hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
     - (HECHO) Explicar de forma generica todo el proyecto, con alguna imagen.
     - (HECHO) 4.1 - Cambiar titulo por 'Arduino Development'
     - 4.1.2:

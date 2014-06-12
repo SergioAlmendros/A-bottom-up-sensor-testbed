@@ -612,7 +612,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
     \subsection{Summary}
 
-      To make easy to see the results of the testbed, I developed an android application. The application shows the data of the sensors in two ways, with markers that show the actual environmental value in that point, and also with heatmap points, the larger the value, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_1}.
+      To make easy to see the results of the testbed, an android application has been developed which shows the sensor data in a map. The application shows the data in two ways, with markers that show the actual value in that point, and also with heatmap points, the larger the value, the more intense the red will be. This can be seen in figure \ref{fig:AppScreenshots}.
       
     \subsection{Interface}
       The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
@@ -638,32 +638,28 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \end{figure}
       
     \subsection{Code}
-      First of all, to create this application it has to be used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
-    
-      This application has the next classes:
-      \begin{itemize}
-        \item MainActivity: Is the controller of the whole application.
-        \item GPSTracker: Is a class to get the current location of the user.
-        \item Feature, Geometry, and Properties: This are the classes where it will stored the data from the parsed JSON from opendata.
-        \item DataBase: This is a singleton class where all the variables are stored, because is more easy to access from different clases.
-      \end{itemize}
+      First of all, to create this application it has to be used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps.
       
-      In the figure \ref{fig:ClassDiagram1} and \ref{fig:ClassDiagram2} are the class diagram:
+      In this application each class has a defined function, starting with MainActivity, which is the one that intialize the other clases, calls all the functions needed in the other classes to get the application started.
       
-      \begin{figure}[htbp]
-        \centering
-          \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_1.pdf}
-        \rule{35em}{0.5pt}
-        \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
-        \label{fig:ClassDiagram1}
-      \end{figure}
+      It also has all the code to interact with the interface. For example, if the user clicks on the marker button, this class has to call all the necessary functions and display all the markers into the map.
+      
+      Next comes the dataBase class, which, as the name suggest, is the class that stores and processes the data downloaded from opencities. This is a Singleton class, which means that there will only be one instance of this class and any instance of any class could access to the data stored on it.
+      
+      To stored the data from opencities, there has been created a set of classes equivalent with the GeoJSON message downloaded to avoid confusion. At the end, the data is stored in features, which is composed primarly of Geometry and Properties.
+      
+      Then a class called HttpAsyncTask that handles the communication with opencities and, using an instance of dataBase, stores the downloaded data.
+      
+      Finally, a GPSTracker class is responsible for obtaining user location to place the map on the user location, because it will be the place that the users want to see.
+           
+      The class diagram, in a reduce way, can be seen in the figure \ref{ClassDiagram}
       
       \begin{figure}[htbp]
         \centering
-          \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
-        \rule{35em}{0.5pt}
-        \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
-        \label{fig:ClassDiagram2}
+          \includegraphics[page=1,scale=0.8]{./Figures/SmallClassDiagram.png}
+        \rule{20em}{0.5pt}
+        \caption[Reduce Class Diagram of the Android App]{Reduce Class Diagram of the Android App.}
+        \label{fig:ClassDiagram}
       \end{figure}
       
       The explanation of the code is in the following flow chart \ref{fig:Android App Flow Chart}:
@@ -696,7 +692,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \caption[Android App Flow Chart]{Android App Flow Chart.}
       \label{fig:Android App Flow Chart}
       \end{figure}
-  
+
+	\section{Repository}
+		All the code, report, figures, etc has been stored in a public repository, so anyone could see it, downloaded a copy, and change it if necessary.
+		
+		During all the project there have been constant uploads of new information, as it was evolving.
 
 \chapter{Testbed Deployment and Results}
 \label{Chapter5}
@@ -781,7 +781,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    First of all create the some directories, so once we make the ssh command, go to ``/mnt/sda1'', make the following comands:
+    First of all create the some directories, so once the ssh command has been done, go to ``/mnt/sda1'', make the following comands:
     
     {\begin{centering} \textbf{
     mkdir arduino \\
@@ -789,17 +789,17 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     mkdir www \\
     }\par \end{centering}}
     
-    We have to copy the python script ``main.py'' into the SD-Card. We have two ways to do this, put the SDCard into a computer an save the files in there, or we can copy the files into the arduino through the network with the following comand:
+    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, put the SDCard into a computer an save the files in there, or copy the files into the arduino through the network with the following comand:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
-    Now that we have the python step done, we have to attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
+    Now that the python step is done, the sensors has to be attach the sensors to the arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
   
   \subsection{Arduino Code}
-    To upload an arduino sketch to the yun we have to use the following IDE: arduino 1.5.5. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
+    To upload an arduino sketch to the yun the IDE: arduino 1.5.5 has to be used. There are two ways to upload an sketch, through a USB cable connected to the arduino, or through the Internet, if we are in the same network as the arduino, it will appear in the IDE.
   
   \section{Actual Testbed}
     We have three arduino, so we have to mount the sensor node and put them in three different places in free space but being sure it will not get wet.
@@ -881,6 +881,23 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
   \input{./Appendix/Pilot_Charter.tex}
   \input{./Appendix/Planning_Report.tex}
+  \section{Class Diagram}
+  
+  	\begin{figure}[htbp]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_1.pdf}
+      \rule{35em}{0.5pt}
+      \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
+      \label{fig:ClassDiagram1}
+    \end{figure}
+    
+    \begin{figure}[htbp]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
+      \rule{35em}{0.5pt}
+      \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
+      \label{fig:ClassDiagram2}
+    \end{figure}
 
 
 \backmatter

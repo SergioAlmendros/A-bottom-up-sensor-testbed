@@ -45,6 +45,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Summary}{26}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Interface}{26}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Code}{26}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Repository}{31}{section.4.3}
 \contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed Deployment and Results}}}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Sensor node}{34}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{34}{subsection.5.1.1}
@@ -58,7 +59,7 @@
 \contentsline {subsection}{\numberline {5.2.1}Results}{37}{subsection.5.2.1}
 \contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{41}{chapter.6}
 \contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{43}{chapter.7}
-\contentsline {chapter}{BIBLIOGRAPHY}{45}{section*.40}
+\contentsline {chapter}{BIBLIOGRAPHY}{45}{section*.39}
 \contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{47}{chapter.8}
 \contentsline {section}{\numberline {8.1}Pilot Charter}{47}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{47}{subsection.8.1.1}
@@ -79,3 +80,4 @@
 \contentsline {subsection}{\numberline {8.2.8}Sentilo module}{50}{subsection.8.2.8}
 \contentsline {subsection}{\numberline {8.2.9}Final report}{50}{subsection.8.2.9}
 \contentsline {subsection}{\numberline {8.2.10}Gantt chart}{50}{subsection.8.2.10}
+\contentsline {section}{\numberline {8.3}Class Diagram}{50}{section.8.3}
