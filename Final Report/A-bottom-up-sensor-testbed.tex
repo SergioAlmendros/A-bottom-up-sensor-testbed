@@ -488,19 +488,15 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
   \section{Visualization platform}
     
-    Para la visualización de los datos de sensores hay varias opciones, una podría ser ver todos los datos en texto plano, pero resultaría dificil de entender. Otra opción es mostrar los datos en un mapa, esto puede hacerse en una página web o en una aplicación para mobiles, tablets, etc. 
-
-Como el objetivo es que los usuarios miren la aplicación de forma eventual, lo más adecuado es usar una aplicación mobil, ya que, en estos tiempos, prácticamente todo el mundo posee un smart phone.
-
-A partir de este paso se tiene de decidir que camino seguir para desarrollar la aplicación. Se puede hacer una aplicación directamente para el sistema operativo (iOS, Android, y Windows Phone) o bien para todos a la vez. 
-
-Para hacer la aplicación para todas estas plataformas se tendría que hacer la aplicación en html5, css, y javascript, y mediante phonegap generar las tres aplicaciones. Pero este camino resultó demasiado dificil, y se prefirió hacer directamente una aplicación para una de las plataformas.
-
-Una vez decidido que la aplicación será dirigida a un sistema operativo, es más optimo elegir el sistema operativo con más cuota de mercado. Por este motivo se ha elegido Android.
+    For the purpose of the sensor data visualization there are several options, in plain text, in a map, in graphics, etc. In this project is used a map to display the data. This can be done on a web page, in a mobile application, tablet application, etc.
     
-    Android is a mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensor data stored in opencities, and show it to the user in a way that anybody can understand it.
+    Since the goal of the application is that a user consult it for an small period of time, the best option is a mobile application. Additionally, almost everybody has an smart phone.
     
-    Nowadays everybody owns an smartphone, so the best way to make visible the sensor network is with a mobile application. There three options: Android, iOS, windows phone. Android and iOS had practically all the market, but Android has more than iOS, so Android is the right choice.
+    From this step forward it has to be chosen in which mobile operationg system it should be developed the application. There are three options, iOS, Android, or Windows Phone. There is another option that is to developed the application in html5, javascript, and CSS, and then compiled it with phonegap, and that will return the application for the three operating system. But that was too much of a challenge, so it was decided to code an application directly to one operating system.
+    
+    Having decided that the application it has to be for only one operating system, it is more logical to chose the operating system with more market share, to reach as many people as possible.
+    
+    Android is a mobile operating system from Google, it runs on smartphones, and applications are programmed in Java. Java is a computer programming language that is object-oriented.
     
     This application it will be tested on a Sony Xperia Z1, with an Android 4.4.2.
 
@@ -509,7 +505,17 @@ Una vez decidido que la aplicación será dirigida a un sistema operativo, es más 
 
   This chapter focused in the process that has been followed to complete the project, which has two main parts, the software to recollect and send the data and the Android application to show it.
   
-  \section{Arduino}
+  To make the project easier to understand an image has been made (Figure \ref{fig:reportGeneralView}.
+  
+  \begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.5]{./Figures/reportGeneralView.jpg}
+        \rule{25em}{0.5pt}
+    \caption[reportGeneralView]{reportGeneralView.}
+    \label{fig:reportGeneralView}
+  \end{figure}
+  
+  \section{Arduino Development}
     
     We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why we use a python script called by the arduino sketch.
     
@@ -560,32 +566,10 @@ Una vez decidido que la aplicación será dirigida a un sistema operativo, es más 
     
     \subsection{Communication with opencities}
     
-      First of all, we need to create an acount in opencities, we have to follow the tutorial of the webpage\footnote{\url{http://opendata.nets.upf.edu/web/index.php/en/getting-started2}}.
-      When this process is complete, we will have all the necessary information.
+      First of all, it is needed to create an acount in opencities, and a dataset to store the sensor data.
+      This process gives all the information needed to upload and download data.
       
-      The communication with opencities is done by a python script, to do this we need a set of libraries installed in the arduino.
-      
-      We need the sys and datetime library that are already installed, but the geopy, geojson, and httplib2 libraries has to be installed.
-      
-      This are the steps I followed to install the libraries:
-      
-      \begin{enumerate}
-        \item First we need to configure the onboard wifi, in this website it is explained how\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}
-        \item When the YUN has an IP, now we can get into the linino by Secure Shell: 
-          \\ {\centering\textbf{ssh root@X.Y.Z.W}\par}
-        \item Now that we are in the linino, we begin to install the necesary packets:
-          \\ {\centering
-            \textbf{
-              opkg update \\
-              opkg install distribute \\
-              opkg install python-openssl \\
-              easy\_install pip \\
-              pip install geojson \\
-              pip install geopy \\
-              pip install httplib2
-            }
-          \par}
-      \end{enumerate}
+      The communication with opencities is done by a python script. This are the packages needed into the linux environment of the arduino: distribute, python-openssl, geojson, geopy, and httplib2.
       
       \textbf{Code explanation}
       
@@ -624,25 +608,33 @@ Una vez decidido que la aplicación será dirigida a un sistema operativo, es más 
   
     \subsection{Summary}
 
-      To make easy to see the results of the testbed, I developed an android application. The application shows the data of the sensors in two ways, with markers that show the actual environmental value in that point, and also with heatmap points, the larger the value, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_3}.
-      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.1]{./Figures/App_Screenshot_3.png}
-              \\
-              \rule{15em}{0.5pt}
-          \caption[App Screenshot 3]{App Screenshot.}
-          \label{fig:App_Screenshot_3}
-      \end{figure}
+      To make easy to see the results of the testbed, I developed an android application. The application shows the data of the sensors in two ways, with markers that show the actual environmental value in that point, and also with heatmap points, the larger the value, the more intense the red will be. This can be seen in figure \ref{fig:App_Screenshot_1}.
       
     \subsection{Interface}
       The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
       If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
-      In the figure \ref{fig:App_Screenshot_1} we can see the app with the Marker button checked, and in the figure \ref{fig:App_Screenshot_2} without.
-      \TwoFig{./Figures/App_Screenshot_1.png}{App Screenshot}{fig:App_Screenshot_1}{./Figures/App_Screenshot_2.png}{App Screenshot}{fig:App_Screenshot_2}
+      In the figures \ref{fig:AppScreenshots} it can sees the app with the Marker button checked, and without.
+      
+      %\TwoFig{./Figures/App_Screenshot_1.png}{App Screenshot}{fig:App_Screenshot_1}{./Figures/App_Screenshot_2.png}{App Screenshot}{fig:App_Screenshot_2}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/App_Screenshot_1.png}
+                \label{fig:App_Screenshot_1}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/App_Screenshot_3.png}
+                \label{fig:App_Screenshot_2}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{App Screenshots}\label{fig:AppScreenshots}
+\end{figure}
       
     \subsection{Code}
-      First of all, to create this application I have used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
+      First of all, to create this application it has to be used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps. 
     
       This application has the next classes:
       \begin{itemize}

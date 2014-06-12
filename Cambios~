@@ -7,7 +7,7 @@
     - (HECHO) Añadir bibliografia en el indice.
     - Se puede usar el verbo 'code'.
     - Mantener una conjugacion, la mejor, pasiva y presente.
-  
+    - Si es posible, hacer tres imagenes pegadas. http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Subfloats
   ABSTRACT:
     - (HECHO) Poner un objetivo mas general, tipo aumentar la conciencia de la gente sobre el medioambiente y ademas el que ya esta puesto, que seria el concreto.
     - (HECHO) Quitar el parrafo de deployment.
@@ -37,16 +37,16 @@
       * (HECHO) Explicar el papel de opencities.
     - (HECHO) Añadir un apartado solo de GeoJSON.
     - 3.6:
-      * Mejorar la explicacion y poner que uso java.
-      * Poner que he contemplado más opciones, como windows phone, y iOS, y que no los he cogido por que no tengo un mac, y porque hacerlo con html5 y phonegap era demasiado.
-      * Cambiar titulo por Mobile visualization platform.
+      * (HECHO) Mejorar la explicacion y poner que uso java.
+      * (HECHO) Poner que he contemplado más opciones, como windows phone, y iOS, y que no los he cogido por que no tengo un mac, y porque hacerlo con html5 y phonegap era demasiado.
+      * (HECHO) Cambiar titulo por Mobile visualization platform.
   
   TESTBED
-    - Explicar de forma generica todo el proyecto, con alguna imagen.
     - Easy_install VS Pip.
-    - 4.1 - Cambiar titulo por 'Arduino Development'
+    - (HECHO) Explicar de forma generica todo el proyecto, con alguna imagen.
+    - (HECHO) 4.1 - Cambiar titulo por 'Arduino Development'
     - 4.1.2:
-      * Poner solo los paquetes, y no las comandas.
+      * (HECHO) Poner solo los paquetes, y no las comandas.
       * Explicar el codigo
     - Añadir vision global de la aplicacion, poner el diagrama de clases extenso como anexo, y hacer una diagrama de clases con las funciones y atributos importantes para que quede más claro.
     - Poner solo dos screenshots
