@@ -365,6 +365,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \caption{Sensor boards}\label{fig:sensorboards}
 \end{figure}
 
+    Another advantage that YUN offers is the integrated WiFi module, since a person who does not have a guifi node can connect to one, and thus have access to opencities, and of course, to stored data.
+    
     We will use the Arduino Yun instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.  
 
   \section{Sensors}
@@ -434,12 +436,33 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
           \label{fig:AllSensors11_bb}
       \end{figure}
     
-  \section{Python}
-    A main part of the project is to upload the sensor data to opencities, and it has to be wrap into a GeoJSON message. The arduino sketch have a very low memory, so the best way to do this process is to use an external script stored in the SD card and make the sketch execute it. 
+  \section{Upload sensor data}
+  
+    A main part of the project is upload the data from the sensors to a platform so that everyone can access them.
     
-    One of the best option is a python script, because is really fast to code, it has all the libraries that we need, and, because this project could be update in the future, it is easy to read and understand.
+    The problem is that is needed to upload five sensor values, consequently the GeoJSON message (Explained in section \ref{GeoJSON}) takes too much memory, so the Arduino sketch can not handle it.
+
+    For this type of operations is possible to run a script in the linux environment through the bridge library\ref{fig:BridgeInShort}.
+
+    This being the path that is followed, there are several options for developing this script, for example, programmed in Java, C / C + +, python, etc..
+
+    We preferred to use python because of the following reasons: fast and perfect for prototyping programming, the code is shorter and therefore, easier to understand, especially if you want to improve in the future.
     
-  \section{Guifi network}
+    \subsection{GeoJSON}
+    \label{GeoJSON}
+      A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that we use is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
+      
+      In the figure \ref{GeoJSON} it can be see an example of a GeoJSON message that is used in this project.
+      \begin{figure}[htbp]
+        \centering
+            \includegraphics[scale=0.5]{./Figures/GeoJSON.png}
+            \\
+            \rule{15em}{0.5pt}
+        \caption[GeoJSON message]{GeoJSON message.}
+        \label{fig:GeoJSON}
+      \end{figure}
+    
+  \section{Community network}
     Guifi \footnote{\url{https://www.guifi.net/}} is the network where the arduino's will be deployed, and the one providing the access to Opencities through the Internet.
     
     Guifi is a network where the people that are interested put their effort in creating an infrastructure which provides acces to the Internet at a fair price.
@@ -453,15 +476,15 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \label{fig:Guifimap}
     \end{figure}
     
-  \section{Opencities}  
-    Opencities\cite{opencities} is the opendata services that we have chosen, the strengths of opencities are:
+  \section{Storage Resource Broker}  
+    Opencities\cite{opencities} is the opendata services that we have chosen, the reasons opencities has been chosen are:
     \begin{itemize}
-      \item They give us free storage.
+      \item The developers are at UPF, this helps because the platform can be tested, and because they can help solve problems and make these part of the project more easy.
       \item Easy API to upload and download the data.
-      \item The developers are in the UPF and problems can be solved more easily.
     \end{itemize}
     
-    In opendata the sensor data will upload into a dataset. Every user can have one or more datasets, and to distinguish, the datasets have an unique ID, and every user have a unique API key. 
+    The role of Opencities is to be the intermediary between data creators and those who want to see them.
+    In Opencities, the sensor data is uploaded into a dataset. Every user have an unique API key, and can have one or more datasets. To distinguish, the datasets have a unique ID. 
     
   \section{Android}
     Android is an open source mobile operating system from Google, it runs on smartphones, and we will use it to develop an application to see the sensor data stored in opencities, and show it to the user in a way that anybody can understand it.
@@ -480,8 +503,6 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     We will need two scripts, one to collect the data, and other to send it. This is because the memory to run an arduino sketch is very low, and the creation of the GeoJSON message to opencities is too big. That is why we use a python script called by the arduino sketch.
     
     The arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script have to create a GeoJSON and send it to opencities.
-    
-    A GeoJSON\footnote{\url{http://geojson.org/}} is a format for encoding a variety of geographic data structures. The GeoJSON that we use is a collection of features, every feature contains a geometry object, in our case, a ``point'' with the longitud and latitud of the sensor node, and some properties required: ID, name, datasetID, datasetName, address, description, timestamp, value of the sensor, and unit.
     
     \subsection{Collect sensor data}
     

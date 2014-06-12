@@ -21,17 +21,19 @@
     - [Menos importante] Añadir más iniciativas del palo smartcitizen, o libellium.
     
   TECHNOLOGIES
-    - (HECHO) Sensor de gas: Que gases, que concentración, 
     - explicar lo de 10 partes por millon (ppm) que sale en el datasheet.
+    - (HECHO) Sensor de gas: Que gases, que concentración, 
     - (HECHO) Si es posible, hacer tres imagenes pegadas. http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Subfloats
-    - 3.1 - Añadir que YUN tiene wifi y se puede conectar a un nodo de guifi de otra persona y estar en la misma red, con opencities y demas.
+    - (HECHO) 3.1 - Añadir que YUN tiene wifi y se puede conectar a un nodo de guifi de otra persona y estar en la misma red, con opencities y demas.
     - (HECHO) 3.2 - Explicar el porque de la eleccion de los sensores.
-    - 3.3 - Cambiar el titulo por algo que explique de que va el apartado, como 'upload data', y mejorar la explicacion.
-    - 3.4 - Cambiar el titulo por 'Comunity network'
+    - 3.3:
+      * (HECHO) Cambiar el titulo por algo que explique de que va el apartado, como 'upload data'.
+      * (HECHO) Mejorar la explicacion.
+    - (HECHO) 3.4 - Cambiar el titulo por 'Comunity network'
     - 3.5:
-      * Quitar 'free storage'
-      * Poner que contribuí en el proyecto de opencities, y que ellos tambien me ayudaron a mi.
-      * Quitar ese titulo por otro mejor, como 'Storage broker'
+      * (HECHO) Quitar 'free storage'
+      * (HECHO) Poner que contribuí en el proyecto de opencities, y que ellos tambien me ayudaron a mi.
+      * (HECHO) Quitar ese titulo por otro mejor, como 'Storage broker'
       * Explicar el papel de opencities.
     - Añadir un apartado solo de GeoJSON.
     - 3.6:

@@ -32,18 +32,19 @@
 \contentsline {subsection}{\numberline {3.2.4}Aosong DHT22 and DHT11: Humidity}{14}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{14}{subsection.3.2.5}
 \contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{17}{subsection.3.2.6}
-\contentsline {section}{\numberline {3.3}Python}{19}{section.3.3}
-\contentsline {section}{\numberline {3.4}Guifi network}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Opencities}{19}{section.3.5}
+\contentsline {section}{\numberline {3.3}Upload sensor data}{19}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}GeoJSON}{19}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Community network}{19}{section.3.4}
+\contentsline {section}{\numberline {3.5}Storage Resource Broker}{21}{section.3.5}
 \contentsline {section}{\numberline {3.6}Android}{21}{section.3.6}
 \contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Arduino}{23}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Collect sensor data}{23}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{24}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Android app}{26}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Summary}{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Interface}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Code}{28}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{25}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Android app}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Summary}{25}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Interface}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Code}{27}{subsection.4.2.3}
 \contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed results}}}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Sensor node}{34}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{34}{subsection.5.1.1}
@@ -58,7 +59,7 @@
 \contentsline {subsection}{\numberline {5.2.1}Results}{38}{subsection.5.2.1}
 \contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{41}{chapter.6}
 \contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{43}{chapter.7}
-\contentsline {chapter}{BIBLIOGRAPHY}{43}{section*.38}
+\contentsline {chapter}{BIBLIOGRAPHY}{43}{section*.39}
 \contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{47}{chapter.8}
 \contentsline {section}{\numberline {8.1}Pilot Charter}{47}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{47}{subsection.8.1.1}

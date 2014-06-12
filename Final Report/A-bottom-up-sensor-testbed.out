@@ -26,47 +26,48 @@
 \BOOKMARK [2][-]{subsection.3.2.4}{Aosong DHT22 and DHT11: Humidity}{section.3.2}% 26
 \BOOKMARK [2][-]{subsection.3.2.5}{MQ135: Gas sensor}{section.3.2}% 27
 \BOOKMARK [2][-]{subsection.3.2.6}{BreadBoard with all the sensors}{section.3.2}% 28
-\BOOKMARK [1][-]{section.3.3}{Python}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.4}{Guifi network}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.5}{Opencities}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.6}{Android}{chapter.3}% 32
-\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 33
-\BOOKMARK [1][-]{section.4.1}{Arduino}{chapter.4}% 34
-\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensor data}{section.4.1}% 35
-\BOOKMARK [2][-]{subsection.4.1.2}{Communication with opencities}{section.4.1}% 36
-\BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.2.1}{Summary}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.2}{Interface}{section.4.2}% 39
-\BOOKMARK [2][-]{subsection.4.2.3}{Code}{section.4.2}% 40
-\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Sensor node}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.1.1}{Connection to the Internet}{section.5.1}% 43
-\BOOKMARK [2][-]{subsection.5.1.2}{Install necessary packets}{section.5.1}% 44
-\BOOKMARK [2][-]{subsection.5.1.3}{Copy the scripts}{section.5.1}% 45
-\BOOKMARK [2][-]{subsection.5.1.4}{Attach the sensors}{section.5.1}% 46
-\BOOKMARK [2][-]{subsection.5.1.5}{Arduino Code}{section.5.1}% 47
-\BOOKMARK [1][-]{section.5.2}{Actual Testbed}{chapter.5}% 48
-\BOOKMARK [2][-]{subsection.5.2.1}{Results}{section.5.2}% 49
-\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 50
-\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 51
-\BOOKMARK [0][-]{section*.38}{BIBLIOGRAPHY}{}% 52
-\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 53
-\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 54
-\BOOKMARK [2][-]{subsection.8.1.1}{Pilot purpose or justification}{section.8.1}% 55
-\BOOKMARK [2][-]{subsection.8.1.2}{Measurable pilot objectives and related success criteria}{section.8.1}% 56
-\BOOKMARK [2][-]{subsection.8.1.3}{High-level requirements}{section.8.1}% 57
-\BOOKMARK [2][-]{subsection.8.1.4}{High-level pilot description}{section.8.1}% 58
-\BOOKMARK [2][-]{subsection.8.1.5}{High-level risks}{section.8.1}% 59
-\BOOKMARK [2][-]{subsection.8.1.6}{Summary milestone schedule}{section.8.1}% 60
-\BOOKMARK [2][-]{subsection.8.1.7}{Summary budget}{section.8.1}% 61
-\BOOKMARK [1][-]{section.8.2}{Planning Report}{chapter.8}% 62
-\BOOKMARK [2][-]{subsection.8.2.1}{Familiarization with the Arduino Yun}{section.8.2}% 63
-\BOOKMARK [2][-]{subsection.8.2.2}{Preliminary testbed}{section.8.2}% 64
-\BOOKMARK [2][-]{subsection.8.2.3}{Collect Data from sensors}{section.8.2}% 65
-\BOOKMARK [2][-]{subsection.8.2.4}{Install Sentilo}{section.8.2}% 66
-\BOOKMARK [2][-]{subsection.8.2.5}{Communication with Sentilo}{section.8.2}% 67
-\BOOKMARK [2][-]{subsection.8.2.6}{Real deployment}{section.8.2}% 68
-\BOOKMARK [2][-]{subsection.8.2.7}{Interface}{section.8.2}% 69
-\BOOKMARK [2][-]{subsection.8.2.8}{Sentilo module}{section.8.2}% 70
-\BOOKMARK [2][-]{subsection.8.2.9}{Final report}{section.8.2}% 71
-\BOOKMARK [2][-]{subsection.8.2.10}{Gantt chart}{section.8.2}% 72
+\BOOKMARK [1][-]{section.3.3}{Upload sensor data}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.1}{GeoJSON}{section.3.3}% 30
+\BOOKMARK [1][-]{section.3.4}{Community network}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.5}{Storage Resource Broker}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.6}{Android}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Arduino}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensor data}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.2}{Communication with opencities}{section.4.1}% 37
+\BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.2.1}{Summary}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.2}{Interface}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.3}{Code}{section.4.2}% 41
+\BOOKMARK [0][-]{chapter.5}{ Testbed results}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Sensor node}{chapter.5}% 43
+\BOOKMARK [2][-]{subsection.5.1.1}{Connection to the Internet}{section.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1.2}{Install necessary packets}{section.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.1.3}{Copy the scripts}{section.5.1}% 46
+\BOOKMARK [2][-]{subsection.5.1.4}{Attach the sensors}{section.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.1.5}{Arduino Code}{section.5.1}% 48
+\BOOKMARK [1][-]{section.5.2}{Actual Testbed}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.2.1}{Results}{section.5.2}% 50
+\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 51
+\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 52
+\BOOKMARK [0][-]{section*.39}{BIBLIOGRAPHY}{}% 53
+\BOOKMARK [0][-]{chapter.8}{ Appendixes}{}% 54
+\BOOKMARK [1][-]{section.8.1}{Pilot Charter}{chapter.8}% 55
+\BOOKMARK [2][-]{subsection.8.1.1}{Pilot purpose or justification}{section.8.1}% 56
+\BOOKMARK [2][-]{subsection.8.1.2}{Measurable pilot objectives and related success criteria}{section.8.1}% 57
+\BOOKMARK [2][-]{subsection.8.1.3}{High-level requirements}{section.8.1}% 58
+\BOOKMARK [2][-]{subsection.8.1.4}{High-level pilot description}{section.8.1}% 59
+\BOOKMARK [2][-]{subsection.8.1.5}{High-level risks}{section.8.1}% 60
+\BOOKMARK [2][-]{subsection.8.1.6}{Summary milestone schedule}{section.8.1}% 61
+\BOOKMARK [2][-]{subsection.8.1.7}{Summary budget}{section.8.1}% 62
+\BOOKMARK [1][-]{section.8.2}{Planning Report}{chapter.8}% 63
+\BOOKMARK [2][-]{subsection.8.2.1}{Familiarization with the Arduino Yun}{section.8.2}% 64
+\BOOKMARK [2][-]{subsection.8.2.2}{Preliminary testbed}{section.8.2}% 65
+\BOOKMARK [2][-]{subsection.8.2.3}{Collect Data from sensors}{section.8.2}% 66
+\BOOKMARK [2][-]{subsection.8.2.4}{Install Sentilo}{section.8.2}% 67
+\BOOKMARK [2][-]{subsection.8.2.5}{Communication with Sentilo}{section.8.2}% 68
+\BOOKMARK [2][-]{subsection.8.2.6}{Real deployment}{section.8.2}% 69
+\BOOKMARK [2][-]{subsection.8.2.7}{Interface}{section.8.2}% 70
+\BOOKMARK [2][-]{subsection.8.2.8}{Sentilo module}{section.8.2}% 71
+\BOOKMARK [2][-]{subsection.8.2.9}{Final report}{section.8.2}% 72
+\BOOKMARK [2][-]{subsection.8.2.10}{Gantt chart}{section.8.2}% 73
