@@ -16,68 +16,68 @@
 \contentsline {subsection}{\numberline {2.3.1}Smartcitizen}{4}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Libelium}{4}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Opendata services}{5}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Opencities}{6}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Opencities}{5}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Xively}{6}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Sentilo}{6}{subsection.2.4.3}
 \contentsline {section}{\numberline {2.5}Sensor boards}{6}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Arduino YUN}{6}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Raspberry Pi}{8}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Picoboard}{8}{subsection.2.5.3}
-\contentsline {chapter}{\numberline {3}{\MakeUppercase { Technologies}}}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Arduino vs Raspberry PI}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Sensors}{12}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}LM35: Temperature}{12}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Light Dependent Resistor (LDR)}{12}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}{14}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Aosong DHT22 and DHT11: Humidity}{14}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{14}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{17}{subsection.3.2.6}
-\contentsline {section}{\numberline {3.3}Upload sensor data}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}GeoJSON}{19}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Community network}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Storage Resource Broker}{21}{section.3.5}
-\contentsline {section}{\numberline {3.6}Visualization platform}{21}{section.3.6}
-\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Arduino Development}{24}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Collect sensor data}{24}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{24}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Android app}{26}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Summary}{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Interface}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Code}{26}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Repository}{31}{section.4.3}
-\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed Deployment and Results}}}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Sensor node}{34}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{34}{subsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.1}Through Ethernet}{34}{subsubsection.5.1.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.2}Through WiFi}{34}{subsubsection.5.1.1.2}
-\contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{35}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{35}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{36}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{36}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Actual Testbed}{37}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Results}{37}{subsection.5.2.1}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{41}{chapter.6}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{43}{chapter.7}
-\contentsline {chapter}{BIBLIOGRAPHY}{45}{section*.40}
-\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{47}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter}{47}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{47}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{47}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}High-level requirements}{47}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}High-level pilot description}{48}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}High-level risks}{48}{subsection.8.1.5}
-\contentsline {subsection}{\numberline {8.1.6}Summary milestone schedule}{48}{subsection.8.1.6}
-\contentsline {subsection}{\numberline {8.1.7}Summary budget}{49}{subsection.8.1.7}
-\contentsline {section}{\numberline {8.2}Planning Report}{49}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{49}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{49}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{49}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{49}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{50}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}Real deployment}{50}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}Interface}{50}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}Sentilo module}{50}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}Final report}{50}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{50}{subsection.8.2.10}
-\contentsline {section}{\numberline {8.3}Class Diagram}{50}{section.8.3}
+\contentsline {subsection}{\numberline {2.5.2}Raspberry Pi}{7}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Picoboard}{7}{subsection.2.5.3}
+\contentsline {chapter}{\numberline {3}{\MakeUppercase { Technologies}}}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Arduino vs Raspberry PI}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Sensors}{10}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}LM35: Temperature}{10}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Light Dependent Resistor (LDR)}{10}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}{12}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Aosong DHT22 and DHT11: Humidity}{12}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{12}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{14}{subsection.3.2.6}
+\contentsline {section}{\numberline {3.3}Upload sensor data}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}GeoJSON}{17}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Community network}{17}{section.3.4}
+\contentsline {section}{\numberline {3.5}Storage Resource Broker}{19}{section.3.5}
+\contentsline {section}{\numberline {3.6}Visualization platform}{19}{section.3.6}
+\contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Arduino Development}{22}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Collect sensor data}{22}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{22}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Android app}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Summary}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Interface}{24}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Code}{24}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Repository}{29}{section.4.3}
+\contentsline {chapter}{\numberline {5}{\MakeUppercase { Testbed Deployment and Results}}}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Sensor node}{32}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{32}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Through Ethernet}{32}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Through WiFi}{32}{subsubsection.5.1.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{33}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{33}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{34}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{34}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Actual Testbed}{35}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Results}{35}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{39}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{41}{chapter.7}
+\contentsline {chapter}{BIBLIOGRAPHY}{43}{section*.37}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{45}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{45}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{45}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{45}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}High-level requirements}{45}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}High-level pilot description}{46}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}High-level risks}{46}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Summary milestone schedule}{46}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}Summary budget}{47}{subsection.8.1.7}
+\contentsline {section}{\numberline {8.2}Planning Report}{47}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{47}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{47}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{47}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{47}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{48}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}Real deployment}{48}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}Interface}{48}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}Sentilo module}{48}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}Final report}{48}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{48}{subsection.8.2.10}
+\contentsline {section}{\numberline {8.3}Class Diagram}{48}{section.8.3}

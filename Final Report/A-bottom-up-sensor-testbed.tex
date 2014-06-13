@@ -239,36 +239,36 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       They have a variety of products, here are some interesting ones:
       \begin{itemize}
         \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow, body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/eletromyography sensor (Figure \ref{fig:Libeliumehealth}).
-          \begin{figure}[htbp]
-            \centering
-                \includegraphics[scale=0.4]{./Figures/Libeliume_health.png}
-                \\
-                \rule{13em}{0.5pt}
-            \caption[Libelium ehealth]{Libelium ehealth.}
-            \label{fig:Libeliumehealth}
-          \end{figure}
         
         \item Waspmote: A sensor node where we can attach more than 60 sensors, solar powered, and though for adjust into street light posts. (Figure \ref{fig:LibeliumWaspmote}).
-          \begin{figure}[htbp]
-            \centering
-                \includegraphics[scale=0.3]{./Figures/LibeliumWaspmote.png}
-                \\
-                \rule{13em}{0.5pt}
-            \caption[Libelium Waspmote]{Libelium Waspmote.}
-            \label{fig:LibeliumWaspmote}
-         \end{figure}
        
        \item Smart Water: Is a wireless sensor platform for water quality monitoring, it also provides real-time data. (Figure \ref{fig:LibeliumSmartWater}).
-        \begin{figure}[htbp]
-            \centering
-                \includegraphics[scale=0.8]{./Figures/LibeliumSmartWater.png}
-                \\
-                \rule{13em}{0.5pt}
-            \caption[Libelium Smart Water]{Libelium Smart Water.}
-            \label{fig:LibeliumSmartWater}
-         \end{figure}
-        
-      \end{itemize}     
+     \end{itemize}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/Libeliume_health.png}
+                \caption{Libelium ehealth}
+                \label{fig:Libeliumehealth}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/LibeliumWaspmote.png}
+                \caption{Libelium Waspmote}
+                \label{fig:LibeliumWaspmote}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/LibeliumSmartWater.png}
+                \caption{Libelium Smart Water}
+                \label{fig:LibeliumSmartWater}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{Libellium Projects}\label{fig:LibelliumProjects}
+		\end{figure}
+      
+           
     
   \section{Opendata services}
     The sensor networks are useless if the data is not stored, although the data could be saved in the device, it would be too expensive to collect it. That is why an opendata service is used.
@@ -320,10 +320,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
           \label{fig:RaspberryPiB}
        \end{figure}
     
-    \subsection{Picoboard}
-    
-      {\bf Puede que cambie Picoboard por BeagleBone}
-      
+    \subsection{Picoboard}      
       PicoBoard\footnote{\url{http://www.picocricket.com/picoboard.html}} is a board to interact with the world, it can be programmed by Scratch projects. It is less flexible than the others, it is composed by a button, a light and sound sensor, a slider, and alligator clips which can be use to build custom sensors. This board can be seen in the figure \ref{fig:picoboard}.
       
       \begin{figure}[htbp]
@@ -367,7 +364,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \end{subfigure}
         \rule{18em}{0.5pt}
         \caption{Sensor boards}\label{fig:sensorboards}
-\end{figure}
+		\end{figure}
 
     Another advantage that YUN offers is the integrated WiFi module, since a person who does not have a guifi node can connect to one, and thus have access to opencities, and of course, to stored data.
     
@@ -386,24 +383,74 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \subsection{LM35: Temperature}
       LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} we can see the way to connect it to the arduino.
       \cite{LM35}
-      \TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
+      %\TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/LM35.jpg}
+                \caption{LM35 sensor}
+                \label{fig:LM35}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/Fritzing/TemperatureSensor_bb.png}
+                \caption{Temperature Sensor Breadboard}
+                \label{fig:TemperatureSensor_bb}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{Temperature sensor}\label{fig:temperaturesensor}
+		\end{figure}
       
     \subsection{Light Dependent Resistor (LDR)}
       LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} it can be seen the way to connect it to the arduino.
-      \TwoFig{./Figures/LDR.jpg}{LDR sensor}{fig:LDR}{./Figures/Fritzing/LightSensor_bb.png}{Light Sensor Breadboard}{fig:LightSensor_bb}
+      %\TwoFig{./Figures/LDR.jpg}{LDR sensor}{fig:LDR}{./Figures/Fritzing/LightSensor_bb.png}{Light Sensor Breadboard}{fig:LightSensor_bb}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/LDR.jpg}
+                \caption{LDR sensor}
+                \label{fig:LDR}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/Fritzing/LightSensor_bb.png}
+                \caption{Light Sensor Breadboard}
+                \label{fig:LightSensor_bb}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{Light sensor}\label{fig:lightsensor}
+			\end{figure}
  
     \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
       This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} it can be seen the way to connect them to the arduino.
       \cite{emarteeminisound}
-      \TwoFig{./Figures/MiniSoundSensor.jpg}{Mini Sound Sensor}{fig:MSS}{./Figures/analognoisesensor.jpg}{Analog noise sensor}{fig:Analognoisesensor}      
-      \begin{figure}[htbp]
-          \centering
-              \includegraphics[scale=0.8]{./Figures/Fritzing/NoiseSensor_bb.png}
-              \\
-              \rule{18em}{0.5pt}
-          \caption[Noise Sensor Breadboard]{Noise Sensor Breadboard.}
-          \label{fig:NoiseSensor_bb}
-      \end{figure}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/MiniSoundSensor.jpg}
+                \caption{Mini Sound Sensor}
+                \label{fig:MSS}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/analognoisesensor.jpg}
+                \caption{Analog noise sensor}
+                \label{fig:Analognoisesensor}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/Fritzing/NoiseSensor_bb.png}
+                \caption{Noise Sensor Breadboard}
+                \label{fig:NoiseSensor_bb}
+        \end{subfigure}
+        \rule{35em}{0.5pt}
+        \caption{Noise sensor}\label{fig:noisesensor}
+			\end{figure}
 
 
     \subsection{Aosong DHT22 and DHT11: Humidity}
@@ -411,14 +458,48 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       At the time the testbed started, there was only 1 DHT22 sensor, so a DHT11 sensor has been used instead of the DHT22, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
       \cite{dht22sensor}
-      \TwoFig{./Figures/dht22.jpg}{DHT22 sensor}{fig:DHT22}{./Figures//Fritzing/HumiditySensor_bb.png}{DHT22 Breadboard}{fig:HumiditySensordht22_bb}
-      \TwoFig{./Figures/dht11.png}{DHT11 sensor}{fig:DHT11}{./Figures/Fritzing/HumiditySensorDht11_bb.png}{DHT11 Breadboard}{fig:HumiditySensordht11_bb}      
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=0.8\textwidth]{./Figures/dht22.jpg}
+                \caption{DHT22 sensor}
+                \label{fig:DHT22}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/Fritzing/HumiditySensor_bb.png}
+                \caption{DHT22 Sensor Breadboard}
+                \label{fig:HumiditySensordht22_bb}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{DHT22 sensor}\label{fig:DHT22sensor}
+			\end{figure}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=0.7\textwidth]{./Figures/dht11.png}
+                \caption{DHT11 sensor}
+                \label{fig:DHT11}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/Fritzing/HumiditySensorDht11_bb.png}
+                \caption{DHT11 Sensor Breadboard}
+                \label{fig:HumiditySensordht11_bb}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{DHT11 sensor}\label{fig:DHT11sensor}
+			\end{figure}     
       
     \subsection{MQ135: Gas sensor}
       This is a gas sensor [Figure \ref{fig:MQ135}], and is used to measure air quality. This sensor does not have a figure in fritzing, so gas sensor that has the same output has been used, and in the figure \ref{fig:GasSensor_bb} it can be seen how to connect it to the arduino.
       \TwoFig{./Figures/mq135.jpg}{MQ135 Air Quality sensor}{fig:MQ135}{./Figures/Fritzing/GasSensor_bb.png}{Gas Sensor Breadboard}{fig:GasSensor_bb}
       
-      The Mq135 sensor reacts to the concentration of the following gases: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.. \ref{mq135gassensor}.
+      The Mq135 sensor reacts to the concentration of the following gases: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.. \cite{mq135gassensor}.
       
     \subsection{BreadBoard with all the sensors}
       
@@ -652,7 +733,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       Finally, a GPSTracker class is responsible for obtaining user location to place the map on the user location, because it will be the place that the users want to see.
            
-      The class diagram, in a reduce way, can be seen in the figure \ref{ClassDiagram}
+      The class diagram, in a reduce way, can be seen in the figure \ref{fig:ClassDiagram}
       
       \begin{figure}[htbp]
         \centering
@@ -700,7 +781,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 		
 		\begin{figure}[htbp]
 			\centering
-				  \includegraphics[scale=0.1]{./Figures/repository.png}
+				  \includegraphics[scale=0.6]{./Figures/repository.png}
 				  \rule{25em}{0.5pt}
 			\caption[Github Repository]{Github Repository.}
 			\label{fig:repository}
