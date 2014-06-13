@@ -1,6 +1,6 @@
 function collect()
 	
-	limit = 100;
+	limit = 1501;
   fid = fopen ("logDataFerran", 'r');
   i = 0;
   while ( feof(fid) == 0 )
@@ -72,7 +72,7 @@ function collect()
   xlabel ("Time [minutes]", "fontsize", 18) 
   title( 'Temperature', "fontsize", 20 );
   legend('Montgat', 'Badalona', 'Barcelona')
-  saveas (1, "../Final\ Report/Figures/GraphicTemperature.png");
+  saveas (1, "../Final\ Report/Figures/CompleteGraphicTemperature.png");
   
   figure 2
   plot(1:i,hum1,'r');
@@ -84,7 +84,7 @@ function collect()
   xlabel( 'Time [minutes]', "fontsize", 18 );
   title( 'Relative Humidity', "fontsize", 20 );
   legend('Montgat', 'Badalona', 'Barcelona')
-  saveas (2, "../Final\ Report/Figures/GraphicHumidity.png");
+  saveas (2, "../Final\ Report/Figures/CompleteGraphicHumidity.png");
   
   figure 3
   plot(1:i,noise1,'r');
@@ -96,7 +96,7 @@ function collect()
   xlabel( 'Time [minutes]', "fontsize", 18 );
   title( 'Noise', "fontsize", 20 );
   legend('Montgat', 'Badalona', 'Barcelona')
-  saveas (3, "../Final\ Report/Figures/GraphicNoise.png");
+  saveas (3, "../Final\ Report/Figures/CompleteGraphicNoise.png");
   
   figure 4
   plot(1:i,light1,'r');
@@ -108,7 +108,7 @@ function collect()
   xlabel( 'Time [minutes]', "fontsize", 18 );
   title( 'Light', "fontsize", 20 );
   legend('Montgat', 'Badalona', 'Barcelona')
-  saveas (4, "../Final\ Report/Figures/GraphicLight.png");
+  saveas (4, "../Final\ Report/Figures/CompleteGraphicLight.png");
   
   figure 5
   plot(1:i,gas1,'r');
@@ -120,6 +120,6 @@ function collect()
   xlabel( 'Time [minutes]', "fontsize", 18 );
   title( 'Air quality', "fontsize", 20 );
   legend('Montgat', 'Badalona', 'Barcelona')
-  saveas (5, "../Final\ Report/Figures/GraphicGas.png");
+  saveas (5, "../Final\ Report/Figures/CompleteGraphicGas.png");
 
 end

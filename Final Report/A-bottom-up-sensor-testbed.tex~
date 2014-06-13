@@ -3,6 +3,8 @@
 \usepackage{pgfgantt}
 \usepackage{tikz}
 \usepackage{eurosym}
+\usepackage{float}
+\usepackage{pdfpages}
 
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -939,19 +941,19 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       The locations had been chosen to change a little bit the values, for example, the node in Montgat had more relative humidity that the one in Santa Coloma. Or the one in the UPF had more noise that the others.
       
-      This graphics had been done with an octave script that analyze the logData file in every sensor node.
+      This graphics had been done with an octave script that analyze the logData file in every sensor node, but this graphics are only a portion of the real testbed, which has been place on Appendixes.
       
       \begin{figure}
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
-                \includegraphics[scale=0.3]{./Figures/GraphicTemperature.png}
+                \includegraphics[width=\textwidth]{./Figures/GraphicTemperature.png}
                 \caption{Graphic Temperature}
                 \label{fig:GraphicTemperature}
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
         \begin{subfigure}[b]{0.3\textwidth}
-                \includegraphics[scale=0.3]{./Figures/GraphicLight.png}
+                \includegraphics[width=\textwidth]{./Figures/GraphicLight.png}
                 \caption{Graphic Light}
                 \label{fig:GraphicLight}
         \end{subfigure}
@@ -1019,21 +1021,58 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   \input{./Appendix/Planning_Report.tex}
   \section{Class Diagram}
   
-  	\begin{figure}[htbp]
-      \centering
-        \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_1.pdf}
-      \rule{35em}{0.5pt}
-      \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
-      \label{fig:ClassDiagram1}
-    \end{figure}
+  	\includepdf[]{./AdditionalInformation/ClassDiagram1_1.pdf}
+
     
-    \begin{figure}[htbp]
+    \begin{figure}[H]
       \centering
         \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
       \rule{35em}{0.5pt}
       \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
       \label{fig:ClassDiagram2}
     \end{figure}
+  
+  \section{Testbed Graphics}
+  	\begin{figure}[H]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./Figures/CompleteGraphicGas.png}
+      \rule{35em}{0.5pt}
+      \caption[Complete Graphic Air Quality]{Complete Graphic Air Quality.}
+      \label{fig:CompleteGraphicGas}
+    \end{figure}
+    
+    \begin{figure}[H]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./Figures/CompleteGraphicHumidity.png}
+      \rule{35em}{0.5pt}
+      \caption[Complete Graphic Humidity]{Complete Graphic Humidity.}
+      \label{fig:CompleteGraphicHumidity}
+    \end{figure}
+    
+    \begin{figure}[H]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./Figures/CompleteGraphicLight.png}
+      \rule{35em}{0.5pt}
+      \caption[Complete Graphic Light]{Complete Graphic Light.}
+      \label{fig:CompleteGraphicLight}
+    \end{figure}
+    
+    \begin{figure}[H]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./Figures/CompleteGraphicNoise.png}
+      \rule{35em}{0.5pt}
+      \caption[Complete Graphic Noise]{Complete Graphic Noise.}
+      \label{fig:CompleteGraphicNoise}
+    \end{figure}
+    
+    \begin{figure}[H]
+      \centering
+        \includegraphics[page=1,scale=0.8]{./Figures/CompleteGraphicTemperature.png}
+      \rule{35em}{0.5pt}
+      \caption[Complete Graphic Temperature]{Complete Graphic Temperature.}
+      \label{fig:CompleteGraphicTemperature}
+    \end{figure}
+  
 
 
 \backmatter

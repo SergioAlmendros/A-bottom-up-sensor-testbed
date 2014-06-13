@@ -57,8 +57,8 @@
     - (HECHO) Cambiar el título.
     - (HECHO) La parte del prototipo, si se puede se hace para la memoria, y sino para la presentacion.
     - Gráficas:
-      * Labels más grandes.
-      * Poner unidades.
+      * (HECHO) Labels más grandes.
+      * (HECHO) Poner unidades.
       * ¿Relative humidity?
     - 5.2.1 - Resultados
       * (HECHO) Tener una red de sensores.

@@ -79,5 +79,6 @@
 \contentsline {subsection}{\numberline {8.2.7}Interface}{46}{subsection.8.2.7}
 \contentsline {subsection}{\numberline {8.2.8}Sentilo module}{46}{subsection.8.2.8}
 \contentsline {subsection}{\numberline {8.2.9}Final report}{46}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{46}{subsection.8.2.10}
-\contentsline {section}{\numberline {8.3}Class Diagram}{46}{section.8.3}
+\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{47}{subsection.8.2.10}
+\contentsline {section}{\numberline {8.3}Class Diagram}{47}{section.8.3}
+\contentsline {section}{\numberline {8.4}Testbed Graphics}{50}{section.8.4}
