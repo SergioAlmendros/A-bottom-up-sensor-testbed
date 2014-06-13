@@ -68,10 +68,10 @@ function collect()
   plot(1:i,temp2,'b');
   plot(1:i,temp3,'g');
   hold off
-  ylabel( 'Temperature' );
-  xlabel( 'Time' );
-  title( "Temperature" );
-  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  ylabel( 'Temperature [Celsius Degrees]', "fontsize", 18);
+  xlabel ("Time [minutes]", "fontsize", 18) 
+  title( 'Temperature', "fontsize", 20 );
+  legend('Montgat', 'Badalona', 'Barcelona')
   saveas (1, "../Final\ Report/Figures/GraphicTemperature.png");
   
   figure 2
@@ -80,10 +80,10 @@ function collect()
   plot(1:i,hum2,'b');
   plot(1:i,hum3,'g');
   hold off
-  ylabel( 'Humidity' );
-  xlabel( 'Time' );
-  title( "Humidity" );
-  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  ylabel( 'Relative Humidity [%]', "fontsize", 18 );
+  xlabel( 'Time [minutes]', "fontsize", 18 );
+  title( 'Relative Humidity', "fontsize", 20 );
+  legend('Montgat', 'Badalona', 'Barcelona')
   saveas (2, "../Final\ Report/Figures/GraphicHumidity.png");
   
   figure 3
@@ -92,10 +92,10 @@ function collect()
   plot(1:i,noise2,'b');
   plot(1:i,noise3,'g');
   hold off
-  ylabel( 'Noise' );
-  xlabel( 'Time' );
-  title( "Noise" );
-  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  ylabel( 'Noise [%]', "fontsize", 18 );
+  xlabel( 'Time [minutes]', "fontsize", 18 );
+  title( 'Noise', "fontsize", 20 );
+  legend('Montgat', 'Badalona', 'Barcelona')
   saveas (3, "../Final\ Report/Figures/GraphicNoise.png");
   
   figure 4
@@ -104,10 +104,10 @@ function collect()
   plot(1:i,light2,'b');
   plot(1:i,light3,'g');
   hold off
-  ylabel( 'Light' );
-  xlabel( 'Time' );
-  title( "Light" );
-  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  ylabel( 'Light [Lux]', "fontsize", 18 );
+  xlabel( 'Time [minutes]', "fontsize", 18 );
+  title( 'Light', "fontsize", 20 );
+  legend('Montgat', 'Badalona', 'Barcelona')
   saveas (4, "../Final\ Report/Figures/GraphicLight.png");
   
   figure 5
@@ -116,10 +116,10 @@ function collect()
   plot(1:i,gas2,'b');
   plot(1:i,gas3,'g');
   hold off
-  ylabel( 'Gas presence' );
-  xlabel( 'Time' );
-  title( "Air quality" );
-  legend('Arduino 1', 'Arduino 2', 'Arduino 3')
+  ylabel( 'Gas presence [%]', "fontsize", 18 );
+  xlabel( 'Time [minutes]', "fontsize", 18 );
+  title( 'Air quality', "fontsize", 20 );
+  legend('Montgat', 'Badalona', 'Barcelona')
   saveas (5, "../Final\ Report/Figures/GraphicGas.png");
 
 end

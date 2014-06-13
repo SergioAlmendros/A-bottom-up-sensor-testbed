@@ -733,7 +733,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       Finally, a GPSTracker class is responsible for obtaining user location to place the map on the user location, because it will be the place that the users want to see.
            
-      The class diagram, in a reduce way, can be seen in the figure \ref{ClassDiagram}
+      The class diagram, in a reduce way, can be seen in the figure \ref{fig:ClassDiagram}
       
       \begin{figure}[htbp]
         \centering
@@ -941,18 +941,47 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       This graphics had been done with an octave script that analyze the logData file in every sensor node.
       
-      \TwoFig{./Figures/GraphicTemperature.png}{Graphic Temperature}{fig:GraphicTemperature}{./Figures/GraphicLight.png}{Graphic Light}{fig:GraphicLight}
-      
-      \TwoFig{./Figures/GraphicNoise.png}{Graphic Noise}{fig:GraphicNoise}{./Figures/GraphicHumidity.png}{Graphic Humidity}{fig:GraphicHumidity}
-      
-      \begin{figure}[htbp]
+      \begin{figure}
         \centering
-            \includegraphics[scale=0.5]{./Figures/GraphicGas.png}
-            \\
-            \rule{15em}{0.5pt}
-        \caption[Graphic Air Quality]{Graphic Air Quality.}
-        \label{fig:GraphicGas}
-      \end{figure}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[scale=0.3]{./Figures/GraphicTemperature.png}
+                \caption{Graphic Temperature}
+                \label{fig:GraphicTemperature}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[scale=0.3]{./Figures/GraphicLight.png}
+                \caption{Graphic Light}
+                \label{fig:GraphicLight}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{Testbed Results}\label{fig:TestbedResults1}
+			\end{figure}
+      
+      \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/GraphicNoise.png}
+                \caption{Graphic Noise}
+                \label{fig:GraphicNoise}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/GraphicHumidity.png}
+                \caption{Graphic Humidity}
+                \label{fig:GraphicHumidity}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{./Figures/GraphicGas.png}
+                \caption{Graphic Air Quality}
+                \label{fig:GraphicGas}
+        \end{subfigure}
+        \rule{18em}{0.5pt}
+        \caption{Testbed Results}\label{fig:TestbedResults1}
+			\end{figure}
+      
     
 \chapter{Conclusions}
 \label{Chapter6}

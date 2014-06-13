@@ -57,27 +57,27 @@
 \contentsline {subsection}{\numberline {5.1.5}Arduino Code}{34}{subsection.5.1.5}
 \contentsline {section}{\numberline {5.2}Actual Testbed}{35}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Results}{35}{subsection.5.2.1}
-\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{39}{chapter.6}
-\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{41}{chapter.7}
-\contentsline {chapter}{BIBLIOGRAPHY}{43}{section*.37}
-\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{45}{chapter.8}
-\contentsline {section}{\numberline {8.1}Pilot Charter}{45}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{45}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{45}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}High-level requirements}{45}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}High-level pilot description}{46}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}High-level risks}{46}{subsection.8.1.5}
-\contentsline {subsection}{\numberline {8.1.6}Summary milestone schedule}{46}{subsection.8.1.6}
-\contentsline {subsection}{\numberline {8.1.7}Summary budget}{47}{subsection.8.1.7}
-\contentsline {section}{\numberline {8.2}Planning Report}{47}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{47}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{47}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{47}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{47}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{48}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}Real deployment}{48}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}Interface}{48}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}Sentilo module}{48}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}Final report}{48}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{48}{subsection.8.2.10}
-\contentsline {section}{\numberline {8.3}Class Diagram}{48}{section.8.3}
+\contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{37}{chapter.6}
+\contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{39}{chapter.7}
+\contentsline {chapter}{BIBLIOGRAPHY}{41}{section*.36}
+\contentsline {chapter}{\numberline {8}{\MakeUppercase { Appendixes}}}{43}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pilot Charter}{43}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Pilot purpose or justification}{43}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Measurable pilot objectives and related success criteria}{43}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}High-level requirements}{43}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}High-level pilot description}{44}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}High-level risks}{44}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Summary milestone schedule}{44}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}Summary budget}{45}{subsection.8.1.7}
+\contentsline {section}{\numberline {8.2}Planning Report}{45}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Familiarization with the Arduino Yun}{45}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Preliminary testbed}{45}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Collect Data from sensors}{45}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Install Sentilo}{45}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}Communication with Sentilo}{46}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}Real deployment}{46}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}Interface}{46}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}Sentilo module}{46}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}Final report}{46}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}Gantt chart}{46}{subsection.8.2.10}
+\contentsline {section}{\numberline {8.3}Class Diagram}{46}{section.8.3}
