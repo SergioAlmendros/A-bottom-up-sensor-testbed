@@ -507,7 +507,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Bottom up sensor testbed}
 \label{Chapter4}
 
-  This chapter focused in the process that has been followed to complete the project, which has two main parts, the software to recollect and send the data and the Android application to show it.
+  This chapter focused in the process that has been followed to complete the project, which has two main parts, the software to collect and send the data and the Android application to show it.
   
   To make the project easier to understand an image has been made (Figure \ref{fig:reportGeneralView}.
   
@@ -577,7 +577,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       The python script has three process, first it stores all the sensor data pass by the arduino sketch into a class. Then it creates a GeoJSON message with all the data, and all the parameters needed to upload it into opencities. Finally upload the GeoJSON message.
       
-      With all this libraries the script can communicate with opencities and store the sensor data recollected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the python script works.\\
+      With all this libraries the script can communicate with opencities and store the sensor data collected by the arduino. The \ref{fig:Python Script Flow Chart} figure explain how the python script works.\\
       
       \begin{figure}[!htbp]
       \centering
@@ -694,11 +694,35 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{figure}
 
 	\section{Repository}
-		All the code, report, figures, etc has been stored in a public repository, so anyone could see it, downloaded a copy, and change it if necessary. This repository is in 
+		All the code, report, figures, etc has been stored in a public repository\footnote{\url{https://github.com/SergioAlmendros/A-bottom-up-sensor-testbed}}, so anyone could see it, downloaded a copy, and change it if necessary.
 		
-		During all the project there have been constant uploads of new information, as it was evolving.
+		In the figure \ref{fig:repository} it has been explained how the repository is distributed, each folder representes part of the process that has been done on this project.
 		
-		The
+		\begin{figure}[htbp]
+			\centering
+				  \includegraphics[scale=0.1]{./Figures/repository.png}
+				  \rule{25em}{0.5pt}
+			\caption[Github Repository]{Github Repository.}
+			\label{fig:repository}
+		\end{figure} 
+		
+		The most important folders are:
+		\begin{itemize}
+			\item {\bf Sensor Code:} Where has been stored the code that go into the arduino (arduino sketch and python script).
+			\item {\bf WorkspaceAndroid:} This folder has been used as workspace for the developing of the mobile application using the IDE (Integrated Development Environment) Eclipse.
+			\item {\bf Final Report:} Is where it has been documenting the project and has been written in latex, a system for the creation of technical and scientific documentation.
+		\end{itemize}
+		
+		The less important folders are:
+		\begin{itemize}
+			\item {\bf Collect Data From Sensors:} Here has been stored the code to get the value of each sensor separately, in case someone wants to use only one of the sensors and dows not want to read the full code.
+			\item {\bf Collect Data From Sensors Nodes:} Using the logData files that have been created during the testbed and an octave script that has been developped to read this data and display it in graphs.
+			\item {\bf Deliverables:} In this folder it has been stored the initial documentation of the project.
+			\item {\bf Presentation:} Finally, here is the slide presentation that has been made to explain the project, also written in latex.
+		\end{itemize}
+		
+		During all the project there have been constant uploads of new information to the repository, as it was evolving.
+
 
 \chapter{Testbed Deployment and Results}
 \label{Chapter5}
