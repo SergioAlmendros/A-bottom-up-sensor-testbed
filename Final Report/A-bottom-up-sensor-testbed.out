@@ -34,7 +34,7 @@
 \BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 34
 \BOOKMARK [1][-]{section.4.1}{Arduino Development}{chapter.4}% 35
 \BOOKMARK [2][-]{subsection.4.1.1}{Collect sensor data}{section.4.1}% 36
-\BOOKMARK [2][-]{subsection.4.1.2}{Communication with opencities}{section.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.1.2}{Communication with Opencities}{section.4.1}% 37
 \BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 38
 \BOOKMARK [2][-]{subsection.4.2.1}{Summary}{section.4.2}% 39
 \BOOKMARK [2][-]{subsection.4.2.2}{Interface}{section.4.2}% 40

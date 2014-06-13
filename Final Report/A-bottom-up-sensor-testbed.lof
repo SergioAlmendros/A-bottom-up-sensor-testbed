@@ -19,12 +19,11 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Noise sensor\relax }}{12}{figure.caption.13}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces DHT22 sensor\relax }}{13}{figure.caption.14}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces DHT11 sensor\relax }}{13}{figure.caption.15}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces MQ135 Air Quality sensor\relax }}{14}{figure.caption.16}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Gas Sensor Breadboard\relax }}{14}{figure.caption.16}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Sensor node Prototype with DHT22}}{15}{figure.caption.17}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Sensor node Prototype with DHT11}}{16}{figure.caption.18}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces GeoJSON message}}{17}{figure.caption.19}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Guifi sensor map}}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces DHT11 sensor\relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Sensor node Prototype with DHT22}}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Sensor node Prototype with DHT11}}{16}{figure.caption.18}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces GeoJSON message}}{17}{figure.caption.19}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Guifi sensor map}}{18}{figure.caption.20}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces reportGeneralView}}{21}{figure.caption.21}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Arduino sketch Flow Chart}}{23}{figure.caption.22}

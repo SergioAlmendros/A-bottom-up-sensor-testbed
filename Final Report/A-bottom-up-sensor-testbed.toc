@@ -40,7 +40,7 @@
 \contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Arduino Development}{22}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Collect sensor data}{22}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Communication with opencities}{22}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Communication with Opencities}{22}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Android app}{24}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Summary}{24}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Interface}{24}{subsection.4.2.2}
