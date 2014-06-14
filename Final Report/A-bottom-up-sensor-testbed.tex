@@ -794,9 +794,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \chapter{Testbed Deployment and Results}
 \label{Chapter5}
 
-  In this chapter I will explained the procedure I followed to make this testbed, and an explanation of the results.
+  In this chapter the procedure to deploy a testbed had been explained step by step.
   
-  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype I will use in this testbed. It is composed of an Arduino YUN, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
+  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype used in this testbed. It is composed of an Arduino YUN, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
   
   \begin{figure}[htbp]
       \centering
@@ -811,16 +811,16 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   Now, I will show the process to configure the node, part of this process is taken of the website of Arduino\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}:
   
   \subsection{Connection to the Internet}
-    First of all Internet connection has to be provide to the Arduino.
+    First of all an Internet connection has to be provide to the Arduino.
     \subsubsection{Through Ethernet}
-      This is the fastest way to provide of Internet connection, the Arduino will behave the same way as a computer, automatically will have an IP address.
+      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically receive an IP address.
       
     \subsubsection{Through WiFi}
       This is a slowest way. The process is the following:
       \begin{enumerate}
         \item First power the Arduino YUN. 
-        \item The Arduino will create his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
-        \item When it is connected to the YUN network, go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. Put the password, which is ``arduino''. as it can be seen in the figure \ref{fig:YunWebPassword}.
+        \item The Arduino creates his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
+        \item When it is connected to the YUN network, go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. Put the password, which is ``arduino''. as shown in the figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebPassword.png}
@@ -829,7 +829,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:YunWebPassword}
           \end{figure}
         
-        \item The next page will be an information page, click on the configure button \ref{fig:YunWebDiagnostic}.
+        \item The next page is an information page, click on the configure button \ref{fig:YunWebDiagnostic}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebDiagnostic.png}
@@ -850,7 +850,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
           \end{figure}
           
         \item Press the configure \& restart button.
-        \item Finally connect to same network as the Yun is connected.
+        \item Finally connect to the same network as the Yun is connected.
         
       \end{enumerate}
   \subsection{Install necessary packets}
@@ -866,15 +866,14 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
           opkg update \\
           opkg install distribute \\
           opkg install python-openssl \\
-          easy\_install pip \\
-          pip install geojson \\
-          pip install geopy \\
-          pip install httplib2
+          easy\_install install geojson \\
+          easy\_install install geopy \\
+          easy\_install install httplib2
         }
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    First of all create the some directories, so once the ssh command has been done, go to ``/mnt/sda1'', make the following comands:
+    First of all it is necessary to create some directories, so once the ssh command has been done, go to ``/mnt/sda1'', make the following comands:
     
     {\begin{centering} \textbf{
     mkdir arduino \\
@@ -882,28 +881,28 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     mkdir www \\
     }\par \end{centering}}
     
-    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, put the SDCard into a computer an save the files in there, or copy the files into the Arduino through the network with the following comand:
+    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the files in there, or copying the files into the Arduino through the network with the following comand:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
-    Now that the python step is done, the sensors has to be attach the sensors to the Arduino Yun, to do that look at figure \ref{fig:AllSensors22_bb} or figure \ref{fig:AllSensors11_bb}.
+    Now that the python step is done, the sensors had to be attach the sensors to the Arduino Yun (Figure \ref{fig:AllSensors22_bb} or Figure \ref{fig:AllSensors11_bb}).
   
   \subsection{Arduino Code}
-    To upload an Arduino sketch to the yun the IDE: Arduino 1.5.5 has to be used. There are two ways to upload an sketch, through a USB cable connected to the Arduino, or through the Internet, if we are in the same network as the Arduino, it will appear in the IDE.
+    To upload an Arduino sketch to the yun the IDE: Arduino 1.5.5 has to be used. There are two ways to upload an sketch, through an USB cable connected to the Arduino, or through the Internet. If we are in the same network as the Arduino, it will appear in the IDE.
   
   \section{Actual Testbed}
-    We have three Arduino, so we have to mount the sensor node and put them in three different places in free space but being sure it will not get wet.
+    We have three Arduinos, so we have to mount the sensor nodes and put them in three different places. The location should be in free space.
     
-    When we have decided when we are going to put them, we have to introduce manually the location and the unique ID into the python script. We can do that by entering into the Arduino by secure shell as we did earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'':
+    When we have decided where we are going to put them, we have to introduce manually the location into the python script and the unique ID into the Arduino sketch. We can do that by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
     
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     
-    After a day of collecting data, we will get the Arduino's back, take the three logData files, and show the data into some graphics.
+    After a day of collecting data, we got the Arduino's back, took the three logData files, and showed the data into some graphics.
     
-    In the figure \ref{fig:Testbedmap} there are the nodes deployed, the location try to be a little bit different to get distinc values.
+    The figure \ref{fig:Testbedmap} shows the nodes deployed, the location try to be a little bit different to get distinc values.
     \begin{figure}[htbp]
       \centering
           \includegraphics[scale=0.2]{./Figures/Testbedmap.png}
@@ -915,28 +914,25 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     \subsection{Results}
       
-      Thanks to the testbed a sensor network has been created, with only three nodes, for economical reasons, but it has been shown that the network could grow without problems.
+      Thanks to the testbed a sensor network has been deployed, with only three nodes, for economical reasons, but it has been shown that the network could grow without problems.    
       
-      The data has been stored on a platform and the application has been able to access them, in this case a problem happened, the application was not designed to so much data, so it needs improvement.
-      
-      A mobile application has been made, and shows an example that could led to more people to create other applications that work with the sensor data stored in Opencities.
-      
-      All the data created during this testbed has been stored in the SD card of the Arduinos, and put it into graphics in the following figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}.
-      
-      The locations had been chosen to change a little bit the values, for example, the node in Montgat had more relative humidity that the one in Santa Coloma. Or the one in the UPF had more noise that the others.
+      A mobile application has been made, and shows an example that could led to more people to create other applications that work with the sensor data stored in Opencities. 
+      The data has been stored on a platform and the mobile application has been able to access them, in this case a problem happened, the application was not designed to that amount of data, so it needs improvement.
+
+      All the data produced during this testbed has been stored in the SD card of the Arduinos, and put them into graphics, as shown in the following figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}.
       
       This graphics had been done with an octave script that analyze the logData file in every sensor node, but this graphics are only a portion of the real testbed, which has been place on Appendixes.
       
       \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{./Figures/GraphicTemperature.png}
                 \caption{Graphic Temperature}
                 \label{fig:GraphicTemperature}
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{./Figures/GraphicLight.png}
                 \caption{Graphic Light}
                 \label{fig:GraphicLight}
@@ -947,27 +943,31 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
       \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{./Figures/GraphicNoise.png}
                 \caption{Graphic Noise}
                 \label{fig:GraphicNoise}
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{./Figures/GraphicHumidity.png}
                 \caption{Graphic Humidity}
                 \label{fig:GraphicHumidity}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.3\textwidth}
-                \includegraphics[width=\textwidth]{./Figures/GraphicGas.png}
-                \caption{Graphic Air Quality}
-                \label{fig:GraphicGas}
         \end{subfigure}
         \rule{18em}{0.5pt}
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
+      \begin{figure}[htbp]
+		    \centering
+		        \includegraphics[scale=0.5]{./Figures/GraphicGas.png}
+		        \caption[Graphic Air Quality]{Graphic Air Quality.}
+		        \label{fig:GraphicGas}
+		    \label{fig:Testbedmap}
+		  \end{figure}
+		  
+		  Graphics explanation:
     
 \chapter{Conclusions}
 \label{Chapter6}
