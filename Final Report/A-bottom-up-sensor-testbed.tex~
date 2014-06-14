@@ -318,15 +318,15 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   This chapter is focused on the techonologies used to develop this project.
   
-  \section{Arduino vs Raspberry PI}
-    For this project, it had been narrowed down the sensor node posibilities to an Arduino Yun (Yun) or a Raspberry Pi model B (RPiB).
+  \section{Arduino-Raspberry PI comparison}
+    For this project, two possible boards have been considered: the Arduino Yun (Yun) and the Raspberry Pi model B (RPiB).
     
-    The Yun is a microcontroller while the RPiB is a full computer, which makes it more powerful, but this project does not require too much, so both Yun and RPiB serve.
+    The Yun is a microcontroller while the RPiB is a full computer, which makes it more powerful, even more than needed, so both Yun and RPiB serve.
     
-    The two of them had a Linux environment, but with the Yun, the normal way to interact is by an Arduino sketch. So RPiB will consider that the developer has some Linux knowledge, while the Yun is better for beginners, the Arduino IDE provides a variety of programs that help to start.
+    The two of them have a Linux environment, but with the Yun, the normal way to interact is by an Arduino sketch. So RPiB considers that the developer has some prior Linux knowledge, while the Yun is better for beginners. Because the Arduino IDE provides a variety of programs that help to start.
     
-    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller. On the other hand, the sensor node will be attach on guifi nodes, which are Power over Ethernet (PoE). 
-    For the Yun there is the posibility of a PoE module which it is not available yet, but will be. The figure \ref{fig:arduinoethernetpoe} shows and Arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as it can be seen in figure \ref{fig:poerpi}.    
+    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller than the RPiB. On the other hand, the sensor node will be attach on guifi nodes, which are powered by Power over Ethernet (PoE). 
+    For the Yun there is the posibility of a PoE module which it is not available yet, which will power the board. The figure \ref{fig:arduinoethernetpoe} shows and Arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as it can be seen in figure \ref{fig:poerpi}.    
     %\TwoFig{./Figures/arduinoethernetpoe.jpg}{Arduino Ethernet PoE}{fig:GraphicTemperature}{./Figures/poe-rpi.jpg}{Raspberry Pi model B PoE}{fig:poerpi}
     
     \begin{figure}
@@ -347,22 +347,20 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \caption{Sensor boards}\label{fig:sensorboards}
 		\end{figure}
 
-    Another advantage that YUN offers is the integrated WiFi module, since a person who does not have a guifi node can connect to one, and thus have access to Opencities, and of course, to stored data.
+    Another advantage that YUN offers is the integrated WiFi module, which offers more flexibility when there is no ethernet available.
     
-    Finally, the Arduino Yun had been used instead of the Raspberry Pi basically because of the size that will become the sensor node, but if, in the future was necesary a more powerful procesor, it will be better use a Raspberry Pi.  
+    Finally, the Arduino Yun has been used instead of the Raspberry Pi basically because of the size that will become the sensor node, but if in the future will be necessary a more powerful processor, it will be better to use a Raspberry Pi.  
 
   \section{Sensors}
     The goal is to analyze the environment around us, for that purpose, sensors are very useful. It has been decided for the use of environmental low cost sensors that are easily accessible and usable. 
     These sensors measure the aspects that may be more useful for citizens: temperature, light, noise, humidity, and air quality.
     
-    A sensor is a device which transform a physical measure to an output signal that can be read by another device, such as an Arduino.
-    
+    A sensor is a device which transform a physical measure to an output signal (Voltage or Digits) that can be read by another device, such as an Arduino.
     In this project we will use five sensors that measured temperature, light, noise, humidity, and gas.
-    
-    To show how the sensors are connected to the Arduino YUN I used the program fritzing\footnote{\url{http://fritzing.org/}}.
+    To show how the sensors are connected to the Arduino YUN the program fritzing\footnote{\url{http://fritzing.org/}} has been used.
     
     \subsection{LM35: Temperature}
-      LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} we can see the way to connect it to the Arduino.
+      LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} is shown how to connect it to the Arduino.
       \cite{LM35}
       %\TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
       
@@ -385,8 +383,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 		\end{figure}
       
     \subsection{Light Dependent Resistor (LDR)}
-      LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} it can be seen the way to connect it to the Arduino.
-      %\TwoFig{./Figures/LDR.jpg}{LDR sensor}{fig:LDR}{./Figures/Fritzing/LightSensor_bb.png}{Light Sensor Breadboard}{fig:LightSensor_bb}
+      LDR [Figure \ref{fig:LDR}] is a light sensor, in the figure \ref{fig:LightSensor_bb} is depicted how to connect it to the Arduino.
       
       \begin{figure}
         \centering
@@ -407,8 +404,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 			\end{figure}
  
     \subsection{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}
-      This two sensors are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} it can be seen the way to connect them to the Arduino.
-      \cite{emarteeminisound}
+      This two sensors \cite{emarteeminisound} are used to measured noise levels [Figure \ref{fig:MSS}] and [Figure \ref{fig:Analognoisesensor}]. The code to read the noise values is the same for both. In the figure \ref{fig:NoiseSensor_bb} is shown how to connect them to the Arduino.
       
       \begin{figure}
         \centering
@@ -435,10 +431,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
 
     \subsection{Aosong DHT22 and DHT11: Humidity}
-      DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The Arduino and the humidity sensor has to be connected as shown in the figure \ref{fig:HumiditySensordht22_bb}. 
-      
-      At the time the testbed started, there was only 1 DHT22 sensor, so a DHT11 sensor has been used instead of the DHT22, which change the breadboard a little bit as shown in the figure \ref{fig:HumiditySensordht11_bb}.
-      \cite{dht22sensor}
+      DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The Arduino and the humidity sensor have to be connected as shown in the figure \ref{fig:HumiditySensordht22_bb} for the DHT22 and as shown in the figure \ref{fig:HumiditySensordht11_bb} for the DHT11 \cite{dht22sensor}.
       
       \begin{figure}
         \centering
@@ -477,9 +470,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 			\end{figure}     
       
     \subsection{MQ135: Gas sensor}
-      This is a gas sensor [Figure \ref{fig:MQ135}], and is used to measure air quality. This sensor does not have a figure in fritzing, so gas sensor that has the same output has been used, and in the figure \ref{fig:GasSensor_bb} it can be seen how to connect it to the Arduino.
-      %\TwoFig{./Figures/mq135.jpg}{MQ135 Air Quality sensor}{fig:MQ135}{./Figures/Fritzing/GasSensor_bb.png}{Gas Sensor Breadboard}{fig:GasSensor_bb}
-      
+      MQ135 is a gas sensor [Figure \ref{fig:MQ135}], and is used to measure air quality. Figure \ref{fig:GasSensor_bb} ilustrates how to connect it to the Arduino.      
       \begin{figure}
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
@@ -502,7 +493,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       
     \subsection{BreadBoard with all the sensors}
       
-      In the figure \ref{fig:AllSensors22_bb} it can be seen the final prototype with the DHT22 sensor, and in the figure \ref{fig:AllSensors11_bb} with the DHT11 sensor.
+      In the figure \ref{fig:AllSensors22_bb} is shown the final prototype with the DHT22 sensor, and in the figure \ref{fig:AllSensors11_bb} with the DHT11 sensor.
       
       \begin{figure}[!htbp]
           \centering
@@ -527,10 +518,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     The problem is that is needed to upload five sensor values, consequently the GeoJSON message (Explained in section \ref{GeoJSON}) takes too much memory, so the Arduino sketch can not handle it.
 
     For this type of operations is possible to run a script in the Linux environment through the bridge library\ref{fig:BridgeInShort}.
-
     This being the path that is followed, there are several options for developing this script, for example, programmed in Java, C / C + +, python, etc..
 
-    Python has been used because of the following reasons: fast and perfect for prototyping programming, the code is shorter and therefore, easier to understand, especially if you want to improve in the future.
+    Python has been used because of the following reasons: fast and perfect for prototyping programming, the code is shorter and therefore, easier to understand, and modular.
     
     \subsection{GeoJSON}
     \label{GeoJSON}
@@ -547,11 +537,10 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \end{figure}
     
   \section{Community network}
-    Guifi \footnote{\url{https://www.guifi.net/}} is the network where the Arduino's will be deployed, and the one providing the access to Opencities through the Internet.
+    Guifi \footnote{\url{https://www.guifi.net/}} is the network where the Arduino will be deployed, and the one providing the access to Opencities through the Internet.
+    Guifi is a network created by people interested in building an open, free and neutral network infrastructure.
     
-    Guifi is a network where the people that are interested put their effort in creating an infrastructure which provides acces to the Internet at a fair price.
-    
-    Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their networks is large enough to become a useful sensor network, as it can be seen in the figure \ref{fig:Guifimap}.
+    Because of their philosophy of participation, Guifi is the perfect network for the deployment of this sensor nodes. Also their network is large enough to become a useful sensor network, as it can be seen in the figure \ref{fig:Guifimap}.
     \begin{figure}[htbp]
       \centering
           \includegraphics[scale=0.5]{./Figures/Guifimap.png}
@@ -561,35 +550,30 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     \end{figure}
     
   \section{Storage Resource Broker}  
-    Opencities \cite{opencities} is the opendata services it has been chosen, the reasons Opencities has been chosen are:
+    Opencities \cite{opencities} is the opendata services that has been chosen, for these reasons:
     \begin{itemize}
-      \item The developers are at UPF, this helps because the platform can be tested, and because they can help solve problems and make these part of the project more easy.
+      \item The developers are at UPF, so the process of improving both projects (feedback, bug fixing, ...) can be fast and effective.
       \item Easy API to upload and download the data.
     \end{itemize}
     
-    The role of Opencities is to be the intermediary between data creators and those who want to see them.
-    In Opencities, the sensor data is uploaded into a dataset. Every user have an unique API key, and can have one or more datasets. To distinguish, the datasets have a unique ID. 
+    The role of Opencities is to be the intermediary between data creators and data users.
+    In Opencities, the sensor data is uploaded into a dataset. Every user has an unique API key, and can create one or more datasets with a unique ID. 
     
   \section{Visualization platform}
     
-    For the purpose of the sensor data visualization there are several options, in plain text, in a map, in graphics, etc. In this project is used a map to display the data. This can be done on a web page, in a mobile application, tablet application, etc.
+    For the purpose of the sensor data visualization there are several options, in plain text, in a map, in graphics, etc. In this project a map is used to display the data. This can be done on a web page, in a mobile application, tablet application, etc.
     
-    Since the goal of the application is that a user consult it for an small period of time, the best option is a mobile application. Additionally, almost everybody has an smart phone.
+    Since the goal of the application is that a user consult it for a small period of time, the best option is a mobile application. Additionally, almost everybody has an smart phone.
     
-    From this step forward it has to be chosen in which mobile operationg system it should be developed the application. There are three options, iOS, Android, or Windows Phone. There is another option that is to developed the application in html5, javascript, and CSS, and then compiled it with phonegap, and that will return the application for the three operating system. But that was too much of a challenge, so it was decided to code an application directly to one operating system.
-    
-    Having decided that the application it has to be for only one operating system, it is more logical to chose the operating system with more market share, to reach as many people as possible.
-    
-    Android is a mobile operating system from Google, it runs on smartphones, and applications are programmed in Java. Java is a computer programming language that is object-oriented.
-    
-    This application it will be tested on a Sony Xperia Z1, with an Android 4.4.2.
+    There are three mobile operating system, iOS, Android, or Windows Phone. There is another option that is to developed the application in html5, javascript, and CSS, and then compile it with phonegap\footnote{\url{http://phonegap.com/}}, and that will build the application for the three operating systems. But it ended up being much more difficult than to create an application directly to an operating system, so the best choice is the one with more market share, to reach as many people as possible.  
+      
+    Android is a mobile operating system from Google, it runs on smartphones, and applications are programmed in Java. Java is a computer programming language that is object-oriented.    
+    This application will be tested on a Sony Xperia Z1, with an Android 4.4.2.
 
 \chapter{Bottom up sensor testbed}
 \label{Chapter4}
 
-  This chapter focused in the process that has been followed to complete the project, which has two main parts, the software to collect and send the data and the Android application to show it.
-  
-  To make the project easier to understand an image has been made (Figure \ref{fig:reportGeneralView}.
+  This chapter is focused on the process followed to finish the project, which has two main parts, the software to collect and send the data and the Android application to show it. A scheme of the project is shown in Figure \ref{fig:reportGeneralView}.
   
   \begin{figure}[htbp]
     \centering
@@ -601,21 +585,21 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \section{Arduino Development}
     
-    Two scripts has been needed, one to collect the data, and other to send it. This is because the memory to run an Arduino sketch is very low, and the creation of the GeoJSON message to Opencities is too big. That is why a python script has been used, called first by the Arduino sketch.
+    Two scripts has been needed, one to collect the data, and other to send it. This is because the memory to run an Arduino sketch is very low, and the creation of the GeoJSON message to Opencities is too big with respect to the available memory. That is why a python script has been used, called first by the Arduino sketch.
     
-    The Arduino sketch is responsible for collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script have to create a GeoJSON and send it to Opencities.
+    The Arduino sketch is responsible of collecting the data, write it down in a logData file, and call the python script with the collected values and an unique ID. Finally the python script has to create a GeoJSON and send it to Opencities.
     
     \subsection{Collect sensor data}
     
-      To collect almost all the data the skecth does not need to include any libray, except for the humidity sensors (DHT22 and DHT11) which need an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
+      To collect almost all the data the skecth does not need to include external libraries, except for the humidity sensors (DHT22 and DHT11)\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}.
       
-      The following libraries has been needed to develope the code: FileIO, Process library, Bridge.
+      The following libraries were needed to develope the code: FileIO, Process library, Bridge.
       
-      This sketch is code in a very simple way, the setup function will initialize the Bridge library to communicate with the Linux environment, the Serial library for debugging purposes, and the FileSystem to log the process, and the loop function. The loop will call three functions: readSensors, readFile, and executePythonScript.
+      The Arduino sketch is code in a very simple way, the setup function will initialize the Bridge library to communicate with the Linux environment, the Serial library for debugging purposes, and the FileSystem to log the process, and the loop function. The loop will call three functions: readSensors, readFile, and executePythonScript.
       
       \begin{itemize}
-        \item {\bf readSensors:} It call 5 different functions to read every sensor, the goal of doing a separate function is to make the code more clear.
-        \item {\bf readFile:} This function log the process, saves the ID of the message, the sensor values, and a timestamp.
+        \item {\bf readSensors:} It call 5 different functions to read every sensor, the reason for doing a separate function is to make the code more clear.
+        \item {\bf readFile:} This function logs the process, saves the ID of the message, the sensor values, and a timestamp.
         \item {\bf executePythonScript:} The script in python located in the SD card is in charge to create the GeoJSON with all the sensor data and upload it to Opencities. This script is called by the Arduino sketch.
       \end{itemize}
       
