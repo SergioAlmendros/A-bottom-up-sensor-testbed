@@ -634,14 +634,13 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     \subsection{Communication with Opencities}
     
-      First of all, it is needed to create an acount in Opencities, and a dataset to store the sensor data.
-      This process gives all the information needed to upload and download data.
+      To communicate with Opencities it is necessary to create an acount, and a dataset to store the sensor data. At the end, the user has an API key and a dataset ID, the required information to upload and download data. 
       
-      The communication with Opencities is done by a python script. This are the packages needed into the Linux environment of the Arduino: distribute, python-openssl, geojson, geopy, and httplib2.
+      The communication with Opencities is done by means of a python script. This are the packages needed into the Linux environment of the Arduino: distribute, python-openssl, geojson, geopy, and httplib2.
       
       The python script has three process, first it stores all the sensor data pass by the Arduino sketch into a class. Then it creates a GeoJSON message with all the data, and all the parameters needed to upload it into Opencities. Finally upload the GeoJSON message.
       
-      With all this libraries the script can communicate with Opencities and store the sensor data collected by the Arduino. The \ref{fig:Python Script Flow Chart} figure explain how the python script works.\\
+      With all this libraries the script can communicate with Opencities and store the sensor data collected by the Arduino. The \ref{fig:Python Script Flow Chart} figure explains how the python script works.\\
       
       \begin{figure}[!htbp]
       \centering
@@ -679,12 +678,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       To make easy to see the results of the testbed, an Android application has been developed which shows the sensor data in a map. The application shows the data in two ways, with markers that show the actual value in that point, and also with heatmap points, the larger the value, the more intense the red will be. This can be seen in figure \ref{fig:AppScreenshots}.
       
     \subsection{Interface}
-      The application interface is a unique map view where the user can zoom to a limit, go to their location, and use the top buttons. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
-      If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit.
-      In the figures \ref{fig:AppScreenshots} it can sees the app with the Marker button checked, and without.
-      
-      %\TwoFig{./Figures/App_Screenshot_1.png}{App Screenshot}{fig:App_Screenshot_1}{./Figures/App_Screenshot_2.png}{App Screenshot}{fig:App_Screenshot_2}
-      
+      The application interface is a unique map view where the user can zoom to a limit, go to his location, and use the top buttons to change the sensor read. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
+      If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit (Figure \ref{fig:AppScreenshots}).
       \begin{figure}
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
@@ -702,7 +697,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \end{figure}
       
     \subsection{Code}
-      First of all, to create this application it has to be used the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps.
+      First of all, to create this application the Google Maps Android API v2\footnote{\url{https://developers.google.com/maps/documentation/android/}} for the map view, and the Google Maps Android API utility library\footnote{\url{http://googlemaps.github.io/android-maps-utils/}} for the heatmaps are needed.
       
       In this application each class has a defined function, starting with MainActivity, which is the one that intialize the other clases, calls all the functions needed in the other classes to get the application started.
       
