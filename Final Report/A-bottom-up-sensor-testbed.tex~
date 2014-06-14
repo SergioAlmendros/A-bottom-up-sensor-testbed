@@ -439,7 +439,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
 
     \subsection{Aosong DHT22 and DHT11: Humidity}
-      DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although we will only use the humidity measure. The output is digital, and to read it, we use an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}}. The Arduino and the humidity sensor have to be connected as shown in the figure \ref{fig:HumiditySensordht22_bb} for the DHT22 and as shown in the figure \ref{fig:HumiditySensordht11_bb} for the DHT11 \cite{dht22sensor}.
+      DHT22 [Figure \ref{fig:DHT22}] and DHT11 [Figure \ref{fig:DHT11}] are humidity and temperature sensors, although the humidity measure is the only one used. The output is digital, and to read it, an external library\footnote{\url{https://github.com/adafruit/DHT-sensor-library}} is needed. The Arduino and the humidity sensor have to be connected as shown in the figure \ref{fig:HumiditySensordht22_bb} for the DHT22 and as shown in the figure \ref{fig:HumiditySensordht11_bb} for the DHT11 \cite{dht22sensor}.
       
       \begin{figure}
         \centering
@@ -523,9 +523,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
     A main part of the project is upload the data from the sensors to a platform so that everyone can access them.
     
-    The problem is that is needed to upload five sensor values, consequently the GeoJSON message (Explained in section \ref{GeoJSON}) takes too much memory, so the Arduino sketch can not handle it.
-
+    The GeoJSON message (Explained in section \ref{GeoJSON}) includes data from 5 sensors, which makes its size too large for the memory of the Arduino.
     For this type of operations is possible to run a script in the Linux environment through the bridge library\ref{fig:BridgeInShort}.
+    
     This being the path that is followed, there are several options for developing this script, for example, programmed in Java, C / C + +, python, etc..
 
     Python has been used because of the following reasons: fast and perfect for prototyping programming, the code is shorter and therefore, easier to understand, and modular.

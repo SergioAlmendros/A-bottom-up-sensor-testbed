@@ -32,9 +32,9 @@
 \contentsline {subsection}{\numberline {3.2.5}MQ135: Gas sensor}{14}{subsection.3.2.5}
 \contentsline {subsection}{\numberline {3.2.6}BreadBoard with all the sensors}{16}{subsection.3.2.6}
 \contentsline {section}{\numberline {3.3}Upload sensor data}{16}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}GeoJSON}{19}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}GeoJSON}{16}{subsection.3.3.1}
 \contentsline {section}{\numberline {3.4}Community network}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Storage Resource Broker}{21}{section.3.5}
+\contentsline {section}{\numberline {3.5}Storage Resource Broker}{19}{section.3.5}
 \contentsline {section}{\numberline {3.6}Visualization platform}{21}{section.3.6}
 \contentsline {chapter}{\numberline {4}{\MakeUppercase { Bottom up sensor testbed}}}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Arduino Development}{24}{section.4.1}
