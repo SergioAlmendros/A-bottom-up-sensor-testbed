@@ -116,10 +116,10 @@
 
   This project aims to deploy a sensor node network prototype taking advantage of the guifi network, an open, free and neutral network, and the visualization of this data in an intuitive and meaningful way, tailoring the presentation of the data to people without specific scientific knowledge.
   
-  The main objective is to give citizens a trace to improve environmental conscience
+  The main objective is to give citizens a trace to improve environmental conscience, giving them the necessary information to know the state of their environment and so they can act accordingly.
   This way anybody can act consequently if the sensors detect harmful situations, for example, not going to a park where the gas sensor detects bad air quality.
    
-  From this point, Arduino Yun is the best choice to be the main component of the sensor node. Through a series of sensors attached to it and the Internet connection provided by guifi, the node can communicate with a storage platform for sensor data, in this case, Opencities. Finally, an Android application downloads the sensor data from Opencities and display them on a map.
+  From this point, Arduino Yun is the main component of the sensor node. Through a series of sensors attached to it and the Internet connection provided by guifi, the node can communicate with a storage platform for sensor data, in this case, Opencities. Finally, an Android application downloads the sensor data from Opencities and display them on a map.
 
 
 \selectlanguage{catalan}
@@ -151,9 +151,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \addcontentsline{toc}{chapter}{List of figures}
 
 %INDEX DE TAULES; NOMÉS ES POSA SI HI HA TAULES
-\listoftables
+%\listoftables
 %Fa que aparegui al sumari
-\addcontentsline{toc}{chapter}{List of tables}
+%\addcontentsline{toc}{chapter}{List of tables}
 
 
 %COMENÇA EL TEXT
@@ -167,24 +167,32 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
   The Bottom-up\footnote{\url{http://bubforeurope.net}} pattern has been used to build the sensor testbed, where the end users, in this case, guifi users, are the ones who have to assemble the sensor nodes and connect them to their guifi nodes to create the sensor network. With the bottom-up model, the data is provided and used by the end users.
 
-  In this project a Android application has been developed to visualize the sensor data and make it accessible to the end users.
+  In this project an Android application has been developed to visualize the sensor data and make it accessible to the end users.
   A sensor testbed has been deployed to gather sensor data, and test the technologies used as nodes.
   
   This project is an attempt to understand the structure, the technological challenges and operations of sensor networks and how they can help us to take conscience about our environment.
 
   The thesis is structure as follows: the actual state of sensor networks (Chapter \ref{Chapter2}), which technologies had been used (Chapter \ref{Chapter3}), and how the project has been developed (Chapter \ref{Chapter4}). 
-
-  There has been a testbed deployed and some data analysis (Chapter \ref{Chapter5}).
-  
+  In chapter \ref{Chapter5} the testbed deployment is illustrated and some resulting data are shown.
   Finally, the conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
   
 \chapter{State of the Art}
 \label{Chapter2}
   
   \section{Introduction}
-    Sensor networks started as a mecanism of defense developed by the military during the Cold War, with acoustic sensors they searched for Soviet submarines. This search continued at Universities, trying to make the sensors smaller, and with the posibility of real-time data \cite{chong2003sensor}.
+    Sensor networks started as a mecanism of defense developed by the United States Navy during the Cold War, with acoustic sensors they searched for Soviet submarines. This search continued at Universities, trying to make the sensors smaller, and with the posibility of real-time data \cite{chong2003sensor}.
     
-    Right now, sensors are small and cheap enough, and processors with network technology have low power consumption, which allows us to deploy a test bed.
+    Sensor networks should not affect the environment, in our case, visually. For this purpose we must ensure that the nodes are relatively small, so the board and sensors had been selected accordingly.
+    
+    To choose the processor board, it has to be look into the following characteristics:
+    
+    \begin{itemize}
+    	\item {\bf Power:} A sensor node can obtain energy in several ways: batteries, solar energy, connecting to an alredy deployed network... The important thing is not to increase the size of the sensor, in our case, is power by an already deployed network.
+    	\item {\bf CPU:} A powerful CPU is not necessary to process sensor data, so this helps to decrease the size of the board and reduce power consumption.
+    	\item {\bf Communication:} There has to be a way to send the collected data outside, usually wireless or through a wired network. If it has wireless communication, the topology and location of the sensor nodes has to be chosen properly. But if it is through a wired network, it should take advantage of something already deployed. In our case, the guifi network is already deployed.
+    \end{itemize}
+    
+    Currently the sensors are small enough to take several together with the same size as the board mentioned before.
     
     Smart cities are the next step. A city capable of having real-time information, not only about the environment, but also from the number of cars that pass on a road, to the amount of rain water in a day. This kind of information could help to manage more efficiently the city.
     
