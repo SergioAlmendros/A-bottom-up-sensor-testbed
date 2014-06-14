@@ -172,7 +172,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   This project is an attempt to understand the structure, the technological challenges and operations of sensor networks and how they can help us to take conscience about our environment.
 
-  The thesis is structure as follows: the actual state of sensor networks (Chapter \ref{Chapter2}), which technologies had been used (Chapter \ref{Chapter3}), and how the project has been developed (Chapter \ref{Chapter4}). 
+  The thesis is structured as follows: the actual state of sensor networks (Chapter \ref{Chapter2}), which technologies had been used (Chapter \ref{Chapter3}), and how the project has been developed (Chapter \ref{Chapter4}). 
   In chapter \ref{Chapter5} the testbed deployment is illustrated and some resulting data are shown.
   Finally, the conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
   
@@ -196,7 +196,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     Smart cities are the next step. A city capable of having real-time information, not only about the environment, but also from the number of cars that pass on a road, to the amount of rain water in a day. This kind of information could help to manage more efficiently the city.
     
-    It is important to share this information, in the case that the government build the sensor network, the data should be open to everyone could see it. There are already some sensor networks functioning, some of them are from the government, and, sometimes, there are not that open about their data, but there are also some people who have sensors nodes at home and share the information with everyone.
+    It is important to share this information so everyone can know the state of their environment. There are already some sensor networks functioning, some of them are government-funded and they often apply a policy where the data is not completel public, while other sensor networks are private-owned and the data are possibly open (e.g. smartcitizen).
 
   \section{Sensor networks and smart cities}
     In this section a few projects on sensor networks deployed has been introduced:
@@ -258,7 +258,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
            
     
   \section{Opendata services}
-    The sensor networks are useless if the data is not stored, although the data could be saved in the device, it would be too expensive to collect it. That is why an opendata service is used.
+    The sensor boards are continuosly collecting data, which has to be stored. The data can be stored locally or remotly. Collecting the data from the sensor board it is unpractical. For this reason an online storage service, opendata, is needed.    
+    
 		\subsection{Opencities}
        Opencities \cite{opencities} is a platform to browse, visualize, and download open data from different participants. Opencities has very simple API to upload and download data, a web page to visualize the stored data.
        
@@ -268,7 +269,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       Xively \footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basically it lets you store sensor data, download it, and visualize it through graphics.
     
     \subsection{Sentilo}
-      Sentilo \footnote{\url{http://www.sentilo.io}} is a open source platform for Smart Cities, it allows the user to use their own service to store the data, but not many. Their goal is that anyone who wants the sentilo platform will have to installed it in their server, and then use it. It also provides a interface to show the data.
+      Sentilo \footnote{\url{http://www.sentilo.io}} is a open source platform for Smart Cities, it allows the user to use their own service to store the data, but they do not intend to become the database for everyone, it is only as an example. The Sentilo platform does not depend on a central server and can be installed on a private server. It also provides a interface to show the data.
     
   \section{Sensor boards}
     In this section are discussed some of the options for a sensor node.
@@ -333,9 +334,8 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     
     The two of them have a Linux environment, but with the Yun, the normal way to interact is by an Arduino sketch. So RPiB considers that the developer has some prior Linux knowledge, while the Yun is better for beginners. Because the Arduino IDE provides a variety of programs that help to start.
     
-    The sensor board is essentially the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller than the RPiB. On the other hand, the sensor node will be attach on guifi nodes, which are powered by Power over Ethernet (PoE). 
-    For the Yun there is the posibility of a PoE module which it is not available yet, which will power the board. The figure \ref{fig:arduinoethernetpoe} shows and Arduino ethernet (similar to the Yun) with a PoE module and does not makes it bigger, and with the RPiB, the module makes it bigger, as it can be seen in figure \ref{fig:poerpi}.    
-    %\TwoFig{./Figures/arduinoethernetpoe.jpg}{Arduino Ethernet PoE}{fig:GraphicTemperature}{./Figures/poe-rpi.jpg}{Raspberry Pi model B PoE}{fig:poerpi}
+    The sensor board is the biggest element of the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller than the RPiB. On the other hand, the sensor node will be attach on guifi nodes, which are powered by Power over Ethernet (PoE). 
+    For the Yun there is the posibility of a PoE module which it is not available yet, which will power the board. The figure \ref{fig:arduinoethernetpoe} and \ref{fig:poerpi} show the comparison between the size of an Arduino Ethernet (similar to the YUN) and the RPiB both powered by PoE. It is clearly visible that the Arduino is more compact.
     
     \begin{figure}
         \centering
@@ -360,7 +360,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     Finally, the Arduino Yun has been used instead of the Raspberry Pi basically because of the size that will become the sensor node, but if in the future will be necessary a more powerful processor, it will be better to use a Raspberry Pi.  
 
   \section{Sensors}
-    The goal is to analyze the environment around us, for that purpose, sensors are very useful. It has been decided for the use of environmental low cost sensors that are easily accessible and usable. 
+    The goal is to analyze the environment around us, for that purpose, sensors are a mean to detect physical or chemical variables. It has been decided to use of low cost environmental sensors that are easily accessible and usable. 
     These sensors measure the aspects that may be more useful for citizens: temperature, light, noise, humidity, and air quality.
     
     A sensor is a device which transform a physical measure to an output signal (Voltage or Digits) that can be read by another device, such as an Arduino.

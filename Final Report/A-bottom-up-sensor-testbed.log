@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  14 JUN 2014 17:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  14 JUN 2014 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,7 +831,7 @@ File: ./Figures/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
 
 <use ./Figures/ArduinoYunFront_2_450px.jpg>
 Package pdftex.def Info: ./Figures/ArduinoYunFront_2_450px.jpg used on input li
-ne 280.
+ne 281.
 (pdftex.def)             Requested size: 180.67178pt x 120.44786pt.
  [6 <./Figures/Libeliume_health.png (PNG copy)> <./Figures/LibeliumWaspmote.png
 > <./Figures/LibeliumSmartWater.png>] <./Figures/BridgeInShort.png, id=596, 652
@@ -839,25 +839,22 @@ ne 280.
 File: ./Figures/BridgeInShort.png Graphic file (type png)
 
 <use ./Figures/BridgeInShort.png>
-Package pdftex.def Info: ./Figures/BridgeInShort.png used on input line 292.
+Package pdftex.def Info: ./Figures/BridgeInShort.png used on input line 293.
 (pdftex.def)             Requested size: 326.21794pt x 181.17642pt.
-
-Underfull \vbox (badness 1337) has occurred while \output is active []
-
  [7 <./Figures/ArduinoYunFront_2_450px.jpg> <./Figures/BridgeInShort.png>]
 <./Figures/raspberry-pi-model-b.jpg, id=606, 725.71124pt x 558.085pt>
 File: ./Figures/raspberry-pi-model-b.jpg Graphic file (type jpg)
 
 <use ./Figures/raspberry-pi-model-b.jpg>
 Package pdftex.def Info: ./Figures/raspberry-pi-model-b.jpg used on input line 
-305.
+306.
 (pdftex.def)             Requested size: 145.13968pt x 111.61502pt.
 
 <./Figures/picoboard.jpg, id=610, 261.97874pt x 450.68375pt>
 File: ./Figures/picoboard.jpg Graphic file (type jpg)
 
 <use ./Figures/picoboard.jpg>
-Package pdftex.def Info: ./Figures/picoboard.jpg used on input line 317.
+Package pdftex.def Info: ./Figures/picoboard.jpg used on input line 318.
 (pdftex.def)             Requested size: 130.98904pt x 225.34131pt.
  [8 <./Figures/raspberry-pi-model-b.jpg>] [9 <./Figures/picoboard.jpg>] [10
 
@@ -919,7 +916,7 @@ Underfull \hbox (badness 1708) in paragraph at lines 407--407
  []
 
 
-Underfull \vbox (badness 2547) has occurred while \output is active []
+Underfull \vbox (badness 1337) has occurred while \output is active []
 
  [12 <./Figures/arduinoethernetpoe.jpg> <./Figures/poe-rpi.jpg>] [13 <./Figures
 /LM35.jpg> <./Figures/Fritzing/TemperatureSensor_bb.png> <./Figures/LDR.jpg> <.
@@ -1483,7 +1480,7 @@ nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 vr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (68 pages, 12580012 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (68 pages, 12580083 bytes).
 PDF statistics:
  1073 PDF objects out of 1200 (max. 8388607)
  915 compressed objects within 10 object streams
