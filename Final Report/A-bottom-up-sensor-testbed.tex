@@ -1004,12 +1004,16 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
 \cleardoublepage
 
-\chapter{Appendixes}
-\label{Chapter8}
+\appendix
+\label{Appendixes}
 
-  \input{./Appendix/Pilot_Charter.tex}
-  \input{./Appendix/Planning_Report.tex}
-  \section{Class Diagram}
+	\chapter{Pilot Charter}
+  	\input{./Appendix/Pilot_Charter.tex}
+	
+	\chapter{Planning Report}
+  	\input{./Appendix/Planning_Report.tex}
+  	
+  \chapter{Class Diagram}
   
   	\includepdf[]{./AdditionalInformation/ClassDiagram1_1.pdf}
 
@@ -1021,7 +1025,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \label{fig:ClassDiagram2}
     \end{figure}
   
-  \section{Testbed Graphics}
+  \chapter{Testbed Graphics}
   \label{testbedgraphicsappendix}
   	\begin{figure}[H]
       \centering

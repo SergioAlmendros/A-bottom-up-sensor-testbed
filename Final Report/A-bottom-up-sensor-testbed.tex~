@@ -945,9 +945,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
-      Claramente el nodo de Barcelona recoge unos valores de ruido mucho más alto que en los otros dos nodos. Los nodos de Badalona y Montgat se encuentran en zonas con tráfico de coches puntual, mientras que el nodo de Barcelona se encuentra en una zona muy tránsitada, lo que provoca un mayor ruido.
+      The Barcelona node collects noise values much higher than the other two nodes. The Badalona and Montgat nodes are in areas with punctual car traffic, while the Barcelona node is a busy area, causing more noise.
       
-      En el caso de la humedad relativa, el nodo de Badalona se encuentra cerca de un río y el nodo de Montgat está cerca del Mar. Por lo tanto, es normal que el nodo de Barcelona capte menos humedad relativa.
+      In the case of the relative humidity, the Badalona node is near a river and the Montgat node is near the sea, so it is logical that the Barcelona node collects less relative humidity.
       
       \begin{figure}
         \centering
@@ -967,7 +967,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
-      El nodo en Badalona capta una mejor calidad de aire que los nodos en Barcelona y Montgat. El nodo en Barcelona capta unos valores más o menos constantes, lo cual es normal al estar en una zona con un tránsito de coches alto. El nodo en Badalona captura un empeoramiento de la calidad del aire a medida que pasa el tiempo, lo cual coincide con la llegada de los trabajadores que aparcan por la zona de éste. En el caso de Montgat, hay una diferencia muy grande en una franja de tiempo. Este nodo se encuentra cerca de la autopista, por lo que se deduce que durante el tiempo en que el sensor capta más presencia de gases es cuando hay más tránsito en la autopista.
+      The Badalona node captures better air quality than the Barcelona and Montgat. The Barcelona node collects constant values, more or less, which is normal because there is in an area with high car traffic. The Badalona node collects a decrease in air quality as time passes, which coincides with the arrival of workers who park in the area. In the case of Montgat, there is a big difference in a time slot. This node is located near a highway, so it is possible that this time slot coincide when there is more traffic on the highway.
       
       \begin{figure}[htbp]
 		    \centering
@@ -1004,10 +1004,11 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
 \cleardoublepage
 
-\chapter{Appendixes}
-\label{Chapter8}
+\appendix
+\label{Appendixes}
 
-  \input{./Appendix/Pilot_Charter.tex}
+	\chapter{Pilot Charter}
+  	\input{./Appendix/Pilot_Charter.tex}
   \input{./Appendix/Planning_Report.tex}
   \section{Class Diagram}
   
