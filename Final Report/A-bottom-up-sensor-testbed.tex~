@@ -223,11 +223,11 @@
             \includegraphics[scale=0.08]{./Figures/smartcitizen.png}
             \rule{18em}{0.5pt}
         \caption[Smart Citizen Node]{Smart Citizen Node.}
-        \label{fig:SmartCitizenNode}
+        \label{fig:Citizenship}
     \end{figure}
             
-    \subsection{Libelium}
-      Libelium is an Internet of things platform provider\footnote{\url{http://www.libelium.com/}}, which supplies an open source sensor platform for the Internet of things.
+    \subsection{Nobelium}
+      Nobelium is an Internet of things platform provider\footnote{\url{http://www.nobelium.com/}}, which supplies an open source sensor platform for the Internet of things.
       They have a variety of products, some interesting ones are shown:
       \begin{itemize}
         \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow (breathing), body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/electromyography sensor (Figure \ref{fig:Libeliumehealth}).
@@ -373,7 +373,7 @@
     To show how the sensors are connected to the Arduino YUN the program fritzing\footnote{\url{http://fritzing.org/}} has been used.
     
     \subsection{LM35: Temperature}
-      LM35 [Figure \ref{fig:LM35}] is a sensor to mesure temperature, in the figure \ref{fig:TemperatureSensor_bb} is shown how to connect it to the Arduino.
+      LM35 [Figure \ref{fig:LM35}] is a sensor to measure temperature, in the figure \ref{fig:TemperatureSensor_bb} is shown how to connect it to the Arduino.
       \cite{LM35}
       %\TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
       
@@ -907,7 +907,7 @@
     
     After a day of collecting data, the three logData files had been analyze, and some graphs to show the data had been made.
     
-    The figure \ref{fig:Testbedmap} shows the nodes deployed, the location tried to be a little bit different to get distinct values.
+    The figure \ref{fig:Testbedmap} shows the nodes deployed, the location tries to be a little bit different to get distinct values.
     \begin{figure}[htbp]
       \centering
           \includegraphics[scale=0.2]{./Figures/Testbedmap.png}
