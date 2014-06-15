@@ -50,12 +50,12 @@
 \contentsline {subsection}{\numberline {5.1.1}Connection to the Internet}{34}{subsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.1.1}Through Ethernet}{34}{subsubsection.5.1.1.1}
 \contentsline {subsubsection}{\numberline {5.1.1.2}Through WiFi}{34}{subsubsection.5.1.1.2}
-\contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{36}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{36}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.2}Install necessary packets}{35}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Copy the scripts}{35}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Attach the sensors}{36}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{37}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.5}Arduino Code}{36}{subsection.5.1.5}
 \contentsline {section}{\numberline {5.2}Actual Testbed}{37}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Results}{38}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Results}{37}{subsection.5.2.1}
 \contentsline {chapter}{\numberline {6}{\MakeUppercase { Conclusions}}}{41}{chapter.6}
 \contentsline {chapter}{\numberline {7}{\MakeUppercase { Future work}}}{43}{chapter.7}
 \contentsline {chapter}{BIBLIOGRAPHY}{45}{section*.36}

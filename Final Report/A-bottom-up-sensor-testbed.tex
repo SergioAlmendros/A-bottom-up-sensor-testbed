@@ -119,16 +119,21 @@
   The main objective is to give citizens a trace to improve environmental conscience, giving them the necessary information to know the state of their environment and so they can act accordingly.
   This way anybody can act consequently if the sensors detect harmful situations, for example, not going to a park where the gas sensor detects bad air quality.
    
-  From this point, Arduino Yun is the main component of the sensor node. Through a series of sensors attached to it and the Internet connection provided by Guifi, the node can communicate with a storage platform for sensor data, in this case, Opencities. Finally, an Android application downloads the sensor data from Opencities and display them on a map.
+  Arduino Yun is the main component of the sensor node. Through a series of sensors attached to it and the Internet connection provided by Guifi, the node can communicate with a storage platform for sensor data, in this case, Opencities. Finally, an Android application downloads the sensor data from Opencities and display them on a map.
 
 
 \selectlanguage{catalan}
-\vspace*{\fill}
+%\vspace*{\fill}
 \section*{\Large \sffamily  Resum}
 
-Cuando el Abstract esté perfecto, lo traduciré al catalan.
+	Aquest projecte té com a objectiu desplegar una xarxa de nodes sensors prenent avantatge de la xarxa Guifi, una xarxa oberta, lliure i neutral, i la visualització d'aquestes dades d'una forma intuïtiva i significativa, adaptant la presentació de les dades per a persones que no tenen coneixements científics específics.
+   \\
+  L'objectiu principal és donar als ciutadans un camí per millorar la consciència ambiental, donant-lis la informació necessària per conèixer l'estat del seu entorn i que així puguin actuar en conseqüència.
+  D'aquesta manera tothom pot actuar en conseqüència si els sensors detecten situacions perilloses, per exemple, no anar a un parc en el qual el sensor de gas detecta una dolenta qualitat de l'aire.
+   \\
+  Arduino Yun és el component principal del node sensor. A través d'una sèrie de sensors connectats a ell i la connexió a Internet proporcionat per Guifi, el node es pot comunicar amb una plataforma d'emmagatzematge per a dades de sensors, en aquest cas, Opencities. Finalment, una aplicació per Android descàrrega les dades de sensors d'Opencities i els mostra en un mapa.
 
-\vspace*{\fill}
+%\vspace*{\fill}
 
 \selectlanguage{english}
 \cleardoublepage
@@ -796,7 +801,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
 
   In this chapter the procedure to deploy a testbed had been explained step by step.
   
-  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype used in this testbed. It is composed of an Arduino YUN, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
+  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype used in this testbed. It is composed of an Arduino YUN, an Arduino UNO to power the Arduino YUN because the micro-USB was broken, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
   
   \begin{figure}[htbp]
       \centering
@@ -808,19 +813,19 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
   
   \section{Sensor node}
   
-  Now, I will show the process to configure the node, part of this process is taken of the website of Arduino\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}:
+  Now, the process to configure the node is going to be explained, part of this process is from the website of Arduino\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}:
   
   \subsection{Connection to the Internet}
     First of all an Internet connection has to be provide to the Arduino.
     \subsubsection{Through Ethernet}
-      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically receive an IP address.
+      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically obtain an IP address.
       
     \subsubsection{Through WiFi}
       This is a slowest way. The process is the following:
       \begin{enumerate}
         \item First power the Arduino YUN. 
         \item The Arduino creates his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
-        \item When it is connected to the YUN network, go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. Put the password, which is ``arduino''. as shown in the figure \ref{fig:YunWebPassword}.
+        \item When it is connected to the YUN network, go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. Put the password, which is ``arduino'', as shown in the figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebPassword.png}
@@ -829,7 +834,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:YunWebPassword}
           \end{figure}
         
-        \item The next page is an information page, click on the configure button \ref{fig:YunWebDiagnostic}.
+        \item The next page is an information page, click on the configure button (Figure \ref{fig:YunWebDiagnostic}).
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebDiagnostic.png}
@@ -839,7 +844,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
             \label{fig:YunWebDiagnostic}
           \end{figure}
         
-        \item Give a unique name to the Yun, and the network to connect \ref{fig:YunWebConfig}.
+        \item Give a unique name to the Yun, and the network to connect (Figure \ref{fig:YunWebConfig}).
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebConfig.png}
@@ -854,9 +859,9 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
         
       \end{enumerate}
   \subsection{Install necessary packets}
-    The Arduino will run an Arduino script and a python script, for python some packets have to be installed.
+    The Arduino runs an Arduino script and a python script, for python some packets have to be installed.
     
-    To install any packet, connect to the Arduino (The password has to be ``arduino''):
+    To install any packet, connect to the Arduino (as shown before):
     
     {\begin{centering} \textbf{ssh root@X.Y.Z.W}\par \end{centering}}
     
@@ -873,7 +878,7 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    First of all it is necessary to create some directories, so once the ssh command has been done, go to ``/mnt/sda1'', make the following commands:
+    First of all, it is necessary to create some directories, so once the ssh command has been done, go to ``/mnt/sda1'', make the following commands:
     
     {\begin{centering} \textbf{
     mkdir arduino \\
@@ -888,21 +893,21 @@ Cuando el Abstract esté perfecto, lo traduciré al catalan.
     }\par \end{centering}}
   
   \subsection{Attach the sensors}
-    Now that the python step is done, the sensors had to be attach the sensors to the Arduino Yun (Figure \ref{fig:AllSensors22_bb} or Figure \ref{fig:AllSensors11_bb}).
+    Now that the python step is done, the sensors had to be attach to the Arduino Yun (Figure \ref{fig:AllSensors22_bb} or Figure \ref{fig:AllSensors11_bb}).
   
   \subsection{Arduino Code}
-    To upload an Arduino sketch to the Yun the IDE: Arduino 1.5.5 has to be used. There are two ways to upload an sketch, through an USB cable connected to the Arduino, or through the Internet. If we are in the same network as the Arduino, it will appear in the IDE.
+    To upload an Arduino sketch to the Yun the IDE (Arduino 1.5.5) has to be used. There are two ways to upload a sketch, through an USB cable connected to the Arduino, or through the Internet. If the Arduino and the computer are in the same network, the Arduino will appear in the IDE as an option to upload.
   
   \section{Actual Testbed}
-    We have three Arduinos, so we have to mount the sensor nodes and put them in three different places. The location should be in free space.
+    There were three Arduinos, so the sensor nodes had to be mounted and put them in three different places. The location should be in free space.
     
-    When we have decided where we are going to put them, we have to introduce manually the location into the python script and the unique ID into the Arduino sketch. We can do that by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
+    The location has to bee introduce manually into the python script and the unique ID into the Arduino sketch by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
     
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     
-    After a day of collecting data, we got the Arduino's back, took the three logData files, and showed the data into some graphics.
+    After a day of collecting data, the three logData files had been analyze, and some graphs to show the data had been made.
     
-    The figure \ref{fig:Testbedmap} shows the nodes deployed, the location try to be a little bit different to get distinct values.
+    The figure \ref{fig:Testbedmap} shows the nodes deployed, the location tries to be a little bit different to get distinct values.
     \begin{figure}[htbp]
       \centering
           \includegraphics[scale=0.2]{./Figures/Testbedmap.png}
