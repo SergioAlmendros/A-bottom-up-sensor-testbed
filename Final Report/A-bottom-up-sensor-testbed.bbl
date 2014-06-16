@@ -31,6 +31,12 @@ Futurlec (2013).
 \newblock \url{https://www.futurlec.com/Datasheet/Sensor/MQ-135.pdf}.
 \newblock [Online; accessed 12-June-2014].
 
+\bibitem[Guide, 2014]{guideArduinoYun}
+Guide, A. (2014).
+\newblock Arduino guide.
+\newblock \url{http://arduino.cc/en/Guide/ArduinoYun}.
+\newblock [Online; accessed 8-January-2014].
+
 \bibitem[Instruments, 2013]{LM35}
 Instruments, T. (2013).
 \newblock Lm35.

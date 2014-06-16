@@ -65,8 +65,13 @@
     note = "[Online; accessed March-2014]"
 }
 
-
-
+@misc{mq135gassensor,
+    author = "Futurlec",
+    title = "MQ-135 Gas sensor",
+    year = "2013",
+    howpublished = {\url{https://www.futurlec.com/Datasheet/Sensor/MQ-135.pdf}},
+    note = "[Online; accessed 12-June-2014]"
+}
 
 
 
