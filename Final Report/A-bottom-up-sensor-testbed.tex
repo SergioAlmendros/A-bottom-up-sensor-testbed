@@ -820,12 +820,12 @@
   	This section shows the process to configure the sensor node \cite{guideArduinoYun}:
   
   \subsection{Connection to the Internet}
-    First of all an Internet connection has to be provide to the Arduino.
+    First of all an Internet connection has to be provided to the Arduino.
     \subsubsection{Through Ethernet}
-      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically obtain an IP address.
+      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically obtains an IP address.
       
     \subsubsection{Through WiFi}
-      This is a slowest way. The process is the following:
+      This is the slowest way. The process is the following:
       \begin{enumerate}
         \item First power the Arduino YUN. 
         \item The Arduino creates his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
@@ -863,7 +863,7 @@
         
       \end{enumerate}
   \subsection{Install necessary packets}
-    The Arduino runs an Arduino script and a python script, for python some packets have to be installed.
+    The Arduino runs an Arduino script and a python script, for python scripts some packets have to be installed.
     
     To install any packet, connect to the Arduino (as shown before):
     
@@ -890,7 +890,7 @@
     mkdir www \\
     }\par \end{centering}}
     
-    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the files in there, or copying the files into the Arduino through the network with the following command:
+    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the file directly, or copying the file into the Arduino through the network with the following command:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
@@ -905,7 +905,7 @@
   \section{Actual Testbed}
     There were three Arduinos, so the sensor nodes had to be mounted and put them in three different places. The location should be in free space.
     
-    The location has to bee introduce manually into the python script and the unique ID into the Arduino sketch by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
+    The unique ID has to be introduced manually into the Arduino sketch with the Arduino IDE and the location into the python script by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
     
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     
@@ -932,9 +932,11 @@
       
       But the following graphs show only 100 minutes of the testbed to make it easier to read. The full graphs are in the appendix \ref{testbedgraphicsappendix}.
       
-      The temperature is clearly higher in Badalona, but the three locations are not far apart, so this value should not vary much. But it is important to notice that this is a low quality sensor so it is possible that it may have failed during the testbed, since the graphs of Montgat and Barcelona are similar between them, but very different in comparison to Badalona.
+      Seeing the graphs has been inferred the following:
       
-      In the case of light, the sensor node in Barcelona receives direct sunlight during most of the day, but the node in Montgat and Badalona do not. Consequently, it is normal that the Barcelona node had a much higher light value. It is important to consider that this node is located in an office, so is reasonable to think that the sudden drop from 100 lux to 10 or less may be because someone turn off the light of the office, and that the sunlight was gone a lot time ago.
+      The temperature is clearly higher in Badalona, but the three locations are not far apart, so this value should not vary much. It is important to notice that this is a low quality sensor so it is possible that it may have failed during the testbed since the graphs of Montgat and Barcelona are similar between them, but very different in comparison to Badalona.
+      
+      In the case of light, the sensor node in Barcelona receives direct sunlight during most of the day, but the node in Montgat and Badalona does not. Consequently, it is normal that the Barcelona node had a much higher light value. It is important to consider that this node is located in an office, so is reasonable to think that the sudden drop from 100 lux to 10 or less may be because someone turn off the light of the office, and that the sunlight was gone a long time ago.
       
       \begin{figure}
         \centering
@@ -954,7 +956,7 @@
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
-      The Barcelona node collects noise values much higher than the other two nodes. The Badalona and Montgat nodes are in areas with punctual car traffic, while the Barcelona node is a busy area, causing more noise.
+      The Barcelona node collects noise values much higher than the other two nodes. The Badalona and Montgat nodes are in areas with punctual car traffic, while the Barcelona node is in a busy area, causing more noise.
       
       In the case of the relative humidity, the Badalona node is near a river and the Montgat node is near the sea, so it is logical that the Barcelona node collects less relative humidity.
       
@@ -976,7 +978,7 @@
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
-      The Badalona node captures better air quality than the Barcelona and Montgat. The Barcelona node collects constant values, more or less, which is normal because there is in an area with high car traffic. The Badalona node collects a decrease in air quality as time passes, which coincides with the arrival of workers who park in the area. In the case of Montgat, there is a big difference in a time slot. This node is located near a highway, so it is possible that this time slot coincide when there is more traffic on the highway.
+      The Badalona node captures better air quality than the Barcelona and Montgat nodes. The Barcelona node collects constant values, more or less, which is normal because there is in an area with high car traffic. The Badalona node collects a decrease in air quality as time passes, which coincides with the arrival of workers who park in the area. In the case of Montgat, there is a big difference in a time slot. This node is located near a highway, so it is possible that this time slot coincide when there is more traffic on the highway.
       
       \begin{figure}[htbp]
 		    \centering
@@ -985,17 +987,15 @@
 		        \label{fig:GraphicGas}
 		    \label{fig:Testbedmap}
 		  \end{figure}
-		  
-		  Graphics explanation:
     
 \chapter{Conclusions}
 \label{Chapter6}
   
-  During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have properly.  
-  Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source, and easy to use.
+  During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have function properly.  
+  Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source hardware and software, and easy to use.
   A mobile application has been developed to serve as an example, so the citizens who want to create their own find the process easier.
+ 	All the code that it has been created during this project is open source and is online, in a Github repository.
   
-  All the code that it has been created during this project is open source and is online, in a Github repository.
   In conclusion, the project had satisfied the goals presented at the start, which are share sensor data on an open network, and let the users visualize it.
 
 \chapter{Future work}

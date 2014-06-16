@@ -803,9 +803,9 @@
 \chapter{Testbed Deployment and Results}
 \label{Chapter5}
 
-  In this chapter the procedure to deploy a testbed had been explained step by step.
+  This chapter explains the procedure to deploy a testbed step by step.
   
-  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype used in this testbed. It is composed of an Arduino YUN, an Arduino UNO to power the Arduino YUN because the micro-USB was broken, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas).
+  In the figure \ref{fig:TestBed_Prototype} there is a photograph of the prototype used in this testbed. It is composed of an Arduino YUN, an Arduino UNO to power the Arduino YUN because the micro-USB was broken, a microSD card, a breadboard, and all the sensor connected (temperature, humidity, noise, light, and gas) to the Arduino YUN.
   
   \begin{figure}[htbp]
       \centering
@@ -817,15 +817,15 @@
   
   \section{Sensor node}
   
-  Now, the process to configure the node is going to be explained, part of this process is from the website of Arduino\footnote{\url{http://arduino.cc/en/Guide/ArduinoYun}}:
+  	This section shows the process to configure the sensor node \cite{guideArduinoYun}:
   
   \subsection{Connection to the Internet}
-    First of all an Internet connection has to be provide to the Arduino.
+    First of all an Internet connection has to be provided to the Arduino.
     \subsubsection{Through Ethernet}
-      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically obtain an IP address.
+      This is the fastest way to provide of Internet connection, the Arduino behave the same way as a computer, automatically obtains an IP address.
       
     \subsubsection{Through WiFi}
-      This is a slowest way. The process is the following:
+      This is the slowest way. The process is the following:
       \begin{enumerate}
         \item First power the Arduino YUN. 
         \item The Arduino creates his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
@@ -863,7 +863,7 @@
         
       \end{enumerate}
   \subsection{Install necessary packets}
-    The Arduino runs an Arduino script and a python script, for python some packets have to be installed.
+    The Arduino runs an Arduino script and a python script, for python scripts some packets have to be installed.
     
     To install any packet, connect to the Arduino (as shown before):
     
@@ -890,7 +890,7 @@
     mkdir www \\
     }\par \end{centering}}
     
-    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the files in there, or copying the files into the Arduino through the network with the following command:
+    Copy the python script ``main.py'' into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the file directly, or copying the file into the Arduino through the network with the following command:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
@@ -905,7 +905,7 @@
   \section{Actual Testbed}
     There were three Arduinos, so the sensor nodes had to be mounted and put them in three different places. The location should be in free space.
     
-    The location has to bee introduce manually into the python script and the unique ID into the Arduino sketch by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
+    The unique ID has to be introduced manually into the Arduino sketch with the Arduino IDE and the location into the python script by entering into the Arduino by secure shell as it was explained earlier, go to the folder where the ``main.py'' is, and modified the following line by using ``nano'', a text editor:
     
     {\begin{centering} \textbf{self.address = 'Sagrada Familia, Carrer de Mallorca, Barcelona'}\par \end{centering}}
     
@@ -931,6 +931,8 @@
       All the data produced during this testbed has been stored in the SD card of the Arduinos, and put them into graphics, as shown in the following figures: \ref{fig:GraphicTemperature}, \ref{fig:GraphicLight}, \ref{fig:GraphicNoise}, \ref{fig:GraphicHumidity}, \ref{fig:GraphicGas}.
       
       But the following graphs show only 100 minutes of the testbed to make it easier to read. The full graphs are in the appendix \ref{testbedgraphicsappendix}.
+      
+      Seeing the graphs has been inferred the following:
       
       The temperature is clearly higher in Badalona, but the three locations are not far apart, so this value should not vary much. But it is important to notice that this is a low quality sensor so it is possible that it may have failed during the testbed, since the graphs of Montgat and Barcelona are similar between them, but very different in comparison to Badalona.
       
