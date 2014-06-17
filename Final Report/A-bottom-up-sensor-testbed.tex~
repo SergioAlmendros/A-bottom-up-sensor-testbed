@@ -104,7 +104,16 @@
 
 %%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
 \noindent {\Large \sffamily Acknowledgments}
+\\
 
+	First and foremost I want to thank my supervisor Jaume Barcelo for guiding and helping me throughout the whole project. I would also like to thank Davide Scaini for proposing the project and help me with the final report, to Manuel Palacin for helping me with technical issues and to Albert Domingo for his constructive criticism that made me progress.
+
+	I also want to thank the other fellows: Ferran Selva, Pedro Vilchez, and Ivan Fernandez for helping in any way they could. 
+	I would like to thank Alejandro Juez, Daniel Valderas, Jacob Uribe, and Carles Xavier, whose experience and knowledge have helped me finished this project. 
+
+	I also want to thank my family for supporting me since I started this project.
+
+	Finally, my sincere gratitude to all my friends who have accompanied me in all the endless hours in the library.
 
 \cleardoublepage
 
@@ -377,7 +386,6 @@
     \subsection{LM35: Temperature}
       LM35 [Figure \ref{fig:LM35}] is a sensor to measure temperature, in the figure \ref{fig:TemperatureSensor_bb} is shown how to connect it to the Arduino.
       \cite{LM35}
-      %\TwoFig{./Figures/LM35.jpg}{LM35 sensor}{fig:LM35}{./Figures/Fritzing/TemperatureSensor_bb.png}{Temperature Sensor Breadboard}{fig:TemperatureSensor_bb}
       
       \begin{figure}
         \centering
@@ -934,9 +942,9 @@
       
       Seeing the graphs has been inferred the following:
       
-      The temperature is clearly higher in Badalona, but the three locations are not far apart, so this value should not vary much. But it is important to notice that this is a low quality sensor so it is possible that it may have failed during the testbed, since the graphs of Montgat and Barcelona are similar between them, but very different in comparison to Badalona.
+      The temperature is clearly higher in Badalona, but the three locations are not far apart, so this value should not vary much. It is important to notice that this is a low quality sensor so it is possible that it may have failed during the testbed since the graphs of Montgat and Barcelona are similar between them, but very different in comparison to Badalona.
       
-      In the case of light, the sensor node in Barcelona receives direct sunlight during most of the day, but the node in Montgat and Badalona do not. Consequently, it is normal that the Barcelona node had a much higher light value. It is important to consider that this node is located in an office, so is reasonable to think that the sudden drop from 100 lux to 10 or less may be because someone turn off the light of the office, and that the sunlight was gone a lot time ago.
+      In the case of light, the sensor node in Barcelona receives direct sunlight during most of the day, but the node in Montgat and Badalona does not. Consequently, it is normal that the Barcelona node had a much higher light value. It is important to consider that this node is located in an office, so is reasonable to think that the sudden drop from 100 lux to 10 or less may be because someone turn off the light of the office, and that the sunlight was gone a long time ago.
       
       \begin{figure}
         \centering
@@ -956,7 +964,7 @@
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
-      The Barcelona node collects noise values much higher than the other two nodes. The Badalona and Montgat nodes are in areas with punctual car traffic, while the Barcelona node is a busy area, causing more noise.
+      The Barcelona node collects noise values much higher than the other two nodes. The Badalona and Montgat nodes are in areas with punctual car traffic, while the Barcelona node is in a busy area, causing more noise.
       
       In the case of the relative humidity, the Badalona node is near a river and the Montgat node is near the sea, so it is logical that the Barcelona node collects less relative humidity.
       
@@ -978,7 +986,7 @@
         \caption{Testbed Results}\label{fig:TestbedResults1}
 			\end{figure}
       
-      The Badalona node captures better air quality than the Barcelona and Montgat. The Barcelona node collects constant values, more or less, which is normal because there is in an area with high car traffic. The Badalona node collects a decrease in air quality as time passes, which coincides with the arrival of workers who park in the area. In the case of Montgat, there is a big difference in a time slot. This node is located near a highway, so it is possible that this time slot coincide when there is more traffic on the highway.
+      The Badalona node captures better air quality than the Barcelona and Montgat nodes. The Barcelona node collects constant values, more or less, which is normal because there is in an area with high car traffic. The Badalona node collects a decrease in air quality as time passes, which coincides with the arrival of workers who park in the area. In the case of Montgat, there is a big difference in a time slot. This node is located near a highway, so it is possible that this time slot coincide when there is more traffic on the highway.
       
       \begin{figure}[htbp]
 		    \centering
@@ -987,17 +995,15 @@
 		        \label{fig:GraphicGas}
 		    \label{fig:Testbedmap}
 		  \end{figure}
-		  
-		  Graphics explanation:
     
 \chapter{Conclusions}
 \label{Chapter6}
   
-  During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have properly.  
-  Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source, and easy to use.
+  During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have function properly.  
+  Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source hardware and software, and easy to use.
   A mobile application has been developed to serve as an example, so the citizens who want to create their own find the process easier.
+ 	All the code that it has been created during this project is open source and is online, in a Github repository.
   
-  All the code that it has been created during this project is open source and is online, in a Github repository.
   In conclusion, the project had satisfied the goals presented at the start, which are share sensor data on an open network, and let the users visualize it.
 
 \chapter{Future work}
