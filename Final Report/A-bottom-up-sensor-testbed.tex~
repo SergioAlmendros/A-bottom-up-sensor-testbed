@@ -95,9 +95,11 @@
 
 %%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 
-%\noindent Dedicatòria
+\noindent Dedicatòria
 
-%\cleardoublepage
+\cleardoublepage
+
+	Dedicated to my parents and sister for supporting me and helping me out at any moment, and all my colleagues who have been with me all these years.
 
 %%%%%% Final de dedicatòria
 
@@ -109,7 +111,7 @@
 	First and foremost I want to thank my supervisor Jaume Barcelo for guiding and helping me throughout the whole project. I would also like to thank Davide Scaini for proposing the project and help me with the final report, to Manuel Palacin for helping me with technical issues and to Albert Domingo for his constructive criticism that made me progress.
 
 	I also want to thank the other fellows: Ferran Selva, Pedro Vilchez, and Ivan Fernandez for helping in any way they could. 
-	I would like to thank Alejandro Juez, Daniel Valderas, Jacob Uribe, Carles Xavier, and Aitor Rodriguez, whose experience and knowledge have helped me finished this project. 
+	I would like to thank Alejandro Juez, Daniel Valderas, Jacob Uribe, Carles Xavier Vilás, and Aitor Rodriguez, whose experience and knowledge have helped me finish this project. 
 
 	I also want to thank my family for supporting me since I started this project.
 
@@ -229,7 +231,7 @@
     In the following sections some companies that are in the business of sensor networks are described.
     
     \subsection{Smartcitizen}
-      Smart Citizen\footnote{\url{http://www.smartcitizen.me/}} is platform that offers a sensor board based on Arduino to monitor the environment (figure \ref{fig:SmartCitizenNode}), and permits to upload this data to their own public database.
+      Smart Citizen\footnote{\url{http://www.smartcitizen.me/}} is a platform that offers a sensor board based on Arduino to monitor the environment (figure \ref{fig:SmartCitizenNode}), and permits to upload this data to their own public database.
       
       \begin{figure}[htbp]
         \centering
@@ -285,7 +287,7 @@
       Xively \footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basically it lets you store sensor data, download it, and visualize it through graphics.
     
     \subsection{Sentilo}
-      Sentilo \footnote{\url{http://www.sentilo.io}} is an open source platform for Smart Cities, it allows the user to use their own service to store the data, but they do not intend to become the database for everyone, it is only as an example. The Sentilo platform does not depend on a central server and can be installed on a private server. It also provides a interface to show the data.
+      Sentilo \footnote{\url{http://www.sentilo.io}} is an open source platform for Smart Cities, it allows the user to use their own service to store the data, but they do not intend to become the database for everyone, it is only as an example. The Sentilo platform does not depend on a central server and can be installed on a private server. It also provides an interface to show the data.
     
   \section{Sensor boards}
     In this section are discussed some of the options for a sensor node.
@@ -373,7 +375,7 @@
 
     Another advantage that YUN offers is the integrated WiFi module, which offers more flexibility when there is no Ethernet available.
     
-    Finally, the Arduino Yun has been used instead of the Raspberry Pi basically because of the size that will become the sensor node, but if in the future will be necessary a more powerful processor, it will be better to use a Raspberry Pi.  
+    Finally, the Arduino Yun has been used instead of the Raspberry Pi basically because of the size that will become the sensor node, but if in the future is necessary a more powerful processor, it will be better to use a Raspberry Pi.  
 
   \section{Sensors}
     The goal is to analyze the environment around us, and sensors are a mean to detect physical or chemical variables. It has been decided to use low cost environmental sensors that are easily accessible and usable. 
@@ -509,7 +511,7 @@
                 \label{fig:GasSensor_bb}
         \end{subfigure}
         \rule{18em}{0.5pt}
-        \caption{DHT11 sensor}\label{fig:DHT11sensor}
+        \caption{Gas sensor}\label{fig:DHT11sensor}
 			\end{figure} 
       
       The Mq135 sensor reacts to the concentration of the following gases: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.. \cite{mq135gassensor}.
@@ -589,7 +591,7 @@
     Since the goal is that a user checks it for a small period of time, the best option is a mobile application. Additionally, almost everybody has an smartphone.
     
     There are three mobile operating system, iOS, Android, or Windows Phone. There is another option that is to developed the application in html, javascript, and CSS, and then compile it with phonegap\footnote{\url{http://phonegap.com/}}, and it builds the application for the three operating systems. But it ended up being much more difficult than to create an application directly to an operating system.
-    Of the three operating systems, the one with more market share has been chosen to reach as many people as possible.
+    Of the three operating systems, the one with more market share has been chosen to reach as many people as possible, so the Android operating system has been chosen.
       
     Android is a mobile operating system from Google, it runs on smartphones, and applications are programmed in Java. Java is a computer programming language that is object-oriented.    
     This application will be tested on a Sony Xperia Z1, with an Android 4.4.2.
@@ -623,7 +625,7 @@
       The other function by default is the ``loop'', which calls three functions: readSensors, readFile, and executePythonScript.
       
       \begin{itemize}
-        \item {\bf readSensors:} It call 5 different functions to read every sensor, the reason for doing a separate function is to make the code more clear.
+        \item {\bf readSensors:} It calls 5 different functions to read every sensor, the reason for doing a separate function is to make the code more clear.
         \item {\bf readFile:} This function logs the process, saves the ID of the message, the sensor values, and a timestamp.
         \item {\bf executePythonScript:} The script in python located in the SD card is in charge to create the GeoJSON message with all the sensor data and upload it to Opencities. This script is called by the Arduino sketch.
       \end{itemize}
@@ -940,7 +942,7 @@
       
       But the following graphs show only 100 minutes of the testbed to make it easier to read. The full graphs are in the appendix \ref{testbedgraphicsappendix}.
       
-      Seeing the graphs has been inferred the following:
+      Seeing the graphs the following has been inferred:
       
       The temperature is clearly higher in Badalona, but the three locations are not far apart, so this value should not vary much. It is important to notice that this is a low quality sensor so it is possible that it may have failed during the testbed since the graphs of Montgat and Barcelona are similar between them, but very different in comparison to Badalona.
       
@@ -1001,6 +1003,7 @@
   
   During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have function properly.  
   Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source hardware and software, and easy to use.
+  
   A mobile application has been developed to serve as an example, so the citizens who want to create their own find the process easier.
  	All the code that it has been created during this project is open source and is online, in a Github repository.
   
@@ -1033,12 +1036,18 @@
   	\input{./Appendix/Planning_Report.tex}
   	
   \chapter{Class Diagram}
-  
-  	\includepdf[]{./AdditionalInformation/ClassDiagram1_1.pdf}
-
+	\clearpage
+		\begin{figure}[H]
+      \centering
+        \includegraphics[scale=0.5]{./Figures/ClassDiagram1_1.png}
+      \rule{35em}{0.5pt}
+      \caption[Class Diagram of the Android App part 1]{Class Diagram of the Android App part 1.}
+      \label{fig:ClassDiagram1}
+    \end{figure}
+		
     \begin{figure}[H]
       \centering
-        \includegraphics[page=1,scale=0.8]{./AdditionalInformation/ClassDiagram1_2.pdf}
+        \includegraphics[scale=0.5]{./Figures/ClassDiagram1_2.png}
       \rule{35em}{0.5pt}
       \caption[Class Diagram of the Android App part 2]{Class Diagram of the Android App part 2.}
       \label{fig:ClassDiagram2}
