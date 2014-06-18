@@ -1,0 +1,64 @@
+\begin{thebibliography}{}
+
+\bibitem[Aosong Electronics~Co., 2013]{dht22sensor}
+Aosong Electronics~Co., L. (2013).
+\newblock Digital-output relative humidity \& temperature sensor/module dht22.
+\newblock
+  \url{https://cdn.shopify.com/s/files/1/0045/8932/files/DHT22.pdf?100745}.
+\newblock [Online; accessed 10-February-2014].
+
+\bibitem[Arduino, 2014]{arduino}
+Arduino (2014).
+\newblock Arduino.
+\newblock \url{http://arduino.cc/}.
+\newblock [Online; accessed 8-January-2014].
+
+\bibitem[Chong and Kumar, 2003]{chong2003sensor}
+Chong, C.-Y. and Kumar, S.~P. (2003).
+\newblock Sensor networks: evolution, opportunities, and challenges.
+\newblock {\em Proceedings of the IEEE}, 91(8):1247--1256.
+
+\bibitem[Emartee, 2013]{emarteeminisound}
+Emartee (2013).
+\newblock Mini sound sensor - emartee.com.
+\newblock
+  \url{http://www.emartee.com/product/42148/Mini%20Sound%20Sensor%20%20Arduino%20Compatible}.
+\newblock [Online; accessed 10-February-2014].
+
+\bibitem[Futurlec, 2013]{mq135gassensor}
+Futurlec (2013).
+\newblock Mq-135 gas sensor.
+\newblock \url{https://www.futurlec.com/Datasheet/Sensor/MQ-135.pdf}.
+\newblock [Online; accessed 12-June-2014].
+
+\bibitem[Guide, 2014]{guideArduinoYun}
+Guide, A. (2014).
+\newblock Arduino guide.
+\newblock \url{http://arduino.cc/en/Guide/ArduinoYun}.
+\newblock [Online; accessed 8-January-2014].
+
+\bibitem[Instruments, 2013]{LM35}
+Instruments, T. (2013).
+\newblock Lm35.
+\newblock \url{www.ti.com/lit/ds/symlink/lm35.pdf}.
+\newblock [Online; accessed 8-January-2014].
+
+\bibitem[Opencities, 2014]{opencities}
+Opencities (2014).
+\newblock Opencities.
+\newblock \url{http://opendata.nets.upf.edu}.
+\newblock [Online; accessed March-2014].
+
+\bibitem[santander, 2014]{SmartcitySantander}
+santander, S. (2014).
+\newblock Smart city in santander.
+\newblock \url{http://www.smartsantander.eu/}.
+\newblock [Online; accessed 10/02/14].
+
+\bibitem[smart city, 2014]{SmartcityAmsterdam}
+smart city, A. (2014).
+\newblock Smart city in amsterdam.
+\newblock \url{http://amsterdamsmartcity.com/}.
+\newblock [Online; accessed 07/02/14].
+
+\end{thebibliography}

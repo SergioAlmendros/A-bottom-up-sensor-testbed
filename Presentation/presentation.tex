@@ -1,4 +1,3 @@
-
 \documentclass[compress,red]{beamer}
 \mode<presentation>
 
@@ -37,7 +36,6 @@
 %\setbeamertemplate{footline}[text line]{} % or empty footer
 
 % include packages
-\usepackage{subfigure}
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{epsfig}
@@ -48,12 +46,14 @@
 \usepackage{multimedia}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \title{A bottom up sensor testbed}
-\subtitle{Hands on WSN}
 \author{Sergio Almendros Diaz}
+
 \institute[institute]{Universitat Pompeu Fabra}
-\date[date]{February, 2014, Barcelona}
+\date[date]{July, 2014, Barcelona}
 
 \begin{document}
 
@@ -64,83 +64,95 @@
 %\section[Outline]{}
 %\frame{\tableofcontents}
 
-\section{General overview of the project}
-   
-  \subsection{Goals}
-  \frame{\frametitle{Goals}
-  The \textbf{general goals} of my project can be summarised in the following points:
-  \vspace{0.25cm}
-  \begin{enumerate}
-  \item Gather \textbf{data} about temperature, humidity, light, noise, and air quality.
-  \vspace{0.25cm}
-  \item \textbf{Share} the data as open data.
-  \vspace{0.25cm}
-  \item \textbf{Visualize} the data in a Android application.
-  \end{enumerate}
-  }
-  
-  \subsection{Introduction}
-  \frame{\frametitle{Introduction}
-  This project has two main parts:
-  \vspace{0.25cm}
-  \begin{enumerate}
-  \item \textbf{Arduino YUN}. \\
-  \begin{center} \includegraphics[scale=.2]{figures/ArduinoYunFront_2_450px.jpg} \end{center}
-  \item \textbf{Android app}. \\
-  \begin{center} \includegraphics[scale=0.05]{figures/Android-logo.png} \end{center}
-  \end{enumerate}
+\section{INTRODUCTION}
+	\frame{\frametitle{INTRODUCTION}
+		\begin{center} \includegraphics[scale=0.4]{../Final_Report/Figures/reportGeneralView.jpg} \end{center}
   }
 
-\section{Arduino Code}
-\frame{\frametitle{Arduino Code}
-The arduino code has three functionalities:
-  \vspace{0.25cm}
-\begin{enumerate}
-\item \textbf{Collect} the analog \& digital data. \\
-  \begin{center} 
-    \includegraphics[scale=.2]{figures/dht22.jpg} 
-    \includegraphics[scale=.2]{figures/LDR.jpg} 
-    \includegraphics[scale=.2]{figures/LM35.jpg} 
-    \includegraphics[scale=.2]{figures/MiniSoundSensor.jpg} 
-    \includegraphics[scale=.2]{figures/sharp.jpg} 
-  \end{center}
-\vspace{0.25cm}
-\item Write it in the \textbf{logData} file.
-\vspace{0.25cm}
-\item Call the \textbf{python script} with the sensory data as arguments, and then the script will send it to opencities. \\
-\begin{center} 
-    \includegraphics[scale=.6]{figures/logo.png} 
-  \end{center}
-\end{enumerate}
-}
+\section{TECHNOLOGIES}
 
-\section{Android App}
-\frame{\frametitle{Android App}
-The app should do:
-  \vspace{0.25cm}
-\begin{enumerate}
-\item Get the \textbf{real-time} data from opencities. \\
-\vspace{0.25cm}
-\item Show it in a way that anybody can \textbf{understand} it.
-\end{enumerate}
-}
+	\subsection{SENSORES}
+	
+		\begin{frame}
+			\begin{columns}[t]
+				\column{.5\textwidth}
+				\centering
+				\includegraphics[width=5cm,height=3.5cm]{../Final_Report/Figures/reportGeneralView.jpg}\\
+				\includegraphics[width=5cm,height=4cm]{../Final_Report/Figures/reportGeneralView.jpg}
+				\column{.5\textwidth}
+				\centering
+				\includegraphics[width=5cm,height=4cm]{../Final_Report/Figures/reportGeneralView.jpg}\\
+				\includegraphics[width=5cm,height=4cm]{../Final_Report/Figures/reportGeneralView.jpg}
+			\end{columns}
+		\end{frame}
+		
+	\subsection{ARDUINO YUN + BRIDGE}
+		HOLA
+		
+	\subsection{PYTHON + GEOJSON}
+		HOLA
+		
+	\subsection{COMMUNITY NETWORK}
+		HOLA
+		
+	\subsection{OPENCITIES}
+		HOLA
+		
+	\subsection{ANDROID APP}
+		HOLA
+		
 
+\section{TESTBED}
+	HOLA
+		
+	
+	\subsection{RESULTS}
+		HOLA
+		
+	
+
+\section{CONCLUSIONS}
+	HOLA
+		
+
+
+\section{FUTURE WORK}
+	HOLA
+		
 
 \section*{}
-\frame{
+	\frame{
     \begin{center}
-        \begin{huge}
-        Thank you for your attention.
-        \end{huge}
-        \\
-        \vspace{1cm}
-        Reporsitory at github.com/SergioAlmendros/A-bottom-up-sensor-testbed \\ 
-        \pause
-        \vspace{1cm}
-        \begin{huge}
-        Any questions?
-        \end{huge}
+      \begin{huge}
+      Thank you for your attention.
+      \end{huge}
+      \\
+      \vspace{1cm}
+      Reporsitory at github.com/SergioAlmendros/A-bottom-up-sensor-testbed	 \\ 
+      \pause
+      \vspace{1cm}
+      \begin{huge}
+      Any questions?
+      \end{huge}
     \end{center}
-}
+	}
+
 
 \end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

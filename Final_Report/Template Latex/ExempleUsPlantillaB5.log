@@ -1,0 +1,407 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  13 MAY 2013 09:43
+entering extended mode
+**ExempleUsPlantillaB5.tex
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
+, bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
+ian, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
+ kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
+-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
+ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
+elsh, loaded.
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\tesi_upf.cls"
+
+LaTeX Warning: You have requested document class `tesi_upf',
+               but the document class provides `book'.
+
+Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\bk12.clo"
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\catalan.ldf"
+Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 91.
+Warning: You are using encoding OT1 instead of T1.
+Some word breaks will not be found.
+\leftllkern=\dimen104
+\rightllkern=\dimen105
+\raiselldim=\dimen106
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\geometry.sty"
+Package: geometry 2002/07/08 v3.2 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen107
+\Gm@wd@mp=\dimen108
+\Gm@odd@mp=\dimen109
+\Gm@even@mp=\dimen110
+\Gm@dimlist=\toks17
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\crop.sty"
+Package: crop 2003/05/20 v1.9 crop marks (mf)
+\stockwidth=\dimen111
+\stockheight=\dimen112
+\CROP@index=\count92
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count93
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\CROP@offset=\count94
+Package crop Info: Local config file crop.cfg used on input line 605.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\xelatex\xetexconfig\crop.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+
+Writing index file ExempleUsPlantillaB5.idx
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 50.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Info: Redefining \l on input line 50.
+LaTeX Info: Redefining \L on input line 50.
+-------------------- Geometry parameters
+paper: b5paper
+landscape: --
+twocolumn: --
+twoside: true
+asymmetric: --
+h-parts: 60.09283pt, 0.7\paperwidth , 90.13925pt (default)
+v-parts: 85.35913pt, 0.7\paperheight , 128.03871pt (default)
+hmarginratio: 2:3
+vmarginratio: 2:3
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  500.7685pt
+\paperheight 711.3189pt
+\textwidth  350.5364pt
+\textheight 497.92105pt
+\oddsidemargin  -12.17715pt
+\evensidemargin 17.86926pt
+\topmargin  -18.78465pt
+\headheight 12.0pt
+\headsep    19.8738pt
+\footskip   30.0pt
+\marginparwidth 50.0pt
+\marginparsep   7.0pt
+\columnsep  10.0pt
+\skip\footins  10.8pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+\@twosidetrue \@mparswitchtrue 
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+
+(C:\Users\Fernando\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count95
+\scratchdimen=\dimen115
+\scratchbox=\box26
+\nofMPsegments=\count96
+\nofMParguments=\count97
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count98
+\MPscratchDim=\dimen116
+\MPnumerator=\count99
+\makeMPintoPDFobject=\count100
+\everyMPtoPDFconversion=\toks19
+)
+Package crop Info: requested driver: `' on input line 50.
+Package crop Info: detected driver: `pdftex' on input line 50.
+Package crop Info: using `pdftex' graphics driver on input line 50.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 55.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 55.
+ <logo_upf.png, id=1, 222.8325pt x 78.2925pt>
+File: logo_upf.png Graphic file (type png)
+
+<use logo_upf.png>
+Package pdftex.def Info: logo_upf.png used on input line 55.
+(pdftex.def)             Requested size: 89.13141pt x 31.31644pt.
+ [1{C:/Users/Fernando/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+
+
+
+ <C:/Users/Fernando/Documents/GitHub/MobileNode-TFG/Thesis/Template/Template Latex/logo_upf.png>] [2
+
+
+] [3] [4
+
+
+] [5] [6
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 78.
+ [7] [8
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+ [9] [10
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
+)
+\tf@toc=\write4
+ [11
+
+
+]
+[12
+
+
+] ("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.lof")
+\tf@lof=\write5
+
+[13] [14
+
+
+] ("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.lot")
+\tf@lot=\write6
+
+[15] [16
+
+
+]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 120.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (1.65485pt too wide) in paragraph at lines 120--121
+[][]\OT1/ptm/m/n/12 Es una mo-di-fi-ca-ci[]o de l'es-til \OT1/pcr/m/n/12 book \OT1/ptm/m/n/12 amb les seg[]uents
+ []
+
+
+Overfull \hbox (8.59828pt too wide) in paragraph at lines 126--127
+[]\OT1/ptm/m/n/12 Es rede-fi-neix \OT1/pcr/m/n/12 cleardoublepage \OT1/ptm/m/n/12 per-qu[]e les p[]agines en blanc
+ []
+
+
+Overfull \hbox (1.20668pt too wide) in paragraph at lines 137--138
+[]\OT1/ptm/m/n/12 S'indica []\OT1/pcr/m/n/12 \pagestyle{plain} \OT1/ptm/m/n/12 per-qu[]e no apa-re-guin els he-
+ []
+
+[1
+
+
+]
+Overfull \hbox (55.78249pt too wide) in paragraph at lines 139--140
+[]\OT1/ptm/m/n/12 A les co-man-des \OT1/pcr/m/n/12 title\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 subtitle\OT1/ptm/m/n/12 , \OT1
+/pcr/m/n/12 author\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 thyear\OT1/ptm/m/n/12 ,\OT1/pcr/m/n/12 department\OT1/ptm/m/n/12 ,
+ []
+
+
+Overfull \hbox (12.62553pt too wide) in paragraph at lines 139--140
+\OT1/pcr/m/n/12 supervisor \OT1/ptm/m/n/12 s'-han de po-sar els va-lors ade-quats. L[]T[]Xgenerar[]a
+ []
+
+
+Overfull \hbox (39.13568pt too wide) in paragraph at lines 162--163
+\OT1/ptm/m/n/12 exem-ple []\OT1/pcr/m/n/12 vancouver\OT1/ptm/m/n/12 ...Per co-mo-di-tat s'in-clou tamb[]e l'es-til []\OT
+1/pcr/m/n/12 vancouver\OT1/ptm/m/n/12 . 
+ []
+
+[2]
+Overfull \hbox (10.03815pt too wide) in paragraph at lines 169--169
+ []\OT1/pcr/m/n/12 com es menciona en \cite[p. 56]{sartre1984ser}[] 
+ []
+
+
+LaTeX Warning: Citation `sartre1984ser' on page 3 undefined on input line 170.
+
+[3] [4
+
+
+]
+Cap\'{\i }tol 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 181.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 198.
+File: logo_upf.png Graphic file (type png)
+<use logo_upf.png>
+Package pdftex.def Info: logo_upf.png used on input line 207.
+(pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
+ [5] [6]
+Cap\'{\i }tol 2.
+
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [7
+
+
+] [8]
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.bbl" [9]
+[10
+
+
+]) [11] [12
+
+
+]
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.ind" [13
+
+
+])
+("C:\Users\Fernando\Documents\GitHub\MobileNode-TFG\Thesis\Template\Template Latex\ExempleUsPlantillaB5.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 204 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 2274 strings out of 493921
+ 32305 string characters out of 3144867
+ 89668 words of memory out of 3000000
+ 5521 multiletter control sequences out of 15000+200000
+ 31669 words of font info for 58 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 28i,10n,24p,560b,276s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on ExempleUsPlantillaB5.pdf (29 pages, 112533 bytes).
+PDF statistics:
+ 121 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

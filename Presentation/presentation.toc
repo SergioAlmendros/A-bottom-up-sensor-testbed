@@ -1,6 +1,13 @@
 \beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{General overview of the project}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Goals}{2}{0}{1}
-\beamer@subsectionintoc {1}{2}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Arduino Code}{4}{0}{2}
-\beamer@sectionintoc {3}{Android App}{5}{0}{3}
+\beamer@sectionintoc {1}{INTRODUCTION}{2}{0}{1}
+\beamer@sectionintoc {2}{TECHNOLOGIES}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{SENSORES}{3}{0}{2}
+\beamer@subsectionintoc {2}{2}{ARDUINO YUN + BRIDGE}{4}{0}{2}
+\beamer@subsectionintoc {2}{3}{PYTHON + GEOJSON}{4}{0}{2}
+\beamer@subsectionintoc {2}{4}{COMMUNITY NETWORK}{4}{0}{2}
+\beamer@subsectionintoc {2}{5}{OPENCITIES}{4}{0}{2}
+\beamer@subsectionintoc {2}{6}{ANDROID APP}{4}{0}{2}
+\beamer@sectionintoc {3}{TESTBED}{4}{0}{3}
+\beamer@subsectionintoc {3}{1}{RESULTS}{4}{0}{3}
+\beamer@sectionintoc {4}{CONCLUSIONS}{4}{0}{4}
+\beamer@sectionintoc {5}{FUTURE WORK}{4}{0}{5}

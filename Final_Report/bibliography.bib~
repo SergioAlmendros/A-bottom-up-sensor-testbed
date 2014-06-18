@@ -1,0 +1,91 @@
+@article{chong2003sensor,
+  title={Sensor networks: evolution, opportunities, and challenges},
+  author={Chong, Chee-Yee and Kumar, Srikanta P},
+  journal={Proceedings of the IEEE},
+  volume={91},
+  number={8},
+  pages={1247--1256},
+  year={2003},
+  publisher={IEEE}
+}
+
+@misc{SmartcityAmsterdam,
+    author = "Amsterdam smart city",
+    title = "Smart city in Amsterdam",
+    year = "2014",
+    howpublished = {\url{http://amsterdamsmartcity.com/}},
+    note = "[Online; accessed 07/02/14]"
+}
+
+@misc{SmartcitySantander,
+    author = "Smart santander",
+    title = "Smart city in Santander",
+    year = "2014",
+    howpublished = {\url{http://www.smartsantander.eu/}},
+    note = "[Online; accessed 10/02/14]"
+}
+
+@misc{LM35,
+    author = "Texas Instruments",
+    title = "LM35",
+    year = "2013",
+    howpublished = {\url{www.ti.com/lit/ds/symlink/lm35.pdf}},
+    note = "[Online; accessed 8-January-2014]"
+}
+
+@misc{dht22sensor,
+    author = "Aosong Electronics Co., Ltd",
+    title = "Digital-output relative humidity \& temperature sensor/module DHT22",
+    year = "2013",
+    howpublished = {\url{https://cdn.shopify.com/s/files/1/0045/8932/files/DHT22.pdf?100745}},
+    note = "[Online; accessed 10-February-2014]"
+}
+
+@misc{emarteeminisound,
+    author = "Emartee",
+    title = "Mini Sound Sensor - emartee.com",
+    year = "2013",
+    howpublished = {\url{http://www.emartee.com/product/42148/Mini%20Sound%20Sensor%20%20Arduino%20Compatible}},
+    note = "[Online; accessed 10-February-2014]"
+}
+
+@misc{arduino,
+    author = "Arduino",
+    title = "Arduino",
+    year = "2014",
+    howpublished = {\url{http://arduino.cc/}},
+    note = "[Online; accessed 8-January-2014]"
+}
+
+@misc{opencities,
+    author = "Opencities",
+    title = "Opencities",
+    year = "2014",
+    howpublished = {\url{http://opendata.nets.upf.edu}},
+    note = "[Online; accessed March-2014]"
+}
+
+@misc{mq135gassensor,
+    author = "Futurlec",
+    title = "MQ-135 Gas sensor",
+    year = "2013",
+    howpublished = {\url{https://www.futurlec.com/Datasheet/Sensor/MQ-135.pdf}},
+    note = "[Online; accessed 12-June-2014]"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

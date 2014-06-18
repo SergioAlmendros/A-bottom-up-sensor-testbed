@@ -1,2 +1,0 @@
-Write on the shell:
-pdflatex A-bottom-up-sensor-testbed.tex && evince A-bottom-up-sensor-testbed.pdf &

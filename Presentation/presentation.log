@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  15 JUN 2014 17:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  18 JUN 2014 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -690,42 +690,22 @@ Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
 (/usr/share/texmf/tex/latex/beamer/base/themes/outer/beamerouterthemesmoothbars
 .sty
 Package: beamerouterthemesmoothbars 2010/06/17  (rcs-revision d02a7cf4d8ae)
-) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
-Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip57
-\subfigcapskip=\skip58
-\subfigcaptopadj=\dimen185
-\subfigbottomskip=\skip59
-\subfigcapmargin=\dimen186
-\subfiglabelskip=\skip60
-\c@subfigure=\count153
-\c@lofdepth=\count154
-\c@subtable=\count155
-\c@lotdepth=\count156
-
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip61
-\subfig@bottom=\skip62
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count157
+\c@tracingmulticols=\count153
 \mult@box=\box53
-\multicol@leftmargin=\dimen187
-\c@unbalance=\count158
-\c@collectmore=\count159
-\doublecol@number=\count160
-\multicoltolerance=\count161
-\multicolpretolerance=\count162
-\full@width=\dimen188
-\page@free=\dimen189
-\premulticols=\dimen190
-\postmulticols=\dimen191
-\multicolsep=\skip63
-\multicolbaselineskip=\skip64
+\multicol@leftmargin=\dimen185
+\c@unbalance=\count154
+\c@collectmore=\count155
+\doublecol@number=\count156
+\multicoltolerance=\count157
+\multicolpretolerance=\count158
+\full@width=\dimen186
+\page@free=\dimen187
+\premulticols=\dimen188
+\postmulticols=\dimen189
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
 \partial@page=\box54
 \last@line=\box55
 \mult@rightbox=\box56
@@ -749,19 +729,19 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box74
 \@tempa=\box75
 \@tempa=\box76
-\c@columnbadness=\count163
-\c@finalcolumnbadness=\count164
-\last@try=\dimen192
-\multicolovershoot=\dimen193
-\multicolundershoot=\dimen194
+\c@columnbadness=\count159
+\c@finalcolumnbadness=\count160
+\last@try=\dimen190
+\multicolovershoot=\dimen191
+\multicolundershoot=\dimen192
 \mult@nat@firstbox=\box77
 \colbreak@box=\box78
-\multicol@sort@counter=\count165
+\multicol@sort@counter=\count161
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen195
-\epsfysize=\dimen196
+\epsfxsize=\dimen193
+\epsfysize=\dimen194
 )
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xy.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
@@ -773,45 +753,45 @@ catcodes, docmode, (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyrecat.tex
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen197
-\Y@c=\dimen198
-\U@c=\dimen199
-\D@c=\dimen200
-\L@c=\dimen201
-\R@c=\dimen202
+\X@c=\dimen195
+\Y@c=\dimen196
+\U@c=\dimen197
+\D@c=\dimen198
+\L@c=\dimen199
+\R@c=\dimen200
 \Edge@c=\toks40
-\X@p=\dimen203
-\Y@p=\dimen204
-\U@p=\dimen205
-\D@p=\dimen206
-\L@p=\dimen207
-\R@p=\dimen208
+\X@p=\dimen201
+\Y@p=\dimen202
+\U@p=\dimen203
+\D@p=\dimen204
+\L@p=\dimen205
+\R@p=\dimen206
 \Edge@p=\toks41
-\X@origin=\dimen209
-\Y@origin=\dimen210
-\X@xbase=\dimen211
-\Y@xbase=\dimen212
-\X@ybase=\dimen213
-\Y@ybase=\dimen214
-\X@min=\dimen215
-\Y@min=\dimen216
-\X@max=\dimen217
-\Y@max=\dimen218
+\X@origin=\dimen207
+\Y@origin=\dimen208
+\X@xbase=\dimen209
+\Y@xbase=\dimen210
+\X@ybase=\dimen211
+\Y@ybase=\dimen212
+\X@min=\dimen213
+\Y@min=\dimen214
+\X@max=\dimen215
+\Y@max=\dimen216
 \lastobjectbox@=\box79
 \zerodotbox@=\box80
-\almostz@=\dimen219
+\almostz@=\dimen217
  direction,
-\d@X=\dimen220
-\d@Y=\dimen221
-\K@=\count166
-\KK@=\count167
-\Direction=\count168
-\K@dXdY=\dimen222
-\K@dYdX=\dimen223
+\d@X=\dimen218
+\d@Y=\dimen219
+\K@=\count162
+\KK@=\count163
+\Direction=\count164
+\K@dXdY=\dimen220
+\K@dYdX=\dimen221
 \xyread@=\read2
 \xywrite@=\write5
-\csp@=\count169
-\quotPTK@=\dimen224
+\csp@=\count165
+\quotPTK@=\dimen222
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks42
@@ -827,15 +807,15 @@ Package: xy 2012/05/24 Xy-pic version 3.8.8
  Xy-pic option: All features v.3.8
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count170
+\crv@cnt@=\count166
 \crvpts@=\toks44
 \splinebox@=\box82
-\splineval@=\dimen225
-\splinedepth@=\dimen226
-\splinetol@=\dimen227
-\splinelength@=\dimen228
+\splineval@=\dimen223
+\splinedepth@=\dimen224
+\splinetol@=\dimen225
+\splinelength@=\dimen226
  circles,
-\L@=\dimen229
+\L@=\dimen227
  loaded)
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
@@ -845,7 +825,7 @@ Package: xy 2012/05/24 Xy-pic version 3.8.8
  Xy-pic option: More Tips extension v.3.9 loaded) loaded)
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyline.tex
  Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen230
+\xylinethick@=\dimen228
  loaded)
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyrotate.tex
  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
@@ -853,13 +833,13 @@ Package: xy 2012/05/24 Xy-pic version 3.8.8
  Xy-pic option: Colour extension v.3.11 loaded)
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count171
-\Col=\count172
+\Row=\count167
+\Col=\count168
 \queue@=\toks45
 \queue@@=\toks46
-\qcount@=\count173
-\qcount@@=\count174
-\matrixsize@=\count175
+\qcount@=\count169
+\qcount@@=\count170
+\matrixsize@=\count171
  loaded)
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -883,308 +863,41 @@ Xy-pic pdf driver: `rotate' extension support
 elliptical arcs, loaded)
 (/usr/share/texmf/tex/latex/beamer/base/multimedia/multimedia.sty
 Package: multimedia 2012/05/02 ver 0.02
-\mm@movie=\count176
+\mm@movie=\count172
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(./presentation.aux)
-\openout1 = `presentation.aux'.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen229
+\captionmargin@=\dimen230
+\captionwidth=\dimen231
+\caption@tempdima=\dimen232
+\caption@indent=\dimen233
 
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: custom
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
-* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
-* \paperwidth=364.19536pt
-* \paperheight=273.14662pt
-* \textwidth=307.28987pt
-* \textheight=244.6939pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-72.26999pt
-* \headheight=14.22636pt
-* \headsep=0.0pt
-* \topskip=11.0pt
-* \footskip=14.22636pt
-* \marginparwidth=4.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count177
-\scratchdimen=\dimen231
-\scratchbox=\box83
-\nofMPsegments=\count178
-\nofMParguments=\count179
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count180
-\MPscratchDim=\dimen232
-\MPnumerator=\count181
-\makeMPintoPDFobject=\count182
-\everyMPtoPDFconversion=\toks48
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box84
-Package hyperref Info: Link coloring OFF on input line 58.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count183
-)
-LaTeX Info: Redefining \ref on input line 58.
-LaTeX Info: Redefining \pageref on input line 58.
-LaTeX Info: Redefining \nameref on input line 58.
-
-(./presentation.out) (./presentation.out)
-\@outlinefile=\write6
-\openout6 = `presentation.out'.
-
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 58.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 58.
-\symnumbers=\mathgroup6
-\sympureletters=\mathgroup7
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 58.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 58.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 58.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 58.
-LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 58.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 58.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 58.
-
-(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
-onary/translator-basic-dictionary-English.dict
-Dictionary: translator-basic-dictionary, Language: English 
-)
-(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-bibliograph
-y-dictionary/translator-bibliography-dictionary-English.dict
-Dictionary: translator-bibliography-dictionary, Language: English 
-)
-(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-environment
--dictionary/translator-environment-dictionary-English.dict
-Dictionary: translator-environment-dictionary, Language: English 
-)
-(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-months-dict
-ionary/translator-months-dictionary-English.dict
-Dictionary: translator-months-dictionary, Language: English 
-)
-(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-numbers-dic
-tionary/translator-numbers-dictionary-English.dict
-Dictionary: translator-numbers-dictionary, Language: English 
-)
-(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-theorem-dic
-tionary/translator-theorem-dictionary-English.dict
-Dictionary: translator-theorem-dictionary, Language: English 
-)
-LaTeX Info: Redefining \includegraphics on input line 58.
-LaTeX Font Info:    Try loading font information for U+msa on input line 58.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 58.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package xypdf Info: Line width: 0.43799pt on input line 58.
- (./presentation.nav)
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 62.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-] [2
-
-]
-<figures/ArduinoYunFront_2_450px.jpg, id=126, 451.6875pt x 301.125pt>
-File: figures/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
-
-<use figures/ArduinoYunFront_2_450px.jpg>
-Package pdftex.def Info: figures/ArduinoYunFront_2_450px.jpg used on input line
- 92.
-(pdftex.def)             Requested size: 90.33589pt x 60.22392pt.
-
-<figures/Android-logo.png, id=127, 1606.0pt x 1606.0pt>
-File: figures/Android-logo.png Graphic file (type png)
-
-<use figures/Android-logo.png>
-Package pdftex.def Info: figures/Android-logo.png used on input line 92.
-(pdftex.def)             Requested size: 80.3047pt x 80.3047pt.
- [3
-
- <./figures/ArduinoYunFront_2_450px.jpg> <./figures/Android-logo.png>]
-<figures/dht22.jpg, id=161, 188.20313pt x 188.20313pt>
-File: figures/dht22.jpg Graphic file (type jpg)
- <use figures/dht22.jpg>
-Package pdftex.def Info: figures/dht22.jpg used on input line 115.
-(pdftex.def)             Requested size: 37.63995pt x 37.63995pt.
-
-<figures/LDR.jpg, id=162, 361.35pt x 361.35pt>
-File: figures/LDR.jpg Graphic file (type jpg)
- <use figures/LDR.jpg>
-Package pdftex.def Info: figures/LDR.jpg used on input line 115.
-(pdftex.def)             Requested size: 72.2687pt x 72.2687pt.
-
-<figures/LM35.jpg, id=163, 240.9pt x 240.9pt>
-File: figures/LM35.jpg Graphic file (type jpg)
- <use figures/LM35.jpg>
-Package pdftex.def Info: figures/LM35.jpg used on input line 115.
-(pdftex.def)             Requested size: 48.17914pt x 48.17914pt.
-
-<figures/MiniSoundSensor.jpg, id=164, 376.40625pt x 369.63094pt>
-File: figures/MiniSoundSensor.jpg Graphic file (type jpg)
-
-<use figures/MiniSoundSensor.jpg>
-Package pdftex.def Info: figures/MiniSoundSensor.jpg used on input line 115.
-(pdftex.def)             Requested size: 75.2799pt x 73.92487pt.
-
-<figures/sharp.jpg, id=165, 144.54pt x 144.54pt>
-File: figures/sharp.jpg Graphic file (type jpg)
- <use figures/sharp.jpg>
-Package pdftex.def Info: figures/sharp.jpg used on input line 115.
-(pdftex.def)             Requested size: 28.90747pt x 28.90747pt.
-
-<figures/logo.png, id=166, 177.66376pt x 64.24pt>
-File: figures/logo.png Graphic file (type png)
- <use figures/logo.png>
-Package pdftex.def Info: figures/logo.png used on input line 115.
-(pdftex.def)             Requested size: 106.59906pt x 38.54428pt.
-
-Overfull \vbox (1.15778pt too high) detected at line 115
- []
-
-[4
-
- <./figures/dht22.jpg> <./figures/LDR.jpg> <./figures/LM35.jpg> <./figures/Mini
-SoundSensor.jpg> <./figures/sharp.jpg> <./figures/logo.png>] [5
-
-] [6
-
-] [7
-
-]
-\tf@nav=\write7
-\openout7 = `presentation.nav'.
-
-\tf@toc=\write8
-\openout8 = `presentation.toc'.
-
-\tf@snm=\write9
-\openout9 = `presentation.snm'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
-
-(./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
-Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 06ABDA09CAD4D0F6F5DA81D169A5FB74;274.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.0pt have occurred.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
- ) 
+! No room for a new \dimen .
+\ch@ck ...\else \errmessage {No room for a new #3}
+                                                  \fi 
+l.507 \newdimen\caption@parindent
+                                 
+? exit
+ 
 Here is how much of TeX's memory you used:
- 19224 strings out of 493307
- 338927 string characters out of 6139906
- 482959 words of memory out of 5000000
- 22167 multiletter control sequences out of 15000+600000
- 12283 words of font info for 49 fonts, out of 8000000 for 9000
+ 17799 strings out of 493307
+ 310621 string characters out of 6139906
+ 469221 words of memory out of 5000000
+ 20853 multiletter control sequences out of 15000+600000
+ 5670 words of font info for 25 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,20n,59p,3237b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on presentation.pdf (7 pages, 522822 bytes).
+ 49i,0n,59p,3237b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 21 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 10 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 

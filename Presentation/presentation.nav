@@ -1,29 +1,36 @@
 \beamer@endinputifotherversion {3.24pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {1}{General overview of the project}{2}{General overview of the project}{0}}
+\headcommand {\sectionentry {1}{INTRODUCTION}{2}{INTRODUCTION}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Goals}}\headcommand {\beamer@subsectionpages {2}{1}}
-\headcommand {\slideentry {1}{1}{1}{2/2}{Goals}{0}}
+\headcommand {\slideentry {1}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{3}{Introduction}}\headcommand {\beamer@subsectionpages {2}{2}}
-\headcommand {\slideentry {1}{2}{1}{3/3}{Introduction}{0}}
+\headcommand {\sectionentry {2}{TECHNOLOGIES}{3}{TECHNOLOGIES}{0}}
+\headcommand {\beamer@sectionpages {2}{2}}
+\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{3}{SENSORES}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {2}{1}{1}{3/3}{SENSORES}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\sectionentry {2}{Arduino Code}{4}{Arduino Code}{0}}
-\headcommand {\beamer@sectionpages {2}{3}}
-\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {2}{0}{2}{4/4}{}{0}}
-\headcommand {\beamer@framepages {4}{4}}
-\headcommand {\sectionentry {3}{Android App}{5}{Android App}{0}}
-\headcommand {\beamer@sectionpages {4}{4}}
-\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\slideentry {3}{0}{3}{5/5}{}{0}}
-\headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {4}{0}{4}{6/7}{}{0}}
-\headcommand {\beamer@framepages {6}{7}}
-\headcommand {\beamer@partpages {1}{7}}
-\headcommand {\beamer@subsectionpages {6}{7}}
-\headcommand {\beamer@sectionpages {6}{7}}
-\headcommand {\beamer@documentpages {7}}
-\headcommand {\def \inserttotalframenumber {6}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{4}{ARDUINO YUN + BRIDGE}}\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{4}{PYTHON + GEOJSON}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{4}{COMMUNITY NETWORK}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{4}{OPENCITIES}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{4}{ANDROID APP}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\sectionentry {3}{TESTBED}{4}{TESTBED}{0}}
+\headcommand {\beamer@sectionpages {3}{3}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{4}{RESULTS}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\sectionentry {4}{CONCLUSIONS}{4}{CONCLUSIONS}{0}}
+\headcommand {\beamer@sectionpages {4}{3}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\sectionentry {5}{FUTURE WORK}{4}{FUTURE WORK}{0}}
+\headcommand {\beamer@sectionpages {4}{3}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\slideentry {6}{0}{1}{4/6}{}{0}}
+\headcommand {\beamer@framepages {4}{6}}
+\headcommand {\beamer@partpages {1}{6}}
+\headcommand {\beamer@subsectionpages {4}{6}}
+\headcommand {\beamer@sectionpages {4}{6}}
+\headcommand {\beamer@documentpages {6}}
+\headcommand {\def \inserttotalframenumber {4}}

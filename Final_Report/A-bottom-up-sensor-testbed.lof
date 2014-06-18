@@ -1,0 +1,57 @@
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {catalan}
+\select@language {english}
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Smart Citizen Node}}{5}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Libellium Projects\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Arduino YUN}}{7}{figure.caption.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Arduino YUN Bridge}}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Raspberry Pi model B}}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Picoboard}}{9}{figure.caption.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sensor boards\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Temperature sensor\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Light sensor\relax }}{13}{figure.caption.11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Noise sensor\relax }}{14}{figure.caption.12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces DHT22 sensor\relax }}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces DHT11 sensor\relax }}{15}{figure.caption.14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Gas sensor\relax }}{16}{figure.caption.15}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Sensor node Prototype with DHT22}}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Sensor node Prototype with DHT11}}{18}{figure.caption.17}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces GeoJSON message}}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Guifi sensor map}}{20}{figure.caption.19}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces General View}}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Arduino sketch Flow Chart}}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Python Script Flow Chart}}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces App Screenshots\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Reduce Class Diagram of the Android App}}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Android App Flow Chart}}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Github Repository}}{31}{figure.caption.26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces TestBed Prototype}}{33}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Yun web Password}}{34}{figure.caption.28}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{35}{figure.caption.29}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{35}{figure.caption.30}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{37}{figure.caption.31}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Testbed Results\relax }}{38}{figure.caption.32}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Testbed Results\relax }}{39}{figure.caption.33}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Air Quality}}{40}{figure.caption.34}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart\relax }}{53}{figure.caption.37}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Class Diagram of the Android App part 1}}{56}{figure.caption.38}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Class Diagram of the Android App part 2}}{57}{figure.caption.39}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Complete Graphic Air Quality}}{59}{figure.caption.40}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Complete Graphic Humidity}}{60}{figure.caption.41}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Complete Graphic Light}}{61}{figure.caption.42}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Complete Graphic Noise}}{62}{figure.caption.43}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Complete Graphic Temperature}}{63}{figure.caption.44}
