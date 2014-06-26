@@ -78,6 +78,7 @@
 \thyear{2014}
 \department{Departament de Tecnologies de la Informació i les Comunicacions (DTIC)}
 \supervisor{Jaume Barceló}
+\supervisor{Davide Scaini}
 
 
 \begin{document}
@@ -95,11 +96,10 @@
 
 %%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 
-\noindent Dedicatòria
+\noindent Dedicated to my parents and sister for supporting me and helping me out at any moment, and all my colleagues who have been with me all these years.
 
 \cleardoublepage
 
-	Dedicated to my parents and sister for supporting me and helping me out at any moment, and all my colleagues who have been with me all these years.
 
 %%%%%% Final de dedicatòria
 
