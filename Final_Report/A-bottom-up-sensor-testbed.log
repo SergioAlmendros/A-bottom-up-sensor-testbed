@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  26 JUN 2014 09:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  26 JUN 2014 15:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,7 +746,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 165.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
  (./A-bottom-up-sensor-testbed.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
@@ -774,8 +774,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [14]
 Chapter 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 185.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 185.
+(Font)              <5> on input line 183.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 183.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -789,87 +789,86 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 ]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 209.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 207.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 209.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 207.
  [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 223.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
 
-Overfull \hbox (23.24052pt too wide) in paragraph at lines 224--225
+Overfull \hbox (23.24052pt too wide) in paragraph at lines 222--223
 \OT1/ptm/m/n/12 there are free spots to park, and, in con-se-quence, re-duce ai
 r pol-lu-tion [[]]. 
  []
 
-<./Figures/smartcitizen.png, id=574, 2478.25874pt x 1368.11125pt>
+[4] <./Figures/smartcitizen.png, id=580, 2478.25874pt x 1368.11125pt>
 File: ./Figures/smartcitizen.png Graphic file (type png)
 
 <use ./Figures/smartcitizen.png>
-Package pdftex.def Info: ./Figures/smartcitizen.png used on input line 237.
+Package pdftex.def Info: ./Figures/smartcitizen.png used on input line 235.
 (pdftex.def)             Requested size: 198.26474pt x 109.45113pt.
- [4]
-<./Figures/Libeliume_health.png, id=588, 326.21875pt x 247.92625pt>
+
+<./Figures/Libeliume_health.png, id=587, 326.21875pt x 247.92625pt>
 File: ./Figures/Libeliume_health.png Graphic file (type png)
 
 <use ./Figures/Libeliume_health.png>
-Package pdftex.def Info: ./Figures/Libeliume_health.png used on input line 257.
+Package pdftex.def Info: ./Figures/Libeliume_health.png used on input line 255.
 
 (pdftex.def)             Requested size: 117.00119pt x 88.92047pt.
 
-<./Figures/LibeliumWaspmote.png, id=589, 428.60126pt x 331.2375pt>
+<./Figures/LibeliumWaspmote.png, id=588, 428.60126pt x 331.2375pt>
 File: ./Figures/LibeliumWaspmote.png Graphic file (type png)
 
 <use ./Figures/LibeliumWaspmote.png>
-Package pdftex.def Info: ./Figures/LibeliumWaspmote.png used on input line 264.
+Package pdftex.def Info: ./Figures/LibeliumWaspmote.png used on input line 262.
 
 (pdftex.def)             Requested size: 117.00119pt x 90.4209pt.
 
-<./Figures/LibeliumSmartWater.png, id=590, 114.4275pt x 112.9821pt>
+<./Figures/LibeliumSmartWater.png, id=589, 114.4275pt x 112.9821pt>
 File: ./Figures/LibeliumSmartWater.png Graphic file (type png)
 
 <use ./Figures/LibeliumSmartWater.png>
 Package pdftex.def Info: ./Figures/LibeliumSmartWater.png used on input line 26
-9.
+7.
 (pdftex.def)             Requested size: 117.00119pt x 115.5281pt.
  [5 <./Figures/smartcitizen.png>]
-<./Figures/ArduinoYunFront_2_450px.jpg, id=604, 451.6875pt x 301.125pt>
+[6 <./Figures/Libeliume_health.png (PNG copy)> <./Figures/LibeliumWaspmote.png>
+ <./Figures/LibeliumSmartWater.png>]
+<./Figures/ArduinoYunFront_2_450px.jpg, id=612, 451.6875pt x 301.125pt>
 File: ./Figures/ArduinoYunFront_2_450px.jpg Graphic file (type jpg)
 
 <use ./Figures/ArduinoYunFront_2_450px.jpg>
 Package pdftex.def Info: ./Figures/ArduinoYunFront_2_450px.jpg used on input li
-ne 298.
+ne 296.
 (pdftex.def)             Requested size: 180.67178pt x 120.44786pt.
- [6 <./Figures/Libeliume_health.png (PNG copy)> <./Figures/LibeliumWaspmote.png
-> <./Figures/LibeliumSmartWater.png>] <./Figures/BridgeInShort.png, id=614, 652
-.4375pt x 362.35374pt>
+
+<./Figures/BridgeInShort.png, id=614, 652.4375pt x 362.35374pt>
 File: ./Figures/BridgeInShort.png Graphic file (type png)
 
 <use ./Figures/BridgeInShort.png>
-Package pdftex.def Info: ./Figures/BridgeInShort.png used on input line 310.
+Package pdftex.def Info: ./Figures/BridgeInShort.png used on input line 308.
 (pdftex.def)             Requested size: 326.21794pt x 181.17642pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./Figures/ArduinoYunFront_2_450px.jpg> <./Figures/BridgeInShort.png>]
-<./Figures/raspberry-pi-model-b.jpg, id=623, 725.71124pt x 558.085pt>
+<./Figures/raspberry-pi-model-b.jpg, id=618, 725.71124pt x 558.085pt>
 File: ./Figures/raspberry-pi-model-b.jpg Graphic file (type jpg)
 
 <use ./Figures/raspberry-pi-model-b.jpg>
 Package pdftex.def Info: ./Figures/raspberry-pi-model-b.jpg used on input line 
-323.
+321.
 (pdftex.def)             Requested size: 145.13968pt x 111.61502pt.
-
-<./Figures/picoboard.jpg, id=627, 261.97874pt x 450.68375pt>
+ [7 <./Figures/ArduinoYunFront_2_450px.jpg>] [8 <./Figures/BridgeInShort.png> <
+./Figures/raspberry-pi-model-b.jpg>]
+<./Figures/picoboard.jpg, id=633, 261.97874pt x 450.68375pt>
 File: ./Figures/picoboard.jpg Graphic file (type jpg)
 
 <use ./Figures/picoboard.jpg>
-Package pdftex.def Info: ./Figures/picoboard.jpg used on input line 335.
+Package pdftex.def Info: ./Figures/picoboard.jpg used on input line 333.
 (pdftex.def)             Requested size: 130.98904pt x 225.34131pt.
- [8 <./Figures/raspberry-pi-model-b.jpg>] [9 <./Figures/picoboard.jpg>] [10
+ [9 <./Figures/picoboard.jpg>] [10
 
 
 ]
@@ -889,7 +888,7 @@ File: ./Figures/poe-rpi.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Figures/poe-rpi.jpg used on input line 367.
 (pdftex.def)             Requested size: 117.00119pt x 88.14133pt.
 
-Underfull \vbox (badness 3343) has occurred while \output is active []
+Underfull \vbox (badness 1264) has occurred while \output is active []
 
  [11]
 <./Figures/LM35.jpg, id=657, 240.9pt x 240.9pt>
@@ -1461,10 +1460,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1106.
  ) 
 Here is how much of TeX's memory you used:
- 19225 strings out of 493307
- 353963 string characters out of 6139906
- 434801 words of memory out of 5000000
- 22007 multiletter control sequences out of 15000+600000
+ 19226 strings out of 493307
+ 353971 string characters out of 6139906
+ 434808 words of memory out of 5000000
+ 22008 multiletter control sequences out of 15000+600000
  32808 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  63i,9n,63p,577b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1476,7 +1475,7 @@ nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 vr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (78 pages, 12798154 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (78 pages, 12817367 bytes).
 PDF statistics:
  1123 PDF objects out of 1200 (max. 8388607)
  956 compressed objects within 10 object streams

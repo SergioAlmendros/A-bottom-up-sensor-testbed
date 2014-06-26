@@ -95,7 +95,7 @@
 
 %%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 
-\noindent Dedicated to my parents and sister for supporting me and helping me out at any moment, and all my colleagues who have been with me all these years.
+\noindent Dedicated to my parents and sister for supporting and helping me at any moment, and all my colleagues who have been with me all these years.
 
 \cleardoublepage
 
@@ -123,29 +123,27 @@
 %ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
-
-  This project aims to deploy a sensor node network taking advantage of the Guifi network, an open, free and neutral network, and the visualization of this data in an intuitive and meaningful way, tailoring the presentation of the data to people without specific scientific knowledge.
-  
-  The main objective is to give citizens a trace to improve their environmental conscience, giving them the necessary information to know the state of their surroundings and so they can act accordingly.
+ 
+  This project aims at creating a sensor testbed that can be continued and supported by a community. 
+  The sensors gather environmental data and are connected to a community network. It gives the community a trace to improve their environmental conscience, giving them the necessary information to know the state of their surroundings and act accordingly.
   This way anybody can act consequently if the sensors detect harmful situations, for example, not going to a park where the gas sensor detects bad air quality.
-   
-  Arduino Yun is the main component of the sensor node. Through a series of sensors attached to it and the Internet connection provided by Guifi, the node can communicate with a storage platform for sensor data, in this case, Opencities. 
   
-  Finally, an Android application downloads the sensor data from Opencities and display them on a map.
+  The sensor data is uploaded to a data broker developed by the university, which makes the data available to a third-party applications. 
+  A mobile application that connects to the data broker has been programmed. 
+  This application offers an intuitive and meaningful sensor data visualization, tailoring the presentation of the data to people without specific scientific knowledge.
 
 
 \selectlanguage{catalan}
 %\vspace*{\fill}
 \section*{\Large \sffamily  Resum}
 
-	Aquest projecte té com a objectiu desplegar una xarxa de nodes sensors prenent avantatge de la xarxa Guifi, una xarxa oberta, lliure i neutral, i la visualització d'aquestes dades d'una forma intuïtiva i significativa, adaptant la presentació de les dades per a persones que no tenen coneixements científics específics.
-   \\
-  L'objectiu principal és donar als ciutadans un camí per millorar la seva consciència ambiental, donant-lis la informació necessària per conèixer l'estat del seu entorn i que així puguin actuar en conseqüència.
-  D'aquesta manera tothom pot actuar en conseqüència si els sensors detecten situacions perilloses, per exemple, no anar a un parc en el qual el sensor de gas detecta una dolenta qualitat de l'aire.
-   \\
-  Arduino Yun és el component principal del node sensor. A través d'una sèrie de sensors connectats a ell i la connexió a Internet proporcionada per Guifi, el node es pot comunicar amb una plataforma d'emmagatzematge per a dades de sensors, en aquest cas, Opencities. 
-  \\
-  Finalment, una aplicació per Android descàrrega les dades de sensors d'Opencities i els mostra en un mapa.
+	Aquest projecte té com a objectiu desplegar un banc de proves de sensors que pot ser continuat y suportat amb el suport d'una comunitat. 
+  Els sensors recullen dades medioambientals i están connectats a una xarxa de la comunitat. Li dóna a la comunitat un camir per millorar la seva consciència ambiental, donant-los la informació necessària per conèixer l'estat del seu entorn i actuar en conseqüència. 
+  D'aquesta manera tothom pot actuar en conseqüència si els sensors detecten situacions perilloses, per exemple, no anar a un parc en el qual el sensor de gas detecta mala qualitat de l'aire. 
+  
+  Les dades del sensors s'emmagatzema en un data broker desenvolupat per la universitat, el que fa que les dades estiguin disponibles per a aplicacions de tercers. 
+  Una aplicació mòbil que es connecta al data broker ha estat programada. 
+	Aquesta aplicació ofereix una visualització de les dades de sensors intuïtiva i significativa, adaptant la presentació de les dades per a persones que no tenen coneixements científics específics.
 
 %\vspace*{\fill}
 
@@ -191,7 +189,7 @@
   
   This project is an attempt to understand the structure, the technological challenges and operations of sensor networks and how they can help us to take conscience about our environment.
 
-  The thesis is structured as follows: the actual state of sensor networks (Chapter \ref{Chapter2}), which technologies had been used (Chapter \ref{Chapter3}), and how the project has been developed (Chapter \ref{Chapter4}). 
+  The thesis is structured as follows: the current state of sensor networks (Chapter \ref{Chapter2}), which technologies had been used (Chapter \ref{Chapter3}), and how the project has been developed (Chapter \ref{Chapter4}). 
   In chapter \ref{Chapter5} the testbed deployment is illustrated and some resulting data are shown.
   Finally, the conclusions (Chapter \ref{Chapter6}) and future work (Chapter \ref{Chapter7}).
   
@@ -206,7 +204,7 @@
     To choose the processor board, it has to be look into the following characteristics:
     
     \begin{itemize}
-    	\item {\bf Power:} A sensor node can obtain energy in several ways: batteries, solar energy, connecting to an already deployed network... The important thing is not to increase the size of the sensor node, in our case, is power by an already deployed network.
+    	\item {\bf Power:} A sensor node can obtain energy in several ways: batteries, solar energy, connecting to an already deployed network, etc. The important thing is not to increase the size of the sensor node, in our case, is power by an already deployed network.
     	\item {\bf CPU:} A powerful CPU is not necessary to process sensor data, so this helps to decrease the size of the board and reduce power consumption.
     	\item {\bf Communication:} There has to be a way to send the collected data outside, usually wireless or through a wired network. If it has wireless communication, the topology and location of the sensor nodes has to be chosen properly. But if it is through a wired network, it should take advantage of something already deployed, in our case, the Guifi network.
     \end{itemize}
@@ -218,16 +216,16 @@
     It is important to share this information so everyone can know the state of their environment. There are already some sensor networks functioning, some of them are government-funded and they often apply a policy where the data is not completely public, while other sensor networks are private-owned and the data are possibly open (e.g. smartcitizen).
 
   \section{Sensor networks and smart cities}
-    In this section a few projects on sensor networks deployed are introduced:
+    In this section a few projects on sensor networks deployed are introduced, there are clear examples of the need for information of our surroundings, in our case, environmental.
     
     \subsection{Amsterdam smart city}
       Amsterdam has many projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consequence, reduce air pollution \cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
-      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, and traffic intensity monitoring \cite{SmartcitySantander}.
+      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, and traffic intensity monitoring. Also SmartSantander encourages the development of new applications using the data that is already deployed (12.000 sensors) \cite{SmartcitySantander}.
     
   \section{Companies}
-    In the following sections some companies that are in the business of sensor networks are described.
+    In the following sections some companies that are in the business of sensor networks are described. They made a business of sensor nodes and sensor networks, and have been helpful to find a path to follow.
     
     \subsection{Smartcitizen}
       Smart Citizen\footnote{\url{http://www.smartcitizen.me/}} is a platform that offers a sensor board based on Arduino to monitor the environment (figure \ref{fig:SmartCitizenNode}), and permits to upload this data to their own public database.
@@ -345,14 +343,16 @@
   This chapter is focused on the technologies used to develop this project.
   
   \section{Arduino-Raspberry PI comparison}
-    For this project, two possible boards have been considered: the Arduino Yun (Yun) and the Raspberry Pi model B (RPiB).
-    
-    The Yun is a microcontroller while the RPiB is a full computer, which makes it more powerful, even more than needed, so both Yun and RPiB serve.
+    For this project, two possible boards have been considered: the Arduino Yun (Yun) and the Raspberry Pi model B (RPiB). The Yun is a microcontroller while the RPiB is a full computer, which makes it more powerful, even more than needed.
     
     The two of them have a Linux environment, but with the Yun, the normal way to interact is by an Arduino sketch. So RPiB considers that the developer has some prior Linux knowledge, while the Yun is better for beginners. Also, the Arduino IDE provides a variety of programs that help to start.
     
+    Another difference is that arduino is open hardware, which might be helpful if it somehow be improved.
+    
     The sensor board is the biggest element of the sensor node, so the size is very important, the smaller the better. In this case, the Yun is smaller than the RPiB. On the other hand, the sensor node will be attach on Guifi nodes, which are powered by Power over Ethernet (PoE). 
     For the Yun there is the possibility of a PoE module (not available yet), which will power the board. The figure \ref{fig:arduinoethernetpoe} and \ref{fig:poerpi} show the comparison between the size of an Arduino Ethernet (similar to the YUN) and the RPiB both powered by PoE. It is clearly visible that the Arduino is more compact.
+    
+    
     
     \begin{figure}
         \centering
@@ -537,7 +537,7 @@
     
   \section{Upload sensor data}
   
-    A main part of the project is upload the data from the sensors to a platform so that everyone can access them.
+    A main part of the project is uploading the data from the sensors to a platform so that everyone can access them.
     
     The GeoJSON message (Explained in section \ref{GeoJSON}) includes data from 5 sensors, which makes its size too large for the memory of the Arduino.
     For this type of operations is possible to run a script in the Linux environment through the bridge library (Figure \ref{fig:BridgeInShort}).
@@ -569,14 +569,14 @@
       \centering
           \includegraphics[scale=0.5]{./Figures/Guifimap.png}
           \rule{25em}{0.5pt}
-      \caption[Guifi sensor map]{Guifi sensor map.}
+      \caption[Guifi nodes]{Guifi nodes.}
       \label{fig:Guifimap}
     \end{figure}
     
   \section{Storage Resource Broker}  
     Opencities \cite{opencities} is the opendata service that has been chosen, for these reasons:
     \begin{itemize}
-      \item The developers are at UPF, so the process of improving both projects (feedback, bug fixing, ...) can be fast and effective.
+      \item The developers are at UPF, so the process of improving both projects (feedback, bug fixing, etc) can be fast and effective.
       \item Easy API to upload and download the data.
     \end{itemize}
     
@@ -620,7 +620,7 @@
       
       The following libraries were needed to develop the code: FileIO, Process library, and Bridge.
       
-      The Arduino sketch is code in a very simple way, the setup function will initialize the Bridge library to communicate with the Linux environment, the Serial library for debugging purposes, and the FileSystem to log the process.
+      The Arduino sketch is coded in a very simple way, the setup function will initialize the Bridge library to communicate with the Linux environment, the Serial library for debugging purposes, and the FileSystem to log the process.
       The other function by default is the ``loop'', which calls three functions: readSensors, readFile, and executePythonScript.
       
       \begin{itemize}
@@ -664,7 +664,7 @@
       
       The communication with Opencities is done by means of a python script. This are the packages needed into the Linux environment of the Arduino: distribute, python-openssl, geojson, geopy, and httplib2.
       
-      The python script has three process, first it stores all the sensor data pass by the Arduino sketch into a class. Then it creates a GeoJSON message with all the data, and all the parameters needed to upload it into Opencities. Finally upload the GeoJSON message.
+      The python script has three processes. First it stores all the sensor data pass by the Arduino sketch into a class. Then it creates a GeoJSON message with all the data, and all the parameters needed to upload it into Opencities. Finally upload the GeoJSON message.
       
       With all this libraries the script can communicate with Opencities and store the sensor data collected by the Arduino. The \ref{fig:Python Script Flow Chart} figure explains how the python script works.\\
       
@@ -705,7 +705,7 @@
       
     \subsection{Interface}
       The application interface is a unique map view where the user can zoom to a limit, go to his location, and use the top buttons to change the sensor read. From left to right, the first button is the Marker button, the user decides whether the markers are displayed or not, and the next buttons refer to the type of sensor data to show as markers and/or as heatmap points (Temperature, Humidity, Noise, Light, and Air Quality).
-      If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity,... and the unit (Figure \ref{fig:AppScreenshots}).
+      If the Marker button is checked, the user can click on the marker in the map and it will show the value of the temperature, humidity, etc and the unit (Figure \ref{fig:AppScreenshots}).
       \begin{figure}
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
@@ -731,7 +731,7 @@
       
       Next comes the dataBase class, which, as the name suggest, is the class that stores and processes the data downloaded from Opencities. This is a Singleton class, which means that there will only be one instance of this class and any instance of any class could access to the data stored on it.
       
-      To stored the data from Opencities, there has been created a set of classes equivalent with the GeoJSON message downloaded to avoid confusion. At the end, the data is stored in features, which is composed primarily of Geometry and Properties.
+      To store the data from Opencities, a set of classes have been created. These classes are equivalent to the GeoJSON message downloaded to avoid confusion. At the end, the data is stored in features, which is composed primarily of Geometry and Properties.
       
       Then a class called HttpAsyncTask that handles the communication with Opencities stores the downloaded data using an instance of dataBase.
       
@@ -798,7 +798,7 @@
 			\item {\bf Final Report:} Is where it has been documented the project and has been written in latex, a system for the creation of technical and scientific documentation.
 		\end{itemize}
 		
-		The less important folders are:
+		The other folders are:
 		\begin{itemize}
 			\item {\bf Collect Data From Sensors:} Here it has been stored the code to get the value of each sensor separately, in case someone wants to use only one of the sensors and does not want to read the full code.
 			\item {\bf Collect Data From Sensors Nodes:} Using the logData files that have been created during the testbed, an octave script reads this data and displays it in graphs.
@@ -962,7 +962,7 @@
                 \label{fig:GraphicLight}
         \end{subfigure}
         \rule{18em}{0.5pt}
-        \caption{Testbed Results}\label{fig:TestbedResults1}
+        \caption{Temperature and Light Graphics}\label{fig:TestbedResults1}
 			\end{figure}
       
       The Barcelona node collects noise values much higher than the other two nodes. The Badalona and Montgat nodes are in areas with punctual car traffic, while the Barcelona node is in a busy area, causing more noise.
@@ -984,7 +984,7 @@
                 \label{fig:GraphicHumidity}
         \end{subfigure}
         \rule{18em}{0.5pt}
-        \caption{Testbed Results}\label{fig:TestbedResults1}
+        \caption{Noise and Humidity Graphics}\label{fig:TestbedResults1}
 			\end{figure}
       
       The Badalona node captures better air quality than the Barcelona and Montgat nodes. The Barcelona node collects constant values, more or less, which is normal because there is in an area with high car traffic. The Badalona node collects a decrease in air quality as time passes, which coincides with the arrival of workers who park in the area. In the case of Montgat, there is a big difference in a time slot. This node is located near a highway, so it is possible that this time slot coincide when there is more traffic on the highway.
@@ -1000,13 +1000,13 @@
 \chapter{Conclusions}
 \label{Chapter6}
   
-  During this project a deployment of a sensor network had been made with optimal results, this has proved that the sensor nodes have function properly.  
+  The deployment of a sensor network made during this project has been successful, this has proved that the sensor nodes have function properly.  
   Therefore, it has been shown that anyone can deploy its own network in an inexpensive way, with open source hardware and software, and easy to use.
   
   A mobile application has been developed to serve as an example, so the citizens who want to create their own find the process easier.
  	All the code that it has been created during this project is open source and is online, in a Github repository.
   
-  In conclusion, the project had satisfied the goals presented at the start, which are share sensor data on an open network, and let the users visualize it.
+  In conclusion, the project had satisfied the goals presented at the start, sharing sensor data on an open network, and letting the users visualize it.
 
 \chapter{Future work}
 \label{Chapter7}

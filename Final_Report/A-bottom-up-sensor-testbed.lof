@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Smart Citizen Node}}{5}{figure.caption.3}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Libellium Projects\relax }}{6}{figure.caption.4}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Arduino YUN}}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Arduino YUN Bridge}}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Arduino YUN Bridge}}{8}{figure.caption.6}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Raspberry Pi model B}}{8}{figure.caption.7}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Picoboard}}{9}{figure.caption.8}
 \addvspace {10\p@ }
@@ -23,7 +23,7 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Sensor node Prototype with DHT22}}{17}{figure.caption.16}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Sensor node Prototype with DHT11}}{18}{figure.caption.17}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces GeoJSON message}}{19}{figure.caption.18}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Guifi sensor map}}{20}{figure.caption.19}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Guifi nodes}}{20}{figure.caption.19}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces General View}}{23}{figure.caption.20}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Arduino sketch Flow Chart}}{25}{figure.caption.21}
@@ -38,8 +38,8 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Yun web Diagnostic}}{35}{figure.caption.29}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Yun web Configuration}}{35}{figure.caption.30}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Testbed Map}}{37}{figure.caption.31}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Testbed Results\relax }}{38}{figure.caption.32}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Testbed Results\relax }}{39}{figure.caption.33}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature and Light Graphics\relax }}{38}{figure.caption.32}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Noise and Humidity Graphics\relax }}{39}{figure.caption.33}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Graphic Air Quality}}{40}{figure.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
