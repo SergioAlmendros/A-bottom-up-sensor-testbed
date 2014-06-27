@@ -1,3 +1,42 @@
+5 Iteracion:
+
+	- (HECHO) My comments are in the direction of having standards (for example, writing always "Figure" and not sometimes "figure"), English corrections and to make it clearer for the reader.
+I did the comments as if it was my work (let's say a work in group), but you have the final decision about applying them or not. Feel free to ignore whatever you want.
+
+Smaller changes:
+
+	- (HECHO) "Arduino nodes" instead of "Arduinos"
+	- (HECHO) Figure with capital F.
+	- (HECHO) Appendix with capital A.
+	- (HECHO) Names starting with capital letters, for example, "Python".
+	- (HECHO) I did not understand the sequence of numbers for the URL references.
+
+	- (CASI HECHO) In Section 5, it would be better to have all the plots together in one page.
+
+Bigger changes:
+
+	- In Section 1, can you briefly describe a WSN? Also, it would be better if you explicitly described what do you mean with "sensor". Is it the device or the thing that senses the environment?
+
+	- (HECHO) The Section 2.1 is a bit confusing. The first paragraph talks about the sensor networks in general, which fits better to the introduction. 
+	- (HECHO) In the next paragraphs (until "Currently the sensors are small enough to put several into a shield with the same size as the board mentioned before."), you talked about what to observe in the nodes, which fits better to the Section 3.1.
+
+	- It would be better if you had a small description about what is a smart city, 
+	- what companies in this field (usually) offer and the general idea of "Opendata", just before listing them.
+
+(añadirla y cambiar el texto para hacer referencia a ella) Consider creating a table for the Section 3.1 comparing:
+- Way of interaction
+- Development skills required
+- Size of the board (with numbers)
+- Computational power
+- Available memory
+
+I would suggest you to remove the flow charts and describe then as pseudo algorithms.
+
+Section 5.1 is written as a manual. It would look better if you wrote as "how I did". For example:  
+Instead of "When it is connected to the YUN network, go to a web browser and go to http://arduino.local or 192.168.240.1. Put the password, which is “arduino”, as shown in the figure 5.2.", "After connecting to the YUN network, the address http://arduino.local or 192.168.240.1 can be accessed and the password should be provided. The default password is “arduino”. The procedure is shown in the Figure 5.2.". The other option would be to say more or less: "After connecting, I put the password as shown in Figure 5.2.".
+
+
+
 4 Iteracion:
 
   GENERAL:
@@ -15,7 +54,7 @@
     - (HECHO) Cuando defino guifi, decir lo de open, neutral, colaborativa, libre.
     
   INTRODUCCION
-    - Poner en contexto cada parte del proyecto.
+    - (HECHO) Poner en contexto cada parte del proyecto.
     
   STATE OF THE ART
     - [Menos importante] Añadir más iniciativas del palo smartcitizen, o libellium.

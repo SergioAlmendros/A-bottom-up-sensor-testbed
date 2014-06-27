@@ -1,76 +1,77 @@
 \BOOKMARK [0][-]{chapter*.2}{List of figures}{}% 1
-\BOOKMARK [0][-]{chapter.1}{ Introduction}{}% 2
-\BOOKMARK [0][-]{chapter.2}{ State of the Art}{}% 3
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.2}{Sensor networks and smart cities}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.1}{Amsterdam smart city}{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.2}{Santander smart city}{section.2.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Companies}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.3.1}{Smartcitizen}{section.2.3}% 9
-\BOOKMARK [2][-]{subsection.2.3.2}{Libelium}{section.2.3}% 10
-\BOOKMARK [1][-]{section.2.4}{Opendata services}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.4.1}{Opencities}{section.2.4}% 12
-\BOOKMARK [2][-]{subsection.2.4.2}{Xively}{section.2.4}% 13
-\BOOKMARK [2][-]{subsection.2.4.3}{Sentilo}{section.2.4}% 14
-\BOOKMARK [1][-]{section.2.5}{Sensor boards}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.5.1}{Arduino YUN}{section.2.5}% 16
-\BOOKMARK [2][-]{subsection.2.5.2}{Raspberry Pi}{section.2.5}% 17
-\BOOKMARK [2][-]{subsection.2.5.3}{Picoboard}{section.2.5}% 18
-\BOOKMARK [0][-]{chapter.3}{ Technologies}{}% 19
-\BOOKMARK [1][-]{section.3.1}{Arduino-Raspberry PI comparison}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.2}{Sensors}{chapter.3}% 21
-\BOOKMARK [2][-]{subsection.3.2.1}{LM35: Temperature}{section.3.2}% 22
-\BOOKMARK [2][-]{subsection.3.2.2}{Light Dependent Resistor \(LDR\)}{section.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.2.3}{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}{section.3.2}% 24
-\BOOKMARK [2][-]{subsection.3.2.4}{Aosong DHT22 and DHT11: Humidity}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.5}{MQ135: Gas sensor}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.6}{BreadBoard with all the sensors}{section.3.2}% 27
-\BOOKMARK [1][-]{section.3.3}{Upload sensor data}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.3.1}{GeoJSON}{section.3.3}% 29
-\BOOKMARK [1][-]{section.3.4}{Community network}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.5}{Storage Resource Broker}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.6}{Visualization platform}{chapter.3}% 32
-\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 33
-\BOOKMARK [1][-]{section.4.1}{Arduino Development}{chapter.4}% 34
-\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensor data}{section.4.1}% 35
-\BOOKMARK [2][-]{subsection.4.1.2}{Communication with Opencities}{section.4.1}% 36
-\BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.2.1}{Summary}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.2}{Interface}{section.4.2}% 39
-\BOOKMARK [2][-]{subsection.4.2.3}{Code}{section.4.2}% 40
-\BOOKMARK [1][-]{section.4.3}{Repository}{chapter.4}% 41
-\BOOKMARK [0][-]{chapter.5}{ Testbed Deployment and Results}{}% 42
-\BOOKMARK [1][-]{section.5.1}{Sensor node}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.1.1}{Connection to the Internet}{section.5.1}% 44
-\BOOKMARK [2][-]{subsection.5.1.2}{Install necessary packets}{section.5.1}% 45
-\BOOKMARK [2][-]{subsection.5.1.3}{Copy the scripts}{section.5.1}% 46
-\BOOKMARK [2][-]{subsection.5.1.4}{Attach the sensors}{section.5.1}% 47
-\BOOKMARK [2][-]{subsection.5.1.5}{Arduino Code}{section.5.1}% 48
-\BOOKMARK [1][-]{section.5.2}{Actual Testbed}{chapter.5}% 49
-\BOOKMARK [2][-]{subsection.5.2.1}{Results}{section.5.2}% 50
-\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 51
-\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 52
-\BOOKMARK [0][-]{section*.36}{BIBLIOGRAPHY}{}% 53
-\BOOKMARK [0][-]{appendix.A}{ Pilot Charter}{}% 54
-\BOOKMARK [1][-]{section.A.1}{Pilot Charter}{appendix.A}% 55
-\BOOKMARK [2][-]{subsection.A.1.1}{Pilot purpose or justification}{section.A.1}% 56
-\BOOKMARK [2][-]{subsection.A.1.2}{Measurable pilot objectives and related success criteria}{section.A.1}% 57
-\BOOKMARK [2][-]{subsection.A.1.3}{High-level requirements}{section.A.1}% 58
-\BOOKMARK [2][-]{subsection.A.1.4}{High-level pilot description}{section.A.1}% 59
-\BOOKMARK [2][-]{subsection.A.1.5}{High-level risks}{section.A.1}% 60
-\BOOKMARK [2][-]{subsection.A.1.6}{Summary milestone schedule}{section.A.1}% 61
-\BOOKMARK [2][-]{subsection.A.1.7}{Summary budget}{section.A.1}% 62
-\BOOKMARK [0][-]{appendix.B}{ Planning Report}{}% 63
-\BOOKMARK [1][-]{section.B.1}{Planning Report}{appendix.B}% 64
-\BOOKMARK [2][-]{subsection.B.1.1}{Familiarization with the Arduino Yun}{section.B.1}% 65
-\BOOKMARK [2][-]{subsection.B.1.2}{Preliminary testbed}{section.B.1}% 66
-\BOOKMARK [2][-]{subsection.B.1.3}{Collect Data from sensors}{section.B.1}% 67
-\BOOKMARK [2][-]{subsection.B.1.4}{Install Sentilo}{section.B.1}% 68
-\BOOKMARK [2][-]{subsection.B.1.5}{Communication with Sentilo}{section.B.1}% 69
-\BOOKMARK [2][-]{subsection.B.1.6}{Real deployment}{section.B.1}% 70
-\BOOKMARK [2][-]{subsection.B.1.7}{Interface}{section.B.1}% 71
-\BOOKMARK [2][-]{subsection.B.1.8}{Sentilo module}{section.B.1}% 72
-\BOOKMARK [2][-]{subsection.B.1.9}{Final report}{section.B.1}% 73
-\BOOKMARK [2][-]{subsection.B.1.10}{Gantt chart}{section.B.1}% 74
-\BOOKMARK [0][-]{appendix.C}{ Class Diagram}{}% 75
-\BOOKMARK [0][-]{appendix.D}{ Testbed Graphics}{}% 76
+\BOOKMARK [0][-]{chapter*.3}{List of tables}{}% 2
+\BOOKMARK [0][-]{chapter.1}{ Introduction}{}% 3
+\BOOKMARK [0][-]{chapter.2}{ State of the Art}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Sensor networks and smart cities}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Amsterdam smart city}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{Santander smart city}{section.2.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Companies}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{Smartcitizen}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.2}{Libelium}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{Opendata services}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{Opencities}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{Xively}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.3}{Sentilo}{section.2.4}% 15
+\BOOKMARK [1][-]{section.2.5}{Sensor boards}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.5.1}{Arduino YUN}{section.2.5}% 17
+\BOOKMARK [2][-]{subsection.2.5.2}{Raspberry Pi}{section.2.5}% 18
+\BOOKMARK [2][-]{subsection.2.5.3}{Picoboard}{section.2.5}% 19
+\BOOKMARK [0][-]{chapter.3}{ Technologies}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Arduino-Raspberry PI comparison}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Sensors}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.2.1}{LM35: Temperature}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.2}{Light Dependent Resistor \(LDR\)}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.3}{Emartee Mini Sound Sensor and Analog Sound Sensor Board Microphone MIC Controller: Noise}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.4}{Aosong DHT22 and DHT11: Humidity}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.5}{MQ135: Gas sensor}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.6}{BreadBoard with all the sensors}{section.3.2}% 28
+\BOOKMARK [1][-]{section.3.3}{Upload sensor data}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.1}{GeoJSON}{section.3.3}% 30
+\BOOKMARK [1][-]{section.3.4}{Community network}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.5}{Storage Resource Broker}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.6}{Visualization platform}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{ Bottom up sensor testbed}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Arduino Development}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.1.1}{Collect sensor data}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.2}{Communication with Opencities}{section.4.1}% 37
+\BOOKMARK [1][-]{section.4.2}{Android app}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.2.1}{Summary}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.2}{Interface}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.3}{Code}{section.4.2}% 41
+\BOOKMARK [1][-]{section.4.3}{Repository}{chapter.4}% 42
+\BOOKMARK [0][-]{chapter.5}{ Testbed Deployment and Results}{}% 43
+\BOOKMARK [1][-]{section.5.1}{Sensor node}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.1.1}{Connection to the Internet}{section.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.1.2}{Install necessary packets}{section.5.1}% 46
+\BOOKMARK [2][-]{subsection.5.1.3}{Copy the scripts}{section.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.1.4}{Attach the sensors}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.5}{Arduino Code}{section.5.1}% 49
+\BOOKMARK [1][-]{section.5.2}{Actual Testbed}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.2.1}{Results}{section.5.2}% 51
+\BOOKMARK [0][-]{chapter.6}{ Conclusions}{}% 52
+\BOOKMARK [0][-]{chapter.7}{ Future work}{}% 53
+\BOOKMARK [0][-]{section*.38}{BIBLIOGRAPHY}{}% 54
+\BOOKMARK [0][-]{appendix.A}{ Pilot Charter}{}% 55
+\BOOKMARK [1][-]{section.A.1}{Pilot Charter}{appendix.A}% 56
+\BOOKMARK [2][-]{subsection.A.1.1}{Pilot purpose or justification}{section.A.1}% 57
+\BOOKMARK [2][-]{subsection.A.1.2}{Measurable pilot objectives and related success criteria}{section.A.1}% 58
+\BOOKMARK [2][-]{subsection.A.1.3}{High-level requirements}{section.A.1}% 59
+\BOOKMARK [2][-]{subsection.A.1.4}{High-level pilot description}{section.A.1}% 60
+\BOOKMARK [2][-]{subsection.A.1.5}{High-level risks}{section.A.1}% 61
+\BOOKMARK [2][-]{subsection.A.1.6}{Summary milestone schedule}{section.A.1}% 62
+\BOOKMARK [2][-]{subsection.A.1.7}{Summary budget}{section.A.1}% 63
+\BOOKMARK [0][-]{appendix.B}{ Planning Report}{}% 64
+\BOOKMARK [1][-]{section.B.1}{Planning Report}{appendix.B}% 65
+\BOOKMARK [2][-]{subsection.B.1.1}{Familiarization with the Arduino Yun}{section.B.1}% 66
+\BOOKMARK [2][-]{subsection.B.1.2}{Preliminary testbed}{section.B.1}% 67
+\BOOKMARK [2][-]{subsection.B.1.3}{Collect Data from sensors}{section.B.1}% 68
+\BOOKMARK [2][-]{subsection.B.1.4}{Install Sentilo}{section.B.1}% 69
+\BOOKMARK [2][-]{subsection.B.1.5}{Communication with Sentilo}{section.B.1}% 70
+\BOOKMARK [2][-]{subsection.B.1.6}{Real deployment}{section.B.1}% 71
+\BOOKMARK [2][-]{subsection.B.1.7}{Interface}{section.B.1}% 72
+\BOOKMARK [2][-]{subsection.B.1.8}{Sentilo module}{section.B.1}% 73
+\BOOKMARK [2][-]{subsection.B.1.9}{Final report}{section.B.1}% 74
+\BOOKMARK [2][-]{subsection.B.1.10}{Gantt chart}{section.B.1}% 75
+\BOOKMARK [0][-]{appendix.C}{ Class Diagram}{}% 76
+\BOOKMARK [0][-]{appendix.D}{ Testbed Graphics}{}% 77
