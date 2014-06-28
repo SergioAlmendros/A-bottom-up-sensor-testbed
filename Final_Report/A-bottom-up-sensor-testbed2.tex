@@ -18,20 +18,17 @@
 
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-%CODIFICACIÓ
-%\usepackage[latin1]{inputenc}
-\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
+%CODIFICACI�
+\usepackage[latin1]{inputenc}
 
 
 %IDIOMES
 \usepackage[catalan,english]{babel}
 
-%NOMÉS PER A OBTENIR INDICACIÓ DEL MARC EN MIDA A4
+%NOM�S PER A OBTENIR INDICACI� DEL MARC EN MIDA A4
 %\usepackage[cam,a4,center,frame]{crop}
 
-%PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
+%PER A INCLOURE GR�FICS I EL LOGO DE LA UPF
 %\usepackage{graphicx}
 
 \usepackage{caption}
@@ -51,7 +48,7 @@
 %SENSE HEADINGS: NO MODIFICAR
 \pagestyle{plain}
 
-%PER A L'ÍNDEX DE MATÈRIES
+%PER A L'�NDEX DE MAT�RIES
 \usepackage{makeidx}
 \makeindex
 
@@ -59,10 +56,10 @@
 \bibliographystyle{apalike}
 
 
-%AQUEST DOCUMENT ÉS EN CATALÀ
+%AQUEST DOCUMENT �S EN CATAL�
 \selectlanguage{english}
 
-%EN COMPTES DE ÍNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
+%EN COMPTES DE �NDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
 \addto\captionscatalan
   {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
 
@@ -77,10 +74,10 @@
 
 %AFEGIU EN AQUESTA PART LES VOSTRES DADES
 \title{A bottom up sensor testbed}
-\author{Sergio Almendros Díaz}
+\author{Sergio Almendros D�az}
 \thyear{2014}
-\department{Departament de Tecnologies de la Informacio i les Comunicacions (DTIC)}
-\supervisor{Jaume Barcelo y Davide Scaini}
+\department{Departament de Tecnologies de la Informaci� i les Comunicacions (DTIC)}
+\supervisor{Jaume Barcel� y Davide Scaini}
 
 
 \begin{document}
@@ -96,33 +93,34 @@
 \cleardoublepage
 
 
-%%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
+%%%%%% Dedicat�ria; si no es vol posar, comenteu fins a final de dedicat�ria
 
 \noindent Dedicated to my parents and sister for supporting and helping me at any moment, and all my colleagues who have been with me all these years.
 
 \cleardoublepage
 
 
-%%%%%% Final de dedicatòria
+%%%%%% Final de dedicat�ria
 
 
-%%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
+%%%%%% Agra�ments; si no es vol posar, comenteu fins a final de agra�ments
 \noindent {\Large \sffamily Acknowledgments}
 \\
 
 	First and foremost I want to thank my supervisor Jaume Barcelo for guiding and helping me throughout the whole project. I would also like to thank Davide Scaini for proposing the project and help me with the final report, to Manuel Palacin for helping me with technical issues and to Albert Domingo for his constructive criticism that made me progress.
 
 	I also want to thank the other fellows: Ferran Selva, Pedro Vilchez, and Ivan Fernandez for helping in any way they could. 
-	I would like to thank Alejandro Juez, Daniel Valderas, Jacob Uribe, Carles Xavier Vilás, and Aitor Rodriguez, whose experience and knowledge have helped me finish this project. 
+	I would like to thank Alejandro Juez, Daniel Valderas, Jacob Uribe, Carles Xavier Vil�s, and Aitor Rodriguez, whose experience and knowledge have helped me finish this project. 
+
 	I also want to thank my family for supporting me since I started this project.
 
 	Finally, my sincere gratitude to all my friends who have accompanied me in all the endless hours in the library.
 
 \cleardoublepage
 
-%%%%%% Final dels agraïments
+%%%%%% Final dels agra�ments
 
-%ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
+%ABSTRACT EN DOS IDIOMES. COM A M�NIM CATAL�. SI L'ALTRE �S EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
  
@@ -139,14 +137,13 @@
 %\vspace*{\fill}
 \section*{\Large \sffamily  Resum}
 
-	Aquest projecte té com a objectiu desplegar un banc de proves de sensors que pot ser continuat y suportat amb el suport d'una comunitat.
-	Els sensors recullen dades medioambientals i están connectats a una xarxa de la comunitat. Li dóna a la comunitat un camir per millorar la seva consciència ambiental, donant-los la informació necessària per conèixer l'estat del seu entorn i actuar en conseqüència. 
-	
-	D'aquesta manera tothom pot actuar en conseqüència si els sensors detecten situacions perilloses, per exemple, no anar a un parc en el qual el sensor de gas detecta mala qualitat de l'aire.
-	Les dades del sensors s'emmagatzema en un data broker desenvolupat per la universitat, el que fa que les dades estiguin disponibles per a aplicacions de tercers.
-	
-	Una aplicació mòbil que es connecta al data broker ha estat programada. 
-	Aquesta aplicació ofereix una visualització de les dades de sensors intuïtiva i significativa, adaptant la presentació de les dades per a persones que no tenen coneixements científics específics.
+	Aquest projecte té com a objectiu desplegar un banc de proves de sensors que pot ser continuat y suportat amb el suport d'una comunitat. 
+��Els sensors recullen dades medioambientals i est�n connectats a una xarxa de la comunitat. Li d�na a la comunitat un camir per millorar la seva consci�ncia ambiental, donant-los la informaci� necess�ria per con�ixer l'estat del seu entorn i actuar en conseq��ncia. 
+��D'aquesta manera tothom pot actuar en conseq��ncia si els sensors detecten situacions perilloses, per exemple, no anar a un parc en el qual el sensor de gas detecta mala qualitat de l'aire. 
+��
+��Les dades del sensors s'emmagatzema en un data broker desenvolupat per la universitat, el que fa que les dades estiguin disponibles per a aplicacions de tercers. 
+��Una aplicaci� m�bil que es connecta al data broker ha estat programada. 
+	Aquesta aplicaci� ofereix una visualitzaci� de les dades de sensors intu�tiva i significativa, adaptant la presentaci� de les dades per a persones que no tenen coneixements cient�fics espec�fics.
 
 %\vspace*{\fill}
 
@@ -161,33 +158,27 @@
 %FINAL DE PREFACI
 
 
-%TAULA DE CONTINGUTS: OBLIGATÒRIA
+%TAULA DE CONTINGUTS: OBLIGAT�RIA
 \selectlanguage{english}
 \tableofcontents
 
-%INDEX DE FIGURES; NOMÉS ES POSA SI HI HA FIGURES
+%INDEX DE FIGURES; NOM�S ES POSA SI HI HA FIGURES
 \listoffigures
 %Fa que aparegui al sumari
 \addcontentsline{toc}{chapter}{List of figures}
 
-%INDEX DE TAULES; NOMÉS ES POSA SI HI HA TAULES
+%INDEX DE TAULES; NOM�S ES POSA SI HI HA TAULES
 \listoftables
 %Fa que aparegui al sumari
 \addcontentsline{toc}{chapter}{List of tables}
 
 
-%COMENÇA EL TEXT
+%COMEN�A EL TEXT
 \mainmatter
 \chapter{Introduction}
 \label{Chapter1}
 	
 	Sensor networks started as a mechanism of defense developed by the United States Navy during the Cold War. With acoustic sensors they searched for Soviet submarines. This research continued at Universities, trying to make the sensors smaller, and with the possibility of real-time data \cite{chong2003sensor}.
-	
-	A sensor network is composed of nodes, and nodes are composed of computers and sensors. The function of these computers are: understand the data returned by the sensors, encapsulate it, and send it to the outside.
-	
-	A node is typically powered by batteries and because it would be unpractical to change batteries at short intervals, the node must require low power to perform all its functions. For this reason, these computers must be equipped with the minimum amount of hardware to perform these functions.
-	To speed the deployment of the network, the most common are ad-hoc wireless sensor networks, which means that nodes will send data from node to node until it finds the target node. The goal is to keep all information collected by all sensors and work with it.
-	In this case, a community network has been used, so the communication will not concern this project.
 	
   The development of this project has been divided into three phases: collect data from environmental sensors, display it to end users in an intuitive way, and make a real testbed to demonstrate its performance.
   
@@ -273,7 +264,9 @@
 		\end{figure}
 
   \section{Opendata services}
-    The sensor boards are continuously collecting data, which has to be stored. The data can be stored remotely or locally, but collecting it from every sensor board it is unpractical, for this reason an online storage service, Open data, is needed. The term Open data pursues the fact that certain types of data should be available for anyone to use, without any control mechanism, e.g. copyright.
+    The sensor boards are continuously collecting data, which has to be stored. The data can be stored remotely or locally, but collecting the data from every sensor board it is unpractical, for this reason an online storage service, opendata, is needed.    
+    
+    {\bf Opendata explanation??}
     
 		\subsection{Opencities}
        Opencities \cite{opencities} is a platform to browse, visualize, and download open data from different participants. Opencities has a very simple API to upload and download data, a web page to visualize the stored data.
@@ -381,20 +374,18 @@
 
     Another advantage that YUN offers is the integrated WiFi module, which offers more flexibility when there is no ethernet available.
     
-    Finally, the YUN has been used instead of the RPiB basically because of the size that will become the sensor node, but if in the future is necessary a more powerful processor, it will be better to use a RPiB.
-    
-    The Table \ref{tab:YUN-RPiBcomparisonfig:sensorboards} shows the differences between the RPiB and the YUN explained before:
+    Finally, the YUN has been used instead of the RPiB basically because of the size that will become the sensor node, but if in the future is necessary a more powerful processor, it will be better to use a RPiB.  
     
     \begin{table}
     	\centering
-		  \begin{tabular}{ | l | p{6cm} | p{3cm} |}
+		  \begin{tabular}{ | l | p{5cm} | p{5cm} |}
 				\hline
-				{\bf Functionalities} & {\bf YUN} & {\bf RPiB} \\ \hline
-				Way of interaction & Arduino Sketch and Linux & Linux \\ \hline
-				Development skills required & Low skills with Arduino and Linux & Medium skills \\ \hline
-				Size of the board & 6.58 x 5.33 cm & 8.55 x 5.41 cm \\ \hline
-				Computational power & Yun:16MHz - Linux:400MHz & 700MHz \\ \hline
-				Available memory & Yun: 32 KB - Linux: 16 MB & 512MB \\ \hline
+				Functionalities & YUN & RPiB \\ \hline
+				Way of interaction & A & B \\ \hline
+				Development skills required & A & B \\ \hline
+				Size of the board & A & B \\ \hline
+				Computational power & A & B \\ \hline
+				Available memory & A & B \\ \hline
 		  \end{tabular}
       \caption{YUN-RPiB comparison}
       \label{tab:YUN-RPiBcomparisonfig:sensorboards}
@@ -857,8 +848,9 @@
     \subsubsection{Through WiFi}
       This is the slowest way. The process is the following:
       \begin{enumerate}
-        \item After powering the Arduino YUN, it creates his own WiFi network (ArduinoYun-XXXXXXXXXXXX).
-        \item After connecting to the YUN network, the address \url{http://arduino.local} or \url{192.168.240.1} can be accessed and the password should be provided. The default password is ``arduino''. The procedure is shown in the Figure \ref{fig:YunWebPassword}.
+        \item First power the Arduino YUN. 
+        \item The Arduino creates his own WiFi network (ArduinoYun-XXXXXXXXXXXX), and with a computer connect to it.
+        \item When it is connected to the YUN network, go to a web browser and go to \url{http://arduino.local} or \url{192.168.240.1}. Put the password, which is ``arduino'', as shown in the Figure \ref{fig:YunWebPassword}.
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebPassword.png}
@@ -867,7 +859,7 @@
             \label{fig:YunWebPassword}
           \end{figure}
         
-        \item After providing the password, an information page is displayed, as shown in Figure \ref{fig:YunWebDiagnostic}.
+        \item The next page is an information page, click on the configure button (Figure \ref{fig:YunWebDiagnostic}).
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebDiagnostic.png}
@@ -877,7 +869,7 @@
             \label{fig:YunWebDiagnostic}
           \end{figure}
         
-        \item It is necessary to tell the Yun what network to connect, and after pressing the the configure \& restart button, the computer could connect to the Yun through the network (Figure \ref{fig:YunWebConfig}).
+        \item Give a unique name to the Yun, and the network to connect (Figure \ref{fig:YunWebConfig}).
           \begin{figure}[htbp]
             \centering
                 \includegraphics[scale=0.3]{./Figures/YunWebConfig.png}
@@ -886,16 +878,19 @@
             \caption[Yun web Configuration]{Yun web Configuration.}
             \label{fig:YunWebConfig}
           \end{figure}
+          
+        \item Press the configure \& restart button.
+        \item Finally connect to the same network as the Yun is connected.
         
       \end{enumerate}
   \subsection{Install necessary packets}
     The Arduino runs an Arduino sketch and a Python script, for the Python script some packets have to be installed.
     
-    To install any packet, an ssh connection to the arduino has to be created (as shown before):
+    To install any packet, connect to the Arduino (as shown before):
     
     {\begin{centering} \textbf{ssh root@X.Y.Z.W}\par \end{centering}}
     
-    The requerided commands are the following:
+    Now install all the necessary packets:
      
       {\begin{centering} \textbf{
           opkg update \\
@@ -908,18 +903,15 @@
       \par \end{centering}}
     
   \subsection{Copy the scripts}
-    First of all, it is necessary to create some directories, the following commands have to be executed:
+    First of all, it is necessary to create some directories, so once the ssh command has been done, go to ``/mnt/sda1'', make the following commands:
     
     {\begin{centering} \textbf{
-    cd /mnt/sda1 \\
     mkdir arduino \\
     cd arduino \\
     mkdir www \\
     }\par \end{centering}}
     
-    After connecting to the YUN network, the address http://arduino.local or 192.168.240.1 can be accessed and the password should be provided. The default password is “arduino”. The procedure is shown in the Figure 5.2.
-    
-    After these processes have finished, the Python script ``main.py'' should be copied into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the file directly, or copying the file into the Arduino through the network with the following command:
+    Copy the Python script ``main.py'' into the SD-Card. There are two ways to do this, putting the SDCard into a computer an saving the file directly, or copying the file into the Arduino through the network with the following command:
     
     {\begin{centering} \textbf{
     scp main.py root@192.168.2.149:/mnt/sda1/arduino/www/main.py
@@ -1124,7 +1116,7 @@
 \end{document}
 
 
-%NUMERACIÓ DE LA PÀGINA EXTERIOR EXCEPTE EN LA PRIMERA PÀGINA DE CADA CAPÍTOL
+%NUMERACI� DE LA P�GINA EXTERIOR EXCEPTE EN LA PRIMERA P�GINA DE CADA CAP�TOL
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyfoot{}
@@ -1132,13 +1124,14 @@
 \fancyfoot[LE]{\thepage}
 
 
-%MUTIPLES ÍNDEX
-%En el preàmbul
+%MUTIPLES �NDEX
+%En el pre�mbul
 \usepackage{multind}
 \makeindex{authors}
-%Introducció d'entrades la forma
+%Introducci� d'entrades la forma
 \index{authors}{Einstein}
-%Situació de l'Índex
+%Situaci� de l'�ndex
 \printindex{authors}{Author index}
 %Cal eliminar les comandes \usepakage{makeidx} \makeindex \printindex
-%cal exacutar des de la línia de comandes makeindex authors
+%cal exacutar des de la l�nia de comandes makeindex authors
+

@@ -8,6 +8,6 @@ bib:
 	pdflatex A-bottom-up-sensor-testbed.tex
 	bibtex A-bottom-up-sensor-testbed
 	pdflatex A-bottom-up-sensor-testbed.tex
-
 clean:
-	rm A-bottom-up-sensor-testbed.aux
+
+	
