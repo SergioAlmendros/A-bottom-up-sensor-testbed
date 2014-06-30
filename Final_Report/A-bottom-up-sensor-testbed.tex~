@@ -383,7 +383,7 @@
     
     Finally, the YUN has been used instead of the RPiB basically because of the size that will become the sensor node, but if in the future is necessary a more powerful processor, it will be better to use a RPiB.
     
-    The Table \ref{tab:YUN-RPiBcomparisonfig:sensorboards} shows the differences between the RPiB and the YUN explained before:
+    The Table \ref{tab:YUN-RPiBcomparisonfig:sensorboards} shows the differences between the RPiB and the YUN explained before.
     
     \begin{table}
     	\centering
