@@ -130,9 +130,9 @@
   The sensors gather environmental data and are connected to a community network. It gives the community a trace to improve their environmental conscience, giving them the necessary information to know the state of their surroundings and act accordingly.
   This way anybody can act consequently if the sensors detect harmful situations, for example, not going to a park where the gas sensor detects bad air quality.
   
-  The sensor data is uploaded to a data broker developed by the university, which makes the data available to a third-party applications. 
+  The sensor data is uploaded to a data broker developed by the University, which makes the data available to third-party applications. 
   A mobile application that connects to the data broker has been programmed. 
-  This application offers an intuitive and meaningful sensor data visualization, tailoring the presentation of the data to people without specific scientific knowledge.
+  This application offers an intuitive and meaningful visualization of sensor's data, tailoring its presentation to people without specific scientific knowledge.
 
 
 \selectlanguage{catalan}
@@ -181,21 +181,21 @@
 \chapter{Introduction}
 \label{Chapter1}
 	
-	Sensor networks started as a mechanism of defense developed by the United States Navy during the Cold War. With acoustic sensors they searched for Soviet submarines. This research continued at Universities, trying to make the sensors smaller, and with the possibility of real-time data \cite{chong2003sensor}.
+	Sensor networks started as a mechanism of defense developed by the United States Navy during the Cold War. With acoustic sensors they searched for Soviet submarines. This research continued at Universities, trying to make the sensors smaller, and with the possibility of real-time data adquisition and processing \cite{chong2003sensor}.
 	
 	A sensor network is composed of nodes, and nodes are composed of computers and sensors. The function of these computers are: understand the data returned by the sensors, encapsulate it, and send it to the outside.
 	
 	A node is typically powered by batteries and because it would be unpractical to change batteries at short intervals, the node must require low power to perform all its functions. For this reason, these computers must be equipped with the minimum amount of hardware to perform these functions.
 	To speed the deployment of the network, the most common are ad-hoc wireless sensor networks, which means that nodes will send data from node to node until it finds the target node. The goal is to keep all information collected by all sensors and work with it.
-	In this case, a community network has been used, so the communication will not concern this project.
+	In this case, an existing community network has been used, so the communication stage is not part of this project.
 	
   The development of this project has been divided into three phases: collect data from environmental sensors, display it to end users in an intuitive way, and make a real testbed to demonstrate its performance.
   
-  As a sensor node has been used an Arduino\cite{arduino} YUN, which allows to obtain easily analog reads from a sensor. With a Power over Ethernet module, it can be attached to Guifi\footnote{\url{http://guifi.net/}} nodes and send the sensor data to a sensor platform, e.g. Opencities \cite{opencities}.
+  As a sensor node an Arduino\cite{arduino} YUN has been used, which allows to obtain easily analog reads from a sensor. With a Power over Ethernet module, it can be attached to Guifi\footnote{\url{http://guifi.net/}} nodes and send the sensor data to a sensor platform, e.g. Opencities \cite{opencities}.
 
-  The Bottom-up\footnote{\url{http://bubforeurope.net}} pattern has been used to build the sensor testbed, where the end users, in this case, Guifi users, are the ones who have to assemble the sensor nodes and connect them to their Guifi nodes to create the sensor network. With the Bottom-up model, the data is provided and used by the end users.
+  The Bottom-up\footnote{\url{http://bubforeurope.net}} pattern has been used to build the sensor testbed, where the end users, in this case, Guifi users, are the ones who has to assemble the sensor nodes and connect them to their Guifi nodes to create the sensor network. With the Bottom-up model, the data is provided and used by the users.
 
-  In this project an Android application has been developed to visualize the sensor data and make it accessible to the end users.
+  In this project an Android application has been developed to visualize the sensor data and make it accessible to the final users.
   A sensor testbed has been deployed to gather sensor data, and test the technologies used and developed.
   
   This project is an attempt to understand the structure, the technological challenges and operations of sensor networks and how they can help us to take conscience about our environment.
@@ -209,26 +209,26 @@
   
   \section{Introduction}
 
-    Currently the sensors are small enough to put several into a shield with the same size as the board mentioned before.
+    Currently the sensors are small enough to put several into a shield of the size of a credit card.
     
     Smart cities are the next step. A city capable of having real-time information, not only about the environment, but also from the number of cars that pass on a road, to the amount of rain water in a day. This kind of information could help to manage more efficiently the city.
     
-    It is important to share this information so everyone can know the state of their environment. There are already some sensor networks functioning, some of them are government-funded and they often apply a policy where the data is not completely public, while other sensor networks are private-owned and the data are possibly open (e.g. Smartcitizen).
+    It is important to share this information so everyone can know the state of their environment. There are already some sensor networks functioning, some of them are government-funded and they often apply a policy where the data is not completely public, while other sensor networks are private-owned and the data are possibly open (e.g. SmartCitizen).
 
   \section{Sensor networks and smart cities}
     In this section a few projects on sensor networks deployed are introduced, those are clear examples of the need for information of our surroundings, in our case, environmental.
     
     \subsection{Amsterdam smart city}
-      Amsterdam has many projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which let drivers to know if there are free spots to park, and, in consequence, reduce air pollution \cite{SmartcityAmsterdam}.
+      Amsterdam has many projects concerning the smart city concept, like the ``Flexible street lighting'', which allows the government to monitor the street and switch off the lights to save energy, or the ``Smart parking'' which informs the drivers if there are free spots to park, and, as a consequence, reduce air pollution \cite{SmartcityAmsterdam}.
       
     \subsection{Santander smart city}
-      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, and traffic intensity monitoring. Also SmartSantander encourages the development of new applications using the data that is already deployed (12.000 sensors) \cite{SmartcitySantander}.
+      Santander has his own sensor network testbed for environmental monitoring, outdoor parking area management, and traffic intensity monitoring. Also SmartSantander encourages the development of new applications using the data that is already available (12.000 sensors) \cite{SmartcitySantander}.
     
   \section{Companies}
-    In the following sections some companies that are in the business of sensor networks are described. They made a business of sensor nodes and sensor networks, and have been helpful to find a path to follow.
+    In the following sections some Companies that are in the business of sensor networks are described. They made a business of sensor nodes and sensor networks, and have been helpful to find a path to follow.
     
-    \subsection{Smartcitizen}
-      SmartCitizen\footnote{\url{http://www.smartcitizen.me/}} is a platform that offers a sensor board based on Arduino to monitor the environment (Figure \ref{fig:SmartCitizenNode}), and permits to upload this data to their own public database.
+    \subsection{SmartCitizen}
+      SmartCitizen\footnote{\url{http://www.smartcitizen.me/}} is a platform that offers a sensor board based on Arduino to monitor the environment (Figure \ref{fig:SmartCitizenNode}), and uploads this data to SmartCitizen's public database.
       
       \begin{figure}[htbp]
         \centering
@@ -239,8 +239,8 @@
     \end{figure}
             
     \subsection{Libelium}
-      Libelium is an Internet of things platform provider\footnote{\url{http://www.libelium.com/}}, which supplies an open source sensor platform for the Internet of things.
-      They have a variety of products, some interesting ones are shown:
+      Libelium is an ``Internet of things'' platform provider\footnote{\url{http://www.libelium.com/}}, which supplies an open source sensor platform for the Internet of things.
+      They have a variety of products, some interesting ones are reported here:
       \begin{itemize}
         \item e-Health: A sensor shield for Arduino and Raspberry Pi for body monitoring: pulse, oxygen in blood, airflow (breathing), body temperature, electrocardiogram, glucometer, galvanic skin response, blood pressure, patient position, and muscle/electromyography sensor (Figure \ref{fig:Libeliumehealth}).
         
@@ -273,7 +273,7 @@
 		\end{figure}
 
   \section{Opendata services}
-    The sensor boards are continuously collecting data, which has to be stored. The data can be stored remotely or locally, but collecting it from every sensor board it is unpractical, for this reason an online storage service, Open data, is needed. The term Open data pursues the fact that certain types of data should be available for anyone to use, without any control mechanism, e.g. copyright.
+    The sensor boards are continuously collecting data which has to be stored. The data can be stored remotely or locally, but collecting it from every sensor board it is unpractical, for this reason an online storage service, Open data, is needed. The term Open data pursues the fact that certain types of data should be available to anyone, without any control mechanism, e.g. copyright.
     
 		\subsection{Opencities}
        Opencities \cite{opencities} is a platform to browse, visualize, and download open data from different participants. Opencities has a very simple API to upload and download data, a web page to visualize the stored data.
@@ -282,7 +282,7 @@
       Xively \footnote{\url{https://xively.com}} offers an Internet of Things platform as a service, basically it lets you store sensor data, download it, and visualize it through graphics.
     
     \subsection{Sentilo}
-      Sentilo \footnote{\url{http://www.sentilo.io}} is an open source platform for Smart cities, it allows the user to use their own service to store the data, but they do not intend to become the database for everyone, it is only as an example. The Sentilo platform does not depend on a central server and can be installed on a private server. It also provides an interface to show the data.
+      Sentilo \footnote{\url{http://www.sentilo.io}} is an open source platform for Smart cities, it allows the user to use their own service to store the data, but they are not looking to be a database where everyone will store their sensor data, they want that each organization has its own sentilo server. The Sentilo platform does not depend on a central server and can be installed on a private server. It also provides an interface to show the data.
     
   \section{Sensor boards}
     In this section are discussed some of the options for a sensor node.

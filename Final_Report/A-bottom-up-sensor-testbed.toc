@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Amsterdam smart city}{3}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Santander smart city}{4}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Companies}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Smartcitizen}{4}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}SmartCitizen}{4}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Libelium}{4}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Opendata services}{5}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Opencities}{5}{subsection.2.4.1}

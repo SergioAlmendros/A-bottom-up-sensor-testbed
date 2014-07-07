@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  2 JUL 2014 16:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.8)  7 JUL 2014 07:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1005,9 +1005,9 @@ Chapter 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
 
-Overfull \hbox (23.24052pt too wide) in paragraph at lines 222--223
-\OT1/ptm/m/n/12 there are free spots to park, and, in con-se-quence, re-duce ai
-r pol-lu-tion [[]]. 
+Overfull \hbox (31.5084pt too wide) in paragraph at lines 222--223
+\OT1/ptm/m/n/12 there are free spots to park, and, as a con-se-quence, re-duce 
+air pol-lu-tion [[]]. 
  []
 
 [3
@@ -1668,7 +1668,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1124.
 
 Package rerunfilecheck Info: File `A-bottom-up-sensor-testbed.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 3FCDD99E7FDE4BE8B1F39043B74E56B0;5187.
+(rerunfilecheck)             Checksum: EAC7219979650A792A041CD210A7B38E;5187.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1678,7 +1678,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1124.
 Here is how much of TeX's memory you used:
  19399 strings out of 493307
  355296 string characters out of 6139906
- 437414 words of memory out of 5000000
+ 437413 words of memory out of 5000000
  22170 multiletter control sequences out of 15000+600000
  32808 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1691,7 +1691,7 @@ nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 vr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-bottom-up-sensor-testbed.pdf (78 pages, 12818834 bytes).
+Output written on A-bottom-up-sensor-testbed.pdf (78 pages, 12818878 bytes).
 PDF statistics:
  1129 PDF objects out of 1200 (max. 8388607)
  962 compressed objects within 10 object streams
