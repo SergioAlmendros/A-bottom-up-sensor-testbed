@@ -42,7 +42,7 @@ This task have to be done in parallel with all the other ones, and its purpose i
 
 \subsection{Gantt chart}
 
-\begin{figure}[ftbp]
+\begin{figure}[H]
   \begin{center}
 
     \begin{ganttchart}
